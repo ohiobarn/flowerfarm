@@ -1,5 +1,10 @@
 # flowerfarm
+
 The Ohio Barn Flower Farm
+
+## Sandbox Setup
+
+* Download from https://wordpress.org/download/
 
 ## Reference
 
