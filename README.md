@@ -6,10 +6,12 @@ The Ohio Barn Flower Farm
 
 * Download from https://wordpress.org/download/
 
-## Reference
+## Development
 
-[wordpress development workflow](https://www.technouz.com/4613/ultimate-wordpress-website-development-workflow/)
-
+```bash
+docker-compose up
+open http://localhost:8080/
+```
 
 ## Publish to Bluehost
 
@@ -17,10 +19,12 @@ The Ohio Barn Flower Farm
 ssh ohiobar1@ftp.ohiobarnflowerfarm.com 
 
 cd wordpress
-#scp -r wp-content ohiobar1@ftp.ohiobarnflowerfarm.com:./www
-
 scp -r duplicator/* ohiobar1@ftp.ohiobarnflowerfarm.com:./www
 ```
+
+## Reference
+
+[wordpress development workflow](https://www.technouz.com/4613/ultimate-wordpress-website-development-workflow/)
 
 ## Bluehost db settings
 
