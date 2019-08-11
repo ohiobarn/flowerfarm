@@ -25,7 +25,7 @@ class Contact_Form extends Predefined_Form
         $this->name = esc_html__('Contact form', 'kaliforms');
         $this->description = esc_html__('A simple form meant to help you comunicate with your site users.', 'kaliforms');
         $this->emails = [
-            ["fromName" => "{sitetitle}", "fromEmail" => "{admin_email}", "toEmail" => "{email}", "replyTo" => "", "ccEmail" => "", "bccEmail" => "", "emailSubject" => "Contact form confirmation", "emailAttachment" => "", "emailBody" => "<p>Hello {first-name},</p> <p>This is your confirmation email for the form submitted on <a href='{homeurl}'>{sitetitle}</a>.</p><p>Have a good day</p>", "index" => "0"],
+            ["fromName" => "{sitetitle}", "fromEmail" => "{admin_email}", "toEmail" => "{email}", "replyTo" => "", "ccEmail" => "", "bccEmail" => "", "emailSubject" => "Contact form confirmation", "emailAttachment" => "", "emailBody" => "<p>Hello {first-name},</p> <p>This is your confirmation email for the form submitted on <a href='{homeurl}'>{sitetitle}</a>.</p><p>Message:<br /> {message}</p><p>Have a good day</p>", "index" => "0"],
         ];
         $this->thank_you_message = ['key' => 'thankYouMessage', 'value' => '{first-name}, thank you for your submission!'];
         $this->grid = [

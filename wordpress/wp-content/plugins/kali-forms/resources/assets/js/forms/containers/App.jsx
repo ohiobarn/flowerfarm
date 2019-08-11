@@ -1,8 +1,6 @@
 import supressNotices from '@/forms/utils/notices';
 import AppBar from '@material-ui/core/AppBar';
 import IconButton from '@material-ui/core/IconButton';
-import InputAdornment from '@material-ui/core/InputAdornment';
-import InputBase from '@material-ui/core/InputBase';
 import Snackbar from '@material-ui/core/Snackbar';
 // import Loader from './../components/Loader';
 import { makeStyles } from '@material-ui/core/styles';
@@ -23,6 +21,7 @@ import FormBuilder from './FormBuilder';
 import FormSettings from './FormSettings';
 import LogoSvg from './../../../img/icon.svg';
 import TextField from '@material-ui/core/TextField';
+import { clear } from 'redux-localstorage-simple';
 
 const useStyles = makeStyles(theme => {
 	const backgroundColorDefault =
@@ -105,6 +104,11 @@ const App = (props) => {
 				break;
 			case 'add-new':
 				document.querySelector('.page-title-action').click();
+				break;
+			case 'back-to-wp':
+				// When user clicks to close the form, we dont need to remember where he left off so lets clear the storage
+				clear({ namespace: `form${KaliFormsObject.formId}` });
+				window.location.href = KaliFormsObject.exit_url
 				break;
 			default:
 				break;
@@ -203,7 +207,7 @@ const App = (props) => {
 							</Tooltip>
 							<Tooltip title={KaliFormsObject.translations.appBar.backToWp}>
 								<IconButton
-									onClick={() => window.location.href = KaliFormsObject.exit_url}
+									onClick={(e) => handleClick(e, 'back-to-wp')}
 									color="inherit"
 								>
 									<CloseIcon />

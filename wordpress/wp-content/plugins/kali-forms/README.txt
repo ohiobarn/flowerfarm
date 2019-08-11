@@ -1,10 +1,10 @@
-=== Kali Forms for WordPress ===
+=== WordPress Forms Made Easy - Kali Forms ===
 Contributors: kaliforms, silkalns
 Tags: contact form, contact form plugin, forms, form builder, custom form, contact button, custom contact form, form manager, form, forms builder, forms creator
 Requires at least: 4.6
 Tested up to: 5.2
 Requires PHP: 5.6
-Stable tag: 1.0.8
+Stable tag: 1.1.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -141,3 +141,10 @@ The easiest and recommended way to install is to click on 'Plugins' then 'Add Ne
 == Screenshots ==
 
 == Changelog ==
+1.1.0
+- Added an instalation hook to add a default contact form
+- Added a loading state for the app
+- Various bugs, fixes and QOL adjustments
+
+1.0.0
+- Release

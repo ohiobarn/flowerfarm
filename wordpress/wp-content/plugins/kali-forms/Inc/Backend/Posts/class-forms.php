@@ -243,7 +243,7 @@ class Forms
             case 'shortcode':
                 echo '<div class="kaliform-shortcode-formgroup">';
                 echo '<input readonly type="text" value=\'[kaliform id="' . absint($post_id) . '"]\' />';
-                echo '<button type="button"><span class="dashicons dashicons-admin-links"></span></button>';
+                echo '<button type="button"><span class="dashicons dashicons-clipboard"></span></button>';
                 echo '</div>';
                 break;
             default:

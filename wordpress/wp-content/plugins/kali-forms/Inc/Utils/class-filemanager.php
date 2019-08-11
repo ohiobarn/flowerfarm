@@ -25,7 +25,7 @@ trait FileManager
         if (empty($_FILES)) {
             $this->display_error(esc_html__('There are no files', 'kaliforms'));
         }
-    }
+	}
     /**
      * File upload
      *

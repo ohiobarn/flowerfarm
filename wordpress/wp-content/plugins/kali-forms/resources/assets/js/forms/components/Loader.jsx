@@ -29,7 +29,7 @@ const useStyles = makeStyles({
 		display: 'flex',
 		alignContent: 'center',
 		justifyContent: 'center',
-		zIndex:10000
+		zIndex: 10000
 	},
 });
 

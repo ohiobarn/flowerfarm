@@ -33,7 +33,7 @@ const FormEmails = (props) => {
 	}, [debouncedEmails])
 
 	useEffect(() => {
-		if( JSON.stringify(props.formEmails) !== JSON.stringify(emails) ){
+		if (JSON.stringify(props.formEmails) !== JSON.stringify(emails)) {
 			setEmails(props.formEmails);
 		}
 	}, [props.formEmails])

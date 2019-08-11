@@ -18,7 +18,6 @@ const mapDispatchToProps = (dispatch) => {
 	return bindActionCreators(StoreActions, dispatch);
 };
 
-
 const useStyles = makeStyles(theme => {
 	return {
 		container: {
@@ -120,6 +119,14 @@ const useStyles = makeStyles(theme => {
 			alignItems: 'center',
 			alignContent: 'center',
 			justifyContent: 'center'
+		},
+		code: {
+			whiteSpace: 'pre',
+			display: 'flex',
+			maxHeight: 70,
+			padding: theme.spacing(2),
+			marginRight: 60,
+			overflowY: 'scroll',
 		}
 	}
 });
@@ -308,6 +315,8 @@ const BuilderFormField = (props) => {
 				return (<span>{label} - {props.fieldComponents[props.index].properties.price}</span>)
 			case 'paypal':
 				return (<span className={classes.paypal}><img src={paypalLogo} /></span>)
+			case 'smartTextOutput':
+				return (<code className={classes.code}>{props.fieldComponents[props.index].properties.content}</code>)
 			default:
 				var label = setComputedLabelFunc();
 				var required = props.fieldComponents[props.index].properties.required;

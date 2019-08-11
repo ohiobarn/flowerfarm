@@ -98,6 +98,7 @@ class Emailer
      */
     public function prepare_placeholders()
     {
+		// @todo just like on thankyou message
         foreach ($this->data as $k => $v) {
             $this->placeholders['{' . $k . '}'] = is_array($v)
             ? implode($this->get('form', true, 'multiple_selections_separator', ''), $v)
@@ -160,7 +161,7 @@ class Emailer
         foreach ($email as $prop => $value) {
             $initialParse = is_string($value) ? strtr($value, $this->placeholders) : $value;
             $arr = [];
-            $previews = $this->getStringsBetween($initialParse, '{', '}');
+            $previews = $this->get_strings_between($initialParse, '{', '}');
             foreach ($previews as $preview) {
                 $arr[$preview] = $this->get_image_html($preview);
             }
@@ -263,7 +264,7 @@ class Emailer
      * @param boolean $with_from_to
      * @return void
      */
-    public function getStringsBetween($str, $start = '[', $end = ']', $with_from_to = true)
+    public function get_strings_between($str, $start = '[', $end = ']', $with_from_to = true)
     {
         $arr = [];
         $last_pos = 0;

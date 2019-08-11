@@ -8,12 +8,12 @@ if (!defined('ABSPATH')) {
 use KaliForms\Inc\Backend\Hooks;
 use KaliForms\Inc\Backend\Meta_Save;
 use KaliForms\Inc\Backend\Notifications;
-use KaliForms\Inc\Payments_Simple;
 use KaliForms\Inc\Backend\Posts\Forms;
 use KaliForms\Inc\Backend\Predefined_Forms;
 use KaliForms\Inc\Frontend\Form_Processor;
+use KaliForms\Inc\Payments_Simple;
 use KaliForms\Inc\Utils\TransientHelper;
-
+use KaliForms\Inc\Utils\First_Install;
 /**
  * Class KaliForms
  *
@@ -41,9 +41,13 @@ class KaliForms
      */
     public function __construct()
     {
-        add_action('plugins_loaded', [$this, 'init_kaliforms']);
+        register_activation_hook(KALIFORMS_PLUGIN_FILE, [$this, 'install']);
+		add_action('plugins_loaded', [$this, 'init_kaliforms']);
     }
 
+    /**
+     * Initiate kaliforms
+     */
     public function init_kaliforms()
     {
         /**
@@ -107,5 +111,13 @@ class KaliForms
         }
 
         return $inst;
+    }
+
+    /**
+     * Installation hook
+     */
+    public static function install()
+    {
+		$first_install = new First_Install();
     }
 }

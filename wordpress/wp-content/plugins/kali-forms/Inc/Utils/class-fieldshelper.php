@@ -45,9 +45,48 @@ trait FieldsHelper
             $value = sanitize_text_field(wp_unslash($_GET[$item['name']]));
         }
 
+        if (isset($item['smartOutput'])) {
+            // $placeholders = $this->get_strings_between($value, '{', '}');
+        }
+
         return $value;
     }
-
+    /**
+     * List dependencies for the smart field
+     */
+    public function get_smart_dependencies($value)
+    {
+        $sanitized = '';
+        $placeholders = $this->get_strings_between($value, '{', '}');
+        foreach ($placeholders as $placeholder) {
+            $item = str_replace('{', '', $placeholder);
+            $item = str_replace('}', '', $item);
+            $sanitized .= $item . ',';
+        }
+        $sanitized = rtrim($sanitized, ',');
+        return $sanitized;
+    }
+    /**
+     * Gets strings between delimiters
+     *
+     * @param [type] $str
+     * @param string $start
+     * @param string $end
+     * @param boolean $with_from_to
+     * @return void
+     */
+    public function get_strings_between($str, $start = '[', $end = ']', $with_from_to = true)
+    {
+        $arr = [];
+        $last_pos = 0;
+        $last_pos = strpos($str, $start, $last_pos);
+        while ($last_pos !== false) {
+            $t = strpos($str, $end, $last_pos);
+            $arr[] = ($with_from_to ? $start : '') . substr($str, $last_pos + 1, $t - $last_pos - 1) . ($with_from_to ? $end : '');
+            $last_pos = strpos($str, $start, $last_pos + 1);
+        }
+        return $arr;
+    }
     /**
      * Generates attributes string
      *
@@ -91,6 +130,11 @@ trait FieldsHelper
                 case 'minDateToday':
                 case 'multiple':
                     $string .= $value ? esc_attr($attribute) . ' ' : '';
+                    break;
+                case 'smartOutput':
+                    $string .= $value ? esc_attr($attribute) . ' ' : '';
+                    $defaultValue = $this->default_value($args, $args['default']);
+                    $string .= 'data-dependencies="' . $this->get_smart_dependencies($defaultValue) . '" ';
                     break;
                 case 'description':
                 case 'caption':

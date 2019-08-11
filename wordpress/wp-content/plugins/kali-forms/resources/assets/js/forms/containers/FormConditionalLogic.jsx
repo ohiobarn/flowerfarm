@@ -165,10 +165,10 @@ const FormConditionalLogic = (props) => {
 					>
 						<MenuItem value='show'>
 							{KaliFormsObject.translations.conditionalLogic.show}
-							</MenuItem>
+						</MenuItem>
 						<MenuItem value='hide'>
 							{KaliFormsObject.translations.conditionalLogic.hide}
-							</MenuItem>
+						</MenuItem>
 					</TextField>
 				</Grid>
 				<Grid item xs={2}>

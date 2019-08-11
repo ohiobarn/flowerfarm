@@ -1,7 +1,6 @@
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import React, { useState } from 'react';
-
 const { CodeEditor } = (typeof Kali !== 'undefined' && Kali.hasOwnProperty('components')) ? Kali.components : () => (<div>Hello world</div>);
 
 const FormCustomCss = (props) => {

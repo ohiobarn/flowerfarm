@@ -79,15 +79,15 @@ const AddableFormEmail = (props) => {
 			props.onChange(getCurrentState())
 		}
 	}, [
-		fromName,
-		fromEmail,
-		toEmail,
-		replyTo,
-		ccEmail,
-		bccEmail,
-		emailAttachment,
-		emailSubject,
-		emailBody,
+			fromName,
+			fromEmail,
+			toEmail,
+			replyTo,
+			ccEmail,
+			bccEmail,
+			emailAttachment,
+			emailSubject,
+			emailBody,
 		])
 
 	return (

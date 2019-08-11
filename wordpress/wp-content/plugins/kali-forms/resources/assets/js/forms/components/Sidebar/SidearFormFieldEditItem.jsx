@@ -168,7 +168,7 @@ class SidebarFormFieldEditItem extends React.Component {
 						value={this.state.value}
 						onChange={e => this.updateStore(e)}
 						multiline={true}
-						rows={2}
+						rows={6}
 						fullWidth={true}
 						error={this.state.error}
 						margin="normal"

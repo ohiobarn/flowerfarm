@@ -72,6 +72,7 @@ export default class FormProcessor {
 		if (typeof paypal !== 'undefined') {
 			this.handlePayPalPayment(paypal);
 		}
+
 		document.dispatchEvent(new CustomEvent('kaliFormProcessConstructed', { detail: this }))
 	}
 
@@ -135,9 +136,16 @@ export default class FormProcessor {
 					let prefix = field.getAttribute('data-fileprefix')
 					return prefix !== null ? `${prefix}${file.name}` : file.name;
 				},
+				/**
+				 * Callback when field is ready to use
+				 */
+				oninit: () => document.dispatchEvent(new CustomEvent('kaliFormUploadFieldInit', {
+					detail: { name: field.getAttribute('name'), instance: pond }
+				}))
 			}
 
 			pond.setOptions(options);
+
 		});
 	}
 
@@ -154,7 +162,7 @@ export default class FormProcessor {
 		if (typeof grecaptcha === 'undefined') {
 			return;
 		}
-		console.log('x');
+
 		this.grecaptcha = true;
 		grecaptcha.ready(() => {
 			grecaptchas.map(e => {
@@ -286,12 +294,13 @@ export default class FormProcessor {
 					arr[e.getAttribute('name')] = Array.from(selected).map(el => el.value);
 					break;
 				default:
-					if (e.getAttribute('name') !== 'null') {
+					if (e.getAttribute('name') !== null) {
 						arr[e.getAttribute('name')] = e.value
 					}
 					break;
 			}
 		})
+
 		return arr;
 	}
 	/**

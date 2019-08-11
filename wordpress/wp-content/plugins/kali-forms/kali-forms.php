@@ -1,10 +1,10 @@
 <?php
 /**
- * Plugin Name: Kali Forms
+ * Plugin Name: WordPress Forms Made Easy - Kali Forms
  * Plugin URI: https://www.kaliforms.com
  * Description: Kali Forms provides the best form creation experience for WordPress.
  * Author: Kali Forms
- * Version: 1.0.8
+ * Version: 1.1.1
  * Author URI: https://www.kaliforms.com/
  * License: GPLv3 or later
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -29,6 +29,7 @@
  */
 
 namespace KaliForms;
+
 use KaliForms\Inc\KaliForms;
 
 if (!defined('ABSPATH')) {

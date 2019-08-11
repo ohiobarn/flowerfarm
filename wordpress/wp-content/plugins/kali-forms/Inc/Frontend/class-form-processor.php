@@ -172,7 +172,39 @@ class Form_Processor
             : sanitize_text_field($v);
         }
 
+        $placeholders = $this->get_strings_between($this->get('thank_you_message', ''), '{', '}');
+        foreach ($placeholders as $placeholder) {
+            if (!isset($this->placeholdered_data[$placeholder])) {
+                $this->placeholdered_data[$placeholder . '}'] = $this->get_value_from_nested_placeholder($placeholder);
+            }
+        }
+
         return $data;
+    }
+    /**
+     * Get value from nested placeholder (in a "special way" lol)
+     */
+    public function get_value_from_nested_placeholder($placeholder)
+    {
+        // We remove first char because it's a '{'
+        $trimmed = substr($placeholder, 1);
+        $trimmedArray = explode(':', $trimmed);
+        $value = '';
+        $nestedValue = isset($this->placeholdered_data[$trimmedArray[1]]) ? $this->placeholdered_data[$trimmedArray[1]] : '';
+
+        switch ($trimmedArray[0]) {
+            case 'imagePreview':
+                $value = '<img src="' . esc_url(wp_get_attachment_url($nestedValue)) . '" />';
+                break;
+            case 'code':
+                $value = '<code>' . wp_kses_post($nestedValue) . '</code>';
+                break;
+            default:
+                $value = '';
+                break;
+        }
+
+        return $value;
     }
 
     /**
@@ -243,14 +275,7 @@ class Form_Processor
      */
     public function get_thank_you_message()
     {
-        $initialParse = strtr($this->get('thank_you_message', ''), $this->placeholdered_data);
-        $arr = [];
-        $previews = $this->getStringsBetween($initialParse, '{', '}');
-        foreach ($previews as $preview) {
-            $arr[$preview] = $this->get_image_html($preview);
-        }
-
-        return strtr($initialParse, $arr);
+        return strtr($this->get('thank_you_message', ''), $this->placeholdered_data);
     }
 
     /**
@@ -274,7 +299,7 @@ class Form_Processor
      * @param boolean $with_from_to
      * @return void
      */
-    public function getStringsBetween($str, $start = '[', $end = ']', $with_from_to = true)
+    public function get_strings_between($str, $start = '[', $end = ']', $with_from_to = true)
     {
         $arr = [];
         $last_pos = 0;
