@@ -3,8 +3,8 @@ REMOTE_WWW_ROOT := ./www
 REMOTE_USER := ohiobar1
 WP_URL := https://ohiobarnflowerfarm.com
 SNAPSHOT_FOLDER := $(shell echo "duplicator-work/flower-snapshot-`date +%Y%m%d`")
-DUMP_FOLDER := $(shell echo "~/db-dump")
-DUMP_NAME := $(shell echo "dump-`date +%Y%m%d`.sql")
+MIGRATE_FOLDER := $(shell echo "~/migrate-work")
+YYMMDD := $(shell echo "`date +%Y%m%d`")
 PROD_DB_NAME := ohiobar1_prod
 STAGING_DB_NAME := ohiobar1_staging
 
@@ -68,20 +68,24 @@ local-db-backup:
 	rm -rf data-backup/data
 	cp -R data data-backup
 
-dump-db:
-	ssh ${REMOTE_USER}@${REMOTE_HOST} "mysqldump ${PROD_DB_NAME} > ${DUMP_FOLDER}/${PROD_DB_NAME}-${DUMP_NAME}"
-	ssh ${REMOTE_USER}@${REMOTE_HOST} "mysqldump ${STAGING_DB_NAME} > ${DUMP_FOLDER}/${STAGING_DB_NAME}-${DUMP_NAME}"
-	ssh ${REMOTE_USER}@${REMOTE_HOST} "sed 's/ohiobarnflowerfarm.com\/staging/ohiobarnflowerfarm.com\/prod/g' ${DUMP_FOLDER}/${STAGING_DB_NAME}-${DUMP_NAME} > ${DUMP_FOLDER}/migrage-staging-to-prod-${DUMP_NAME}"
-	ssh ${REMOTE_USER}@${REMOTE_HOST} "sed 's/ohiobarnflowerfarm.com\/prod/ohiobarnflowerfarm.com\/staging/g' ${DUMP_FOLDER}/${PROD_DB_NAME}-${DUMP_NAME}    > ${DUMP_FOLDER}/migrage-prod-to-staging-${DUMP_NAME}"
+dump-sites:
+	ssh ${REMOTE_USER}@${REMOTE_HOST} "mkdir -p ${MIGRATE_FOLDER}/${YYMMDD}/staging"
+	ssh ${REMOTE_USER}@${REMOTE_HOST} "mkdir -p ${MIGRATE_FOLDER}/${YYMMDD}/prod"
+	ssh ${REMOTE_USER}@${REMOTE_HOST} "mysqldump ${PROD_DB_NAME} > ${MIGRATE_FOLDER}/${YYMMDD}/${PROD_DB_NAME}.sql"
+	ssh ${REMOTE_USER}@${REMOTE_HOST} "mysqldump ${STAGING_DB_NAME} > ${MIGRATE_FOLDER}/${YYMMDD}/${STAGING_DB_NAME}.sql"
+	ssh ${REMOTE_USER}@${REMOTE_HOST} "cp -R ~/www/staging/* ${MIGRATE_FOLDER}/${YYMMDD}/staging/"
+	ssh ${REMOTE_USER}@${REMOTE_HOST} "cp -R ~/www/prod/* ${MIGRATE_FOLDER}/${YYMMDD}/prod/"
+	ssh ${REMOTE_USER}@${REMOTE_HOST} "sed 's/ohiobarnflowerfarm.com\/staging/ohiobarnflowerfarm.com\/prod/g' ${MIGRATE_FOLDER}/${YYMMDD}/${STAGING_DB_NAME}.sql > ${MIGRATE_FOLDER}/${YYMMDD}/migrage-staging-to-prod.sql"
+	ssh ${REMOTE_USER}@${REMOTE_HOST} "sed 's/ohiobarnflowerfarm.com\/prod/ohiobarnflowerfarm.com\/staging/g' ${MIGRATE_FOLDER}/${YYMMDD}/${PROD_DB_NAME}.sql    > ${MIGRATE_FOLDER}/${YYMMDD}/migrage-prod-to-staging.sql"
 
 
-staging-to-prod-db:
-	ssh ${REMOTE_USER}@${REMOTE_HOST} "mysql -h localhost -D ${PROD_DB_NAME} < ${DUMP_FOLDER}/migrage-staging-to-prod-${DUMP_NAME}"
+staging-to-prod:
+	ssh ${REMOTE_USER}@${REMOTE_HOST} "mysql -h localhost -D ${PROD_DB_NAME} < ${MIGRATE_FOLDER}/${YYMMDD}/migrage-staging-to-prod.sql"
 	ssh ${REMOTE_USER}@${REMOTE_HOST} "cp -R ~/www/staging/* ~/www/prod/"
-	ssh ${REMOTE_USER}@${REMOTE_HOST} "sed -i 's/ohiobar1_staging/ohiobar1_prod/g' ~/www/staging/wp-config.php"
+	ssh ${REMOTE_USER}@${REMOTE_HOST} "sed -i 's/ohiobar1_staging/ohiobar1_prod/g' ~/www/prod/wp-config.php"
 
 prod-to-staging:
-	ssh ${REMOTE_USER}@${REMOTE_HOST} "mysql -h localhost -D ${STAGING_DB_NAME} < ${DUMP_FOLDER}/migrage-prod-to-staging-${DUMP_NAME}"
+	ssh ${REMOTE_USER}@${REMOTE_HOST} "mysql -h localhost -D ${STAGING_DB_NAME} < ${MIGRATE_FOLDER}/${YYMMDD}/migrage-prod-to-staging.sql"
 	ssh ${REMOTE_USER}@${REMOTE_HOST} "cp -R ~/www/prod/* ~/www/staging/"
 	ssh ${REMOTE_USER}@${REMOTE_HOST} "sed -i 's/ohiobar1_prod/ohiobar1_staging/g' ~/www/staging/wp-config.php"
 
