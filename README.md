@@ -26,24 +26,13 @@ scp -r duplicator/* ohiobar1@ftp.ohiobarnflowerfarm.com:./www
 
 [wordpress development workflow](https://www.technouz.com/4613/ultimate-wordpress-website-development-workflow/)
 
-## Bluehost db settings
 
-To discover db info `cat ~/www/wp-config.php`
+## Moving between Staging and Prod
 
-```php
-// ** MySQL settings ** //
-/** The name of the database for WordPress */
-define( 'DB_NAME', 'ohiobar1_afc' );
+* todo - document the make file
 
-/** MySQL database username */
-define( 'DB_USER', 'ohiobar1_afc' );
 
-/** MySQL database password */
-define( 'DB_PASSWORD', '<not shown>' );
-
-/** MySQL hostname */
-define( 'DB_HOST', 'localhost' );
-```
+## Moving between Staging and Prod (old)
 
 
 * Please create a new database and user for your staging website and update the details in wp-config file in your staging folder. 
@@ -63,3 +52,20 @@ password=<pwd>
 user=ohiobar1_dbuser
 password=<pwd>
 ```
+
+## Copy from Prod to Sandbox
+
+* Go to the duplicator page in prod `https://ohiobarnflowerfarm.com/prod/wp-admin/admin.php?page=duplicator`
+* Create a duplicator package
+  * db: ohiobar1_prod
+  * db user: ohiobar1_dbuser
+  * use `make dsp-db-info` for password
+* Take the defaults and then same in `duplicator-work/flower-snapshot-YYYYMMDD`
+* run `docker-compose up`
+* copy installer and package zip into web root
+  `cp duplicator-work/flower-snapshot-YYYYMMDD/* wordpress/`
+* run `docker-compose up`
+* open `http://localhost:8080/installer.php`
+
+
+

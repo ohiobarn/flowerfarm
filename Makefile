@@ -60,7 +60,7 @@ ssh-remote:
 
 dsp-db-info:
 	@echo "Prod:"
-	ssh ${REMOTE_USER}@${REMOTE_HOST} "cat ./www/wp-config.php | grep DB_"
+	ssh ${REMOTE_USER}@${REMOTE_HOST} "cat ./www/prod/wp-config.php | grep DB_"
 	@echo "Staging:"
 	ssh ${REMOTE_USER}@${REMOTE_HOST} "cat ./www/staging/wp-config.php | grep DB_"
 
