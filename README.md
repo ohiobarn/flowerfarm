@@ -63,9 +63,13 @@ password=<pwd>
 * Take the defaults and then same in `duplicator-work/flower-snapshot-YYYYMMDD`
 * run `docker-compose up`
 * copy installer and package zip into web root
-  `cp duplicator-work/flower-snapshot-YYYYMMDD/* wordpress/`
+
+  ```bash
+  cp duplicator-work/flower-snapshot-YYYYMMDD/* wordpress/
+  mv wordpress/wp-config.php wordpress/wp-config.php.back
+  ```
 * run `docker-compose up`
-* open `http://localhost:8080/installer.php`
+* open `http://localhost:8080/installer.php` and complete the wizard
 
 
 
