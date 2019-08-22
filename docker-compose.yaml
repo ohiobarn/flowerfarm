@@ -9,9 +9,9 @@ services:
       - 8080:80
     environment:
       WORDPRESS_DB_HOST: db
-      WORDPRESS_DB_USER: exampleuser
-      WORDPRESS_DB_PASSWORD: examplepass
-      WORDPRESS_DB_NAME: exampledb
+      WORDPRESS_DB_USER: devdbuser
+      WORDPRESS_DB_PASSWORD: devdbpass
+      WORDPRESS_DB_NAME: devdb
     volumes:
        - ./wordpress:/var/www/html
 
@@ -19,9 +19,9 @@ services:
     image: mysql:5.7
     restart: always
     environment:
-      MYSQL_DATABASE: exampledb
-      MYSQL_USER: exampleuser
-      MYSQL_PASSWORD: examplepass
+      MYSQL_DATABASE: devdb
+      MYSQL_USER: devdbuser
+      MYSQL_PASSWORD: devdbpass
       MYSQL_RANDOM_ROOT_PASSWORD: '1'
     volumes:
       - ./data:/var/lib/mysql

@@ -176,7 +176,7 @@ class Data extends JobExecutable {
      */
     protected function isTable( $table ) {
         if( $this->db->get_var( "SHOW TABLES LIKE '{$table}'" ) != $table ) {
-            $this->log( "Preparing Data: Table {$table} does not exist.", Logger::TYPE_ERROR );
+            $this->log( "Preparing Data: Table {$table} does not exist.", Logger::TYPE_INFO );
             return false;
         }
         return true;
@@ -411,7 +411,7 @@ define( 'DB_COLLATE', '" . DB_COLLATE . "' );\r\n";
         //}
         // All good
         if( $insert ) {
-            $this->log( "Preparing Data Step2: Successfull", Logger::TYPE_INFO );
+            $this->log( "Preparing Data Step2: Successful", Logger::TYPE_INFO );
             return true;
         }
 
@@ -450,7 +450,7 @@ define( 'DB_COLLATE', '" . DB_COLLATE . "' );\r\n";
             return true;
         }
 
-        $this->log( "Preparing Data Step3: Failed to update rewrite_rules in {$this->prefix}options {$this->db->last_error}", Logger::TYPE_ERROR );
+        //$this->log( "Preparing Data Step3: Failed to update rewrite_rules in {$this->prefix}options {$this->db->last_error}", Logger::TYPE_ERROR );
         return true;
     }
 
@@ -614,6 +614,7 @@ define( 'DB_COLLATE', '" . DB_COLLATE . "' );\r\n";
 
         // Skip - Table does not exist
         if( false === $this->isTable( $this->prefix . 'options' ) ) {
+            $this->log( "Preparing Data Step8: Skipping" );
             return true;
         }
 
@@ -900,21 +901,24 @@ define( 'DB_COLLATE', '" . DB_COLLATE . "' );\r\n";
             return true;
         }
 
-        $error = isset( $this->db->last_error ) ? 'Last error: ' . $this->db->last_error : '';
+        $error = !empty( $this->db->last_error ) ? 'Last error: ' . $this->db->last_error : '';
 
-        $this->log( "Preparing Data Step13: Updating upload_path in {$this->prefix}options. {$error}" );
-
+//        $updateOptions = $this->db->query(
+//                $this->db->prepare(
+//                        "UPDATE {$this->prefix}options SET option_value = %s WHERE option_name = 'upload_path'", $newUploadPath
+//                )
+//        );
         $updateOptions = $this->db->query(
                 $this->db->prepare(
-                        "UPDATE {$this->prefix}options SET option_value = %s WHERE option_name = 'upload_path'", $newUploadPath
+                        "UPDATE {$this->prefix}options SET option_value = %s WHERE option_name = 'upload_path'", ""
                 )
         );
 
         if( false === $updateOptions ) {
-            $this->log( "Preparing Data Step13: Failed to update upload_path in {$this->prefix}options. {$error}", Logger::TYPE_ERROR );
+            $this->log( "Preparing Data Step13: Did not update upload_path in {$this->prefix}options. {$error}", Logger::TYPE_INFO );
             return true;
         }
-        $this->Log( "Preparing Data Step 13: Finished successfully" );
+        $this->Log( "Preparing Data Step13: Finished successfully" );
         return true;
     }
 
@@ -1043,34 +1047,81 @@ define( 'DB_COLLATE', '" . DB_COLLATE . "' );\r\n";
      * Remove UPLOADS constant in wp-config.php to reset default image folder
      * @return bool
      */
+//    protected function step17() {
+//        $path = $this->options->destinationDir . "wp-config.php";
+//
+//        $this->log( "Preparing Data Step17: Remove UPLOADS in wp-config.php" );
+//
+//        if( false === ($content = file_get_contents( $path )) ) {
+//            $this->log( "Preparing Data Step17: Failed to get UPLOADS in wp-config.php. Can't read wp-config.php", Logger::TYPE_ERROR );
+//            return false;
+//        }
+//
+//
+//        // Get UPLOADS from wp-config.php
+//        preg_match( "/define\s*\(\s*['\"]UPLOADS['\"]\s*,\s*(.*)\s*\);/", $content, $matches );
+//
+//        if( !empty( $matches[0] ) ) {
+//
+//            $pattern = "/define\s*\(\s*'UPLOADS'\s*,\s*(.*)\s*\);/";
+//
+//            $replace = "";
+//
+//            if( null === ($content = preg_replace( array($pattern), $replace, $content )) ) {
+//                $this->log( "Preparing Data: Failed to change UPLOADS", Logger::TYPE_ERROR );
+//                return false;
+//            }
+//        } else {
+//            $this->log( "Preparing Data Step17: UPLOADS not defined in wp-config.php. Skipping this step." );
+//        }
+//
+//        if( false === @file_put_contents( $path, $content ) ) {
+//            $this->log( "Preparing Data Step17: Failed to update UPLOADS. Can't save contents", Logger::TYPE_ERROR );
+//            return false;
+//        }
+//        $this->Log( "Preparing Data Step17: Finished successfully" );
+//        return true;
+//    }
+
+    /**
+     * Add UPLOADS constant in wp-config.php or change it to correct destination. 
+     * This is important when a custom uploads folder is used
+     * @return bool
+     */
     protected function step17() {
-        $path = $this->options->destinationDir . "wp-config.php";
-
-        $this->log( "Preparing Data Step17: Remove UPLOADS in wp-config.php" );
-
+        $path    = $this->options->destinationDir . "wp-config.php";
+        $this->log( "Preparing Data Step17: Update UPLOADS constant in wp-config.php" );
         if( false === ($content = file_get_contents( $path )) ) {
             $this->log( "Preparing Data Step17: Failed to get UPLOADS in wp-config.php. Can't read wp-config.php", Logger::TYPE_ERROR );
             return false;
         }
-
-
-        // Get UPLOADS from wp-config.php
+        // Get UPLOADS from wp-config.php if there is already one
         preg_match( "/define\s*\(\s*['\"]UPLOADS['\"]\s*,\s*(.*)\s*\);/", $content, $matches );
-
+        $uploadFolder = wpstg_get_rel_upload_dir();
         if( !empty( $matches[0] ) ) {
-
             $pattern = "/define\s*\(\s*'UPLOADS'\s*,\s*(.*)\s*\);/";
-
-            $replace = "";
-
+            $replace = "define('UPLOADS', '" . $uploadFolder . "');";
             if( null === ($content = preg_replace( array($pattern), $replace, $content )) ) {
-                $this->log( "Preparing Data: Failed to change UPLOADS", Logger::TYPE_ERROR );
+                $this->log( "Preparing Data Step17: Failed to change UPLOADS", Logger::TYPE_ERROR );
                 return false;
             }
         } else {
-            $this->log( "Preparing Data Step17: UPLOADS not defined in wp-config.php. Skipping this step." );
+            $this->log( "Preparing Data Step17: UPLOADS not defined in wp-config.php. Creating new entry." );
+            // Find line with ABSPATH and add UPLOADS constant above
+            preg_match( "/if\s*\(\s*\s*!\s*defined\s*\(\s*['\"]ABSPATH['\"]\s*(.*)\s*\)\s*\)/", $content, $matches );
+            if( !empty( $matches[0] ) ) {
+                $matches[0];
+                $pattern = "/if\s*\(\s*\s*!\s*defined\s*\(\s*['\"]ABSPATH['\"]\s*(.*)\s*\)\s*\)/";
+                $replace = "define('UPLOADS', '" . $uploadFolder . "'); \n" .
+                        "if ( ! defined( 'ABSPATH' ) )";
+                if( null === ($content = preg_replace( array($pattern), $replace, $content )) ) {
+                    $this->log( "Preparing Data Step 17: Failed to change UPLOADS", Logger::TYPE_ERROR );
+                    return false;
+                }
+            } else {
+                $this->log( "Preparing Data Step 17: Can not add UPLOAD constant to wp-config.php. Can not find free position to add it.", Logger::TYPE_ERROR );
+            }
         }
-
         if( false === @file_put_contents( $path, $content ) ) {
             $this->log( "Preparing Data Step17: Failed to update UPLOADS. Can't save contents", Logger::TYPE_ERROR );
             return false;
