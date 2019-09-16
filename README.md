@@ -1,19 +1,51 @@
 # flowerfarm
 
-The Ohio Barn Flower Farm
+The Ohio Barn Flower Farm, TOC:
 
-## Sandbox Setup
+[Docs](#Docs)
+
+[Wordpress](#Wordpress)
+
+---
+
+## Docs
+
+This repo uses [mkdocs](https://www.mkdocs.org/) ([help](https://mkdocs.readthedocs.io/en/0.10/)) and [github pages](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/) to host content at:
+
+https://tonygilkerson.github.io/flowerfarm/
+
+### Develop
+
+```bash
+cd OpsDoc
+mkdocs serve
+# Edit content and review changes here:
+open http://127.0.0.1:8000/
+```
+
+### Publish
+
+```bash
+cd OpsDoc
+mkdocs build --clean
+mkdocs gh-deploy
+open https://tonygilkerson.github.io/OpsDoc/
+```
+
+## Wordpress
+
+### Sandbox Setup
 
 * Download from https://wordpress.org/download/
 
-## Development
+### Development
 
 ```bash
 docker-compose up
 open http://localhost:8080/
 ```
 
-## Publish to Bluehost
+### Publish to Bluehost
 
 ```bash
 ssh ohiobar1@ftp.ohiobarnflowerfarm.com 
@@ -22,17 +54,15 @@ cd wordpress
 scp -r duplicator/* ohiobar1@ftp.ohiobarnflowerfarm.com:./www
 ```
 
-## Reference
+### Reference
 
 [wordpress development workflow](https://www.technouz.com/4613/ultimate-wordpress-website-development-workflow/)
 
-
-## Moving between Staging and Prod
+### Moving between Staging and Prod
 
 * todo - document the make file
 
-
-## Moving between Staging and Prod (old)
+### Moving between Staging and Prod (old)
 
 
 * Please create a new database and user for your staging website and update the details in wp-config file in your staging folder. 
@@ -53,7 +83,7 @@ user=ohiobar1_dbuser
 password=<pwd>
 ```
 
-## Copy from Prod to Sandbox
+### Copy from Prod to Sandbox
 
 * Go to the duplicator page in prod `https://ohiobarnflowerfarm.com/prod/wp-admin/admin.php?page=duplicator`
 * Create a duplicator package

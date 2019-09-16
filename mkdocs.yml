@@ -1,0 +1,9 @@
+site_name: Ohio Barn Flower Farm
+site_author: Tony Gilkerson
+nav:
+  - Home: index.md
+  - Spring 2020:
+    - Plan: spring2020/plan.md
+  - About: about.md
+
+#theme: readthedocs
