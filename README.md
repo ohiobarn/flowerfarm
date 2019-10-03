@@ -29,7 +29,7 @@ open http://127.0.0.1:8000/
 cd OpsDoc
 mkdocs build --clean
 mkdocs gh-deploy
-open https://tonygilkerson.github.io/OpsDoc/
+open https://tonygilkerson.github.io/flowerfarm/
 ```
 
 ## Wordpress

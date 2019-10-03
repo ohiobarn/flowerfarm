@@ -16,12 +16,20 @@ STAGING_DB_NAME := ohiobar1_staging
 define install_instructions
 	@echo "\n\n"
 	@echo "******************************************************************************"
-	@echo "Workflow:"
+	@echo "Wordpress Workflow:"
 	@echo "******************************************************************************"
 	@echo ""
 	@echo " 1 - Run 'make dev' and do web development"
 	@echo " 2 - Run 'make publish' to publish your change"
 	@echo ""
+	@echo "******************************************************************************"
+	@echo "mkdocs Workflow:"
+	@echo "******************************************************************************"
+	@echo ""
+	@echo " 1 - mkdocs serve"
+	@echo " 2 - mkdocs build --clean"
+	@echo " 3 - mkdocs gh-deploy"
+	@echo ""	
 	@echo "\n"
 endef
 
