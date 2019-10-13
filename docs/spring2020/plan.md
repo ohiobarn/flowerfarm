@@ -2,31 +2,28 @@
 
 ## Flower Field Layout
 
-Here is an overview of the field.
-
 ![flower-field](img/field-layout.png)
 
-* Each row is 4 feet by 100 feet
-* There is 6ft between each row. This leaves room for driving equipment up and down the row, i.e. the gator
-* Each row has three drip tape irrigation lines
-* Two irrigation zones, each zone has 15 drip tape lines to cover 5 rows each zone
+* Each bed is 4 feet by 100 feet
+* 10 beds total (5 beds in each irrigation zone)
+* 2 feet between each bed with 6 feet between each zone 
+  * Landscape fabric is 6 feet wide. This is enough to cover the beds and overlap in between to allow ~2 feet for a walking path
+* 3 drip tape irrigation lines per bed
+* 2 irrigation zones, each zone has 15 drip tape lines
 
-Doing the math, each bed is 48 inches (4 feet) wide and 1200 inches (100 feet) long, as shown above, and by planting with 9-inch square spacing, I can fit 65 plants in each bed:
+## Plant Spacing
 
-* **width**: 48in / 9in spacing = 5.3 plants; rounds down to 5 plants
-* **length**: 1200in / 9in spacing = 133.3 plants; rounds down to 133 plants 
-* **bed**: 5 plants X 133 plants = 665 plants per row
+To compute the number of plants per bed; each bed is 48 inches (4 feet) wide and 1,200 inches (100 feet) long, as shown above, and by planting with 9-inch spacing, I can fit ~665 plants in each bed:
 
->665 plants per row
+* **Plants per width**: 48in / 9in spacing = 5.3 plants; rounds down to 5 plants
+* **Plants per length**: 1200in / 9in spacing = 133.3 plants; rounds down to 133 plants 
+* **Plants per bed**: 5 plants X 133 plants = 665 plants per bed
 
-![flower-field](img/plant-spacing.png)
+>665 plants per bed, that's 6,650 plants for the entire field
 
+![](img/plant-spacing.png)
 
 ## Irrigation
-
-Reference for this section:
-
-* [dripworks planning guide](https://www.dripworks.com/resources/drip-planning-guide)
 
 ### Flow
 
@@ -41,9 +38,7 @@ I did a flow test with the spigot out in the field.  It took about 55 seconds to
 
 ```
 
-> flow test: 55 seconds per 5 gallons
->
-> that works out to **327 GPH**
+> Flow Capacity:  **327 GPH**
 
 ### Soil Type
 
@@ -63,12 +58,29 @@ According to the description Drip Tape sounds best for my situation:
 
 >**Drip Tape** is best for long, straight row crops. It is the most economical way to water your plants and is easy to install and maintain.
 
-To start I am going to buy a kit. There seem to be two kits that could do the job:
+To start I am going to buy a kit. There seems to be two kits that could do the job:
 
 * [drip tape row crop medium](https://www.dripworks.com/drip-tape-row-crop-kit-medium)
 * [drip tape row crop large](https://www.dripworks.com/drip-tape-row-crop-kit-large)
 
-If I only use two strips of drip tape per row then I could get the medium kit.  However, the medium kit leaves no room for error and I feel like I am my 9in spacing for the plants is denser than normal so I better go with at least three strips of drip tape per row.  Given that I will get the large kit with an extra timer so I can automate two zones. 
+If I only use two strips of drip tape per row then I could get the medium kit.  However, the medium kit leaves no room for error and I feel like 9 inch spacing for the plants is denser than normal so I better go with at least three strips of drip tape per row.  Given that I will get the large kit with an extra timer so I can automate two zones.
+
+In [this blog post](https://www.floretflowers.com/soil-preparation/) Floret says they use four strips of drip tape per four foot bed but they have sandy soil and even say that you could get by with two or three strips if you don't have sandy soil, so that validates my choice.  
+
 
 > I will be going with the [drip tape row crop large kit](https://www.dripworks.com/drip-tape-row-crop-kit-large)
+
+### Zones
+
+The drip tape that comes with the [large kit](https://www.dripworks.com/drip-tape-row-crop-kit-large) uses [drip tape part# TA1508L](https://www.dripworks.com/aqua-traxx-15-mil-drip-tape-rolls) which is rated at **Flow per 100 feet is 20 GPH**. So that is 20 GPH for each strip of drip tape.  I need 30 strips total for the field which would require feet beds which would require 600 GPH (20 GPH X 30 strips), but my system can only generate 327 GPH. Therefore, if I split my field into two zone, 5 beds requiring 15 strips each then each zone will only need 300 GPH (20 GPH X 15 strips) which is less than 327 GPH, so we are good.
+
+> two zones, each requiring 300 GPH (20 GPH X 15 strips)
+ 
+
+Reference for this section:
+
+* [dripworks planning guide](https://www.dripworks.com/resources/drip-planning-guide)
+* [growing with landscape fabric](https://www.floretflowers.com/growing-with-landscape-fabric/)
+
+
 
