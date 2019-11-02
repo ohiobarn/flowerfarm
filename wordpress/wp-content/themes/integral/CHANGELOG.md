@@ -1,3 +1,19 @@
+### 1.4.5.2 - Oct 7th, 2019
+
+Changes:
+
+- Edited styles for content lists in style.css
+
+
+### 1.4.5.1 - Sept 14th, 2019
+
+Changes:
+
+- Edited theme description
+- Removed irrelevant code comments
+- Tested with WordPress 5.2.3
+
+
 ### 1.4.5 - July 3rd, 2019
 
 Changes:

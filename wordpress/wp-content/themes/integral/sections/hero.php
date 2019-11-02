@@ -41,4 +41,4 @@
 		</div>
 	</div>
 </div>
-</section><!--hero-->
+</section>

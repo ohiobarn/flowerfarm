@@ -147,6 +147,15 @@ body {
     opacity: .4;
 }
 
+.react-grid-item>.react-resizable-handle::after {
+    right: 4px;
+    bottom: 4px;
+    width: 10px;
+    height: 11px;
+    border-right: 3px solid rgba(0, 0, 0, 0.4);
+    border-bottom: 3px solid rgba(0, 0, 0, 0.4);
+}
+
 .postbox {
     padding: 0;
     margin-bottom: 0;
@@ -317,8 +326,8 @@ html.wp-toolbar {
 
     .kaliforms-skeleton-sidebar {
         flex-grow: 0;
-        max-width: 25%;
-        flex-basis: 25%;
+        max-width: 33%;
+        flex-basis: 33%;
         background: #fafafa;
         margin-right: 30px;
         display: flex;
@@ -350,8 +359,8 @@ html.wp-toolbar {
 
     .kaliforms-skeleton-container {
         flex-grow: 0;
-        max-width: 75%;
-        flex-basis: 75%;
+        max-width: 67%;
+        flex-basis: 67%;
     }
 }
 

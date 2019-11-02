@@ -49,5 +49,5 @@
 			</div>
         </div>
 	</div>
-</section><!--blog-->
+</section>
 <?php } ?>

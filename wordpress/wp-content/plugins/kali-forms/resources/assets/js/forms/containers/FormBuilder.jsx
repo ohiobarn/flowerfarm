@@ -34,10 +34,10 @@ const FormBuilder = (props) => {
 					</Grid>
 				</If>
 				<If condition={!props.templateSelecting}>
-					<Grid item md={3} id="kali-sidebar">
+					<Grid item md={4} id="kali-sidebar">
 						<Sidebar />
 					</Grid>
-					<Grid item md={9} id="kali-responsive-grid-layout">
+					<Grid item md={8} id="kali-responsive-grid-layout">
 						<BuilderFieldDropZone />
 					</Grid>
 				</If>

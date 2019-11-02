@@ -11,6 +11,8 @@
 * 3 drip tape irrigation lines per bed
 * 2 irrigation zones, each zone has 15 drip tape lines
 
+---
+
 ## Plant Spacing
 
 To compute the number of plants per bed; each bed is 48 inches (4 feet) wide and 1,200 inches (100 feet) long, as shown above, and by planting with 9-inch spacing, I can fit ~665 plants in each bed:
@@ -23,7 +25,9 @@ To compute the number of plants per bed; each bed is 48 inches (4 feet) wide and
 
 ![](img/plant-spacing.png)
 
-## Irrigation
+---
+
+## Irrigation Setup
 
 ### Flow
 
@@ -75,12 +79,21 @@ In [this blog post](https://www.floretflowers.com/soil-preparation/) Floret says
 The drip tape that comes with the [large kit](https://www.dripworks.com/drip-tape-row-crop-kit-large) uses [drip tape part# TA1508L](https://www.dripworks.com/aqua-traxx-15-mil-drip-tape-rolls) which is rated at **Flow per 100 feet is 20 GPH**. So that is 20 GPH for each strip of drip tape. I need 30 strips total for the field which would require 600 GPH (20 GPH X 30 strips), but my system can only generate 327 GPH. Therefore, if I split my field into two zone, 5 beds requiring 15 strips each, then each zone will only need 300 GPH (20 GPH X 15 strips) which is less than 327 GPH, so we are good.
 
 > two zones, each requiring 300 GPH (20 GPH X 15 strips)
- 
 
-Reference for this section:
+---
+
+## Germination Station
+
+
+---
+
+## Resources
+
+
+### Irrigation
 
 * [dripworks planning guide](https://www.dripworks.com/resources/drip-planning-guide)
 * [growing with landscape fabric](https://www.floretflowers.com/growing-with-landscape-fabric/)
 
-
+### Germination
 

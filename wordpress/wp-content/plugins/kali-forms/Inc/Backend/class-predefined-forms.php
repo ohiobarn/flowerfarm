@@ -99,6 +99,14 @@ class Predefined_Forms
             'instance' => $full ? $employeeInformation : null,
         ];
 
+		$this->forms['gdpr-contact'] = [
+            'name' => esc_html__('GDPR-Friendly contact form', 'kaliforms'),
+            'description' => esc_html__('A simple gdpr-friendly form meant to help you comunicate with your site users.', 'kaliforms'),
+            'class' => 'PredefinedForms\GDPR_Friendly_Contact_Form',
+            'pro' => true,
+            'instance' => $full && class_exists('KaliForms\Inc\Backend\PredefinedForms\GDPR_Friendly_Contact_Form') ? new PredefinedForms\GDPR_Friendly_Contact_Form() : null,
+        ];
+
         $this->forms['appointment'] = [
             'name' => esc_html__('Appointment form', 'kaliforms'),
             'description' => esc_html__('Use this as a starting point in building an appointment service on your site.', 'kaliforms'),

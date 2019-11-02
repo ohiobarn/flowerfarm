@@ -238,6 +238,10 @@ class OMAPI_Output {
 		add_action( 'pre_get_posts', array( $this, 'load_optinmonster_inline' ), 9999 );
 		add_action( 'wp_footer', array( $this, 'load_optinmonster' ) );
 
+		if ( ! empty( $_GET['om-live-preview'] ) || ! empty( $_GET['om-verify-site'] ) ) {
+			add_action( 'wp_footer', array( $this, 'load_global_optinmonster') );
+		}
+
 	}
 
 	/**
@@ -367,6 +371,28 @@ class OMAPI_Output {
 			}
 		}
 
+	}
+
+	/**
+	 * Loads the global OM code on this page.
+	 *
+	 * @since 1.8.0
+	 */
+	public function load_global_optinmonster() {
+		$option = $this->base->get_option();
+
+		// If we don't have the data we need, return early.
+		if ( empty( $option['userId'] ) || empty( $option['accountId'] ) ) {
+			return;
+		}
+
+		printf(
+			'<script type="text/javascript" src="%s" data-account="%s" data-user="%s" %s async></script>',
+			esc_url_raw( OPTINMONSTER_APIJS_URL ),
+			esc_attr( $option['accountId'] ),
+			esc_attr( $option['userId'] ),
+			defined( 'OPTINMONSTER_ENV' ) ? 'data-env="' . OPTINMONSTER_ENV . '"' : ''
+		);
 	}
 
 	/**

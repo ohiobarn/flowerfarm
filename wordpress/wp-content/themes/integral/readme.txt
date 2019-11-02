@@ -3,8 +3,8 @@
 Contributors: Ishmael Desjarlais @ Themely.com
 Tags: one-column, two-columns, featured-images, custom-menu, custom-logo, featured-image-header, right-sidebar, full-width-template, theme-options, custom-colors, custom-background, translation-ready, rtl-language-support, threaded-comments, portfolio, photography, blog, custom-header, sticky-post, e-commerce, education, entertainment
 Requires at least: 3.8
-Tested up to: 5.1.1
-Stable tag: 5.1.1
+Tested up to: 5.2.3
+Stable tag: 5.2.3
 Requires PHP: 5.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -154,6 +154,22 @@ Fonts - Montserrat, Open Sans and Cabin by Google Fonts
 
 
 == Changelog ==
+
+### 1.4.5.2 - Oct 7th, 2019
+
+Changes:
+
+- Edited styles for content lists in style.css
+
+
+### 1.4.5.1 - Sept 14th, 2019
+
+Changes:
+
+- Edited theme description
+- Removed irrelevant code comments
+- Tested with WordPress 5.2.3
+
 
 ### 1.4.5 - July 3rd, 2019
 

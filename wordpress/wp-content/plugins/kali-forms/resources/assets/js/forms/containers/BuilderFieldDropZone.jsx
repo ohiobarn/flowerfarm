@@ -22,6 +22,7 @@ const mapStateToProps = state => {
 		formFieldEditor: state.FormFieldEditor,
 		templateSelecting: state.TemplateSelecting,
 		sidebar: state.Sidebar,
+		conditionalLogic: state.ConditionalLogic,
 		grid: state.Grid,
 	};
 };
@@ -38,12 +39,13 @@ const useStyles = makeStyles(theme => {
 			alignItems: 'center',
 			justifyContent: 'center',
 			borderRadius: theme.shape.borderRadius,
-			// border: '1px solid #fff',
+			border: '1px solid transparent',
 			// boxShadow: theme.shadows[2],
 			background: theme.palette.background.paper,
 			'&:hover': {
 				// borderColor: '#eee',
 				background: '#fafafa',
+				borderColor: theme.palette.primary.main,
 				transition: 'all .25 ease-in-out'
 			},
 			'&:hover > div:last-of-type': {
@@ -196,13 +198,14 @@ const BuilderFieldDropZone = (props) => {
 	const tryToDetermineWidth = () => {
 		let totalWidth = document.querySelector('#kali-appbar');
 		if (totalWidth === null) {
-			return 1240;
+			return 1263;
 		}
 		let subtractor = document.querySelector('#kali-sidebar');
 		if (subtractor === null) {
-			return 1240;
+			return 1263;
 		}
 		if (subtractor.offsetWidth === 0) {
+			return 1263
 			subtractor = document.querySelector('#kali-sidebar-settings');
 		}
 
@@ -249,6 +252,31 @@ const BuilderFieldDropZone = (props) => {
 		props.setFormFieldInEditor(idx);
 	}
 
+	const getItemStyle = (item, idx) => {
+		if (props.sidebar.activeTab !== 'fieldProperties') {
+			return {};
+		}
+
+		let currentActiveFormField = props.formFieldEditor.activeFormField;
+		let style = {};
+		if (currentActiveFormField === idx) {
+			style = { ...style, ...{ borderColor: props.theme.palette.primary.light, backgroundColor: '#fafafa' } };
+		}
+
+		if (typeof KaliFormsObject.conditionalLogic === 'undefined') {
+			return style;
+		}
+
+		props.conditionalLogic.map(condition => {
+			if (condition.field === item.internalId
+				&& props.fieldComponents[currentActiveFormField].internalId === condition.conditioner) {
+				style = { ...style, ...{ backgroundColor: 'rgba(162, 162, 250, .15)' } }
+			}
+		})
+
+		return style;
+	}
+
 	return (
 		<div id="kali-responsive-grid-layout" style={{ paddingTop: 10, minHeight: 380, position: 'relative' }}>
 			{<If condition={layoutBuilder.length === 0}>
@@ -265,12 +293,7 @@ const BuilderFieldDropZone = (props) => {
 					onLayoutChange={(layout) => _.debounce(props.setGrid(layout), 300)}>
 					{
 						layoutBuilder.map((item, idx) => {
-							let style = (props.formFieldEditor.activeFormField === idx && props.sidebar.activeTab === 'fieldProperties')
-								? {
-									borderColor: props.theme.palette.primary.light,
-								}
-								: {};
-
+							let style = getItemStyle(item, idx);
 							return (
 								<div key={item.internalId} data-grid={item.grid} style={style} className={classes.gridItem}>
 									<BuilderFormField

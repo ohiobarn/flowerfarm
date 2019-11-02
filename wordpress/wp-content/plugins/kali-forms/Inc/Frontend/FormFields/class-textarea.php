@@ -28,8 +28,8 @@ class TextArea extends Form_Field
     public function render($item, $form_info)
     {
         $attributes = $this->generate_attribute_string($item);
-
-        $div = '<div class="col-12 col-md-' . absint($item['col']) . '">';
+		$offset = isset($item['offset']) && $item['offset'] > 0 ? 'offset-md-' . absint($item['offset']) : '';
+        $div = '<div class="col-12 col-md-' . absint($item['col']) . ' ' . $offset . '">';
         $div .= $this->generate_label($item, $form_info);
         $div .= '<textarea ' . $attributes . '>' . esc_html($item['default']) . '</textarea>';
         $div .= !empty($item['description']) ? '<small>' . esc_html($item['description']) . '</small>' : '';

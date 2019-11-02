@@ -139,7 +139,7 @@ class Emailer
      */
     public function send()
     {
-        $emails = json_decode($this->get('form', true, 'emails', '[]'));
+		$emails = json_decode($this->get('form', true, 'emails', '[]'));
         $sent = [];
         foreach ($emails as $email) {
             $sent[] = $this->_send($email);

@@ -3,8 +3,8 @@ Theme Name: Integral
 Theme URI: https://www.themely.com/themes/integral/
 Author: Themely
 Author URI: https://www.themely.com/
-Description: Build a professional website with Integral one-page business theme. Its strength lies in displaying content on a single page in a simple and elegant manner. It's super easy to customize and allows you to create a stunning website in minutes. It boasts a rich color scheme with light and dark sections and a clean, minimal, modern design with smooth parallax effect. Integral is built with Bootstrap, is responsive and integrates with popular plugins like Contact Form 7, Woocommerce. Integral is now compatible with Elementor & Beaver Builder page-builders. Perfect for professionals, agencies, small business, corporate business, startup, freelancer, development company, personal, portfolio, blog, real estate, lawyer, travel and photography websites.
-Version: 1.4.5
+Description: Build a professional website for your business with Integral one-page theme. Its strength lies in displaying content on a single page in a simple and elegant manner. It's super easy to customize and allows you to create a stunning website in minutes. It boasts a rich color scheme with light and dark sections and a clean, minimal, modern design with smooth parallax effect. Integral is built with Bootstrap, is responsive and integrates with popular plugins like Contact Form 7, Woocommerce. Integral is now compatible with Elementor & Beaver Builder page-builders. Perfect for professionals, agencies, small business, corporate business, startup, freelancer, development company, personal, portfolio, blog, real estate, lawyer, travel and photography websites.
+Version: 1.4.5.2
 Tags: one-column, two-columns, featured-images, custom-menu, custom-logo, featured-image-header, right-sidebar, full-width-template, theme-options, custom-colors, custom-background, translation-ready, rtl-language-support, threaded-comments, portfolio, photography, blog, custom-header
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -1124,8 +1124,6 @@ ul.dropdown-menu li:focus > ul.dropdown-menu {
 .content .pagemeta li i {
     margin-right: 5px;
 }
-.content ul,
-.content li,
 .content blockquote {
     font-size: 1.143rem;
     line-height: 24px;

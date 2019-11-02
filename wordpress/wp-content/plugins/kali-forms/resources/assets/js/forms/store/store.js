@@ -24,6 +24,10 @@ const initialState = {
 		fieldComponents: KaliFormsObject.formFields,
 	},
 	/**
+	 * Conditional logic
+	 */
+	ConditionalLogic: typeof KaliFormsObject.conditionalLogic !== 'undefiend' ? KaliFormsObject.conditionalLogic : [],
+	/**
 	 * Form Emails
 	 */
 	FormEmails: KaliFormsObject.formEmails,

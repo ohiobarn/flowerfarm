@@ -1,3 +1,64 @@
+.react-grid-layout {
+  position: relative;
+  -webkit-transition: height 200ms ease;
+  transition: height 200ms ease;
+}
+.react-grid-item {
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  -webkit-transition-property: left, top;
+  transition-property: left, top;
+}
+.react-grid-item.cssTransforms {
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+}
+.react-grid-item.resizing {
+  z-index: 1;
+  will-change: width, height;
+}
+
+.react-grid-item.react-draggable-dragging {
+  -webkit-transition: none;
+  transition: none;
+  z-index: 3;
+  will-change: transform;
+}
+
+.react-grid-item.react-grid-placeholder {
+  background: red;
+  opacity: 0.2;
+  -webkit-transition-duration: 100ms;
+          transition-duration: 100ms;
+  z-index: 2;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.react-grid-item > .react-resizable-handle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  bottom: 0;
+  right: 0;
+  cursor: se-resize;
+}
+
+.react-grid-item > .react-resizable-handle::after {
+  content: "";
+  position: absolute;
+  right: 3px;
+  bottom: 3px;
+  width: 5px;
+  height: 5px;
+  border-right: 2px solid rgba(0, 0, 0, 0.4);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+}
 .kaliforms-wrapper input[type=color],
 .kaliforms-wrapper input[type=datetime-local],
 .kaliforms-wrapper input[type=datetime],
@@ -106,6 +167,14 @@ body {
 .react-grid-item.react-grid-placeholder {
   background: #f3f3f3;
   opacity: .4; }
+
+.react-grid-item > .react-resizable-handle::after {
+  right: 4px;
+  bottom: 4px;
+  width: 10px;
+  height: 11px;
+  border-right: 3px solid rgba(0, 0, 0, 0.4);
+  border-bottom: 3px solid rgba(0, 0, 0, 0.4); }
 
 .postbox {
   padding: 0;
@@ -245,8 +314,8 @@ html.wp-toolbar {
   .kaliforms-preloader .kaliforms-skeleton-sidebar {
     -webkit-box-flex: 0;
     flex-grow: 0;
-    max-width: 25%;
-    flex-basis: 25%;
+    max-width: 33%;
+    flex-basis: 33%;
     background: #fafafa;
     margin-right: 30px;
     display: -webkit-box;
@@ -275,8 +344,8 @@ html.wp-toolbar {
   .kaliforms-preloader .kaliforms-skeleton-container {
     -webkit-box-flex: 0;
     flex-grow: 0;
-    max-width: 75%;
-    flex-basis: 75%; }
+    max-width: 67%;
+    flex-basis: 67%; }
 
 .skeleton-box {
   display: inline-block;

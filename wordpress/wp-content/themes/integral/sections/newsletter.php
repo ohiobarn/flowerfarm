@@ -24,5 +24,5 @@
                 <?php } ?>
             </div>
         </div>
-</section><!--parallax3-->
+</section>
 <?php } ?>

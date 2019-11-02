@@ -52,6 +52,7 @@ const FormInfo = (props) => {
 	const [thankYouMessage, setThankYouMessage] = useState(KaliFormsObject.thankYouMessage);
 	const [redirectUrl, setRedirectUrl] = useState(KaliFormsObject.redirectUrl);
 
+	const [hideFormName, setHideFormName] = useState(KaliFormsObject.hideFormName);
 	const [removeCaptchaForLoggedUsers, setRemoveCaptchaForLoggedUsers] = useState(KaliFormsObject.removeCaptchaForLoggedUsers);
 	const [showThankYouMessage, setShowThankYouMessage] = useState(KaliFormsObject.showThankYouMessage);
 
@@ -68,6 +69,9 @@ const FormInfo = (props) => {
 		switch (key) {
 			case 'removeCaptchaForLoggedUsers':
 				setRemoveCaptchaForLoggedUsers(event.target.checked ? '1' : '0');
+				break;
+			case 'hideFormName':
+				setHideFormName(event.target.checked ? '1' : '0');
 				break;
 			case 'showThankYouMessage':
 				setShowThankYouMessage(event.target.checked ? '1' : '0');
@@ -129,6 +133,20 @@ const FormInfo = (props) => {
 							label={KaliFormsObject.translations.formInfo.removeCaptcha}
 						/>
 						<TextField type="hidden" name="kaliforms[remove_captcha_for_logged_users]" value={removeCaptchaForLoggedUsers} />
+					</FormGroup>
+				</Grid>
+				<Grid item>
+					<FormGroup row>
+						<FormControlLabel
+							control={
+								<Switch
+									checked={hideFormName === '1'}
+									onChange={e => onToggleChange(e, 'hideFormName')}
+								/>
+							}
+							label={KaliFormsObject.translations.formInfo.hideFormName}
+						/>
+						<TextField type="hidden" name="kaliforms[hide_form_name]" value={hideFormName} />
 					</FormGroup>
 				</Grid>
 			</Grid>

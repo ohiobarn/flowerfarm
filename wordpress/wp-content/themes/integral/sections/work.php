@@ -26,8 +26,8 @@
                     $content = str_replace(']]>', ']]>', $content);
                     echo $content;
                 ?>
-			</div><!--feature-->
+			</div>
 		</div>
 	</div>
-</section><!--work-->
+</section>
 <?php } ?>

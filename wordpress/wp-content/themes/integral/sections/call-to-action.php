@@ -38,5 +38,5 @@
             <?php } ?>
         </div>
     </div>
-</section><!--parallax2-->
+</section>
 <?php } ?>

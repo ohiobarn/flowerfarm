@@ -24,5 +24,5 @@
 		</div>
         <?php endif; ?>
 	</div>
-</section><!--clients-->
+</section>
 <?php } ?>

@@ -58,5 +58,5 @@
         <?php } ?>
 	</div>
 </div>
-</section><!--contact-->
+</section>
 <?php } ?>

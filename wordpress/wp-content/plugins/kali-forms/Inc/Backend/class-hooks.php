@@ -112,22 +112,6 @@ class Hooks
     public function frontend_enqueue()
     {
         wp_register_script(
-            'kaliforms-frontend-vendor',
-            KALIFORMS_URL . 'assets/frontend/js/vendor.js',
-            false,
-            KALIFORMS_VERSION,
-            true
-        );
-
-        wp_register_script(
-            'kaliforms-frontend-manifest',
-            KALIFORMS_URL . 'assets/frontend/js/manifest.js',
-            false,
-            KALIFORMS_VERSION,
-            true
-        );
-
-        wp_register_script(
             'kali-grecaptcha',
             '//www.google.com/recaptcha/api.js',
             false,
@@ -138,7 +122,7 @@ class Hooks
         wp_enqueue_script(
             'kaliforms-frontend',
             KALIFORMS_URL . 'assets/frontend/js/frontend.js',
-            ['kaliforms-frontend-vendor', 'kaliforms-frontend-manifest'],
+            [],
             KALIFORMS_VERSION,
             true
         );
@@ -199,32 +183,9 @@ class Hooks
         //     false
         // );
 
-        wp_register_script(
-            'kaliforms-backend-vendor',
-            KALIFORMS_URL . 'assets/backend/js/vendor.js',
-            false,
-            KALIFORMS_VERSION,
-            true
-        );
-
-        wp_register_script(
-            'kaliforms-backend-manifest',
-            KALIFORMS_URL . 'assets/backend/js/manifest.js',
-            false,
-            KALIFORMS_VERSION,
-            true
-        );
-
         wp_enqueue_style(
             'kaliforms-general',
             KALIFORMS_URL . 'assets/general/css/general.css',
-            false,
-            KALIFORMS_VERSION
-        );
-
-        wp_register_style(
-            'kaliforms-backend-vendor',
-            KALIFORMS_URL . 'assets/backend/css/vendor.css',
             false,
             KALIFORMS_VERSION
         );

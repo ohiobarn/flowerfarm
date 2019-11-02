@@ -89,6 +89,7 @@ class JS_Vars
         $this->content['globalErrorMessage'] = wp_kses_post($this->get('global_error_message', ''));
         $this->content['multipleSelectionsSeparator'] = wp_kses_post($this->get('multiple_selections_separator', ''));
         $this->content['removeCaptchaForLoggedUsers'] = esc_attr($this->get('remove_captcha_for_logged_users', '0'));
+        $this->content['hideFormName'] = esc_attr($this->get('hide_form_name', '0'));
         $this->content['cssId'] = esc_attr($this->get('css_id', ''));
         $this->content['cssClass'] = esc_attr($this->get('css_class', ''));
         /**

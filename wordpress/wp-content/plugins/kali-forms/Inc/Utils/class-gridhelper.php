@@ -31,6 +31,10 @@ trait GridHelper
          * Rearrange columns as intended
          */
         $this->sort_columns_properly();
+        /**
+         * If a field has " offsets " - add them
+         */
+        $this->add_offsets();
     }
 
     /**
@@ -90,7 +94,48 @@ trait GridHelper
     {
         $this->rows['row-' . $item->y][] = $this->parse_item($item);
     }
+    /**
+     * Adds offsets to items
+     *
+     * @return void
+     */
+    public function add_offsets()
+    {
+        foreach ($this->rows as $index => $row) {
+            $this->rows[$index] = $this->array_merge_recursive_new($row, $this->_determine_gaps($row));
+        }
+    }
+    /**
+     * Determine if we need to add gaps
+     */
+    private function _determine_gaps($row)
+    {
+        $total = 0;
+        $start_indexes = [];
+        $last_index = [];
+        foreach ($row as $index => $field) {
+            if ($index === 0 && $field['x'] > 0) {
+                $start_indexes[$index]['offset'] = $field['x'];
+            }
 
+            if ($index > 0// In case we are further in the array
+                 && !empty($last_index) // and we have the last index array defined
+                 && $last_index['end'] !== $field['x']) // and the index is different than it needs
+            {
+                $start_indexes[$index]['offset'] = $field['x'] - $last_index['end'];
+            }
+
+            if (!isset($start_indexes[$index]['offset'])) {
+                $start_indexes[$index]['offset'] = 0;
+            }
+
+            $last_index = [
+                'start' => $field['x'],
+                'end' => $field['x'] + $field['col'],
+            ];
+        };
+        return $start_indexes;
+    }
     /**
      * Parses the item and returns it as needed by our workflow
      *
@@ -99,13 +144,13 @@ trait GridHelper
      */
     public function parse_item($item)
     {
-		$current_field = $this->fields[$item->i];
+        $current_field = $this->fields[$item->i];
         $parsedItem = [
             'col' => $item->w,
             'grid_id' => $item->i,
             'type' => $current_field->id,
             'frontend' => $this->construct_object($current_field->id),
-			'x' => $item->x,
+            'x' => $item->x,
         ];
 
         if (!$parsedItem['frontend']) {
@@ -114,7 +159,7 @@ trait GridHelper
 
         foreach ($current_field->properties as $key => $value) {
             $parsedItem[$key] = $this->pluck_value_from_properties($key, $current_field);
-		}
+        }
 
         return $parsedItem;
     }
@@ -129,5 +174,27 @@ trait GridHelper
     public function pluck_value_from_properties($key, $obj)
     {
         return $obj->properties->{$key};
+    }
+
+    /**
+     * Merge arrays on numeric keys
+     *
+     * @return void
+     */
+    public function array_merge_recursive_new()
+    {
+        $arrays = func_get_args();
+        $base = array_shift($arrays);
+        foreach ($arrays as $array) {
+            reset($base);
+            while (list($key, $value) = @each($array)) {
+                if (is_array($value) && @is_array($base[$key])) {
+                    $base[$key] = $this->array_merge_recursive_new($base[$key], $value);
+                } else {
+                    $base[$key] = $value;
+                }
+            }
+        }
+        return $base;
     }
 }

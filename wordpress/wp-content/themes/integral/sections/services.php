@@ -36,5 +36,5 @@
         </div>
         <?php endif; ?>
 	</div>
-</section><!--services-->
+</section>
 <?php } ?>

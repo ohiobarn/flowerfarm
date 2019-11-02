@@ -29,7 +29,8 @@ class PayPal extends Form_Field
     public function render($item, $form_info)
     {
         $attributes = $this->generate_attribute_string($item);
-        $div = '<div class="col-12 col-md-' . absint($item['col']) . '">';
+        $offset = isset($item['offset']) && $item['offset'] > 0 ? 'offset-md-' . absint($item['offset']) : '';
+        $div = '<div class="col-12 col-md-' . absint($item['col']) . ' ' . $offset . '">';
         $div .= '<div id="kaliforms-paypal-button-container" style="text-align:center"></div>';
         $div .= '</div>';
 

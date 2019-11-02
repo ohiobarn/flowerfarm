@@ -45,7 +45,7 @@ const SidebarFieldComponentItem = (props) => {
 	 * SHOULD BE PARSED/STRINGIFY SO YOU FORGET OBJECT REFS
 	 */
 	const addField = () => {
-		props.properties.id.value = props.properties.id.value + props.fieldComponents.length
+		props.properties.id.value = props.properties.id.value + getLastIndex()
 		props.addComponent(
 			JSON.parse(JSON.stringify(
 				{
@@ -53,11 +53,20 @@ const SidebarFieldComponentItem = (props) => {
 					label: props.label,
 					properties: formatObj(props),
 					constraint: props.constraint,
-					internalId: props.id.toLowerCase() + props.fieldComponents.length
+					internalId: props.id.toLowerCase() + getLastIndex(),
 				}
 			))
 		);
 	}
+	const getLastIndex = () => {
+		let returnItem = 0;
+		props.fieldComponents.map(e => {
+			let index = e.internalId;
+			returnItem = parseFloat(index.replace(e.id.toLowerCase(), ''));
+		})
+		return returnItem + 1;
+	}
+
 	/**
 	 * Format object
 	 *

@@ -30,7 +30,8 @@ class File_Upload extends Form_Field
 		$item['type'] = 'file';
         $attributes = $this->generate_attribute_string($item);
 
-        $div = '<div class="col-12 col-md-' . absint($item['col']) . '">';
+        $offset = isset($item['offset']) && $item['offset'] > 0 ? 'offset-md-' . absint($item['offset']) : '';
+        $div = '<div class="col-12 col-md-' . absint($item['col']) . ' ' . $offset . '">';
         $div .= $this->generate_label($item, $form_info);
 		$div .= '<input ' . $attributes . '>';
 		$div .= !empty($item['description']) ? '<br/><small>' . esc_html($item['description']) . '</small>' : '';

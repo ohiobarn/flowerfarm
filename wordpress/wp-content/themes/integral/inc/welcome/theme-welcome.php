@@ -110,7 +110,7 @@ class Integral_Welcome {
 
 		<div class="wrap about-wrap theme-welcome">
 
-            <h1><?php esc_html_e('Welcome to Integral', 'integral'); ?> <span><?php esc_html_e('VERSION 1.4.5', 'integral'); ?></span></h1>
+            <h1><?php esc_html_e('Welcome to Integral', 'integral'); ?> <span><?php esc_html_e('VERSION 1.4.5.2', 'integral'); ?></span></h1>
 
             <div class="about-text"><?php esc_html_e('Integral is a powerful one-page theme for professionals, agencies and businesses. Its strength lies in displaying content on a single page in a simple and elegant manner. It\'s super easy to customize and allows you to create a stunning website in minutes.', 'integral'); ?></div>
 

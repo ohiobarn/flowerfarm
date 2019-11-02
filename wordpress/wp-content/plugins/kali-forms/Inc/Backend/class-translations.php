@@ -148,6 +148,7 @@ class Translations
             'removeCaptcha' => esc_html__('Remove captcha for logged user', 'kaliforms'),
             'showThankYou' => esc_html__('Show thank you message', 'kaliforms'),
             'globalErrorMessage' => esc_html__('Global error message', 'kaliforms'),
+            'hideFormName' => esc_html__('Hide form name', 'kaliforms'),
 
             // Second section
             'afterFormSubmit' => esc_html__('After form submit', 'kaliforms'),
@@ -171,7 +172,19 @@ class Translations
         ];
 
         $this->translations['conditionalLogic'] = [
-            'conditionalLogic' => esc_html__('Conditional logic', 'kaliforms'),
+			'placeholder' => sprintf(
+				'%s <a href="https://kaliforms.com/docs/faq/how-to-hide-show-fields/" target="_blank"> %s </a>',
+				esc_html__('You do not have any conditional statements configured at the moment.', 'kaliforms'),
+				esc_html__('Learn how to create your first statement in our documentation.', 'kaliforms')
+			),
+            'add' => esc_html__('Add', 'kaliforms'),
+            'currentField' => esc_html__('Current field', 'kaliforms'),
+            'state' => esc_html__('State', 'kaliforms'),
+            'ifThisField' => esc_html__('If this field', 'kaliforms'),
+            'operator' => esc_html__('Operator', 'kaliforms'),
+            'value' => esc_html__('Value', 'kaliforms'),
+			'conditionalLogic' => esc_html__('Conditional logic', 'kaliforms'),
+			'conditionalLogicSettings' => esc_html__('Conditional logic settings', 'kaliforms'),
             'show' => esc_html__('Show', 'kaliforms'),
             'hide' => esc_html__('Hide', 'kaliforms'),
             'equalTo' => esc_html__('Equal to', 'kaliforms'),

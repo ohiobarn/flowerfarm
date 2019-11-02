@@ -24,5 +24,5 @@
 		</div>
         <?php endif; ?>
 	</div>
-</section><!--team-->
+</section>
 <?php } ?>

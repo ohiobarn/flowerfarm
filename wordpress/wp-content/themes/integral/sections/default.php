@@ -51,4 +51,4 @@
     
     </div>
 
-</section><!--hero-->
+</section>

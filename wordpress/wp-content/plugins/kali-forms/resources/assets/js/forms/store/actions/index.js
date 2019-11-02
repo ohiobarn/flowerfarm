@@ -174,3 +174,10 @@ export const setUiSidebarSettings = (payload) => ({
 	type: SET_UI_SIDEBARSETTINGS,
 	payload: payload,
 })
+
+export const SET_CONDITIONAL_LOGIC = 'SET_CONDITIONAL_LOGIC';
+
+export const setConditionalLogic = (payload) => ({
+	type: SET_CONDITIONAL_LOGIC,
+	payload: payload
+})

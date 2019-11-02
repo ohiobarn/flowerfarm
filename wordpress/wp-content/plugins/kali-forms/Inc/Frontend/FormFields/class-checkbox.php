@@ -28,7 +28,8 @@ class Checkbox extends Form_Field
     public function render($item, $form_info)
     {
         $item['type'] = 'checkbox';
-        $div = '<div class="col-12 col-md-' . absint($item['col']) . '">';
+        $offset = isset($item['offset']) && $item['offset'] > 0 ? 'offset-md-' . absint($item['offset']) : '';
+        $div = '<div class="col-12 col-md-' . absint($item['col']) . ' ' . $offset . '">';
         $div .= '<span style="margin-bottom:15px;display:inline-block">' . esc_html($item['caption']) . '</span>';
         $div .= $item['flow'] === 'vertical'
         ? $this->flow_vertical($item)

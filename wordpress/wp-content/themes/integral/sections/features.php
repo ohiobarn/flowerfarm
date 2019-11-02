@@ -17,5 +17,5 @@
             <?php endif; ?>
 		</div>
 	</div>
-</section><!--features-->
+</section>
 <?php } ?>

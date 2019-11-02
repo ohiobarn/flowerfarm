@@ -3,6 +3,8 @@ import { bindActionCreators } from 'redux';
 import * as StoreActions from '../../store/actions';
 import connect from 'react-redux/es/connect/connect';
 import SidebarFormFieldEditItem from './SidearFormFieldEditItem';
+import Button from '@material-ui/core/Button';
+// import SidebarFormFieldEditItem from './SidearFormFieldEditItem copy';
 // import SidebarFormFieldEditItemBk from './SidebarFormFieldItemBkup';
 import Paper from '@material-ui/core/Paper';
 const mapStateToProps = state => {
@@ -90,6 +92,12 @@ const SidebarFormFieldEditorContainer = (props) => {
 		return editorStyles;
 	}
 
+	const jumpToConditionalLogic = internalId => {
+		props.setUiAppBar('formSettings');
+		props.setUiSidebarSettings('conditionalLogic');
+		console.log(internalId);
+	}
+
 	return (
 		<div>
 			{
@@ -103,10 +111,17 @@ const SidebarFormFieldEditorContainer = (props) => {
 										<SidebarFormFieldEditItem
 											constraint={e.constraint}
 											properties={e}
+											index={idx}
 											key={e.id}
 										/>
 									)
 								}
+								<If condition={typeof KaliFormsObject.conditionalLogic !== 'undefined'}>
+									<hr />
+									<Button color="primary" onClick={() => jumpToConditionalLogic(idx)}>
+										{KaliFormsObject.translations.conditionalLogic.conditionalLogicSettings}
+									</Button>
+								</If>
 							</Paper>
 						</div>
 					)

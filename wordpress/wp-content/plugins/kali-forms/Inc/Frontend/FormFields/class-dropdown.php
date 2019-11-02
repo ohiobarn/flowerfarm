@@ -29,7 +29,8 @@ class DropDown extends Form_Field
     {
         $attributes = $this->generate_attribute_string($item);
 
-        $div = '<div class="col-12 col-md-' . absint($item['col']) . '">';
+        $offset = isset($item['offset']) && $item['offset'] > 0 ? 'offset-md-' . absint($item['offset']) : '';
+        $div = '<div class="col-12 col-md-' . absint($item['col']) . ' ' . $offset . '">';
         $div .= $this->generate_label($item, $form_info);
         $div .= '<select ' . $attributes . '>';
         foreach ($item['choices'] as $choice) {

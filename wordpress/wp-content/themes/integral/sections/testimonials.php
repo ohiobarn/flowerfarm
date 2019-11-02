@@ -27,5 +27,5 @@
         </div>
     </div>
 </div>
-</section><!--Parallax1-->
+</section>
 <?php } ?>

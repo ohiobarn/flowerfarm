@@ -7,6 +7,7 @@ import connect from 'react-redux/es/connect/connect';
 import { bindActionCreators } from 'redux';
 import * as StoreActions from '../store/actions';
 import DeleteIcon from '@material-ui/icons/Delete';
+import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import PlusIcon from '@material-ui/icons/Add';
 import Table from '@material-ui/core/Table';
@@ -20,6 +21,8 @@ const mapStateToProps = state => {
 		loading: state.PageLoading,
 		fieldComponents: state.FieldComponents,
 		fieldComponentsHash: state.FieldComponentsHash,
+		conditionalLogic: state.ConditionalLogic,
+		formFieldEditor: state.FormFieldEditor,
 	};
 };
 
@@ -33,13 +36,13 @@ const FormConditionalLogic = (props) => {
 		fieldComponents: {},
 		fieldConditioners: {},
 		states: {
-			hide: 'Hide',
-			show: 'Show',
+			hide: KaliFormsObject.translations.conditionalLogic.hide,
+			show: KaliFormsObject.translations.conditionalLogic.show,
 		},
 		operator: {
-			equal: 'Equal to',
-			different: 'Different then',
-			or: 'Can be'
+			equal: KaliFormsObject.translations.conditionalLogic.equalTo,
+			different: KaliFormsObject.translations.conditionalLogic.differentThan,
+			or: KaliFormsObject.translations.conditionalLogic.canBe
 		},
 	});
 	const [conditionalValue, setConditionalValue] = useState('');
@@ -119,6 +122,7 @@ const FormConditionalLogic = (props) => {
 		}
 
 		setConditions([...conditions, newCondition])
+		props.setConditionalLogic([...conditions, newCondition])
 	}
 
 	const removeCondition = (idx) => {
@@ -136,10 +140,10 @@ const FormConditionalLogic = (props) => {
 
 	return (
 		<div>
-			<Grid container direction="row" style={{ marginTop: 10 }} spacing={4}>
+			<Grid container direction="row" style={{ marginTop: 10 }} spacing={4} alignItems="center">
 				<Grid item xs={2}>
 					<TextField
-						label="Current field"
+						label={KaliFormsObject.translations.conditionalLogic.currentField}
 						value={conditionalField}
 						onChange={e => setConditionalField(e.target.value)}
 						error={isError('conditionalField')}
@@ -156,7 +160,7 @@ const FormConditionalLogic = (props) => {
 				</Grid>
 				<Grid item xs={2}>
 					<TextField
-						label="State"
+						label={KaliFormsObject.translations.conditionalLogic.state}
 						value={action}
 						onChange={e => setAction(e.target.value)}
 						select
@@ -173,7 +177,7 @@ const FormConditionalLogic = (props) => {
 				</Grid>
 				<Grid item xs={2}>
 					<TextField
-						label="If this field"
+						label={KaliFormsObject.translations.conditionalLogic.ifThisField}
 						value={conditionedByField}
 						error={isError('conditionedByField')}
 						onChange={e => setConditionedByField(e.target.value)}
@@ -192,7 +196,7 @@ const FormConditionalLogic = (props) => {
 				</Grid>
 				<Grid item xs={2}>
 					<TextField
-						label="Operator"
+						label={KaliFormsObject.translations.conditionalLogic.operator}
 						value={operator}
 						onChange={e => setOperator(e.target.value)}
 						select
@@ -213,7 +217,7 @@ const FormConditionalLogic = (props) => {
 				<Grid item xs={2}>
 					<If condition={conditionedByField !== ''}>
 						<TextField
-							label="Value"
+							label={KaliFormsObject.translations.conditionalLogic.value}
 							value={conditionalValue}
 							onChange={e => setConditionalValue(e.target.value)}
 							fullWidth={true}
@@ -233,9 +237,10 @@ const FormConditionalLogic = (props) => {
 					</If>
 				</Grid>
 				<Grid item>
-					<IconButton aria-label="Add condition" color="primary" onClick={() => pushConditionalField()}>
-						<PlusIcon />
-					</IconButton>
+					<Button variant="contained" color="primary" onClick={() => pushConditionalField()}>
+						{KaliFormsObject.translations.conditionalLogic.add}
+						<PlusIcon></PlusIcon>
+					</Button>
 					<TextField
 						value={JSON.stringify(conditions)}
 						type="hidden"
@@ -248,16 +253,18 @@ const FormConditionalLogic = (props) => {
 				<Grid item xs={9}>
 					<Paper style={{ width: '100%', overflowX: 'auto', }} elevation={1}>
 						<Table style={{ opacity: tableLoading ? .5 : 1, transition: 'all .5s ease-in-out' }}>
-							<TableHead>
-								<TableRow>
-									<TableCell>{KaliFormsObject.translations.conditionalLogic.field}</TableCell>
-									<TableCell>{KaliFormsObject.translations.conditionalLogic.state}</TableCell>
-									<TableCell>{KaliFormsObject.translations.conditionalLogic.conditionedBy}</TableCell>
-									<TableCell>{KaliFormsObject.translations.conditionalLogic.if}</TableCell>
-									<TableCell>{KaliFormsObject.translations.conditionalLogic.value}</TableCell>
-									<TableCell>{KaliFormsObject.translations.conditionalLogic.action}</TableCell>
-								</TableRow>
-							</TableHead>
+							<If condition={conditions.length}>
+								<TableHead>
+									<TableRow>
+										<TableCell>{KaliFormsObject.translations.conditionalLogic.field}</TableCell>
+										<TableCell>{KaliFormsObject.translations.conditionalLogic.state}</TableCell>
+										<TableCell>{KaliFormsObject.translations.conditionalLogic.conditionedBy}</TableCell>
+										<TableCell>{KaliFormsObject.translations.conditionalLogic.if}</TableCell>
+										<TableCell>{KaliFormsObject.translations.conditionalLogic.value}</TableCell>
+										<TableCell>{KaliFormsObject.translations.conditionalLogic.action}</TableCell>
+									</TableRow>
+								</TableHead>
+							</If>
 							<TableBody>
 								<If condition={conditions.length}>
 									{
@@ -288,6 +295,13 @@ const FormConditionalLogic = (props) => {
 											)
 										)
 									}
+								</If>
+								<If condition={!conditions.length}>
+									<TableRow>
+										<TableCell style={{ textAlign: 'center' }} >
+											<span dangerouslySetInnerHTML={{ __html: KaliFormsObject.translations.conditionalLogic.placeholder }}></span>
+										</TableCell>
+									</TableRow>
 								</If>
 							</TableBody>
 						</Table>

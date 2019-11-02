@@ -137,7 +137,7 @@ class Forms
             wp_enqueue_script(
                 'kaliforms-forms',
                 KALIFORMS_URL . 'assets/backend/js/forms.js',
-                ['underscore', 'kaliforms-backend-vendor', 'kaliforms-backend-manifest'],
+                ['underscore'],
                 KALIFORMS_VERSION,
                 true
             );
@@ -151,7 +151,7 @@ class Forms
             wp_enqueue_style(
                 'kaliforms',
                 KALIFORMS_URL . 'assets/backend/css/forms.css',
-                ['kaliforms-roboto-font', 'kaliforms-backend-vendor'],
+                ['kaliforms-roboto-font'],
                 KALIFORMS_VERSION
             );
         }
@@ -275,6 +275,7 @@ class Forms
             ['id' => 'global_error_message', 'sanitize' => 'wp_kses_post'],
             ['id' => 'multiple_selections_separator', 'sanitize' => 'sanitize_text_field'],
             ['id' => 'remove_captcha_for_logged_users', 'sanitize' => 'KaliForms\Inc\Backend\Sanitizers::sanitize_boolean'],
+            ['id' => 'hide_form_name', 'sanitize' => 'KaliForms\Inc\Backend\Sanitizers::sanitize_boolean'],
             ['id' => 'custom_action', 'sanitize' => 'sanitize_key'],
             ['id' => 'override_method', 'sanitize' => 'sanitize_text_field'],
             ['id' => 'additional_html_attributes', 'sanitize' => 'sanitize_text_field'],

@@ -29,9 +29,26 @@ const theme = createMuiTheme({
 			inputSelect: {
 				padding: '10px 27px 4px 13px',
 			}
+		},
+		MuiTabs: {
+			indicator: {
+				background: '#fff'
+			}
 		}
 	}
 });
-
+import { SnackbarProvider } from 'notistack';
 import App from './containers/App';
-ReactDOM.render(<Provider store={store}><MuiThemeProvider theme={theme}><App /></MuiThemeProvider></Provider>, document.getElementById('kaliforms-container'));
+import supressNotices from '@/forms/utils/notices';
+
+KaliFormsObject.notices = supressNotices();
+ReactDOM.render(
+	<Provider store={store}>
+		<MuiThemeProvider theme={theme}>
+			<SnackbarProvider>
+				<App />
+			</SnackbarProvider>
+		</MuiThemeProvider>
+	</Provider>,
+	document.getElementById('kaliforms-container')
+);

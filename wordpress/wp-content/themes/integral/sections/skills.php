@@ -76,5 +76,5 @@
             <?php } ?>
 		</div>
 	</div>
-</section><!--skills-->
+</section>
 <?php } ?>

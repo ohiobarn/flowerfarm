@@ -10,7 +10,7 @@ if (!defined('ABSPATH')) {
  */
 class Form
 {
-	public $slug = 'kaliforms';
+    public $slug = 'kaliforms';
     /**
      * Rows
      *
@@ -52,8 +52,8 @@ class Form
     {
         $div = '<form ' . $this->generate_form_attributes() . '>';
         $beforeFormStart = apply_filters($this->slug . '_before_form_start', ['context' => $this, 'string' => '']);
-        $div .= $beforeFormStart['string'];
-        $div .= empty($this->form_info['form_name']) ? '' : '<h3>' . esc_html($this->form_info['form_name']) . '</h3>';
+		$div .= $beforeFormStart['string'];
+        $div .= (empty($this->form_info['form_name']) || $this->form_info['hide_form_name'] === '1') ? '' : '<h3>' . esc_html($this->form_info['form_name']) . '</h3>';
         $div .= '<div id="kaliforms-global-error-message-' . esc_attr($this->form_id) . '" class="global-error-message">' . wp_kses_post($this->form_info['global_error_message']) . '</div>';
 
         foreach ($this->rows as $row) {

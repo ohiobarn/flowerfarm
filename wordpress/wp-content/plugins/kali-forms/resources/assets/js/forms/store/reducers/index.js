@@ -11,6 +11,7 @@ import FormEmails from './FormEmails';
 import TemplateSelecting from './TemplateSelecting';
 import Errors from './Errors';
 import PredefinedForms from './PredefinedForms';
+import ConditionalLogic from './ConditionalLogic';
 import Ui from './Ui';
 
 const rootReducer = combineReducers({
@@ -26,6 +27,7 @@ const rootReducer = combineReducers({
 	FormInfo,
 	FormEmails,
 	PredefinedForms,
+	ConditionalLogic,
 	Errors
 });
 

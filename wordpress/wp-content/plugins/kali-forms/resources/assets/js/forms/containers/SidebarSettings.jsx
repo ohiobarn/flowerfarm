@@ -54,6 +54,13 @@ const SidebarSettings = (props) => {
 	useEffect(() => {
 		toggle(false, props.ui.sidebarSettings);
 	}, [])
+
+	useEffect(() => {
+		if (props.ui.sidebarSettings !== selectedTab) {
+			toggle(false, props.ui.sidebarSettings);
+		}
+	}, [props.ui.sidebarSettings])
+
 	const toggle = (e, tab) => {
 		if (selectedTab !== tab) {
 			setSelectedTab(tab)

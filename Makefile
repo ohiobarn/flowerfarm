@@ -19,8 +19,22 @@ define install_instructions
 	@echo "Wordpress Workflow:"
 	@echo "******************************************************************************"
 	@echo ""
-	@echo " 1 - Run 'make dev' and do web development"
-	@echo " 2 - Run 'make publish' to publish your change"
+	@echo " Normally:"
+	@echo "   1 - Make changes in staging ${WP_URL}/stag/wp-login.php"
+	@echo "   2 - When ready run 'make staging-to-prod' "
+	@echo "   3 - Test in prod ${WP_URL}/prod/wp-login.php"
+  @echo ""
+	@echo " Local Development:"
+	@echo "   Overview: "
+	@echo "     - cp staging to local then do development"
+	@echo "     - cp local to staging then test"
+	@echo "     - cp staging to prod "
+	@echo " " 
+	@echo "   1 - Run 'make make-stag-duplicator-package' and follow instructions to install it locally"
+	@ech0 "   2 - Make changes locally"
+	@echo "   3 - Run 'make make-local-duplicator-package' and follow instructions to install it in staging"
+	@echo "   4 - Test in staging"
+	@echo     5 - Run 'staging-to-prod' to publish to prod"
 	@echo ""
 	@echo "******************************************************************************"
 	@echo "mkdocs Workflow:"
@@ -36,36 +50,39 @@ endef
 help:
 	$(call install_instructions)
 
-dev:
+start-dev:
 	cp -R data data-backup
-	docker-compose up &
+	docker-compose up
 	open http://localhost:8080/
 
-# TODO - i think this is old plan to remove
-mk-snapshot-folder:
+make-stag-duplicator-package:
 	mkdir -p ${SNAPSHOT_FOLDER}
-	
+	@echo ""
+	@echo " - Open prod ${WP_URL}/stag/wp-login.php"
+	@echo " - Select 'duplicator' in the left menu and click the 'Create New' package button"
+	@echo " - When the package is built select the 'one-click download'"
+	@echo " - Save in this folder: ${SNAPSHOT_FOLDER}"
+	@echo " - Run 'make install-local-duplicator-package' and follow the instructions"
 
-# TODO - i think this is old plan to remove
-publish:
-	@mkdir -p ${SNAPSHOT_FOLDER}
-	@echo "Select 'duplicator' in the left menu and click the 'Create New' package button"
-	@echo "When the package is built select the 'one-click download'"
-	@echo "Save in this folder: ${SNAPSHOT_FOLDER}"
-	@echo "do 'make install-package' next"
+make-local-duplicator-package:
+	mkdir -p ${SNAPSHOT_FOLDER}
+	@echo ""
+	@echo " - Select 'duplicator' in the left menu and click the 'Create New' package button"
+	@echo " - When the package is built select the 'one-click download'"
+	@echo " - Save in this folder: ${SNAPSHOT_FOLDER}"
+	@echo " - Run 'make install-stag-duplicator-package' and follow the instructions"
 
-# TODO - i think this is old plan to remove
-install-package: 
+install-local-duplicator-package:
+	cp ${SNAPSHOT_FOLDER}/* wordpress/
+	@echo ""
+	@echo " - Run 'make start-dev'"
+	@echo " - Open http://localhost:8080/installer.php (uses db values from compose file)"
+
+install-stag-duplicator-package: 
 	scp -r ${SNAPSHOT_FOLDER} ${REMOTE_USER}@${REMOTE_HOST}:~/${SNAPSHOT_FOLDER}
-	ssh ${REMOTE_USER}@${REMOTE_HOST} "mv ~/www/wp-config.php ~/www/wp-config.php.back"
-	ssh ${REMOTE_USER}@${REMOTE_HOST} "cp ~/${SNAPSHOT_FOLDER}/* ./www/"
-	open ${WP_URL}/installer.php
-
-# TODO - i think this is old plan to remove
-cp-staging-prod:
-	ssh ${REMOTE_USER}@${REMOTE_HOST} "mv ~/www/wp-config.php ~/www/wp-config.php.back"
-	ssh ${REMOTE_USER}@${REMOTE_HOST} "cp ~/www/stag/wp-snapshots/*.zip ./www/"
-	ssh ${REMOTE_USER}@${REMOTE_HOST} "cp ~/www/stag/wp-snapshots/*installer.php ./www/installer.php"
+	ssh ${REMOTE_USER}@${REMOTE_HOST} "mv ~/www/stag/wp-config.php ~/www/stag/wp-config.php.back"
+	ssh ${REMOTE_USER}@${REMOTE_HOST} "cp ~/${SNAPSHOT_FOLDER}/* ./www/stag"
+  @echo " - Open ${WP_URL}/stag/installer.php (uses db values from compose file)"
 
 ssh-remote:
 	ssh ${REMOTE_USER}@${REMOTE_HOST}
@@ -91,12 +108,12 @@ dump-sites:
 	ssh ${REMOTE_USER}@${REMOTE_HOST} "sed 's/\/prod/\/stag/g' ${MIGRATE_FOLDER}/${YYMMDD}/${PROD_DB_NAME}.sql    > ${MIGRATE_FOLDER}/${YYMMDD}/migrage-prod-to-staging.sql"
 
 
-staging-to-prod:
+staging-to-prod: dump-sites
 	ssh ${REMOTE_USER}@${REMOTE_HOST} "mysql -h localhost -D ${PROD_DB_NAME} < ${MIGRATE_FOLDER}/${YYMMDD}/migrage-staging-to-prod.sql"
 	ssh ${REMOTE_USER}@${REMOTE_HOST} "cp -R ~/www/stag/* ~/www/prod/"
 	ssh ${REMOTE_USER}@${REMOTE_HOST} "sed -i 's/ohiobar1_staging/ohiobar1_prod/g' ~/www/prod/wp-config.php"
 
-prod-to-staging:
+prod-to-staging: dump-sites
 	ssh ${REMOTE_USER}@${REMOTE_HOST} "mysql -h localhost -D ${STAGING_DB_NAME} < ${MIGRATE_FOLDER}/${YYMMDD}/migrage-prod-to-staging.sql"
 	ssh ${REMOTE_USER}@${REMOTE_HOST} "cp -R ~/www/prod/* ~/www/stag/"
 	ssh ${REMOTE_USER}@${REMOTE_HOST} "sed -i 's/ohiobar1_prod/ohiobar1_staging/g' ~/www/stag/wp-config.php"

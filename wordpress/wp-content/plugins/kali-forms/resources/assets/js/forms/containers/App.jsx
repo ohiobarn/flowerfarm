@@ -1,8 +1,5 @@
-import supressNotices from '@/forms/utils/notices';
 import AppBar from '@material-ui/core/AppBar';
 import IconButton from '@material-ui/core/IconButton';
-import Snackbar from '@material-ui/core/Snackbar';
-// import Loader from './../components/Loader';
 import { makeStyles } from '@material-ui/core/styles';
 import Tab from '@material-ui/core/Tab';
 import Tabs from '@material-ui/core/Tabs';
@@ -10,7 +7,6 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
 import CloseIcon from '@material-ui/icons/Close';
-// import EditIcon from '@material-ui/icons/Edit';
 import SaveIcon from '@material-ui/icons/Save';
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
@@ -22,10 +18,13 @@ import FormSettings from './FormSettings';
 import LogoSvg from './../../../img/icon.svg';
 import TextField from '@material-ui/core/TextField';
 import { clear } from 'redux-localstorage-simple';
+import { useSnackbar } from 'notistack';
+import CustomSnack from '@/forms/components/SnackBars/CustomSnack';
+import SnackBarAction from '@/forms/components/SnackBars/SnackBarAction';
 
 const useStyles = makeStyles(theme => {
-	const backgroundColorDefault =
-		theme.palette.type === 'light' ? theme.palette.grey[100] : theme.palette.grey[900];
+	// const backgroundColorDefault =
+	// 	theme.palette.type === 'light' ? theme.palette.grey[100] : theme.palette.grey[900];
 
 	return {
 		app: {
@@ -70,14 +69,13 @@ const mapStateToProps = state => {
 		loading: state.PageLoading,
 		formInfo: state.FormInfo,
 		ui: state.Ui,
-		notices: supressNotices()
+		notices: KaliFormsObject.notices,
 	};
 };
 
 const mapDispatchToProps = (dispatch) => {
 	return bindActionCreators(PageActions, dispatch);
 };
-
 
 /**
  * App created as a hook
@@ -88,8 +86,30 @@ const mapDispatchToProps = (dispatch) => {
 const App = (props) => {
 	const [activeTab, setActiveTab] = useState(props.ui.appBar);
 	const [formName, setFormName] = useState(KaliFormsObject.formName);
-	const [notices, setNotices] = useState(props.notices);
-	const [loaded, setLoaded] = useState(false);
+	const { enqueueSnackbar } = useSnackbar();
+
+	useEffect(() => {
+		if (props.formInfo.formName !== formName) {
+			setFormName(props.formInfo.formName)
+		}
+	}, [props.formInfo.formName])
+
+	useEffect(() => {
+		setFormName(KaliFormsObject.formName)
+	}, [])
+
+	useEffect(() => {
+		props.notices.map(e => {
+			queueSnack(e);
+		});
+	}, [props.notices]);
+
+	useEffect(() => {
+		if (props.ui.appBar !== activeTab) {
+			setActiveTab(props.ui.appBar);
+		}
+	}, [props.ui.appBar])
+
 	/**
 	 * Handle click
 	 */
@@ -136,22 +156,26 @@ const App = (props) => {
 		setFormName(val);
 	}
 
-	const handleClose = (id) => {
-		let newNotices = notices.filter((e, idx) => {
-			return e.id !== id;
-		});
-		setNotices(newNotices);
+	const queueSnack = (props) => {
+		props.tip === true
+			?
+			enqueueSnackbar(props.message, {
+				persist: true,
+				preventDuplicate: true,
+				children: (key) => (
+					<CustomSnack id={key} message={props.message} title={props.title} type={props.type} />
+				),
+			})
+			:
+			enqueueSnackbar(props.message,
+				{
+					preventDuplicate: true,
+					variant: props.type,
+					action: (key) => <SnackBarAction snackKey={key} />
+				}
+			)
 	}
 
-	useEffect(() => {
-		if (props.formInfo.formName !== formName) {
-			setFormName(props.formInfo.formName)
-		}
-	}, [props.formInfo.formName])
-
-	useEffect(() => {
-		setFormName(KaliFormsObject.formName)
-	}, [])
 	/**
 	 * Display styles based on tab
 	 */
@@ -166,25 +190,10 @@ const App = (props) => {
 
 	return (
 		<div className={classes.app + ' kaliforms-wrapper'}>
-			{/* <If condition={!loaded}>
-				<Loader />
-			</If> */}
-
 			<ErrorBoundary>
 				<AppBar position="static" color="primary" elevation={0} id="kali-appbar">
 					<Toolbar>
 						<img src={LogoSvg} className={classes.logo} />
-						{/* <InputBase
-							value={formName}
-							onChange={e => changeFormName(e)}
-							className={classes.formNameInput}
-							placeholder={KaliFormsObject.translations.appBar.formName}
-							startAdornment={
-								<InputAdornment className={classes.inputAdornment}>
-									<EditIcon />
-								</InputAdornment>
-							}
-						/> */}
 						<TextField
 							value={formName}
 							onChange={e => changeFormName(e)}
@@ -192,7 +201,7 @@ const App = (props) => {
 							placeholder={KaliFormsObject.translations.appBar.formName}
 						/>
 
-						<Tabs indicatorColor="primary" value={activeTab} onChange={toggle}>
+						<Tabs value={activeTab} onChange={toggle}>
 							<Tab value="formBuilder" label={KaliFormsObject.translations.appBar.formBuilder} />
 							<Tab value="formSettings" label={KaliFormsObject.translations.appBar.formSettings} />
 						</Tabs>
@@ -216,23 +225,6 @@ const App = (props) => {
 						</div>
 					</Toolbar>
 				</AppBar>
-				{
-					notices.map(e => <Snackbar anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
-						open={true}
-						message={e.message}
-						key={e.id}
-						action={[
-							<IconButton
-								key="close"
-								aria-label="Close"
-								color="inherit"
-								onClick={() => handleClose(e.id)}
-							>
-								<CloseIcon />
-							</IconButton>,
-						]}
-					/>)
-				}
 				<Typography component="div" style={{ display: displayStyles.formBuilder }}>
 					<FormBuilder />
 				</Typography>
