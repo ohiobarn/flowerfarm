@@ -71,7 +71,6 @@ If I only use two strips of drip tape per row then I could get the medium kit.  
 
 In [this blog post](https://www.floretflowers.com/soil-preparation/) Floret says they use four strips of drip tape per four foot bed but they have sandy soil and even say that you could get by with two or three strips if you don't have sandy soil, so that validates my choice.  
 
-
 > I will be going with the [drip tape row crop large kit](https://www.dripworks.com/drip-tape-row-crop-kit-large)
 
 ### Zones
@@ -84,6 +83,20 @@ The drip tape that comes with the [large kit](https://www.dripworks.com/drip-tap
 
 ## Germination Station
 
+### One Shelf
+
+The image below shows the layout for one shelf of the germination station. Each shelf will be able to hold `288 plants`, four starter trays of 72 plants each.  
+
+> 288 plants per shelf
+
+![](img/one-shelf-seed-starter.png)
+
+
+### One Station
+
+Each station is a five shelf unit.  The top shelf is used for storage and four shelves will be used for germination.  Each station will be able to hold `1,152 plants`, four shelves of 288 plants each.
+
+> 1,152 plants per station
 
 ---
 
