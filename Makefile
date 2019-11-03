@@ -31,10 +31,10 @@ define install_instructions
 	@echo "     - cp staging to prod "
 	@echo " " 
 	@echo "   1 - Run 'make make-stag-duplicator-package' and follow instructions to install it locally"
-	@ech0 "   2 - Make changes locally"
+	@echo "   2 - Make changes locally"
 	@echo "   3 - Run 'make make-local-duplicator-package' and follow instructions to install it in staging"
 	@echo "   4 - Test in staging"
-	@echo     5 - Run 'staging-to-prod' to publish to prod"
+	@echo "   5 - Run 'staging-to-prod' to publish to prod"
 	@echo ""
 	@echo "******************************************************************************"
 	@echo "mkdocs Workflow:"
@@ -44,7 +44,7 @@ define install_instructions
 	@echo " 2 - mkdocs build --clean"
 	@echo " 3 - mkdocs gh-deploy"
 	@echo ""	
-	@echo "\n"
+	@echo ""
 endef
 
 help:
