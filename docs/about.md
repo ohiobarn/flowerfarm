@@ -2,5 +2,6 @@
 
 For more information see:
 
-* <https://ohiobarnflowerfarm.com/>
-* <https://www.theohiobarn.com/>
+* <https://ohiobarnflowerfarm.com>
+* <https://www.theohiobarn.com>
+* <https://ohiobarnflowerfarm.blogspot.com>
