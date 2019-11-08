@@ -73,6 +73,7 @@ make-local-duplicator-package:
 	@echo " - Run 'make install-stag-duplicator-package' and follow the instructions"
 
 install-local-duplicator-package:
+	rm wordpress/wp-config.php 
 	cp ${SNAPSHOT_FOLDER}/* wordpress/
 	@echo ""
 	@echo " - Run 'make start-dev'"

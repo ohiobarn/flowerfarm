@@ -15,35 +15,34 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 function monsterinsights_is_settings_page() {
-    $current_screen = function_exists( 'get_current_screen' ) ? get_current_screen() : false;
-    global $admin_page_hooks;
+	$current_screen = function_exists( 'get_current_screen' ) ? get_current_screen() : false;
+	global $admin_page_hooks;
 
-    if ( ! is_object( $current_screen ) || empty( $current_screen->id ) || empty( $admin_page_hooks ) ) {
-        return false;
-    }
-
-    $settings_page = false;
-    if ( ! empty( $admin_page_hooks['monsterinsights_settings'] ) && $current_screen->id === $admin_page_hooks['monsterinsights_settings'] ) {
-        $settings_page = true;
-    }
-
-    if ( $current_screen->id === 'toplevel_page_monsterinsights_settings' ) {
-        $settings_page = true;
-    }
-
-    if ( $current_screen->id === 'insights_page_monsterinsights_settings' ) {
-        $settings_page = true;
-    }
-
-	if ( strpos( $current_screen->id, 'monsterinsights_settings' ) !== false ) {
-        $settings_page = true;
+	if ( ! is_object( $current_screen ) || empty( $current_screen->id ) || empty( $admin_page_hooks ) ) {
+		return false;
 	}
 
-    if ( ! empty( $current_screen->base ) && strpos( $current_screen->base, 'monsterinsights_network' ) !== false ) {
-        $settings_page = true;
-    }
+	$settings_page = false;
+	if ( ! empty( $admin_page_hooks['monsterinsights_settings'] ) && $current_screen->id === $admin_page_hooks['monsterinsights_settings'] ) {
+		$settings_page = true;
+	}
 
-    return $settings_page;
+	if ( $current_screen->id === 'toplevel_page_monsterinsights_settings' ) {
+		$settings_page = true;
+	}
+
+	if ( $current_screen->id === 'insights_page_monsterinsights_settings' ) {
+		$settings_page = true;
+	}
+
+	if ( strpos( $current_screen->id, 'monsterinsights_settings' ) !== false ) {
+		$settings_page = true;
+	}
+
+	if ( ! empty( $current_screen->base ) && strpos( $current_screen->base, 'monsterinsights_network' ) !== false ) {
+		$settings_page = true;
+	}
+	return $settings_page;
 }
 
 /**
@@ -82,10 +81,10 @@ function monsterinsights_is_reports_page() {
 /**
  * Loads styles for all MonsterInsights-based Administration Screens.
  *
+ * @return null Return early if not on the proper screen.
  * @since 6.0.0
  * @access public
  *
- * @return null Return early if not on the proper screen.
  */
 function monsterinsights_admin_styles() {
 
@@ -128,33 +127,8 @@ function monsterinsights_admin_styles() {
 		return;
 	}
 
-
-	// Bootstrap
-	// Primary
-	wp_register_style( 'monsterinsights-bootstrap', plugins_url( 'assets/css/bootstrap-prefixed' . $suffix . '.css', MONSTERINSIGHTS_PLUGIN_FILE ), array(), monsterinsights_get_asset_version() );
-	wp_enqueue_style( 'monsterinsights-bootstrap' );
-
-	// Secondary
-	//wp_register_style( 'monsterinsights-bootstrap-base', plugins_url( 'assets/css/bootstrap' . $suffix . '.css', MONSTERINSIGHTS_PLUGIN_FILE ), array(), monsterinsights_get_asset_version() );
-	//wp_enqueue_style( 'monsterinsights-bootstrap-base' );
-	//wp_register_style( 'monsterinsights-bootstrap-theme', plugins_url( 'assets/css/bootstrap-theme' . $suffix . '.css', MONSTERINSIGHTS_PLUGIN_FILE ), array( 'monsterinsights-bootstrap-base' ), monsterinsights_get_asset_version() );
-	//wp_enqueue_style( 'monsterinsights-bootstrap-theme' );
-
-	// Vendors
-	wp_register_style( 'monsterinsights-vendors-style', plugins_url( 'assets/css/vendors' . $suffix . '.css', MONSTERINSIGHTS_PLUGIN_FILE ), array(), monsterinsights_get_asset_version() );
-	wp_enqueue_style( 'monsterinsights-vendors-style' );
-
 	// Tooltips
 	wp_enqueue_script( 'jquery-ui-tooltip' );
-
-	// Load necessary admin styles.
-	wp_register_style( 'monsterinsights-admin-style', plugins_url( 'assets/css/admin' . $suffix . '.css', MONSTERINSIGHTS_PLUGIN_FILE ), array(), monsterinsights_get_asset_version() );
-	wp_enqueue_style( 'monsterinsights-admin-style' );
-
-	// Load LTR stylesheet where needed.
-	if ( is_rtl() ) {
-		wp_enqueue_style( 'monsterinsights-admin-style-rtl', plugins_url( 'assets/css/admin-rtl' . $suffix . '.css', MONSTERINSIGHTS_PLUGIN_FILE ), array(), monsterinsights_get_asset_version() );
-	}
 }
 
 add_action( 'admin_enqueue_scripts', 'monsterinsights_admin_styles' );
@@ -162,10 +136,10 @@ add_action( 'admin_enqueue_scripts', 'monsterinsights_admin_styles' );
 /**
  * Loads scripts for all MonsterInsights-based Administration Screens.
  *
+ * @return null Return early if not on the proper screen.
  * @since 6.0.0
  * @access public
  *
- * @return null Return early if not on the proper screen.
  */
 function monsterinsights_admin_scripts() {
 
@@ -197,10 +171,12 @@ function monsterinsights_admin_scripts() {
 	if ( monsterinsights_is_settings_page() ) {
 		global $wp_version;
 
-		if ( ! defined( 'MONSTERINSIGHTS_LOCAL_JS_URL' ) ) {
-
+		if ( ! defined( 'MONSTERINSIGHTS_LOCAL_VENDORS_JS_URL' ) ) {
 			wp_enqueue_script( 'monsterinsights-vue-vendors', plugins_url( $version_path . '/assets/vue/js/chunk-vendors.js', MONSTERINSIGHTS_PLUGIN_FILE ), array(), monsterinsights_get_asset_version(), true );
 			wp_enqueue_script( 'monsterinsights-vue-common', plugins_url( $version_path . '/assets/vue/js/chunk-common.js', MONSTERINSIGHTS_PLUGIN_FILE ), array(), monsterinsights_get_asset_version(), true );
+		} else {
+			wp_enqueue_script( 'monsterinsights-vue-vendors', MONSTERINSIGHTS_LOCAL_VENDORS_JS_URL, array(), monsterinsights_get_asset_version(), true );
+			wp_enqueue_script( 'monsterinsights-vue-common', MONSTERINSIGHTS_LOCAL_COMMON_JS_URL, array(), monsterinsights_get_asset_version(), true );
 		}
 		$app_js_url = defined( 'MONSTERINSIGHTS_LOCAL_JS_URL' ) && MONSTERINSIGHTS_LOCAL_JS_URL ? MONSTERINSIGHTS_LOCAL_JS_URL : plugins_url( $version_path . '/assets/vue/js/settings.js', MONSTERINSIGHTS_PLUGIN_FILE );
 		wp_register_script( 'monsterinsights-vue-script', $app_js_url, array(), monsterinsights_get_asset_version(), true );
@@ -235,6 +211,7 @@ function monsterinsights_admin_scripts() {
 				$prepared_dimensions[] = $dimension;
 			}
 		}
+		$is_authed = ( MonsterInsights()->auth->is_authed() || MonsterInsights()->auth->is_network_authed() );
 
 		wp_localize_script(
 			'monsterinsights-vue-script',
@@ -273,6 +250,9 @@ function monsterinsights_admin_scripts() {
 				'plugin_version'       => MONSTERINSIGHTS_VERSION,
 				'is_admin'             => true,
 				'reports_url'          => add_query_arg( 'page', 'monsterinsights_reports', admin_url( 'admin.php' ) ),
+				'first_run_notice'     => apply_filters( 'monsterinsights_settings_first_time_notice_hide', monsterinsights_get_option( 'monsterinsights_first_run_notice' ) ),
+				'getting_started_url'  => is_multisite() ? network_admin_url( 'admin.php?page=monsterinsights_network#/about/getting-started' ) : admin_url( 'admin.php?page=monsterinsights_settings#/about/getting-started' ),
+				'authed'               => $is_authed,
 			)
 		);
 
@@ -282,29 +262,38 @@ function monsterinsights_admin_scripts() {
 
 	if ( monsterinsights_is_reports_page() ) {
 		global $wp_version;
-		if ( ! defined( 'MONSTERINSIGHTS_LOCAL_REPORTS_JS_URL' ) ) {
+		if ( ! defined( 'MONSTERINSIGHTS_LOCAL_VENDORS_JS_URL' ) ) {
 			wp_enqueue_script( 'monsterinsights-vue-vendors', plugins_url( $version_path . '/assets/vue/js/chunk-vendors.js', MONSTERINSIGHTS_PLUGIN_FILE ), array(), monsterinsights_get_asset_version(), true );
 			wp_enqueue_script( 'monsterinsights-vue-common', plugins_url( $version_path . '/assets/vue/js/chunk-common.js', MONSTERINSIGHTS_PLUGIN_FILE ), array(), monsterinsights_get_asset_version(), true );
+		} else {
+			wp_enqueue_script( 'monsterinsights-vue-vendors', MONSTERINSIGHTS_LOCAL_VENDORS_JS_URL, array(), monsterinsights_get_asset_version(), true );
+			wp_enqueue_script( 'monsterinsights-vue-common', MONSTERINSIGHTS_LOCAL_COMMON_JS_URL, array(), monsterinsights_get_asset_version(), true );
 		}
 		$app_js_url = defined( 'MONSTERINSIGHTS_LOCAL_REPORTS_JS_URL' ) && MONSTERINSIGHTS_LOCAL_REPORTS_JS_URL ? MONSTERINSIGHTS_LOCAL_REPORTS_JS_URL : plugins_url( $version_path . '/assets/vue/js/reports.js', MONSTERINSIGHTS_PLUGIN_FILE );
 		wp_register_script( 'monsterinsights-vue-reports', $app_js_url, array(), monsterinsights_get_asset_version(), true );
 		wp_enqueue_script( 'monsterinsights-vue-reports' );
 
+		// We do not have a current auth.
+		$site_auth = MonsterInsights()->auth->get_viewname();
+		$ms_auth   = is_multisite() && MonsterInsights()->auth->get_network_viewname();
+
 		wp_localize_script(
 			'monsterinsights-vue-reports',
 			'monsterinsights',
 			array(
-				'ajax'           => admin_url( 'admin-ajax.php' ),
-				'nonce'          => wp_create_nonce( 'mi-admin-nonce' ),
-				'network'        => is_network_admin(),
-				'translations'   => wp_get_jed_locale_data( monsterinsights_is_pro_version() ? 'ga-premium' : 'google-analytics-for-wordpress' ),
-				'assets'         => plugins_url( $version_path . '/assets/vue', MONSTERINSIGHTS_PLUGIN_FILE ),
-				'shareasale_id'  => monsterinsights_get_shareasale_id(),
-				'shareasale_url' => monsterinsights_get_shareasale_url( monsterinsights_get_shareasale_id(), '' ),
-				'addons_url'     => is_multisite() ? network_admin_url( 'admin.php?page=monsterinsights_network#/addons' ) : admin_url( 'admin.php?page=monsterinsights_settings#/addons' ),
-				'timezone'       => date( 'e' ),
+				'ajax'            => admin_url( 'admin-ajax.php' ),
+				'nonce'           => wp_create_nonce( 'mi-admin-nonce' ),
+				'network'         => is_network_admin(),
+				'translations'    => wp_get_jed_locale_data( monsterinsights_is_pro_version() ? 'ga-premium' : 'google-analytics-for-wordpress' ),
+				'assets'          => plugins_url( $version_path . '/assets/vue', MONSTERINSIGHTS_PLUGIN_FILE ),
+				'shareasale_id'   => monsterinsights_get_shareasale_id(),
+				'shareasale_url'  => monsterinsights_get_shareasale_url( monsterinsights_get_shareasale_id(), '' ),
+				'addons_url'      => is_multisite() ? network_admin_url( 'admin.php?page=monsterinsights_network#/addons' ) : admin_url( 'admin.php?page=monsterinsights_settings#/addons' ),
+				'timezone'        => date( 'e' ),
+				'authed'          => $site_auth || $ms_auth,
+				'settings_url'    => add_query_arg( 'page', 'monsterinsights_settings', admin_url( 'admin.php' ) ),
 				// Used to add notices for future deprecations.
-				'versions'       => array(
+				'versions'        => array(
 					'php_version'          => phpversion(),
 					'php_version_below_54' => apply_filters( 'monsterinsights_temporarily_hide_php_52_and_53_upgrade_warnings', version_compare( phpversion(), '5.4', '<' ) ),
 					'php_version_below_56' => apply_filters( 'monsterinsights_temporarily_hide_php_54_and_55_upgrade_warnings', version_compare( phpversion(), '5.6', '<' ) ),
@@ -314,10 +303,15 @@ function monsterinsights_admin_scripts() {
 					'wp_version_below_49'  => version_compare( $wp_version, '4.9', '<' ),
 					'wp_update_link'       => monsterinsights_get_url( 'settings-notice', 'settings-page', 'https://www.monsterinsights.com/docs/update-wordpress/' ),
 				),
-				'plugin_version' => MONSTERINSIGHTS_VERSION,
-				'is_admin'       => true,
+				'plugin_version'  => MONSTERINSIGHTS_VERSION,
+				'is_admin'        => true,
+				'wizard_url'      => admin_url( 'index.php?page=monsterinsights-onboarding' ),
+				'install_nonce'   => wp_create_nonce( 'monsterinsights-install' ),
+				'activate_nonce'  => wp_create_nonce( 'monsterinsights-activate' ),
+				'update_settings' => current_user_can( 'monsterinsights_save_settings' ),
 			)
 		);
+
 		return;
 	}
 	// ublock notice
@@ -329,10 +323,10 @@ add_action( 'admin_enqueue_scripts', 'monsterinsights_admin_scripts' );
 /**
  * Remove Assets that conflict with ours from our screens.
  *
+ * @return null Return early if not on the proper screen.
  * @since 6.0.4
  * @access public
  *
- * @return null Return early if not on the proper screen.
  */
 function monsterinsights_remove_conflicting_asset_files() {
 
@@ -600,10 +594,10 @@ add_action( 'admin_enqueue_scripts', 'monsterinsights_remove_conflicting_asset_f
 /**
  * Remove non-MI notices from MI page.
  *
+ * @return null Return early if not on the proper screen.
  * @since 6.0.0
  * @access public
  *
- * @return null Return early if not on the proper screen.
  */
 function hide_non_monsterinsights_warnings() {
 	// Bail if we're not on a MonsterInsights screen.
@@ -681,10 +675,10 @@ add_action( 'admin_head', 'hide_non_monsterinsights_warnings', PHP_INT_MAX );
  *
  * If no ID is present, just returns the monsterinsights.com/lite URL with UTM tracking.
  *
+ * @return string Upgrade link.
  * @since 6.0.0
  * @access public
  *
- * @return string Upgrade link.
  */
 function monsterinsights_get_upgrade_link( $medium = '', $campaign = '', $url = '' ) {
 	$url = monsterinsights_get_url( $medium, $campaign, $url, false );

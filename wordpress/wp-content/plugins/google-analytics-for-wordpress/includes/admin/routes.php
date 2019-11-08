@@ -27,6 +27,8 @@ class MonsterInsights_Rest_Routes {
 		add_action( 'wp_ajax_monsterinsights_handle_settings_import', array( $this, 'handle_settings_import' ) );
 
 		add_action( 'admin_notices', array( $this, 'hide_old_notices' ), 0 );
+
+		add_action( 'wp_ajax_monsterinsights_vue_dismiss_first_time_notice', array( $this, 'dismiss_first_time_notice' ) );
 	}
 
 	/**
@@ -36,7 +38,7 @@ class MonsterInsights_Rest_Routes {
 
 		check_ajax_referer( 'mi-admin-nonce', 'nonce' );
 
-		if ( ! current_user_can( 'monsterinsights_view_dashboard' ) ) {
+		if ( ! current_user_can( 'monsterinsights_view_dashboard' ) || ! monsterinsights_is_pro_version() ) {
 			return;
 		}
 
@@ -63,7 +65,7 @@ class MonsterInsights_Rest_Routes {
 	}
 
 	/**
-	 * Ajax handler for grabbing the license
+	 * Ajax handler for grabbing the current authenticated profile.
 	 */
 	public function get_profile() {
 
@@ -85,7 +87,7 @@ class MonsterInsights_Rest_Routes {
 	}
 
 	/**
-	 * Ajax handler for grabbing the license
+	 * Ajax handler for grabbing the settings.
 	 */
 	public function get_settings() {
 
@@ -113,7 +115,7 @@ class MonsterInsights_Rest_Routes {
 	}
 
 	/**
-	 * Ajax handler for grabbing the license
+	 * Ajax handler for updating the settings.
 	 */
 	public function update_settings() {
 
@@ -316,8 +318,6 @@ class MonsterInsights_Rest_Routes {
 
 		if ( isset( $installed_plugins[ $plugin_basename ] ) ) {
 			$installed = true;
-			$ms_active = is_plugin_active_for_network( $plugin_basename );
-			$ss_active = is_plugin_active( $plugin_basename );
 
 			if ( is_multisite() && is_network_admin() ) {
 				$active = is_plugin_active_for_network( $plugin_basename );
@@ -372,12 +372,12 @@ class MonsterInsights_Rest_Routes {
 			return;
 		}
 
-		$manual_ua_code     = isset( $_POST['manual_ua_code'] ) ? sanitize_text_field( wp_unslash( $_POST['manual_ua_code'] ) ) : '';
-		$manual_ua_code     = monsterinsights_is_valid_ua( $manual_ua_code ); // Also sanitizes the string.
-		$manual_ua_code_old = MonsterInsights()->auth->get_manual_ua();
+		$manual_ua_code = isset( $_POST['manual_ua_code'] ) ? sanitize_text_field( wp_unslash( $_POST['manual_ua_code'] ) ) : '';
+		$manual_ua_code = monsterinsights_is_valid_ua( $manual_ua_code ); // Also sanitizes the string.
 		if ( ! empty( $_REQUEST['isnetwork'] ) && sanitize_text_field( wp_unslash( $_REQUEST['isnetwork'] ) ) ) {
 			define( 'WP_NETWORK_ADMIN', true );
 		}
+		$manual_ua_code_old = is_network_admin() ? MonsterInsights()->auth->get_network_manual_ua() : MonsterInsights()->auth->get_manual_ua();
 
 		if ( $manual_ua_code && $manual_ua_code_old && $manual_ua_code_old === $manual_ua_code ) {
 			// Same code we had before
@@ -533,8 +533,8 @@ class MonsterInsights_Rest_Routes {
 		$report = MonsterInsights()->reporting->get_report( $report_name );
 
 		$isnetwork = ! empty( $_REQUEST['isnetwork'] ) ? sanitize_text_field( wp_unslash( $_REQUEST['isnetwork'] ) ) : '';
-		$start     = ! empty( $_POST['start'] ) ? sanitize_text_field( wp_unslash( $_POST['start'] ) ) : '';
-		$end       = ! empty( $_POST['end'] ) ? sanitize_text_field( wp_unslash( $_POST['end'] ) ) : '';
+		$start     = ! empty( $_POST['start'] ) ? sanitize_text_field( wp_unslash( $_POST['start'] ) ) : date( 'Y-m-d', strtotime( '-30 days' ) );
+		$end       = ! empty( $_POST['end'] ) ? sanitize_text_field( wp_unslash( $_POST['end'] ) ) : date( 'Y-m-d', strtotime( '-1 day' ) );;
 		$args      = array(
 			'start' => $start,
 			'end'   => $end,
@@ -543,7 +543,7 @@ class MonsterInsights_Rest_Routes {
 			$args['network'] = true;
 		}
 
-		if ( ! MonsterInsights()->license->license_can( $report->level ) ) {
+		if ( monsterinsights_is_pro_version() && ! MonsterInsights()->license->license_can( $report->level ) ) {
 			$data = array(
 				'success' => false,
 				'error'   => 'license_level',
@@ -555,6 +555,16 @@ class MonsterInsights_Rest_Routes {
 		if ( ! empty( $data['success'] ) && ! empty( $data['data'] ) ) {
 			wp_send_json_success( $data['data'] );
 		} else if ( isset( $data['success'] ) && false === $data['success'] && ! empty( $data['error'] ) ) {
+			// Use a custom handler for invalid_grant errors.
+			if ( strpos( $data['error'], 'invalid_grant' ) > 0 ) {
+				wp_send_json_error(
+					array(
+						'message' => 'invalid_grant',
+						'footer'  => '',
+					)
+				);
+			}
+
 			wp_send_json_error(
 				array(
 					'message' => $data['error'],
@@ -653,5 +663,15 @@ class MonsterInsights_Rest_Routes {
 		wp_send_json_success();
 
 		wp_die();
+	}
+
+	/**
+	 * Store that the first run notice has been dismissed so it doesn't show up again.
+	 */
+	public function dismiss_first_time_notice() {
+
+		monsterinsights_update_option( 'monsterinsights_first_run_notice', true );
+
+		wp_send_json_success();
 	}
 }
