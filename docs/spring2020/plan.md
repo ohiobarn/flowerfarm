@@ -1,6 +1,17 @@
 # Spring 2020 Plan
 
+> Fairborn, OH is in Zone 6a.
+
+> On average, your frost-free growing season starts Apr 11 and ends Oct 30, totaling 202 days
+
+> Spring 2020 in Northern Hemisphere will begin on Thursday, March 19
+
 ## Flower Field Layout
+
+Reference: 
+
+* [dripworks planning guide](https://www.dripworks.com/resources/drip-planning-guide)
+* [growing with landscape fabric](https://www.floretflowers.com/growing-with-landscape-fabric/)
 
 ![flower-field](img/field-layout.png)
 
@@ -100,13 +111,59 @@ Each station is a five shelf unit.  The top shelf is used for storage and four s
 
 ---
 
-## Resources
+## Beds
 
+## Plants
 
-### Irrigation
+Main cutting beds, annuals with irrigation
 
-* [dripworks planning guide](https://www.dripworks.com/resources/drip-planning-guide)
-* [growing with landscape fabric](https://www.floretflowers.com/growing-with-landscape-fabric/)
+| #| Plant               | Germ  | Space | Fabric | Irrigation 
+|--|---------------------|-------|-------|--------|------------
+| 1| Ranunculus          | corms |  4x4  |   no   |   yes
+| 2| Dahlias             | tuber | 16x16 |   yes  |   yes
+| 3| Anenome             | corms |  4x4  |   no   |   yes
+| 4| Zinnias             | | |
+| 5| Black Eyed Susans   | | |
+| 6| Snapdragon          | | |
+| 7| Cosmos              | | |
+| 8| Stocks              | | |
+| 9| Celosia             | | |
+|10| Gormphrena          | | |
+|11| Larkspur            | | |
+|12| Marigold            | | |
+|13| Choc.Qn Anne's Lace | | |
+|14| Sweet Pea           | | |
 
-### Germination
+Filler
 
+Floret said 50% Foliage and filler
+
+| #| Plant          | | |
+|--|----------------|-|-|
+| 1| Baby's Breath (Gypsophila) | | |
+| 2| Bishops Flower | | |
+| 3| Love-in-a-Mist | | |
+
+Foliage
+
+| #| Plant            | | |
+|--|------------------|-|-|
+| 1| Dusty Miller     | | perennials but grown as annual|
+| 2| Scented Geranium | | |
+| 3| Grasses-Panicum  | | "frosted explosion" |
+| 4| Eucalyptus       | | "silver drop", "seeded" |
+
+Sunflower beds, no irrigation
+
+| #| Variety             | | |
+|--|------------------|-|-|
+| 1| Single bloom | | |
+| 2| Blush | | |
+
+Pumpkin Patch, no irrigation
+
+| #| Variety            | | |
+|--|------------------|-|-|
+| 1| Variety 1 | | |
+| 2| Variety 2 | | |
+| 3| Variety 3 | | |
