@@ -113,15 +113,21 @@ Each station is a five shelf unit.  The top shelf is used for storage and four s
 
 ## Beds
 
+* main cutting beds
+* pumpkin patch
+* sunflower strip
+ 
+
+
 ## Plants
 
 Main cutting beds, annuals with irrigation
 
-| #| Plant               | Germ  | Space | Fabric | Irrigation 
-|--|---------------------|-------|-------|--------|------------
-| 1| Ranunculus          | corms |  4x4  |   no   |   yes
-| 2| Dahlias             | tuber | 16x16 |   yes  |   yes
-| 3| Anenome             | corms |  4x4  |   no   |   yes
+| #| Plant               | Germ  | Between plants in row   | Between rows | Rows per bed | Fabric | Irrigation 
+|--|---------------------|-------|-------------------------|--------------|--------------|--------|------------
+| 1| Ranunculus          | corms |  8 in                   | 10 in        | 4            |   no   |   yes
+| 2| Dahlias             | tuber | 16 in                   | 16 in        | 3            |  yes   |   yes
+| 3| Anemone             | corms |  6 in                   | 10 in        | 4            |   no   |   yes
 | 4| Zinnias             | | |
 | 5| Black Eyed Susans   | | |
 | 6| Snapdragon          | | |
