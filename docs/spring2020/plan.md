@@ -123,13 +123,13 @@ Each station is a five shelf unit.  The top shelf is used for storage and four s
 
 Main cutting beds, annuals with irrigation
 
-| #| Plant               | Germ  | Between plants in row   | Between rows | Rows per bed | Fabric | Irrigation 
-|--|---------------------|-------|-------------------------|--------------|--------------|--------|------------
-| 1| Ranunculus          | corms |  8 in                   | 10 in        | 4            |   no   |   yes
-| 2| Dahlias             | tuber | 16 in                   | 16 in        | 3            |  yes   |   yes
-| 3| Anemone             | corms |  6 in                   | 10 in        | 4            |   no   |   yes
-| 4| Zinnias             | | |
-| 5| Black Eyed Susans   | | |
+| #| Plant               | Propagation | Start   | Between plants in row   | Between rows | Rows per bed | Fabric | Irrigation 
+|--|---------------------|-------------|---------|-------------------------|--------------|--------------|--------|------------
+| 1| Ranunculus          | corms       | outside |  8 in                   | 10 in        | 4            |   no   |   yes
+| 2| Dahlias             | tuber       | outside | 16 in                   | 16 in        | 3            |  yes   |   yes
+| 3| Anemone             | corms       | outside |  6 in                   | 10 in        | 4            |   no   |   yes
+| 4| Zinnias             | seed        | inside  |  9 in                   |  9 in        | 5            |  yes   |   yes
+| 5| Black Eyed Susans   | seed        | inside  |  9 in                   |  9 in        | 5            |  yes   |   yes
 | 6| Snapdragon          | | |
 | 7| Cosmos              | | |
 | 8| Stocks              | | |
