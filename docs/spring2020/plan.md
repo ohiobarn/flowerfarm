@@ -140,7 +140,18 @@ Main cutting beds, annuals with irrigation
 |13| Choc.Qn Anne's Lace | | |
 |14| Sweet Pea           | | |
 
-Filler
+### Plants Grow Sow Chart
+
+![](img/Plant-List-2020-Back-Field.png)
+>[view larger image](img/Plant-List-2020-Back-Field.png)
+
+### Plants Field Layout
+
+![](img/Plan_2020_Field.png)
+
+---
+
+## Filler
 
 Floret said 50% Foliage and filler
 
@@ -150,7 +161,7 @@ Floret said 50% Foliage and filler
 | 2| Bishops Flower | | |
 | 3| Love-in-a-Mist | | |
 
-Foliage
+## Foliage
 
 | #| Plant            | | |
 |--|------------------|-|-|
@@ -159,6 +170,8 @@ Foliage
 | 3| Grasses-Panicum  | | "frosted explosion" |
 | 4| Eucalyptus       | | "silver drop", "seeded" |
 
+## Sunflowers
+
 Sunflower beds, no irrigation
 
 | #| Variety             | | |
@@ -166,26 +179,28 @@ Sunflower beds, no irrigation
 | 1| Single bloom | | |
 | 2| Blush | | |
 
+## Pumpkin Patch
+
 Pumpkin Patch, no irrigation
 
-| #| Variety          | Class   | Days to Germ | Vine Length | Between plants in row | Between rows |
-|--|------------------|---------|--------------|-------------|-----------------------|--------------|
-| 1| PipSqueak(Sm)    | Pumpkin | 100          | Medium      | 33 in                 | 8 ft
-| 2| Racer (Med)      | Pumpkin | |
-| 3| Howden (Lg)      | Pumpkin | |
-| 4| Casperita (Mini) | Pumpkin | |
-| 5| Flat Stacker     | Pumpkin | |
-| 6| Ornamental Mix   | Gourd   | |
+|#| Variety        | Size   | Days to Maturity | Vine Length | Between plants in row | Between rows | Grow    | Link  |
+|-|----------------|--------|------------------|-------------|-----------------------|--------------|---------|-------|
+|1| PipSqueak      | Small  | 100              | Medium      | 33 in                 |  8 ft        | &#8224; | [JS](https://www.johnnyseeds.com/vegetables/pumpkins/pipsqueak-pmr-f1-pumpkin-seed-4019.html?cgid=pumpkins)
+|2| Racer Treated  | Medium |  85              | Short       | 33 in                 |  6 ft        | &#8224; | [JS](https://www.johnnyseeds.com/vegetables/pumpkins/jack-o-lanterns/racer-treated-f1-pumpkin-seed-2163T.html#q=racer&lang=en_US&start=1)
+|3| Howden         | Large  | 115              | Long        | 60 in                 | 12 ft        | &#8224; | [JS](https://www.johnnyseeds.com/vegetables/pumpkins/specialty-pumpkins/casperita-f1-pumpkin-seed-3076.html#q=casperita&lang=en_US&start=1)
+|4| Casperita      | Mini   |  77              | Medium      | 18 in                 | 10 ft        | &#8224; | [JS](https://www.johnnyseeds.com/vegetables/pumpkins/specialty-pumpkins/casperita-f1-pumpkin-seed-3076.html#q=casperita&lang=en_US&start=1)
+|5| Flat Stacker   | Medium |  95              | Long        | 42 in                 | 12 ft        | &#8224; | [JS](https://www.johnnyseeds.com/vegetables/pumpkins/specialty-pumpkins/flat-stacker-f1-pumpkin-seed-3574.html)
+|6| Ornamental Mix | Gourd  |  95              | Medium      | 60 in                 |  8 ft        | &#8224; | [JS](https://www.johnnyseeds.com/vegetables/gourds/ornamental-gourds-small-mixed-gourd-seed-604.html#q=ornamental%2Bgourds&lang=en_US&start=1)
+
+> &#8224; - For direct seeding, sow 2 seeds per spacing, 1/2-1" deep. Thin to 1 plant per spacing after seedlings are established
+
+### Pumpkin Grow Sow Chart
+
+![](img/Pumpkin_Patch_Plant_List.png )
+
+### Pumpkin Grow Sow Field Layout
+
+![](img/Pumpkin_Patch_Field.png)
+---
 
 ![](img/pumpkins-specialty-varieties-comparison-chart_pdf.png)
-## Garden Planner
-
-### Plant List
-
-![](img/Plant-List-2020-Back-Field.png)
->[view larger image](img/Plant-List-2020-Back-Field.png)
-
-### Field
-
-![](img/Plan_2020_Field.png)
->[view larger image](img/Plan_2020_Field.png)
