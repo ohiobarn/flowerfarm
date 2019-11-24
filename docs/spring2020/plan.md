@@ -130,7 +130,7 @@ Main cutting beds, annuals with irrigation
 | 3| Anemone             | corms       | outside |  6 in                   | 10 in        | 4            |   no   |   yes
 | 4| Zinnias             | seed        | inside  |  9 in                   |  9 in        | 5            |  yes   |   yes
 | 5| Black Eyed Susans   | seed        | inside  |  9 in                   |  9 in        | 5            |  yes   |   yes
-| 6| Snapdragon          | | |
+| 6| Snapdragon          | seed        | inside  |  9 in                   |  9 in        | 5            |  yes   |   yes
 | 7| Cosmos              | | |
 | 8| Stocks              | | |
 | 9| Celosia             | | |
@@ -168,19 +168,24 @@ Sunflower beds, no irrigation
 
 Pumpkin Patch, no irrigation
 
-| #| Variety            | | |
-|--|------------------|-|-|
-| 1| Variety 1 | | |
-| 2| Variety 2 | | |
-| 3| Variety 3 | | |
+| #| Variety          | Class   | Days to Germ | Vine Length | Between plants in row | Between rows |
+|--|------------------|---------|--------------|-------------|-----------------------|--------------|
+| 1| PipSqueak(Sm)    | Pumpkin | 100          | Medium      | 33 in                 | 8 ft
+| 2| Racer (Med)      | Pumpkin | |
+| 3| Howden (Lg)      | Pumpkin | |
+| 4| Casperita (Mini) | Pumpkin | |
+| 5| Flat Stacker     | Pumpkin | |
+| 6| Ornamental Mix   | Gourd   | |
 
-
+![](img/pumpkins-specialty-varieties-comparison-chart_pdf.png)
 ## Garden Planner
 
 ### Plant List
 
 ![](img/Plant-List-2020-Back-Field.png)
+>[view larger image](img/Plant-List-2020-Back-Field.png)
 
 ### Field
 
 ![](img/Plan_2020_Field.png)
+>[view larger image](img/Plan_2020_Field.png)
