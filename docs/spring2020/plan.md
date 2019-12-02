@@ -121,6 +121,10 @@ Each station is a five shelf unit.  The top shelf is used for storage and four s
 
 Main cutting beds, annuals with irrigation.
 
+> * [Main field layout PDF](Main-Field-2020.pdf)
+> * [Plant list PDF](Plant-List-2020-Main-Field.pdf)
+
+
 Plant Spacing:
 
 | #| Plant               | Propagation | Start   | Between plants in row   | Between rows | Rows per bed | Fabric | Irrigation |
@@ -173,10 +177,6 @@ In this table if the number of plants is fixed then the *bed-linear-feed* will b
 
 TODO - use [this info for the dahlia seed and work into the tables](https://www.johnnyseeds.com/flowers/dahlia/giant-hybrid-mix-dahlia-seed-3397.11.html)
 
-### Plants Field Layout
-
-![](img/Plan_2020_Field.png)
-> [Plant list PDF for the above image](Plant-List-2020-Main-Field.pdf)
 ---
 
 ## Filler
