@@ -24,7 +24,7 @@ Reference:
 
 ---
 
-## Plant Spacing
+## Plant Spacing Plan
 
 To compute the number of plants per bed; each bed is 48 inches (4 feet) wide and 1,200 inches (100 feet) long, as shown above, and by planting with 9-inch spacing, I can fit ~665 plants in each bed:
 
@@ -113,19 +113,19 @@ Each station is a five shelf unit.  The top shelf is used for storage and four s
 
 ## Beds
 
-* main cutting beds
-* pumpkin patch
-* sunflower strip
+* Main cutting beds
+* Filler and Foliage
+* Sunflower strip
+* Pumpkin patch
 
-## Plants
+## Main Cutting Beds
 
 Main cutting beds, annuals with irrigation.
 
-> * [Main field layout PDF](Main-Field-2020.pdf)
-> * [Plant list PDF](Main-Field-2020-Plant-List.pdf)
+> * [Bed Layout PDF](Main-Field-2020.pdf)
+> * [Sow Grow Chart PDF](Main-Field-2020-Plant-List.pdf)
 
-
-Plant Spacing:
+### Cut Flower Spacing
 
 | #| Plant               | Propagation | Start   | Between plants in row   | Between rows | Rows per bed | Fabric | Irrigation |
 |--|---------------------|-------------|---------|-------------------------|--------------|--------------|--------|------------|
@@ -145,10 +145,9 @@ Plant Spacing:
 |14| Choc.Qn Anne's Lace | | |
 |15| Sweet Pea           | | |
 
-Varieties:
+### Varieties
 
 In this table if the number of plants is fixed then the *bed-linear-feed* will be computed in the Garden Planner app.  However in most cases the *bed-linear-feed* is given and the number of plans is computed. **Note** a "plant" might require several seeds (or tubers or corms) if it is a "thinning" plant like the pumpkins. 
-
 
 | Plant                  | Variety                     | Fixed Qty   | Row Group |
 |------------------------|-----------------------------|-------------|-----------|
@@ -174,14 +173,15 @@ In this table if the number of plants is fixed then the *bed-linear-feed* will b
 |                        | Café Au Lait (XL)           | 8 tubers    |    6G
 |                        | Mix (seed)                  | 90 seeds    |    6H
 
-
 TODO - use [this info for the dahlia seed and work into the tables](https://www.johnnyseeds.com/flowers/dahlia/giant-hybrid-mix-dahlia-seed-3397.11.html)
 
 ---
 
-## Filler
+## Filler and Foliage
 
 Floret said 50% Foliage and filler
+
+### Filler
 
 | #| Plant          | | |
 |--|----------------|-|-|
@@ -189,7 +189,7 @@ Floret said 50% Foliage and filler
 | 2| Bishops Flower | | |
 | 3| Love-in-a-Mist | | |
 
-## Foliage
+### Foliage
 
 | #| Plant            | | |
 |--|------------------|-|-|
@@ -197,6 +197,8 @@ Floret said 50% Foliage and filler
 | 2| Scented Geranium | | |
 | 3| Grasses-Panicum  | | "frosted explosion" |
 | 4| Eucalyptus       | | "silver drop", "seeded" |
+
+---
 
 ## Sunflowers
 
@@ -206,6 +208,8 @@ Sunflower beds, no irrigation
 |--|------------------|-|-|
 | 1| Single bloom | | |
 | 2| Blush | | |
+
+---
 
 ## Pumpkin Patch
 
@@ -226,14 +230,12 @@ Pumpkin Patch, no irrigation
 
 ![](img/Pumpkin_Patch_Plant_List.png )
 
-### Pumpkin Grow Sow Field Layout
+### Pumpkin Grow Sow Chart
 
 ![](img/Pumpkin_Patch_Field.png)
+
 ---
 
 ![](img/pumpkins-specialty-varieties-comparison-chart_pdf.png)
 
 
-## Resources
-
-* [Floret-Grow-Great-Dahlias.pdf](Floret-Grow-Great-Dahlias.pdf)
