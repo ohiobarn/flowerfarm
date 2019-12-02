@@ -116,39 +116,67 @@ Each station is a five shelf unit.  The top shelf is used for storage and four s
 * main cutting beds
 * pumpkin patch
 * sunflower strip
- 
-
 
 ## Plants
 
-Main cutting beds, annuals with irrigation
+Main cutting beds, annuals with irrigation.
 
-| #| Plant               | Propagation | Start   | Between plants in row   | Between rows | Rows per bed | Fabric | Irrigation 
-|--|---------------------|-------------|---------|-------------------------|--------------|--------------|--------|------------
-| 1| Ranunculus          | corms       | outside |  8 in                   | 10 in        | 4            |   no   |   yes
-| 2| Dahlias             | tuber       | outside | 16 in                   | 16 in        | 3            |  yes   |   yes
-| 3| Anemone             | corms       | outside |  6 in                   | 10 in        | 4            |   no   |   yes
-| 4| Zinnias             | seed        | inside  |  9 in                   |  9 in        | 5            |  yes   |   yes
-| 5| Black Eyed Susans   | seed        | inside  |  9 in                   |  9 in        | 5            |  yes   |   yes
-| 6| Snapdragon          | seed        | inside  |  9 in                   |  9 in        | 5            |  yes   |   yes
-| 7| Cosmos              | | |
-| 8| Stocks              | | |
-| 9| Celosia             | | |
-|10| Gormphrena          | | |
-|11| Larkspur            | | |
-|12| Marigold            | | |
-|13| Choc.Qn Anne's Lace | | |
-|14| Sweet Pea           | | |
+Plant Spacing:
 
-### Plants Grow Sow Chart
+| #| Plant               | Propagation | Start   | Between plants in row   | Between rows | Rows per bed | Fabric | Irrigation |
+|--|---------------------|-------------|---------|-------------------------|--------------|--------------|--------|------------|
+| 1| Dahlias             | tuber       | outside | 16 in                   | 16 in        | 3            |  yes   |   yes      |
+| 2| Dahlia Mix          | seed        | inside  | 12 in                   | 16 in        | 3            |  yes   |   yes      |
+| 3| Ranunculus          | corms       | outside |  8 in                   | 10 in        | 4            |   no   |   yes      |  
+| 4| Anemone             | corms       | outside |  6 in                   | 10 in        | 4            |   no   |   yes      |
+| 5| Zinnias             | seed        | inside  |  9 in                   |  9 in        | 5            |  yes   |   yes      |
+| 6| Black Eyed Susans   | seed        | inside  |  9 in                   |  9 in        | 5            |  yes   |   yes      |
+| 7| Snapdragon          | seed        | inside  |  9 in                   |  9 in        | 5            |  yes   |   yes      |
+| 8| Cosmos              | | |
+| 9| Stocks              | | |
+|10| Celosia             | | |
+|11| Gormphrena          | | |
+|12| Larkspur            | | |
+|13| Marigold            | | |
+|14| Choc.Qn Anne's Lace | | |
+|15| Sweet Pea           | | |
 
-![](img/Plant-List-2020-Back-Field.png)
->[view larger image](img/Plant-List-2020-Back-Field.png)
+Varieties:
+
+In this table if the number of plants is fixed then the *bed-linear-feed* will be computed in the Garden Planner app.  However in most cases the *bed-linear-feed* is given and the number of plans is computed. **Note** a "plant" might require several seeds (or tubers or corms) if it is a "thinning" plant like the pumpkins. 
+
+
+| Plant                  | Variety                     | Fixed Qty   | Row Group |
+|------------------------|-----------------------------|-------------|-----------|
+| Dahlias                | Jan Ryecroft (Sm 4”)        | 5 tubers    |    6A
+|                        | Lady Natalie (Sm 4”)        | 5 tubers    |    6A
+|                        | Golden Scepter (Sm 2”)      | 5 tubers    |    6A
+|                        | Black Satin (Sm 2-4”)       | 5 tubers    |    6B
+|                        | Cornel (Sm 4”)              | 5 tubers    |    6B
+|                        | Dorothy (Sm)                | 5 tubers    |    6B
+|                        | Franz Kafka (Sm 2-3”)       | 7 tubers    |    6C
+|                        | Wizard of Oz (Sm 3”)        | 3 tubers    |    6C
+|                        | Peaches n Cream (Med 4-6“)  | 8 tubers    |    6D
+|                        | Conn.Coral (Med)            | 8 tubers    |    6D
+|                        | Mystique (Med 4-6“)         | 8 tubers    |    6D
+|                        | BoomBoom White (Med 6”)     | 5 tubers    |    6E
+|                        | Sweet Nathalie (Med. 5”)    | 5 tubers    |    6E
+|                        | L’ancresse (Med 4-6“)       | 5 tubers    |    6E
+|                        | Thomas Edison (Med 6”)      | 5 tubers    |    6F
+|                        | Shiloh Noelle (XL 10”)      | 5 tubers    |    6F
+|                        | Hamari Gold (XL 10”)        | 5 tubers    |    6F
+|                        | Penhill Watermelon (XL 10”) | 8 tubers    |    6G
+|                        | Otto’s Thrill (XL)          | 8 tubers    |    6G
+|                        | Café Au Lait (XL)           | 8 tubers    |    6G
+|                        | Mix (seed)                  | 90 seeds    |    6H
+
+
+TODO - use [this info for the dahlia seed and work into the tables](https://www.johnnyseeds.com/flowers/dahlia/giant-hybrid-mix-dahlia-seed-3397.11.html)
 
 ### Plants Field Layout
 
 ![](img/Plan_2020_Field.png)
-
+> [Plant list PDF for the above image](Plant-List-2020-Main-Field.pdf)
 ---
 
 ## Filler
@@ -204,3 +232,8 @@ Pumpkin Patch, no irrigation
 ---
 
 ![](img/pumpkins-specialty-varieties-comparison-chart_pdf.png)
+
+
+## Resources
+
+* [Floret-Grow-Great-Dahlias.pdf](Floret-Grow-Great-Dahlias.pdf)
