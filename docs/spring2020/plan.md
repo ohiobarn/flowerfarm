@@ -122,7 +122,7 @@ Each station is a five shelf unit.  The top shelf is used for storage and four s
 Main cutting beds, annuals with irrigation.
 
 > * [Main field layout PDF](Main-Field-2020.pdf)
-> * [Plant list PDF](Plant-List-2020-Main-Field.pdf)
+> * [Plant list PDF](Main-Field-2020-Plant-List.pdf)
 
 
 Plant Spacing:
