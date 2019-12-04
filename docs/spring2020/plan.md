@@ -149,39 +149,43 @@ Main cutting beds, annuals with irrigation.
 
 In this table if the number of plants is fixed then the *bed-linear-feed* will be computed in the Garden Planner app.  However in most cases the *bed-linear-feed* is given and the number of plans is computed. **Note** a "plant" might require several seeds (or tubers or corms) if it is a "thinning" plant like the pumpkins. 
 
-| Plant                  | Variety                     | Fixed Qty          | Row Group |
-|------------------------|-----------------------------|--------------------|-----------|
-| Dahlias                | Jan Ryecroft (Sm 4”)        | 5 tubers           | 6A
-|                        | Lady Natalie (Sm 4”)        | 5 tubers           | 6A
-|                        | Golden Scepter (Sm 2”)      | 5 tubers           | 6A
-|                        | Black Satin (Sm 2-4”)       | 5 tubers           | 6B
-|                        | Cornel (Sm 4”)              | 5 tubers           | 6B
-|                        | Dorothy (Sm)                | 5 tubers           | 6B
-|                        | Franz Kafka (Sm 2-3”)       | 7 tubers           | 6C
-|                        | Wizard of Oz (Sm 3”)        | 3 tubers           | 6C
-|                        | Peaches n Cream (Med 4-6“)  | 8 tubers           | 6D
-|                        | Conn.Coral (Med)            | 8 tubers           | 6D
-|                        | Mystique (Med 4-6“)         | 8 tubers           | 6D
-|                        | BoomBoom White (Med 6”)     | 5 tubers           | 6E
-|                        | Sweet Nathalie (Med. 5”)    | 5 tubers           | 6E
-|                        | L’ancresse (Med 4-6“)       | 5 tubers           | 6E
-|                        | Thomas Edison (Med 6”)      | 5 tubers           | 6F
-|                        | Shiloh Noelle (XL 10”)      | 5 tubers           | 6F
-|                        | Hamari Gold (XL 10”)        | 5 tubers           | 6F
-|                        | Penhill Watermelon (XL 10”) | 8 tubers           | 6G
-|                        | Otto’s Thrill (XL)          | 8 tubers           | 6G
-|                        | Café Au Lait (XL)           | 8 tubers           | 6G
-|                        | Mix (seed)                  | 90 seeds           | 6H
-| Cosmos                 | Versailles Mix              |  6 LBF, ~40 plants | 7A
-|                        | Dbl-Click SnowPuff          |  6 LBF, ~40 plants | 7B
-|                        | Dbl-Click Mix               |  6 LBF, ~40 plants | 7C
-|                        | Rubenza                     |  6 LBF, ~40 plants | 7D
-|                        | Sea Shells                  |  6 LBF, ~40 plants | 7E
+| Plant              | Variety                     | Row Group | Fixed        | Derived   | Sow per plant | Stock&#8224;| What to Buy
+|--------------------|-----------------------------|-----------|--------------|-----------|---------------|-------------|------------
+| Dahlias            | Jan Ryecroft (Sm 4”)        | 6A        |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
+|                    | Lady Natalie (Sm 4”)        | 6A        |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
+|                    | Golden Scepter (Sm 2”)      | 6A        |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
+|                    | Black Satin (Sm 2-4”)       | 6B        |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
+|                    | Cornel (Sm 4”)              | 6B        |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
+|                    | Dorothy (Sm)                | 6B        |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
+|                    | Franz Kafka (Sm 2-3”)       | 6C        |   7 tubers   |  8 LBF    |  1 tuber      |   7 tubers  |   7 tubers
+|                    | Wizard of Oz (Sm 3”)        | 6C        |   3 tubers   |  8 LBF    |  1 tuber      |   3 tubers  |   3 tubers
+|                    | Peaches n Cream (Med 4-6“)  | 6D        |   8 tubers   | 12.5 LBF  |  1 tuber      |   8 tubers  |   8 tubers
+|                    | Conn.Coral (Med)            | 6D        |   8 tubers   | 12.5 LBF  |  1 tuber      |   8 tubers  |   8 tubers
+|                    | Mystique (Med 4-6“)         | 6D        |   8 tubers   | 12.5 LBF  |  1 tuber      |   8 tubers  |   8 tubers
+|                    | BoomBoom White (Med 6”)     | 6E        |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
+|                    | Sweet Nathalie (Med. 5”)    | 6E        |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
+|                    | Lancresse (Med 4-6“)        | 6E        |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
+|                    | Thomas Edison (Med 6”)      | 6F        |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
+|                    | Shiloh Noelle (XL 10”)      | 6F        |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
+|                    | Hamari Gold (XL 10”)        | 6F        |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
+|                    | Penhill Watermelon (XL 10”) | 6G        |   8 tubers   | 12 LBF    |  1 tuber      |   8 tubers  |   8 tubers
+|                    | Otto’s Thrill (XL)          | 6G        |   8 tubers   | 12 LBF    |  1 tuber      |   8 tubers  |   8 tubers
+|                    | Café Au Lait (XL)           | 6G        |   8 tubers   | 12 LBF    |  1 tuber      |   8 tubers  |   8 tubers
+|                    | Mix (seed)                  | 6H        |  30 LBF      | 90 plants |  2 seeds      | 180 seeds   | 216 seeds
+| Cosmos             | Versailles Mix              | 7A        |   6 LBF      | 40 plants |  1 seed       |  40 seeds   |  48 seeds
+|                    | Dbl-Click SnowPuff          | 7B        |   6 LBF      | 40 plants |  1 seed       |  40 seeds   |  48 seeds
+|                    | Dbl-Click Mix               | 7C        |   6 LBF      | 40 plants |  1 seed       |  40 seeds   |  48 seeds
+|                    | Rubenza                     | 7D        |   6 LBF      | 40 plants |  1 seed       |  40 seeds   |  48 seeds
+|                    | Sea Shells                  | 7E        |   6 LBF      | 40 plants |  1 seed       |  40 seeds   |  48 seeds
+| Zinnias            | Jazzy Mix                   | 7F        | 6.5 LBF      | 45 plants |  6 seeds      | 270 seeds   | 324 seeds
+|                    | Oklahoma White              | ??        | 6.5 LBF      | 45 plants |  6 seeds      | 270 seeds   | 324 seeds
+|                    | Queen Red Lime              | ??        | 6.5 LBF      | 45 plants |  6 seeds      | 270 seeds   | 324 seeds
+|                    | Giant Mix                   | ??        | 6.5 LBF      | 45 plants |  6 seeds      | 270 seeds   | 324 seeds
+|                    | Giant Salmon Rose           | ??        | 6.5 LBF      | 45 plants |  6 seeds      | 270 seeds   | 324 seeds
+|                    | Uproar Rose                 | ??        | 6.5 LBF      | 45 plants |  6 seeds      | 270 seeds   | 324 seeds
 
-> `lbf` - linear bed feed.  The number of plants in a LBF depends on spacing, for example with a 9in x 9in, 6 LBF will hold about 40 plants.
-
-
-TODO - use [this info for the dahlia seed and work into the tables](https://www.johnnyseeds.com/flowers/dahlia/giant-hybrid-mix-dahlia-seed-3397.11.html)
+> *  &#8224; Stock is exactly what is needed gut when growing from seed, always order 20 percent more. The `What to Buy` has 20% added to stock in some cases
+> * `lbf` - linear bed feed.  The number of plants in a LBF depends on spacing, for example with a 9in x 9in, 6 LBF will hold about 40 plants.
 
 ---
 
