@@ -179,11 +179,11 @@ In this table if the number of plants is fixed then the *bed-linear-feed* will b
 |                    | Rubenza                     | 7D        |   6 LBF      | 40 plants |  1 seed       |  40 seeds   |  48 seeds
 |                    | Sea Shells                  | 7E        |   6 LBF      | 40 plants |  1 seed       |  40 seeds   |  48 seeds
 | Zinnias            | Jazzy Mix                   | 7F        | 6.5 LBF      | 45 plants |  6 seeds      | 270 seeds   | 324 seeds
-|                    | Oklahoma White              | ??        | 6.5 LBF      | 45 plants |  6 seeds      | 270 seeds   | 324 seeds
-|                    | Queen Red Lime              | ??        | 6.5 LBF      | 45 plants |  6 seeds      | 270 seeds   | 324 seeds
-|                    | Giant Mix                   | ??        | 6.5 LBF      | 45 plants |  6 seeds      | 270 seeds   | 324 seeds
-|                    | Giant Salmon Rose           | ??        | 6.5 LBF      | 45 plants |  6 seeds      | 270 seeds   | 324 seeds
-|                    | Uproar Rose                 | ??        | 6.5 LBF      | 45 plants |  6 seeds      | 270 seeds   | 324 seeds
+|                    | Oklahoma White              | 7G        | 6.5 LBF      | 45 plants |  6 seeds      | 270 seeds   | 324 seeds
+|                    | Queen Red Lime              | 7H        | 6.5 LBF      | 45 plants |  6 seeds      | 270 seeds   | 324 seeds
+|                    | Giant Mix                   | 7I        | 6.5 LBF      | 45 plants |  6 seeds      | 270 seeds   | 324 seeds
+|                    | Giant Salmon Rose           | 7J        | 6.5 LBF      | 45 plants |  6 seeds      | 270 seeds   | 324 seeds
+|                    | Uproar Rose                 | 7K        | 6.5 LBF      | 45 plants |  6 seeds      | 270 seeds   | 324 seeds
 
 > *  &#8224; Stock is exactly what is needed gut when growing from seed, always order 20 percent more. The `What to Buy` has 20% added to stock in some cases
 > * `lbf` - linear bed feed.  The number of plants in a LBF depends on spacing, for example with a 9in x 9in, 6 LBF will hold about 40 plants.
