@@ -1,14 +1,16 @@
-# Spring 2020 Plan
+# Spring 2020
 
-> Fairborn, OH is in Zone 6a.
+Quick Facts:
 
-> On average, your frost-free growing season starts Apr 11 and ends Oct 30, totaling 202 days
+> * Fairborn, OH is in Zone 6a.
+> * On average, your frost-free growing season starts Apr 11 and ends Oct 30, totaling 202 days
+> * Spring 2020 in Northern Hemisphere will begin on Thursday, March 19
 
-> Spring 2020 in Northern Hemisphere will begin on Thursday, March 19
+---
 
 ## Flower Field Layout
 
-Reference: 
+Reference:
 
 * [dripworks planning guide](https://www.dripworks.com/resources/drip-planning-guide)
 * [growing with landscape fabric](https://www.floretflowers.com/growing-with-landscape-fabric/)
@@ -24,7 +26,7 @@ Reference:
 
 ---
 
-## Plant Spacing Plan
+## Spacing Plan
 
 To compute the number of plants per bed; each bed is 48 inches (4 feet) wide and 1,200 inches (100 feet) long, as shown above, and by planting with 9-inch spacing, I can fit ~665 plants in each bed:
 
@@ -94,7 +96,7 @@ The drip tape that comes with the [large kit](https://www.dripworks.com/drip-tap
 
 ## Germination Station
 
-### One Shelf
+### Shelf Layout
 
 The image below shows the layout for one shelf of the germination station. Each shelf will be able to hold `288 plants`, four starter trays of 72 plants each.  
 
@@ -102,8 +104,7 @@ The image below shows the layout for one shelf of the germination station. Each 
 
 ![](img/one-shelf-seed-starter.png)
 
-
-### One Station
+### Station
 
 Each station is a five shelf unit.  The top shelf is used for storage and four shelves will be used for germination.  Each station will be able to hold `1,152 plants`, four shelves of 288 plants each.
 
@@ -111,21 +112,21 @@ Each station is a five shelf unit.  The top shelf is used for storage and four s
 
 ---
 
-## Beds
+## Beds Summary
 
 * Main cutting beds
 * Filler and Foliage
 * Sunflower strip
 * Pumpkin patch
 
-## Main Cutting Beds
+### Garden Planner
 
 Main cutting beds, annuals with irrigation.
 
 > * [Bed Layout PDF](Main-Field-2020.pdf)
 > * [Sow Grow Chart PDF](Main-Field-2020-Plant-List.pdf)
 
-### Cut Flower Spacing
+## Spacing
 
 | #| Plant               | Propagation | Start   | Between plants in row   | Between rows | Rows per bed | Fabric | Irrigation |
 |--|---------------------|-------------|---------|-------------------------|--------------|--------------|--------|------------|
@@ -145,9 +146,9 @@ Main cutting beds, annuals with irrigation.
 |13| Choc.Qn Anne's Lace | | |
 |14| Sweet Pea           | | |
 
-### Varieties
+## Varieties
 
-In this table if the number of plants is fixed then the *bed-linear-feed* will be computed in the Garden Planner app.  However in most cases the *bed-linear-feed* is given and the number of plans is computed. **Note** a "plant" might require several seeds (or tubers or corms) if it is a "thinning" plant like the pumpkins. 
+In this table if the number of plants is fixed then the *bed-linear-feed* will be computed in the Garden Planner app.  However in most cases the *bed-linear-feed* is given and the number of plans is computed. **Note** a "plant" might require several seeds (or tubers or corms) if it is a "thinning" plant like the pumpkins or if you need to sow several seeds per plant.
 
 | Plant              | Variety                     | Row Group | Fixed        | Derived   | Sow per plant | Stock&#8224;| What to Buy
 |--------------------|-----------------------------|-----------|--------------|-----------|---------------|-------------|------------
@@ -238,16 +239,14 @@ Pumpkin Patch, no irrigation
 
 > &#8224; - For direct seeding, sow 2 seeds per spacing, 1/2-1" deep. Thin to 1 plant per spacing after seedlings are established
 
-### Pumpkin Grow Sow Chart
+### Pumpkin Field 
 
 ![](img/Pumpkin_Patch_Plant_List.png )
 
-### Pumpkin Grow Sow Chart
+---
 
 ![](img/Pumpkin_Patch_Field.png)
 
 ---
 
 ![](img/pumpkins-specialty-varieties-comparison-chart_pdf.png)
-
-
