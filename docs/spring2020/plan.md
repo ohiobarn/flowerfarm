@@ -150,8 +150,8 @@ Main cutting beds, annuals with irrigation.
 
 In this table if the number of plants is fixed then the *bed-linear-feed* will be computed in the Garden Planner app.  However in most cases the *bed-linear-feed* is given and the number of plans is computed. **Note** a "plant" might require several seeds (or tubers or corms) if it is a "thinning" plant like the pumpkins or if you need to sow several seeds per plant.
 
-| Plant              | Variety                     | Row Group | Fixed        | Derived   | Sow per plant | Stock&#8224;| What to Buy
-|--------------------|-----------------------------|-----------|--------------|-----------|---------------|-------------|------------
+| Plant              | Variety                     | Row Group | Fixed        | Derived   | Sow per plant | Stock&#8224;| What to Buy (stock * 1.2)
+|--------------------|-----------------------------|-----------|--------------|-----------|---------------|-------------|--------------------------
 | Dahlias            | Jan Ryecroft (Sm 4”)        | 6A        |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
 |                    | Lady Natalie (Sm 4”)        | 6A        |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
 |                    | Golden Scepter (Sm 2”)      | 6A        |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
@@ -184,6 +184,19 @@ In this table if the number of plants is fixed then the *bed-linear-feed* will b
 |                    | Giant Mix                   | 7I        | 6.5 LBF      | 45 plants |  6 seeds      | 270 seeds   | 324 seeds
 |                    | Giant Salmon Rose           | 7J        | 6.5 LBF      | 45 plants |  6 seeds      | 270 seeds   | 324 seeds
 |                    | Uproar Rose                 | 7K        | 6.5 LBF      | 45 plants |  6 seeds      | 270 seeds   | 324 seeds
+| Snapdragons        | Potomac Custom Mix          | 8A        |  10 LBF      | 65 plants |  1 seed       |  65 seeds   |  78 seeds  
+|                    | Rocket Mix                  | 8B        |  10 LBF      | 65 plants |  1 seed       |  65 seeds   |  78 seeds
+|                    | Costa Silver                | 8C        |  10 LBF      | 65 plants |  1 seed       |  65 seeds   |  78 seeds
+|                    | Madame Butterfly Mix        | 8D        |  10 LBF      | 65 plants |  1 seed       |  65 seeds   |  78 seeds
+|                    | Costa Mix                   | 8E        |  10 LBF      | 65 plants |  1 seed       |  65 seeds   |  78 seeds
+| Black-Eyed Susans  | Triloba                     | 8F        |12.5 LBF      | 85 plants |  1 seed       |  85 seeds   | 102 seets
+| (Cornflower)       | Hirta Cherokee Sunset Mix   | 8G        |12.5 LBF      | 85 plants |  1 seed       |  85 seeds   | 102 seets
+|                    | Hirta Indian Summer         | 8H        |12.5 LBF      | 85 plants |  1 seed       |  85 seeds   | 102 seets
+|                    | Hirta Cherry Brandy         | 9I        |12.5 LBF      | 85 plants |  1 seed       |  85 seeds   | 102 seets
+
+
+
+
 
 > *  &#8224; Stock is exactly what is needed gut when growing from seed, always order 20 percent more. The `What to Buy` has 20% added to stock in some cases
 > * `lbf` - linear bed feed.  The number of plants in a LBF depends on spacing, for example with a 9in x 9in, 6 LBF will hold about 40 plants.
