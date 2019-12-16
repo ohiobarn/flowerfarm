@@ -193,7 +193,7 @@ In this table if the number of plants is fixed then the *bed-linear-feed* will b
 | (Cornflower)       | Hirta Cherokee Sunset Mix   |  8G       |12.5 LBF      | 85 plants |  1 seed       |  85 seeds   | 102 seeds
 |                    | Hirta Indian Summer         |  8H       |12.5 LBF      | 85 plants |  1 seed       |  85 seeds   | 102 seeds
 |                    | Hirta Cherry Brandy         |  9I       |12.5 LBF      | 85 plants |  1 seed       |  85 seeds   | 102 seeds
-| Anemone            | DeCaen White                | 10A       |  10 LBF      | 80 plants |  1 root       |  80 roots   |  20 roots
+| Anemone            | DeCaen White                | 10A       |  10 LBF      | 80 plants |  1 root       |  80 roots   |  80 roots
 |                    | DeCaen Blue White Mix       | 10B       |   5 LBF      | 40 plants |  1 root       |  40 roots   |  40 roots
 |                    | Lord Lieutenant             | 10C       |   4 LBF      | 32 plants |  1 root       |  32 roots   |  32 roots
 |                    | Super Mix                   | 10D       |   6 LBF      | 48 plants |  1 root       |  48 roots   |  48 roots
