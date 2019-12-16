@@ -152,49 +152,58 @@ In this table if the number of plants is fixed then the *bed-linear-feed* will b
 
 | Plant              | Variety                     | Row Group | Fixed        | Derived   | Sow per plant | Stock&#8224;| What to Buy (stock * 1.2)
 |--------------------|-----------------------------|-----------|--------------|-----------|---------------|-------------|--------------------------
-| Dahlias            | Jan Ryecroft (Sm 4”)        | 6A        |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
-|                    | Lady Natalie (Sm 4”)        | 6A        |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
-|                    | Golden Scepter (Sm 2”)      | 6A        |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
-|                    | Black Satin (Sm 2-4”)       | 6B        |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
-|                    | Cornel (Sm 4”)              | 6B        |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
-|                    | Dorothy (Sm)                | 6B        |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
-|                    | Franz Kafka (Sm 2-3”)       | 6C        |   7 tubers   |  8 LBF    |  1 tuber      |   7 tubers  |   7 tubers
-|                    | Wizard of Oz (Sm 3”)        | 6C        |   3 tubers   |  8 LBF    |  1 tuber      |   3 tubers  |   3 tubers
-|                    | Peaches n Cream (Med 4-6“)  | 6D        |   8 tubers   | 12.5 LBF  |  1 tuber      |   8 tubers  |   8 tubers
-|                    | Conn.Coral (Med)            | 6D        |   8 tubers   | 12.5 LBF  |  1 tuber      |   8 tubers  |   8 tubers
-|                    | Mystique (Med 4-6“)         | 6D        |   8 tubers   | 12.5 LBF  |  1 tuber      |   8 tubers  |   8 tubers
-|                    | BoomBoom White (Med 6”)     | 6E        |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
-|                    | Sweet Nathalie (Med. 5”)    | 6E        |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
-|                    | Lancresse (Med 4-6“)        | 6E        |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
-|                    | Thomas Edison (Med 6”)      | 6F        |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
-|                    | Shiloh Noelle (XL 10”)      | 6F        |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
-|                    | Hamari Gold (XL 10”)        | 6F        |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
-|                    | Penhill Watermelon (XL 10”) | 6G        |   8 tubers   | 12 LBF    |  1 tuber      |   8 tubers  |   8 tubers
-|                    | Otto’s Thrill (XL)          | 6G        |   8 tubers   | 12 LBF    |  1 tuber      |   8 tubers  |   8 tubers
-|                    | Café Au Lait (XL)           | 6G        |   8 tubers   | 12 LBF    |  1 tuber      |   8 tubers  |   8 tubers
-|                    | Mix (seed)                  | 6H        |  30 LBF      | 90 plants |  2 seeds      | 180 seeds   | 216 seeds
-| Cosmos             | Versailles Mix              | 7A        |   6 LBF      | 40 plants |  1 seed       |  40 seeds   |  48 seeds
-|                    | Dbl-Click SnowPuff          | 7B        |   6 LBF      | 40 plants |  1 seed       |  40 seeds   |  48 seeds
-|                    | Dbl-Click Mix               | 7C        |   6 LBF      | 40 plants |  1 seed       |  40 seeds   |  48 seeds
-|                    | Rubenza                     | 7D        |   6 LBF      | 40 plants |  1 seed       |  40 seeds   |  48 seeds
-|                    | Sea Shells                  | 7E        |   6 LBF      | 40 plants |  1 seed       |  40 seeds   |  48 seeds
-| Zinnias            | Jazzy Mix                   | 7F        | 6.5 LBF      | 45 plants |  6 seeds      | 270 seeds   | 324 seeds
-|                    | Oklahoma White              | 7G        | 6.5 LBF      | 45 plants |  6 seeds      | 270 seeds   | 324 seeds
-|                    | Queen Red Lime              | 7H        | 6.5 LBF      | 45 plants |  6 seeds      | 270 seeds   | 324 seeds
-|                    | Giant Mix                   | 7I        | 6.5 LBF      | 45 plants |  6 seeds      | 270 seeds   | 324 seeds
-|                    | Giant Salmon Rose           | 7J        | 6.5 LBF      | 45 plants |  6 seeds      | 270 seeds   | 324 seeds
-|                    | Uproar Rose                 | 7K        | 6.5 LBF      | 45 plants |  6 seeds      | 270 seeds   | 324 seeds
-| Snapdragons        | Potomac Custom Mix          | 8A        |  10 LBF      | 65 plants |  1 seed       |  65 seeds   |  78 seeds  
-|                    | Rocket Mix                  | 8B        |  10 LBF      | 65 plants |  1 seed       |  65 seeds   |  78 seeds
-|                    | Costa Silver                | 8C        |  10 LBF      | 65 plants |  1 seed       |  65 seeds   |  78 seeds
-|                    | Madame Butterfly Mix        | 8D        |  10 LBF      | 65 plants |  1 seed       |  65 seeds   |  78 seeds
-|                    | Costa Mix                   | 8E        |  10 LBF      | 65 plants |  1 seed       |  65 seeds   |  78 seeds
-| Black-Eyed Susans  | Triloba                     | 8F        |12.5 LBF      | 85 plants |  1 seed       |  85 seeds   | 102 seets
-| (Cornflower)       | Hirta Cherokee Sunset Mix   | 8G        |12.5 LBF      | 85 plants |  1 seed       |  85 seeds   | 102 seets
-|                    | Hirta Indian Summer         | 8H        |12.5 LBF      | 85 plants |  1 seed       |  85 seeds   | 102 seets
-|                    | Hirta Cherry Brandy         | 9I        |12.5 LBF      | 85 plants |  1 seed       |  85 seeds   | 102 seets
-
-
+| Dahlias            | Jan Ryecroft (Sm 4”)        |  6A       |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
+|                    | Lady Natalie (Sm 4”)        |  6A       |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
+|                    | Golden Scepter (Sm 2”)      |  6A       |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
+|                    | Black Satin (Sm 2-4”)       |  6B       |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
+|                    | Cornel (Sm 4”)              |  6B       |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
+|                    | Dorothy (Sm)                |  6B       |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
+|                    | Franz Kafka (Sm 2-3”)       |  6C       |   7 tubers   |  8 LBF    |  1 tuber      |   7 tubers  |   7 tubers
+|                    | Wizard of Oz (Sm 3”)        |  6C       |   3 tubers   |  8 LBF    |  1 tuber      |   3 tubers  |   3 tubers
+|                    | Peaches n Cream (Med 4-6“)  |  6D       |   8 tubers   | 12.5 LBF  |  1 tuber      |   8 tubers  |   8 tubers
+|                    | Conn.Coral (Med)            |  6D       |   8 tubers   | 12.5 LBF  |  1 tuber      |   8 tubers  |   8 tubers
+|                    | Mystique (Med 4-6“)         |  6D       |   8 tubers   | 12.5 LBF  |  1 tuber      |   8 tubers  |   8 tubers
+|                    | BoomBoom White (Med 6”)     |  6E       |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
+|                    | Sweet Nathalie (Med. 5”)    |  6E       |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
+|                    | Lancresse (Med 4-6“)        |  6E       |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
+|                    | Thomas Edison (Med 6”)      |  6F       |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
+|                    | Shiloh Noelle (XL 10”)      |  6F       |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
+|                    | Hamari Gold (XL 10”)        |  6F       |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
+|                    | Penhill Watermelon (XL 10”) |  6G       |   8 tubers   | 12 LBF    |  1 tuber      |   8 tubers  |   8 tubers
+|                    | Otto’s Thrill (XL)          |  6G       |   8 tubers   | 12 LBF    |  1 tuber      |   8 tubers  |   8 tubers
+|                    | Café Au Lait (XL)           |  6G       |   8 tubers   | 12 LBF    |  1 tuber      |   8 tubers  |   8 tubers
+|                    | Mix (seed)                  |  6H       |  30 LBF      | 90 plants |  2 seeds      | 180 seeds   | 216 seeds
+| Cosmos             | Versailles Mix              |  7A       |   6 LBF      | 40 plants |  1 seed       |  40 seeds   |  48 seeds
+|                    | Dbl-Click SnowPuff          |  7B       |   6 LBF      | 40 plants |  1 seed       |  40 seeds   |  48 seeds
+|                    | Dbl-Click Mix               |  7C       |   6 LBF      | 40 plants |  1 seed       |  40 seeds   |  48 seeds
+|                    | Rubenza                     |  7D       |   6 LBF      | 40 plants |  1 seed       |  40 seeds   |  48 seeds
+|                    | Sea Shells                  |  7E       |   6 LBF      | 40 plants |  1 seed       |  40 seeds   |  48 seeds
+| Zinnias            | Jazzy Mix                   |  7F       | 6.5 LBF      | 45 plants |  6 seeds      | 270 seeds   | 324 seeds
+|                    | Oklahoma White              |  7G       | 6.5 LBF      | 45 plants |  6 seeds      | 270 seeds   | 324 seeds
+|                    | Queen Red Lime              |  7H       | 6.5 LBF      | 45 plants |  6 seeds      | 270 seeds   | 324 seeds
+|                    | Giant Mix                   |  7I       | 6.5 LBF      | 45 plants |  6 seeds      | 270 seeds   | 324 seeds
+|                    | Giant Salmon Rose           |  7J       | 6.5 LBF      | 45 plants |  6 seeds      | 270 seeds   | 324 seeds
+|                    | Uproar Rose                 |  7K       | 6.5 LBF      | 45 plants |  6 seeds      | 270 seeds   | 324 seeds
+| Snapdragons        | Potomac Custom Mix          |  8A       |  10 LBF      | 65 plants |  1 seed       |  65 seeds   |  78 seeds  
+|                    | Rocket Mix                  |  8B       |  10 LBF      | 65 plants |  1 seed       |  65 seeds   |  78 seeds
+|                    | Costa Silver                |  8C       |  10 LBF      | 65 plants |  1 seed       |  65 seeds   |  78 seeds
+|                    | Madame Butterfly Mix        |  8D       |  10 LBF      | 65 plants |  1 seed       |  65 seeds   |  78 seeds
+|                    | Costa Mix                   |  8E       |  10 LBF      | 65 plants |  1 seed       |  65 seeds   |  78 seeds
+| Black-Eyed Susans  | Triloba                     |  8F       |12.5 LBF      | 85 plants |  1 seed       |  85 seeds   | 102 seeds
+| (Cornflower)       | Hirta Cherokee Sunset Mix   |  8G       |12.5 LBF      | 85 plants |  1 seed       |  85 seeds   | 102 seeds
+|                    | Hirta Indian Summer         |  8H       |12.5 LBF      | 85 plants |  1 seed       |  85 seeds   | 102 seeds
+|                    | Hirta Cherry Brandy         |  9I       |12.5 LBF      | 85 plants |  1 seed       |  85 seeds   | 102 seeds
+| Anemone            | DeCaen White                | 10A       |  10 LBF      | 80 plants |  1 root       |  80 roots   |  20 roots
+|                    | DeCaen Blue White Mix       | 10B       |   5 LBF      | 40 plants |  1 root       |  40 roots   |  40 roots
+|                    | Lord Lieutenant             | 10C       |   4 LBF      | 32 plants |  1 root       |  32 roots   |  32 roots
+|                    | Super Mix                   | 10D       |   6 LBF      | 48 plants |  1 root       |  48 roots   |  48 roots
+| Ranunculus         | Romantic Mix                | 10E       |  12 LBF      | 72 plants |  1 root       |  72 roots   |  72 roots
+|                    | Red                         | 10F       |   6 LBF      | 36 plants |  1 root       |  36 roots   |  36 roots
+|                    | White                       | 10G       |  12 LBF      | 72 plants |  1 root       |  72 roots   |  72 roots
+|                    | Bridal Mix                  | 10H       |  18 LBF      |108 plants |  1 root       | 108 roots   | 108 roots
+|                    | Violet                      | 10I       |   3 LBF      | 16 plants |  1 root       |  16 roots   |  16 roots
+|                    | Purple/ White Picotee       | 10J       |   9 LBF      | 52 plants |  1 root       |  52 roots   |  52 roots
+|                    | Pink/ White                 | 10K       |  12 LBF      | 72 plants |  1 root       |  72 roots   |  72 roots
 
 
 
