@@ -1,6 +1,19 @@
-# Spring 2020 Plan
+# Spring 2020
+
+Quick Facts:
+
+> * Fairborn, OH is in Zone 6a.
+> * On average, your frost-free growing season starts Apr 11 and ends Oct 30, totaling 202 days
+> * Spring 2020 in Northern Hemisphere will begin on Thursday, March 19
+
+---
 
 ## Flower Field Layout
+
+Reference:
+
+* [dripworks planning guide](https://www.dripworks.com/resources/drip-planning-guide)
+* [growing with landscape fabric](https://www.floretflowers.com/growing-with-landscape-fabric/)
 
 ![flower-field](img/field-layout.png)
 
@@ -13,7 +26,7 @@
 
 ---
 
-## Plant Spacing
+## Spacing Plan
 
 To compute the number of plants per bed; each bed is 48 inches (4 feet) wide and 1,200 inches (100 feet) long, as shown above, and by planting with 9-inch spacing, I can fit ~665 plants in each bed:
 
@@ -71,7 +84,6 @@ If I only use two strips of drip tape per row then I could get the medium kit.  
 
 In [this blog post](https://www.floretflowers.com/soil-preparation/) Floret says they use four strips of drip tape per four foot bed but they have sandy soil and even say that you could get by with two or three strips if you don't have sandy soil, so that validates my choice.  
 
-
 > I will be going with the [drip tape row crop large kit](https://www.dripworks.com/drip-tape-row-crop-kit-large)
 
 ### Zones
@@ -84,16 +96,179 @@ The drip tape that comes with the [large kit](https://www.dripworks.com/drip-tap
 
 ## Germination Station
 
+### Shelf Layout
+
+The image below shows the layout for one shelf of the germination station. Each shelf will be able to hold `288 plants`, four starter trays of 72 plants each.  
+
+> 288 plants per shelf
+
+![](img/one-shelf-seed-starter.png)
+
+### Station
+
+Each station is a five shelf unit.  The top shelf is used for storage and four shelves will be used for germination.  Each station will be able to hold `1,152 plants`, four shelves of 288 plants each.
+
+> 1,152 plants per station
 
 ---
 
-## Resources
+## Beds Summary
+
+* Main cutting beds
+* Filler and Foliage
+* Sunflower strip
+* Pumpkin patch
+
+### Garden Planner
+
+Main cutting beds, annuals with irrigation.
+
+> * [Bed Layout PDF](Main-Field-2020.pdf)
+> * [Sow Grow Chart PDF](Main-Field-2020-Plant-List.pdf)
+
+## Spacing
+
+| #| Plant               | Propagation | Start   | Between plants in row   | Between rows | Rows per bed | Fabric | Irrigation |
+|--|---------------------|-------------|---------|-------------------------|--------------|--------------|--------|------------|
+| 1| Dahlias             | tuber       | outside | 16 in                   | 16 in        | 3            |  yes   |   yes      |
+| 2| Dahlia Mix          | seed        | inside  | 12 in                   | 16 in        | 3            |  yes   |   yes      |
+| 3| Ranunculus          | corms       | outside |  8 in                   | 10 in        | 4            |   no   |   yes      |  
+| 4| Anemone             | corms       | outside |  6 in                   | 10 in        | 4            |   no   |   yes      |
+| 5| Cosmos              | seed        | inside  |  9 in                   |  9 in        | 5            |  yes   |   yes      |
+| 6| Larkspur            | | |
+| 7| Zinnias             | seed        | inside  |  9 in                   |  9 in        | 5            |  yes   |   yes      |
+| 8| Black Eyed Susans   | seed        | inside  |  9 in                   |  9 in        | 5            |  yes   |   yes      |
+| 9| Snapdragon          | seed        | inside  |  9 in                   |  9 in        | 5            |  yes   |   yes      |
+| 9| Stocks              | | |
+|10| Celosia             | | |
+|11| Gormphrena          | | |
+|12| Marigold            | | |
+|13| Choc.Qn Anne's Lace | | |
+|14| Sweet Pea           | | |
+
+## Varieties
+
+In this table if the number of plants is fixed then the *bed-linear-feed* will be computed in the Garden Planner app.  However in most cases the *bed-linear-feed* is given and the number of plans is computed. **Note** a "plant" might require several seeds (or tubers or corms) if it is a "thinning" plant like the pumpkins or if you need to sow several seeds per plant.
+
+| Plant              | Variety                     | Row Group | Fixed        | Derived   | Sow per plant | Stock&#8224;| What to Buy (stock * 1.2)
+|--------------------|-----------------------------|-----------|--------------|-----------|---------------|-------------|--------------------------
+| Dahlias            | Jan Ryecroft (Sm 4”)        |  6A       |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
+|                    | Lady Natalie (Sm 4”)        |  6A       |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
+|                    | Golden Scepter (Sm 2”)      |  6A       |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
+|                    | Black Satin (Sm 2-4”)       |  6B       |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
+|                    | Cornel (Sm 4”)              |  6B       |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
+|                    | Dorothy (Sm)                |  6B       |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
+|                    | Franz Kafka (Sm 2-3”)       |  6C       |   7 tubers   |  8 LBF    |  1 tuber      |   7 tubers  |   7 tubers
+|                    | Wizard of Oz (Sm 3”)        |  6C       |   3 tubers   |  8 LBF    |  1 tuber      |   3 tubers  |   3 tubers
+|                    | Peaches n Cream (Med 4-6“)  |  6D       |   8 tubers   | 12.5 LBF  |  1 tuber      |   8 tubers  |   8 tubers
+|                    | Conn.Coral (Med)            |  6D       |   8 tubers   | 12.5 LBF  |  1 tuber      |   8 tubers  |   8 tubers
+|                    | Mystique (Med 4-6“)         |  6D       |   8 tubers   | 12.5 LBF  |  1 tuber      |   8 tubers  |   8 tubers
+|                    | BoomBoom White (Med 6”)     |  6E       |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
+|                    | Sweet Nathalie (Med. 5”)    |  6E       |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
+|                    | Lancresse (Med 4-6“)        |  6E       |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
+|                    | Thomas Edison (Med 6”)      |  6F       |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
+|                    | Shiloh Noelle (XL 10”)      |  6F       |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
+|                    | Hamari Gold (XL 10”)        |  6F       |   5 tubers   |  9 LBF    |  1 tuber      |   5 tubers  |   5 tubers
+|                    | Penhill Watermelon (XL 10”) |  6G       |   8 tubers   | 12 LBF    |  1 tuber      |   8 tubers  |   8 tubers
+|                    | Otto’s Thrill (XL)          |  6G       |   8 tubers   | 12 LBF    |  1 tuber      |   8 tubers  |   8 tubers
+|                    | Café Au Lait (XL)           |  6G       |   8 tubers   | 12 LBF    |  1 tuber      |   8 tubers  |   8 tubers
+|                    | Mix (seed)                  |  6H       |  30 LBF      | 90 plants |  2 seeds      | 180 seeds   | 216 seeds
+| Cosmos             | Versailles Mix              |  7A       |   6 LBF      | 40 plants |  1 seed       |  40 seeds   |  48 seeds
+|                    | Dbl-Click SnowPuff          |  7B       |   6 LBF      | 40 plants |  1 seed       |  40 seeds   |  48 seeds
+|                    | Dbl-Click Mix               |  7C       |   6 LBF      | 40 plants |  1 seed       |  40 seeds   |  48 seeds
+|                    | Rubenza                     |  7D       |   6 LBF      | 40 plants |  1 seed       |  40 seeds   |  48 seeds
+|                    | Sea Shells                  |  7E       |   6 LBF      | 40 plants |  1 seed       |  40 seeds   |  48 seeds
+| Zinnias            | Jazzy Mix                   |  7F       | 6.5 LBF      | 45 plants |  6 seeds      | 270 seeds   | 324 seeds
+|                    | Oklahoma White              |  7G       | 6.5 LBF      | 45 plants |  6 seeds      | 270 seeds   | 324 seeds
+|                    | Queen Red Lime              |  7H       | 6.5 LBF      | 45 plants |  6 seeds      | 270 seeds   | 324 seeds
+|                    | Giant Mix                   |  7I       | 6.5 LBF      | 45 plants |  6 seeds      | 270 seeds   | 324 seeds
+|                    | Giant Salmon Rose           |  7J       | 6.5 LBF      | 45 plants |  6 seeds      | 270 seeds   | 324 seeds
+|                    | Uproar Rose                 |  7K       | 6.5 LBF      | 45 plants |  6 seeds      | 270 seeds   | 324 seeds
+| Snapdragons        | Potomac Custom Mix          |  8A       |  10 LBF      | 65 plants |  1 seed       |  65 seeds   |  78 seeds  
+|                    | Rocket Mix                  |  8B       |  10 LBF      | 65 plants |  1 seed       |  65 seeds   |  78 seeds
+|                    | Costa Silver                |  8C       |  10 LBF      | 65 plants |  1 seed       |  65 seeds   |  78 seeds
+|                    | Madame Butterfly Mix        |  8D       |  10 LBF      | 65 plants |  1 seed       |  65 seeds   |  78 seeds
+|                    | Costa Mix                   |  8E       |  10 LBF      | 65 plants |  1 seed       |  65 seeds   |  78 seeds
+| Black-Eyed Susans  | Triloba                     |  8F       |12.5 LBF      | 85 plants |  1 seed       |  85 seeds   | 102 seeds
+| (Cornflower)       | Hirta Cherokee Sunset Mix   |  8G       |12.5 LBF      | 85 plants |  1 seed       |  85 seeds   | 102 seeds
+|                    | Hirta Indian Summer         |  8H       |12.5 LBF      | 85 plants |  1 seed       |  85 seeds   | 102 seeds
+|                    | Hirta Cherry Brandy         |  9I       |12.5 LBF      | 85 plants |  1 seed       |  85 seeds   | 102 seeds
+| Anemone            | DeCaen White                | 10A       |  10 LBF      | 80 plants |  1 root       |  80 roots   |  80 roots
+|                    | DeCaen Blue White Mix       | 10B       |   5 LBF      | 40 plants |  1 root       |  40 roots   |  40 roots
+|                    | Lord Lieutenant             | 10C       |   4 LBF      | 32 plants |  1 root       |  32 roots   |  32 roots
+|                    | Super Mix                   | 10D       |   6 LBF      | 48 plants |  1 root       |  48 roots   |  48 roots
+| Ranunculus         | Romantic Mix                | 10E       |  12 LBF      | 72 plants |  1 root       |  72 roots   |  72 roots
+|                    | Red                         | 10F       |   6 LBF      | 36 plants |  1 root       |  36 roots   |  36 roots
+|                    | White                       | 10G       |  12 LBF      | 72 plants |  1 root       |  72 roots   |  72 roots
+|                    | Bridal Mix                  | 10H       |  18 LBF      |108 plants |  1 root       | 108 roots   | 108 roots
+|                    | Violet                      | 10I       |   3 LBF      | 16 plants |  1 root       |  16 roots   |  16 roots
+|                    | Purple/ White Picotee       | 10J       |   9 LBF      | 52 plants |  1 root       |  52 roots   |  52 roots
+|                    | Pink/ White                 | 10K       |  12 LBF      | 72 plants |  1 root       |  72 roots   |  72 roots
 
 
-### Irrigation
 
-* [dripworks planning guide](https://www.dripworks.com/resources/drip-planning-guide)
-* [growing with landscape fabric](https://www.floretflowers.com/growing-with-landscape-fabric/)
+> *  &#8224; Stock is exactly what is needed gut when growing from seed, always order 20 percent more. The `What to Buy` has 20% added to stock in some cases
+> * `lbf` - linear bed feed.  The number of plants in a LBF depends on spacing, for example with a 9in x 9in, 6 LBF will hold about 40 plants.
 
-### Germination
+---
 
+## Filler and Foliage
+
+Floret said 50% Foliage and filler
+
+### Filler
+
+| #| Plant          | | |
+|--|----------------|-|-|
+| 1| Baby's Breath (Gypsophila) | | |
+| 2| Bishops Flower | | |
+| 3| Love-in-a-Mist | | |
+
+### Foliage
+
+| #| Plant            | | |
+|--|------------------|-|-|
+| 1| Dusty Miller     | | perennials but grown as annual|
+| 2| Scented Geranium | | |
+| 3| Grasses-Panicum  | | "frosted explosion" |
+| 4| Eucalyptus       | | "silver drop", "seeded" |
+
+---
+
+## Sunflowers
+
+Sunflower beds, no irrigation
+
+| #| Variety             | | |
+|--|------------------|-|-|
+| 1| Single bloom | | |
+| 2| Blush | | |
+
+---
+
+## Pumpkin Patch
+
+Pumpkin Patch, no irrigation
+
+|#| Variety        | Size   | Days to Maturity | Vine Length | Between plants in row | Between rows | Grow    | Link  |
+|-|----------------|--------|------------------|-------------|-----------------------|--------------|---------|-------|
+|1| PipSqueak      | Small  | 100              | Medium      | 33 in                 |  8 ft        | &#8224; | [JS](https://www.johnnyseeds.com/vegetables/pumpkins/pipsqueak-pmr-f1-pumpkin-seed-4019.html?cgid=pumpkins)
+|2| Racer Treated  | Medium |  85              | Short       | 33 in                 |  6 ft        | &#8224; | [JS](https://www.johnnyseeds.com/vegetables/pumpkins/jack-o-lanterns/racer-treated-f1-pumpkin-seed-2163T.html#q=racer&lang=en_US&start=1)
+|3| Howden         | Large  | 115              | Long        | 60 in                 | 12 ft        | &#8224; | [JS](https://www.johnnyseeds.com/vegetables/pumpkins/specialty-pumpkins/casperita-f1-pumpkin-seed-3076.html#q=casperita&lang=en_US&start=1)
+|4| Casperita      | Mini   |  77              | Medium      | 18 in                 | 10 ft        | &#8224; | [JS](https://www.johnnyseeds.com/vegetables/pumpkins/specialty-pumpkins/casperita-f1-pumpkin-seed-3076.html#q=casperita&lang=en_US&start=1)
+|5| Flat Stacker   | Medium |  95              | Long        | 42 in                 | 12 ft        | &#8224; | [JS](https://www.johnnyseeds.com/vegetables/pumpkins/specialty-pumpkins/flat-stacker-f1-pumpkin-seed-3574.html)
+|6| Ornamental Mix | Gourd  |  95              | Medium      | 60 in                 |  8 ft        | &#8224; | [JS](https://www.johnnyseeds.com/vegetables/gourds/ornamental-gourds-small-mixed-gourd-seed-604.html#q=ornamental%2Bgourds&lang=en_US&start=1)
+
+> &#8224; - For direct seeding, sow 2 seeds per spacing, 1/2-1" deep. Thin to 1 plant per spacing after seedlings are established
+
+### Pumpkin Field 
+
+![](img/Pumpkin_Patch_Plant_List.png )
+
+---
+
+![](img/Pumpkin_Patch_Field.png)
+
+---
+
+![](img/pumpkins-specialty-varieties-comparison-chart_pdf.png)
