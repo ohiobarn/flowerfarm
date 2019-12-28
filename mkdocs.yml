@@ -4,7 +4,7 @@ nav:
   - Home: index.md
   - Spring 2020:
     - Plan: spring2020/plan.md
-  - Resources: resources.md
+  - Etc: etc.md
   - About: about.md
 
 #theme: readthedocs
