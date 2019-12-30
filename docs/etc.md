@@ -4,7 +4,7 @@
 
 First and last frost dates for my zip 45324.
 
-* Average Last Frost:  04/23/20&#8224;
+* Average Last Frost:  04/23/20&clubs;
 * Average First Frost: 10/05/30&spades;
 
 
@@ -27,15 +27,15 @@ First and last frost dates for my zip 45324.
     <td></td><td></td><td></td><td></td>
     <td></td><td></td><td></td><td></td>
     <td></td><td></td><td></td><td></td>
-    <td></td><td></td><td>&#8224;</td><td></td>
-    <td></td><td></td><td></td><td></td>
-    <td></td><td></td><td></td><td></td>
+    <td></td><td></td><td>&clubs;</td><td></td>
     <td></td><td></td><td></td><td></td>
     <td></td><td></td><td></td><td></td>
     <td></td><td></td><td></td><td></td>
     <td></td><td></td><td></td><td></td>
     <td></td><td></td><td></td><td></td>
     <td>&spades;</td><td></td><td></td><td></td>
+    <td></td><td></td><td></td><td></td>
+    <td></td><td></td><td></td><td></td>
   </tr>
   </tr>
     <td colspan="3" align="center">early</td>
@@ -81,6 +81,8 @@ First and last frost dates for my zip 45324.
 * [The Old Farmer's Almanac](https://www.almanac.com/plant)
 * [Johnny Seeds](https://www.johnnyseeds.com/flowers/)
 * [Burpee growing calendar](https://www.burpee.com/growingcalendar)
+* [Association of Specialty Cut Flower Growers (ascfg)](https://www.ascfg.org)
+* [Ball Seed](https://www.ballseed.com/)
 
 ## Tech
 
