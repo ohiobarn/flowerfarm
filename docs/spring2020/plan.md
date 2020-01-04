@@ -1,6 +1,10 @@
 # Spring 2020
 
-Quick Facts:
+## Results
+
+* [Germ to buy list](https://airtable.com/shrE2BXRmEn19iRpW) - This is the AirTable with the list of seeds to buy for each variety
+
+## Quick Facts
 
 > * Fairborn, OH is in Zone 6a.
 > * On average, your frost-free growing season starts Apr 11 and ends Oct 30, totaling 202 days
