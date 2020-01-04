@@ -2,7 +2,7 @@
 
 ## Results
 
-* [Germ to buy list](https://airtable.com/shrE2BXRmEn19iRpW) - This is the AirTable with the list of seeds to buy for each variety
+* [Germ to buy list](https://airtable.com/shrCgcllsvxiaqQhT) - This is the AirTable with the list of seeds to buy for each variety
 
 ## Quick Facts
 
