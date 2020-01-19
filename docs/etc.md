@@ -2,6 +2,8 @@
 
 ## Seasons
 
+*Fairborn, OH is in Zone 6a*
+
 First and last frost dates for my zip 45324.
 
 * Average Last Frost:  04/23/20&clubs;
@@ -81,9 +83,12 @@ First and last frost dates for my zip 45324.
 * [The Old Farmer's Almanac](https://www.almanac.com/plant)
 * [Johnny Seeds](https://www.johnnyseeds.com/flowers/)
 * [Burpee growing calendar](https://www.burpee.com/growingcalendar)
+* [Burpee flowers](https://www.burpee.com/flowers)
 * [Association of Specialty Cut Flower Growers (ascfg)](https://www.ascfg.org)
 * [Ball Seed](https://www.ballseed.com/)
 * [Floret Flower Seed](https://shop.floretflowers.com/collections/seeds)
+* [Floret Workshop](https://workshop.floretflowers.com/)
+* [USDA Natural Resources Conservation Service](https://plants.sc.egov.usda.gov/)
 
 ## Tech
 
