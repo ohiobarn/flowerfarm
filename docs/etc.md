@@ -87,7 +87,7 @@ First and last frost dates for my zip 45324.
 * [Association of Specialty Cut Flower Growers (ascfg)](https://www.ascfg.org)
 * [Ball Seed](https://www.ballseed.com/)
 * [Floret Flower Seed](https://shop.floretflowers.com/collections/seeds)
-* [Floret Workshop](https://workshop.floretflowers.com/)
+* [Floret Workshop](https://workshop.floretflowers.com/products/floret-online-workshop)
 * [USDA Natural Resources Conservation Service](https://plants.sc.egov.usda.gov/)
 
 ## Tech
