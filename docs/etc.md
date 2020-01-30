@@ -94,12 +94,18 @@ First and last frost dates for my zip 45324.
 * Rimo Greenhouses
     * [High Tunnel vs. Greenhouse vs. Hoop House: Which is Right For Me?](https://www.rimolgreenhouses.com/blog/high-tunnel-vs-greenhouse-vs-hoop-house-which-is-right-for-me)
     * [Rolling Thunder (high-tunnel)](https://www.rimolgreenhouses.com/greenhouse-series/rolling-thunder)
+
 * Hoop House/High Tunnel
     * [Grower Supply, high tunnels](https://www.growerssupply.com/farm/supplies/prod1;gs_high_tunnels_cold_frames;pgpb01680r6c.html)
-    * [Hoop house construction plans](https://kerrcenter.com/publication/hoop-house-construction-plans/)
+    * [Hoop house construction plans (Kerr Center)](https://kerrcenter.com/publication/hoop-house-construction-plans/)
     * [Growing for market, Hoophouse production](https://www.growingformarket.com/categories/Hoophouse-production)
-* Misc shoping
+    * [youtube with parts list](https://www.youtube.com/watch?v=_UxCZaWX5s8)
+    * [Amleo - palring 146-gsm poly covering ](https://www.amleo.com/palring-146-gsm-poly-covering/p/VP-PALRING146/)
+    * [Bootstrap Farmer - green house kits with full instructions](https://www.bootstrapfarmer.com/pages/diy-greenhouse-kits)
+
+* Misc shopping
     * [Tidy tray](https://www.greenhousemegastore.com/yard-garden/tools/garden-tools/tidy-tray)
+
 
 ## Tech
 
