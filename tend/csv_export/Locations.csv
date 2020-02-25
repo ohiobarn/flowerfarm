@@ -1,113 +1,102 @@
 Site Name,Field Name,Field Name Version,Block Name,Bed Number,Bed Length,1st Rotation Planting Name,1st Rotation Crop,1st Rotation Start Date,1st Rotation End Date
-The Back Field,L1,,Dah,21,20 ft,"Dahlias, Mid Blooming, Giant Hybrid Mix (seed)",Dahlias,04/05/2020,10/04/2020
-The Back Field,L1,,Dah,20,4 ft,"Dahlias, Mid Blooming, Shiloh Noelle (XL 10”)",Dahlias,05/07/2020,10/04/2020
-The Back Field,L1,,Dah,19,4 ft,"Dahlias, Mid Blooming, Penhill Watermelon (XL 10”)",Dahlias,05/07/2020,10/04/2020
-The Back Field,L1,,Dah,18,4 ft,"Dahlias, Mid Blooming, Otto’s Thrill (XL)",Dahlias,05/07/2020,10/04/2020
-The Back Field,L1,,Dah,17,4 ft,"Dahlias, Mid Blooming, Hamari Gold (XL 10”)",Dahlias,05/07/2020,10/04/2020
-The Back Field,L1,,Dah,16,4 ft,"Dahlias, Mid Blooming, Café Au Lait (XL)",Dahlias,05/07/2020,10/04/2020
-The Back Field,L1,,Dah,15,4 ft,"Dahlias, Mid Blooming, Thomas Edison (Med 6”)",Dahlias,05/07/2020,10/04/2020
-The Back Field,L1,,Dah,14,4 ft,"Dahlias, Mid Blooming, Sweet Nathalie (Med. 5”)",Dahlias,05/07/2020,10/04/2020
-The Back Field,L1,,Dah,13,4 ft,"Dahlias, Mid Blooming, Peaches n Cream (Med 4-6“)",Dahlias,05/07/2020,10/04/2020
-The Back Field,L1,,Dah,12,4 ft,"Dahlias, Mid Blooming, Mystique (Med 4-6“)",Dahlias,05/07/2020,10/04/2020
-The Back Field,L1,,Dah,11,4 ft,"Dahlias, Mid Blooming, Lancresse (Med 4-6“)",Dahlias,05/07/2020,10/04/2020
-The Back Field,L1,,Dah,10,4 ft,"Dahlias, Mid Blooming, Conn.Coral (Med)",Dahlias,05/07/2020,10/04/2020
-The Back Field,L1,,Dah,9,4 ft,"Dahlias, Mid Blooming, BoomBoom White (Med 6”)",Dahlias,05/07/2020,10/04/2020
-The Back Field,L1,,Dah,8,4 ft,"Dahlias, Mid Blooming, Wizard of Oz (Sm 3”)",Dahlias,05/07/2020,10/04/2020
-The Back Field,L1,,Dah,7,4 ft,"Dahlias, Mid Blooming, Lady Natalie (Sm 4”)",Dahlias,05/07/2020,10/04/2020
-The Back Field,L1,,Dah,6,4 ft,"Dahlias, Mid Blooming, Jan Ryecroft (Sm 4”)",Dahlias,05/07/2020,10/04/2020
-The Back Field,L1,,Dah,5,4 ft,"Dahlias, Mid Blooming, Golden Scepter (Sm 2”)",Dahlias,05/07/2020,10/04/2020
-The Back Field,L1,,Dah,4,4 ft,"Dahlias, Mid Blooming, Franz Kafka (Sm 2-3”)",Dahlias,05/07/2020,10/04/2020
-The Back Field,L1,,Dah,3,4 ft,"Dahlias, Mid Blooming, Dorothy (Sm)",Dahlias,05/07/2020,10/04/2020
-The Back Field,L1,,Dah,2,4 ft,"Dahlias, Mid Blooming, Cornel (Sm 4”)",Dahlias,05/07/2020,10/04/2020
 The Back Field,L1,,Dah,1,4 ft,"Dahlias, Mid Blooming, Black Satin (Sm 2-4”)",Dahlias,05/07/2020,10/04/2020
-The Back Field,L10,,Fo,1,10 ft,"Ornamental Grasses, Ornamental Grasses, Frosted Explosion",Ornamental Grasses,03/16/2020,09/12/2020
-The Back Field,L10,,Fo,2,10 ft,"Dusty Miller, Dusty Miller, New Look",Dusty Miller,02/25/2020,10/05/2020
-The Back Field,L10,,Fo,3,10 ft,"Dusty Miller, Dusty Miller, New Look",Dusty Miller,02/25/2020,10/05/2020
-The Back Field,L10,,Fo,4,10 ft,"Ornamental Grasses, Ornamental Grasses, Frosted Explosion",Ornamental Grasses,04/06/2020,10/03/2020
-The Back Field,L10,,Fo,5,10 ft,"Amaranthus, Amaranthus, Green Tails",Amaranthus,04/25/2020,08/23/2020
-The Back Field,L10,,Fo,6,10 ft,"Amaranthus, Amaranthus, Hot Biscuits",Amaranthus,04/25/2020,08/23/2020
-The Back Field,L10,,Fo,7,10 ft,"Basil, Basil, Mrs. Burns' Lemon, Full-Size",Basil,05/29/2020,09/04/2020
-The Back Field,L10,,Fo,8,10 ft,"Basil, Basil, Aromatto, Full-Size",Basil,06/19/2020,09/28/2020
-The Back Field,L10,,Fo,9,10 ft,"Basil, Basil, Mrs. Burns' Lemon, Full-Size",Basil,06/19/2020,09/25/2020
-The Back Field,L10,,Fo,10,10 ft,"Amaranthus, Amaranthus, Hot Biscuits",Amaranthus,05/25/2020,09/22/2020
-The Back Field,L2,,Anem,1,2 ft,"Anemone, Mid Blooming, Lord Lieutenant",Anemone,03/09/2020,06/15/2020
-The Back Field,L2,,Anem,2,3 ft,"Anemone, Mid Blooming, De Caen Blue White Mix",Anemone,03/09/2020,06/15/2020
+The Back Field,L1,,Dah,2,4 ft,"Dahlias, Mid Blooming, Cornel (Sm 4”)",Dahlias,05/07/2020,10/04/2020
+The Back Field,L1,,Dah,3,4 ft,"Dahlias, Mid Blooming, Dorothy (Sm)",Dahlias,05/07/2020,10/04/2020
+The Back Field,L1,,Dah,4,4 ft,"Dahlias, Mid Blooming, Franz Kafka (Sm 2-3”)",Dahlias,05/07/2020,10/04/2020
+The Back Field,L1,,Dah,5,4 ft,"Dahlias, Mid Blooming, Golden Scepter (Sm 2”)",Dahlias,05/07/2020,10/04/2020
+The Back Field,L1,,Dah,6,4 ft,"Dahlias, Mid Blooming, Jan Ryecroft (Sm 4”)",Dahlias,05/07/2020,10/04/2020
+The Back Field,L1,,Dah,7,4 ft,"Dahlias, Mid Blooming, Lady Natalie (Sm 4”)",Dahlias,05/07/2020,10/04/2020
+The Back Field,L1,,Dah,8,4 ft,"Dahlias, Mid Blooming, Wizard of Oz (Sm 3”)",Dahlias,05/07/2020,10/04/2020
+The Back Field,L1,,Dah,9,4 ft,"Dahlias, Mid Blooming, BoomBoom White (Med 6”)",Dahlias,05/07/2020,10/04/2020
+The Back Field,L1,,Dah,10,4 ft,"Dahlias, Mid Blooming, Conn.Coral (Med)",Dahlias,05/07/2020,10/04/2020
+The Back Field,L1,,Dah,11,4 ft,"Dahlias, Mid Blooming, Lancresse (Med 4-6“)",Dahlias,05/07/2020,10/04/2020
+The Back Field,L1,,Dah,12,4 ft,"Dahlias, Mid Blooming, Mystique (Med 4-6“)",Dahlias,05/07/2020,10/04/2020
+The Back Field,L1,,Dah,13,4 ft,"Dahlias, Mid Blooming, Peaches n Cream (Med 4-6“)",Dahlias,05/07/2020,10/04/2020
+The Back Field,L1,,Dah,14,4 ft,"Dahlias, Mid Blooming, Sweet Nathalie (Med. 5”)",Dahlias,05/07/2020,10/04/2020
+The Back Field,L1,,Dah,15,4 ft,"Dahlias, Mid Blooming, Thomas Edison (Med 6”)",Dahlias,05/07/2020,10/04/2020
+The Back Field,L1,,Dah,16,4 ft,"Dahlias, Mid Blooming, Café Au Lait (XL)",Dahlias,05/07/2020,10/04/2020
+The Back Field,L1,,Dah,17,4 ft,"Dahlias, Mid Blooming, Hamari Gold (XL 10”)",Dahlias,05/07/2020,10/04/2020
+The Back Field,L1,,Dah,18,4 ft,"Dahlias, Mid Blooming, Otto’s Thrill (XL)",Dahlias,05/07/2020,10/04/2020
+The Back Field,L1,,Dah,19,4 ft,"Dahlias, Mid Blooming, Penhill Watermelon (XL 10”)",Dahlias,05/07/2020,10/04/2020
+The Back Field,L1,,Dah,20,4 ft,"Dahlias, Mid Blooming, Shiloh Noelle (XL 10”)",Dahlias,05/07/2020,10/04/2020
+The Back Field,L1,,Dah seed,21,20 ft,"Dahlias, Mid Blooming, Giant Hybrid Mix (seed)",Dahlias,04/05/2020,10/04/2020
+The Back Field,L10,,Folage,1,10 ft,"Ornamental Grasses, Ornamental Grasses, Frosted Explosion",Ornamental Grasses,03/16/2020,09/12/2020
+The Back Field,L10,,Folage,2,20 ft,"Dusty Miller, Dusty Miller, New Look",Dusty Miller,02/25/2020,10/05/2020
+The Back Field,L10,,Folage,3,10 ft,"Ornamental Grasses, Ornamental Grasses, Frosted Explosion",Ornamental Grasses,04/06/2020,10/03/2020
+The Back Field,L10,,Folage,4,10 ft,"Amaranthus, Amaranthus, Hot Biscuits",Amaranthus,04/25/2020,08/23/2020
+The Back Field,L10,,Folage,5,10 ft,"Amaranthus, Amaranthus, Green Tails",Amaranthus,04/25/2020,08/23/2020
+The Back Field,L10,,Folage,6,10 ft,"Basil, Basil, Mrs. Burns' Lemon, Full-Size",Basil,05/29/2020,09/04/2020
+The Back Field,L10,,Folage,7,10 ft,"Basil, Basil, Mrs. Burns' Lemon, Full-Size",Basil,06/19/2020,09/25/2020
+The Back Field,L10,,Folage,8,10 ft,"Basil, Basil, Aromatto, Full-Size",Basil,06/19/2020,09/28/2020
+The Back Field,L10,,Folage,9,10 ft,"Amaranthus, Amaranthus, Hot Biscuits",Amaranthus,05/25/2020,09/22/2020
+The Back Field,L2,,Anem,1,3 ft,"Anemone, Mid Blooming, De Caen Blue White Mix",Anemone,03/09/2020,06/15/2020
+The Back Field,L2,,Anem,2,2 ft,"Anemone, Mid Blooming, Lord Lieutenant",Anemone,03/09/2020,06/15/2020
 The Back Field,L2,,Anem,3,7 ft,"Anemone, Mid Blooming, De Caen White",Anemone,03/09/2020,06/15/2020
 The Back Field,L2,,Anem,4,8 ft,"Anemone, Mid Blooming, Mix Super Bag",Anemone,03/09/2020,06/15/2020
-The Back Field,L2,,Anem,5,8 ft,"Ranunculus, Ranunculus, Red",Ranunculus,04/30/2020,08/27/2020
-The Back Field,L2,,Ranu,6,10 ft,"Ranunculus, Ranunculus, Romantic Mix",Ranunculus,04/30/2020,08/27/2020
-The Back Field,L2,,Ranu,7,10 ft,"Ranunculus, Ranunculus, White",Ranunculus,04/30/2020,08/27/2020
-The Back Field,L2,,Ranu,8,20 ft,"Ranunculus, Ranunculus, Bridal Mix",Ranunculus,04/30/2020,08/27/2020
-The Back Field,L2,,Ranu,9,5 ft,"Ranunculus, Ranunculus, Violet",Ranunculus,04/30/2020,08/27/2020
-The Back Field,L2,,Ranu,10,15 ft,"Ranunculus, Ranunculus, Purple/ White Picotee",Ranunculus,04/30/2020,08/27/2020
-The Back Field,L2,,Ranu,11,12 ft,"Ranunculus, Ranunculus, Pink/ White",Ranunculus,04/30/2020,08/27/2020
-The Back Field,L3,,Fl,1,10 ft,"Zinnias, Zinnias, Lilliput Mix",Zinnias,03/12/2020,09/09/2020
-The Back Field,L3,,Fl,2,10 ft,"Zinnias, Zinnias, Lilliput Salmon",Zinnias,03/12/2020,09/09/2020
-The Back Field,L3,,Fl,3,10 ft,"Zinnias, Zinnias, Senora™",Zinnias,03/12/2020,09/09/2020
-The Back Field,L3,,Fl,4,10 ft,"Rudbeckia (Black-Eyed Susan), Rudbeckia (Black-Eyed Susan), Cherry Brandy",Rudbeckia (Black-Eyed Susan),02/17/2020,10/09/2020
-The Back Field,L3,,Fl,5,10 ft,"Rudbeckia (Black-Eyed Susan), Rudbeckia (Black-Eyed Susan), Chim Chiminee Mix",Rudbeckia (Black-Eyed Susan),02/17/2020,10/09/2020
-The Back Field,L3,,Fl,6,10 ft,"Rudbeckia (Black-Eyed Susan), Rudbeckia (Black-Eyed Susan), Denver Daisy Film-Coated",Rudbeckia (Black-Eyed Susan),02/17/2020,10/08/2020
-The Back Field,L3,,Fl,7,10 ft,"Rudbeckia (Black-Eyed Susan), Rudbeckia (Black-Eyed Susan), Prairie Sun",Rudbeckia (Black-Eyed Susan),02/17/2020,10/08/2020
-The Back Field,L3,,Fl,8,10 ft,"Rudbeckia (Black-Eyed Susan), Rudbeckia (Black-Eyed Susan), Sahara",Rudbeckia (Black-Eyed Susan),02/17/2020,10/09/2020
-The Back Field,L3,,Fl,9,10 ft,"Aster, Aster, Apricot Swirl Mix",Aster,03/07/2020,09/06/2020
-The Back Field,L3,,Fl,10,10 ft,"Aster, Aster, Harlekin Violet",Aster,03/07/2020,09/06/2020
-The Back Field,L4,,Fl,1,10 ft,"Gomphrena (Globe Amaranth), Gomphrena (Globe Amaranth), Pastel Mix",Gomphrena (Globe Amaranth),03/26/2020,10/03/2020
-The Back Field,L4,,Fl,2,10 ft,"Gomphrena (Globe Amaranth), Gomphrena (Globe Amaranth), Sunset Mix",Gomphrena (Globe Amaranth),03/26/2020,10/03/2020
-The Back Field,L4,,Fl,3,10 ft,"Gomphrena (Globe Amaranth), Gomphrena (Globe Amaranth), White",Gomphrena (Globe Amaranth),03/26/2020,10/03/2020
-The Back Field,L4,,Fl,4,10 ft,"Stock, Stock, Avalanche Supreme",Stock,03/12/2020,09/26/2020
-The Back Field,L4,,Fl,5,10 ft,"Stock, Stock, Katz Formula Mix",Stock,03/12/2020,09/26/2020
-The Back Field,L4,,Fl,6,10 ft,"Scabiosa (Pincushion Flower), Annual, Fata Morgana",Scabiosa (Pincushion Flower),03/19/2020,10/03/2020
-The Back Field,L4,,Fl,7,10 ft,"Scabiosa (Pincushion Flower), Annual, Snowmaiden",Scabiosa (Pincushion Flower),03/19/2020,10/03/2020
-The Back Field,L4,,Fl,8,10 ft,"Zinnias, Zinnias, Benary's Giant Salmon Rose",Zinnias,04/03/2020,10/01/2020
-The Back Field,L4,,Fl,9,10 ft,"Zinnias, Zinnias, Queen Lime with Blush",Zinnias,04/03/2020,10/01/2020
-The Back Field,L4,,Fl,10,10 ft,"Cosmos, Cosmos, Cupcake Blush",Cosmos,04/09/2020,09/09/2020
-The Back Field,L5,,Fl,1,10 ft,"Cosmos, Cosmos, Double Click Bicolor Pink",Cosmos,04/09/2020,09/09/2020
-The Back Field,L5,,Fl,2,10 ft,"Cosmos, Cosmos, Double Click Snow Puff",Cosmos,04/09/2020,09/09/2020
-The Back Field,L5,,Fl,3,10 ft,"Celosia, Celosia, Cockscomb Coral Reef",Celosia,03/27/2020,08/28/2020
-The Back Field,L5,,Fl,4,10 ft,"Aster, Aster, Chamois Apricot",Aster,04/01/2020,10/01/2020
-The Back Field,L5,,Fl,5,10 ft,"Aster, Aster, Valkyrie Pink",Aster,04/01/2020,10/01/2020
-The Back Field,L5,,Fl,6,10 ft,"Cosmos, Cosmos, Apricot Lemonade",Cosmos,04/30/2020,09/30/2020
-The Back Field,L5,,Fl,7,10 ft,"Cosmos, Cosmos, Double Click Mix",Cosmos,04/30/2020,09/30/2020
-The Back Field,L5,,Fl,8,10 ft,"Cosmos, Cosmos, Rubenza",Cosmos,04/30/2020,09/30/2020
-The Back Field,L5,,Fl,9,10 ft,"Celosia, Celosia, Pampas Plume",Celosia,04/02/2020,09/24/2020
-The Back Field,L5,,Fl,10,10 ft,"Celosia, Celosia, Texas Plume Summer Sherbert",Celosia,04/08/2020,09/30/2020
-The Back Field,L6,,Fi,1,10 ft,"Talinum (fame flower), Talinum (fame flower), Jewels of Opar",Talinum (fame flower),02/17/2020,11/03/2020
-The Back Field,L6,,Fi,2,10 ft,"Talinum (fame flower), Talinum (fame flower), Jewels of Opar",Talinum (fame flower),02/17/2020,11/03/2020
-The Back Field,L6,,Fi,3,10 ft,"Talinum (fame flower), Talinum (fame flower), Jewels of Opar",Talinum (fame flower),02/17/2020,11/03/2020
-The Back Field,L6,,Fi,4,10 ft,"Ammi (False Queen Anne's Lace), Ammi (False Queen Anne's Lace), Chocolate Lace",Ammi (False Queen Anne's Lace),02/26/2020,09/04/2020
-The Back Field,L6,,Fi,5,10 ft,"Ammi (False Queen Anne's Lace), Ammi (False Queen Anne's Lace), Green Mist",Ammi (False Queen Anne's Lace),02/26/2020,09/04/2020
-The Back Field,L6,,Fi,6,10 ft,"Larkspur, Larkspur, White Cloud",Larkspur,04/23/2020,10/04/2020
-The Back Field,L6,,Fi,7,10 ft,"Larkspur, Larkspur, White Cloud",Larkspur,04/23/2020,10/04/2020
-The Back Field,L6,,Fi,8,10 ft,"Larkspur, Larkspur, White Cloud",Larkspur,04/23/2020,10/04/2020
-The Back Field,L6,,Fi,9,10 ft,"Larkspur, Larkspur, White Cloud",Larkspur,04/23/2020,10/04/2020
-The Back Field,L6,,Fi,10,10 ft,"Yarrow, Yarrow, Summer Berries",Yarrow,02/20/2020,09/28/2020
-The Back Field,L7,,Fi,1,10 ft,"Yarrow, Yarrow, Summer Berries",Yarrow,02/20/2020,09/28/2020
-The Back Field,L7,,Fi,2,10 ft,"Ammi (False Queen Anne's Lace), Ammi (False Queen Anne's Lace), Chocolate Lace",Ammi (False Queen Anne's Lace),03/18/2020,09/25/2020
-The Back Field,L7,,Fi,3,10 ft,"Ammi (False Queen Anne's Lace), Ammi (False Queen Anne's Lace), Chocolate Lace",Ammi (False Queen Anne's Lace),03/18/2020,09/25/2020
-The Back Field,L7,,Fi,4,10 ft,"Ammi (False Queen Anne's Lace), Ammi (False Queen Anne's Lace), Green Mist",Ammi (False Queen Anne's Lace),03/18/2020,09/25/2020
-The Back Field,L7,,Fi,5,10 ft,"Ammi (False Queen Anne's Lace), Ammi (False Queen Anne's Lace), Green Mist",Ammi (False Queen Anne's Lace),03/18/2020,09/25/2020
-The Back Field,L7,,Fi,6,10 ft,"Cress, Cress, Emerald Beads, Full-Size",Cress,05/07/2020,08/19/2020
-The Back Field,L7,,Fi,7,10 ft,"Cress, Cress, Wrinkled Crinkled, Full-Size",Cress,05/07/2020,07/20/2020
-The Back Field,L7,,Fi,8,10 ft,"Mignonette, Mignonette, Mignonette Standard",Mignonette,04/13/2020,08/05/2020
-The Back Field,L7,,Fi,9,10 ft,"Mignonette, Mignonette, White Mignonette",Mignonette,04/13/2020,08/05/2020
-The Back Field,L7,,Fi,10,10 ft,"Shiso, Shiso, Perilla Purple Zi Su, Full-Size",Shiso,04/20/2020,09/01/2020
-The Back Field,L8,,Fi,1,10 ft,"Gypsophila (Baby's Breath), Gypsophila (Baby's Breath), Covent Garden Market",Gypsophila (Baby's Breath),05/21/2020,08/27/2020
-The Back Field,L8,,Fi,2,10 ft,"Shiso, Shiso, Perilla Purple Zi Su, Full-Size",Shiso,05/11/2020,09/22/2020
-The Back Field,L8,,Fi,3,10 ft,"Mignonette, Mignonette, Mignonette Standard",Mignonette,05/05/2020,08/27/2020
-The Back Field,L8,,Fi,4,10 ft,"Mignonette, Mignonette, White Mignonette",Mignonette,05/05/2020,08/27/2020
-The Back Field,L8,,Fi,5,10 ft,"Cress, Cress, Emerald Beads, Full-Size",Cress,06/18/2020,09/30/2020
-The Back Field,L8,,Fi,6,10 ft,"Cress, Cress, Pennycress, Full-Size",Cress,06/18/2020,08/31/2020
-The Back Field,L8,,Fi,7,10 ft,"Gypsophila (Baby's Breath), Gypsophila (Baby's Breath), Covent Garden Market",Gypsophila (Baby's Breath),06/29/2020,10/05/2020
-The Back Field,L8,,Fi,8,10 ft,"Mignonette, Mignonette, White Mignonette",Mignonette,05/29/2020,09/20/2020
-The Back Field,L8,,Fi,9,10 ft,"Cress, Cress, Pennycress, Full-Size",Cress,07/09/2020,09/21/2020
-The Back Field,L8,,Fi,10,10 ft,"Cress, Cress, Wrinkled Crinkled, Full-Size",Cress,07/09/2020,09/21/2020
-The Back Field,L9,,Fo,1,10 ft,"Geranium (scented), Geranium (scented), Scented Geranium",Geranium (scented),03/02/2020,10/05/2020
-The Back Field,L9,,Fo,2,10 ft,"Geranium (scented), Geranium (scented), Scented Geranium",Geranium (scented),03/02/2020,10/05/2020
-The Back Field,L9,,Fo,3,10 ft,"Atriplex (Cut flower), Atriplex (Cut flower), Caramel Apple Mix",Atriplex (Cut flower),03/12/2020,10/03/2020
-The Back Field,L9,,Fo,4,10 ft,"Amaranthus, Amaranthus, Green Tails",Amaranthus,03/26/2020,07/24/2020
-The Back Field,L9,,Fo,5,10 ft,"Nicandra Physalodes, Nicandra Physalodes, Apple of Peru",Nicandra Physalodes,03/19/2020,09/30/2020
-The Back Field,L9,,Fo,6,10 ft,"Nicandra Physalodes, Nicandra Physalodes, Apple of Peru",Nicandra Physalodes,03/19/2020,09/30/2020
-The Back Field,L9,,Fo,7,10 ft,"Eucalyptus, Eucalyptus, Parviflora",Eucalyptus,02/17/2020,10/05/2020
-The Back Field,L9,,Fo,8,10 ft,"Eucalyptus, Eucalyptus, Parviflora",Eucalyptus,02/17/2020,10/05/2020
-The Back Field,L9,,Fo,9,10 ft,"Eucalyptus, Eucalyptus, Silver Dollar",Eucalyptus,02/17/2020,10/05/2020
-The Back Field,L9,,Fo,10,10 ft,"Eucalyptus, Eucalyptus, Silver Dollar",Eucalyptus,02/17/2020,10/05/2020
+The Back Field,L2,,Ranu,5,20 ft,"Ranunculus, Ranunculus, Bridal Mix",Ranunculus,04/30/2020,08/27/2020
+The Back Field,L2,,Ranu,6,15 ft,"Ranunculus, Ranunculus, Purple/ White Picotee",Ranunculus,04/30/2020,08/27/2020
+The Back Field,L2,,Ranu,7,5 ft,"Ranunculus, Ranunculus, Violet",Ranunculus,04/30/2020,08/27/2020
+The Back Field,L2,,Ranu,8,12 ft,"Ranunculus, Ranunculus, Pink/ White",Ranunculus,04/30/2020,08/27/2020
+The Back Field,L2,,Ranu,9,10 ft,"Ranunculus, Ranunculus, Romantic Mix",Ranunculus,04/30/2020,08/27/2020
+The Back Field,L2,,Ranu,10,10 ft,"Ranunculus, Ranunculus, White",Ranunculus,04/30/2020,08/27/2020
+The Back Field,L2,,Ranu,11,8 ft,"Ranunculus, Ranunculus, Red",Ranunculus,04/30/2020,08/27/2020
+The Back Field,L3,,Flower,1,10 ft,"Zinnias, Zinnias, Lilliput Mix",Zinnias,03/12/2020,09/09/2020
+The Back Field,L3,,Flower,2,10 ft,"Zinnias, Zinnias, Lilliput Salmon",Zinnias,03/12/2020,09/09/2020
+The Back Field,L3,,Flower,3,10 ft,"Zinnias, Zinnias, Senora™",Zinnias,03/12/2020,09/09/2020
+The Back Field,L3,,Flower,4,10 ft,"Rudbeckia (Black-Eyed Susan), Rudbeckia (Black-Eyed Susan), Chim Chiminee Mix",Rudbeckia (Black-Eyed Susan),02/15/2020,10/07/2020
+The Back Field,L3,,Flower,5,10 ft,"Rudbeckia (Black-Eyed Susan), Rudbeckia (Black-Eyed Susan), Cherry Brandy",Rudbeckia (Black-Eyed Susan),02/15/2020,10/07/2020
+The Back Field,L3,,Flower,6,10 ft,"Rudbeckia (Black-Eyed Susan), Rudbeckia (Black-Eyed Susan), Denver Daisy Film-Coated",Rudbeckia (Black-Eyed Susan),02/15/2020,10/06/2020
+The Back Field,L3,,Flower,7,10 ft,"Rudbeckia (Black-Eyed Susan), Rudbeckia (Black-Eyed Susan), Prairie Sun",Rudbeckia (Black-Eyed Susan),02/15/2020,10/06/2020
+The Back Field,L3,,Flower,8,10 ft,"Rudbeckia (Black-Eyed Susan), Rudbeckia (Black-Eyed Susan), Sahara",Rudbeckia (Black-Eyed Susan),02/15/2020,10/07/2020
+The Back Field,L3,,Flower,9,10 ft,"Rudbeckia (Black-Eyed Susan), Rudbeckia (Black-Eyed Susan), Macau",Rudbeckia (Black-Eyed Susan),02/17/2020,10/08/2020
+The Back Field,L3,,Flower,10,10 ft,"Aster, Aster, Apricot Swirl Mix",Aster,03/07/2020,09/06/2020
+The Back Field,L3,,,11,10 ft,"Aster, Aster, Harlekin Violet",Aster,03/07/2020,09/06/2020
+The Back Field,L4,,Flower,1,10 ft,"Stock, Stock, Avalanche Supreme",Stock,03/12/2020,09/26/2020
+The Back Field,L4,,Flower,2,10 ft,"Stock, Stock, Katz Formula Mix",Stock,03/12/2020,09/26/2020
+The Back Field,L4,,Flower,3,10 ft,"Gomphrena (Globe Amaranth), Gomphrena (Globe Amaranth), Pastel Mix",Gomphrena (Globe Amaranth),03/26/2020,10/03/2020
+The Back Field,L4,,Flower,4,10 ft,"Gomphrena (Globe Amaranth), Gomphrena (Globe Amaranth), Sunset Mix",Gomphrena (Globe Amaranth),03/26/2020,10/03/2020
+The Back Field,L4,,Flower,5,10 ft,"Gomphrena (Globe Amaranth), Gomphrena (Globe Amaranth), White",Gomphrena (Globe Amaranth),03/26/2020,10/03/2020
+The Back Field,L4,,Flower,6,10 ft,"Scabiosa (Pincushion Flower), Annual, Fata Morgana",Scabiosa (Pincushion Flower),03/19/2020,10/03/2020
+The Back Field,L4,,Flower,7,10 ft,"Scabiosa (Pincushion Flower), Annual, Snowmaiden",Scabiosa (Pincushion Flower),03/19/2020,10/03/2020
+The Back Field,L4,,Flower,8,10 ft,"Zinnias, Zinnias, Benary's Giant Salmon Rose",Zinnias,04/03/2020,10/01/2020
+The Back Field,L4,,Flower,9,10 ft,"Zinnias, Zinnias, Queen Lime with Blush",Zinnias,04/03/2020,10/01/2020
+The Back Field,L4,,Flower,10,10 ft,"Cosmos, Cosmos, Cupcake Blush",Cosmos,04/09/2020,09/09/2020
+The Back Field,L5,,Flower,1,10 ft,"Cosmos, Cosmos, Double Click Bicolor Pink",Cosmos,04/09/2020,09/09/2020
+The Back Field,L5,,Flower,2,10 ft,"Cosmos, Cosmos, Double Click Snow Puff",Cosmos,04/09/2020,09/09/2020
+The Back Field,L5,,Flower,3,10 ft,"Celosia, Celosia, Cockscomb Coral Reef",Celosia,03/27/2020,08/28/2020
+The Back Field,L5,,Flower,4,10 ft,"Aster, Aster, Chamois Apricot",Aster,04/01/2020,10/01/2020
+The Back Field,L5,,Flower,5,10 ft,"Aster, Aster, Valkyrie Pink",Aster,04/01/2020,10/01/2020
+The Back Field,L5,,Flower,6,10 ft,"Cosmos, Cosmos, Apricot Lemonade",Cosmos,04/30/2020,09/30/2020
+The Back Field,L5,,Flower,7,10 ft,"Cosmos, Cosmos, Double Click Mix",Cosmos,04/30/2020,09/30/2020
+The Back Field,L5,,Flower,8,10 ft,"Cosmos, Cosmos, Rubenza",Cosmos,04/30/2020,09/30/2020
+The Back Field,L5,,Flower,9,10 ft,"Celosia, Celosia, Pampas Plume",Celosia,04/02/2020,09/24/2020
+The Back Field,L5,,Flower,10,10 ft,"Celosia, Celosia, Texas Plume Summer Sherbert",Celosia,04/08/2020,09/30/2020
+The Back Field,L6,,Filler,1,30 ft,"Talinum (fame flower), Talinum (fame flower), Jewels of Opar",Talinum (fame flower),02/17/2020,11/03/2020
+The Back Field,L6,,Filler,2,10 ft,"Ammi (False Queen Anne's Lace), Ammi (False Queen Anne's Lace), Chocolate Lace",Ammi (False Queen Anne's Lace),02/26/2020,09/04/2020
+The Back Field,L6,,Filler,3,10 ft,"Ammi (False Queen Anne's Lace), Ammi (False Queen Anne's Lace), Green Mist",Ammi (False Queen Anne's Lace),02/26/2020,09/04/2020
+The Back Field,L6,,Filler,4,40 ft,"Larkspur, Larkspur, White Cloud",Larkspur,04/23/2020,10/04/2020
+The Back Field,L6,,Filler,5,10 ft,"Yarrow, Yarrow, Summer Berries",Yarrow,02/20/2020,09/28/2020
+The Back Field,L7,,Filler,1,10 ft,"Yarrow, Yarrow, Summer Berries",Yarrow,02/20/2020,09/28/2020
+The Back Field,L7,,Filler,2,20 ft,"Ammi (False Queen Anne's Lace), Ammi (False Queen Anne's Lace), Chocolate Lace",Ammi (False Queen Anne's Lace),03/18/2020,09/25/2020
+The Back Field,L7,,Filler,3,20 ft,"Ammi (False Queen Anne's Lace), Ammi (False Queen Anne's Lace), Green Mist",Ammi (False Queen Anne's Lace),03/18/2020,09/25/2020
+The Back Field,L7,,Filler,4,10 ft,"Cress, Cress, Emerald Beads, Full-Size",Cress,05/07/2020,08/19/2020
+The Back Field,L7,,Filler,5,10 ft,"Cress, Cress, Wrinkled Crinkled, Full-Size",Cress,05/07/2020,07/20/2020
+The Back Field,L7,,Filler,6,10 ft,"Mignonette, Mignonette, Mignonette Standard",Mignonette,04/13/2020,08/05/2020
+The Back Field,L7,,Filler,7,10 ft,"Mignonette, Mignonette, White Mignonette",Mignonette,04/13/2020,08/05/2020
+The Back Field,L7,,Filler,8,10 ft,"Shiso, Shiso, Perilla Purple Zi Su, Full-Size",Shiso,04/20/2020,09/01/2020
+The Back Field,L8,,Filler,1,10 ft,"Gypsophila (Baby's Breath), Gypsophila (Baby's Breath), Covent Garden Market",Gypsophila (Baby's Breath),05/21/2020,08/27/2020
+The Back Field,L8,,Filler,2,10 ft,"Shiso, Shiso, Perilla Purple Zi Su, Full-Size",Shiso,05/11/2020,09/22/2020
+The Back Field,L8,,Filler,3,10 ft,"Mignonette, Mignonette, Mignonette Standard",Mignonette,05/05/2020,08/27/2020
+The Back Field,L8,,Filler,4,10 ft,"Mignonette, Mignonette, White Mignonette",Mignonette,05/05/2020,08/27/2020
+The Back Field,L8,,Filler,5,10 ft,"Cress, Cress, Emerald Beads, Full-Size",Cress,06/18/2020,09/30/2020
+The Back Field,L8,,Filler,6,10 ft,"Cress, Cress, Pennycress, Full-Size",Cress,06/18/2020,08/31/2020
+The Back Field,L8,,Filler,7,10 ft,"Gypsophila (Baby's Breath), Gypsophila (Baby's Breath), Covent Garden Market",Gypsophila (Baby's Breath),06/29/2020,10/05/2020
+The Back Field,L8,,Filler,8,10 ft,"Mignonette, Mignonette, White Mignonette",Mignonette,05/29/2020,09/20/2020
+The Back Field,L8,,Filler,9,10 ft,"Cress, Cress, Pennycress, Full-Size",Cress,07/09/2020,09/21/2020
+The Back Field,L8,,Filler,10,10 ft,"Cress, Cress, Wrinkled Crinkled, Full-Size",Cress,07/09/2020,09/21/2020
+The Back Field,L9,,Folage,1,20 ft,"Geranium (scented), Geranium (scented), Scented Geranium",Geranium (scented),03/02/2020,10/05/2020
+The Back Field,L9,,Folage,2,10 ft,"Atriplex (Cut flower), Atriplex (Cut flower), Caramel Apple Mix",Atriplex (Cut flower),03/12/2020,10/03/2020
+The Back Field,L9,,Folage,3,10 ft,"Amaranthus, Amaranthus, Green Tails",Amaranthus,03/26/2020,07/24/2020
+The Back Field,L9,,Folage,4,20 ft,"Nicandra Physalodes, Nicandra Physalodes, Apple of Peru",Nicandra Physalodes,03/19/2020,09/30/2020
+The Back Field,L9,,Folage,5,20 ft,"Eucalyptus, Eucalyptus, Silver Dollar",Eucalyptus,02/17/2020,10/05/2020
+The Back Field,L9,,Folage,6,20 ft,"Eucalyptus, Eucalyptus, Parviflora",Eucalyptus,02/17/2020,10/05/2020
