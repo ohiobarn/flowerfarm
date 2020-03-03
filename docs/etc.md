@@ -65,9 +65,18 @@ First and last frost dates for my zip 45324.
 
 ### Seasons Window
 
-| Name                      |  From         | To
-|---------------------------|---------------|------------------|
-| xxx  | xxx   | xxx
+| Name               |  From  | To    |
+|--------------------|------- |-------|
+| Late Winter        |  2/23  |  3/14
+| Early Spring       |  3/15  |  4/18
+| Mid Spring         |  4/19  |  5/23
+| Late Spring        |  5/24  |  6/27
+| Early Summer       |  6/28  |  7/25
+| Mid Summer         |  7/26  |  8/22
+| Late Summer        |  8/23  |  9/26
+| Early Fall         |  9/27  | 10/24
+| Mid Fall           | 10/25  | 11/21
+| Late Fall          | 11/22  | 12/26
 
 
 [Farmer's Almanac - The Seasons](https://www.farmersalmanac.com/the-seasons)
