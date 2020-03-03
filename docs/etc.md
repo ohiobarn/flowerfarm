@@ -63,6 +63,12 @@ First and last frost dates for my zip 45324.
   </tr>
 </table>
 
+### Seasons Window
+
+| Name                      |  From         | To
+|---------------------------|---------------|------------------|
+| xxx  | xxx   | xxx
+
 
 [Farmer's Almanac - The Seasons](https://www.farmersalmanac.com/the-seasons)
 
