@@ -63,6 +63,11 @@ I did a flow test with the spigot out in the field.  It took about 55 seconds to
 
 ### Soil Type
 
+My soil test:
+ 
+* the results: [soil-test-results-S191028-111](soil-test-results-S191028-111.PDF)
+* the request: [soil_test_routine_home_grounds_101019](soil_test_routine_home_grounds_101019.pdf)
+
 Next we need to know our soil type:
 
 * Clay - requires a 0.5 GPH emitter
