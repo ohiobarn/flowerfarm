@@ -31,10 +31,13 @@
   * [Amleo - palring 146-gsm poly covering ](https://www.amleo.com/palring-146-gsm-poly-covering/p/VP-PALRING146/)
   * [Bootstrap Farmer - green house kits with full instructions](https://www.bootstrapfarmer.com/pages/diy-greenhouse-kits)
 
+* Supplies
+  * [Yoderl's 2020-Seed-Supply-Catalog](https://yoders-produce.dcatalog.com/v/2020-Seed-Supply-Catalog?page=20)
+  * [agriculturesolutions](https://www.agriculturesolutions.com/)
+  
 * Misc shopping
   * [Tidy tray](https://www.greenhousemegastore.com/yard-garden/tools/garden-tools/tidy-tray)
 
 ## Tech
 
 * [Clipboard to markdown](https://euangoddard.github.io/clipboard2markdown/)
-* [Yoderl's 2020-Seed-Supply-Catalog](https://yoders-produce.dcatalog.com/v/2020-Seed-Supply-Catalog?page=20) 
