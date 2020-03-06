@@ -279,11 +279,66 @@ Pumpkin Patch, no irrigation
 
 ## Soil Test
 
-My soil test:
- 
+Results:
+
 * the results: [soil-test-results-S191028-111](soil-test-results-S191028-111.PDF)
 * the request: [soil_test_routine_home_grounds_101019](soil_test_routine_home_grounds_101019.pdf)
 
-```math
-2*(3/4)
+Summary of the recommendation:
+
+The numbers in this table represent **lbs/1000 sq ft**
+
+| Nitrogen, N | Phosphorus, P2O5 | Potassium, K2O |
+|:-----------:|:----------------:|:--------------:|
+| 2-3         | 1                | 1
+> For example 2.5 lbs/1000 sq ft of N
+
+The main cutting field is 10 locations (4x100) each location 400 sq ft so that times 10 locations gives a total of 4,000 sq ft. 
+
+> main cutting field `4,000 sq ft`
+ N - 10 lbs  (4000/1000 * 2.5)
+ P -  4 lbs  (4000/1000 * 1)
+ K -  4 lbs  (4000/1000 * 1)
+
+To calculate how much fertilizer is needed using the following calculation. This formula can be calculated for N, P or K.
+
+`Lbs. N recommended / %N in the fertilizer blend x 100 = lbs. fertilizer needed per 1000 sq ft` 
+
+So `10-10-10` all purpose fertilizer is generally available at [THD](https://www.homedepot.com/p/Hyponex-40-lb-All-Purpose-Fertilizer-10-10-10-523902/202968725).  
+
+Lets compute how much of the `10.10.10` is need for P and K, then I will need to supplement for N.
+
+```text
+# given a 40 lb bag of 10-10-10
+
+40 lbs * 10% N = 4 lbs of N ( which is 6 lbs short of what we need)
+40 lbs * 10% P = 4 lbs of P ( which is what we need)
+40 lbs * 10% K = 4 lbs of K ( which is what we need)
+
+```
+
+N sourced from blood meal
+
+To make up the shortfall of N let look at some [blood meal](https://www.homedepot.com/p/Espoma-3-5-lbs-Organic-Blood-Meal-Fertilizer-100047195/306626551) which is rated at `12-0-0`
+
+```text
+# given a 3.5 lb bag of 12-0-0
+
+3.5 lbs * 12% N = 0.42 lbs of 
+
+Therefore we would need 14 bags to make up our 6 lbs short fall (14 = 6/0.42)
+
+```
+
+N sourced from urea
+
+To make up the shortfall of N let look at some [urea](https://www.amazon.com/Seed-And-Plant-Urea-Fertilizer/dp/B076B3961Y/ref=asc_df_B076B3961Y/?tag=hyprod-20&linkCode=df0&hvadid=309835941037&hvpos=&hvnetw=g&hvrand=16452409708629974501&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9015854&hvtargid=pla-569879295008&psc=1&tag=&ref=&adgrpid=60867042199&hvpone=&hvptwo=&hvadid=309835941037&hvpos=&hvnetw=g&hvrand=16452409708629974501&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9015854&hvtargid=pla-569879295008) which is rated at `46-0-0`
+
+```text
+# given a 5 lb bag of 46-0-0
+
+5 lbs * 46% N = 2.3 lbs  
+
+Therefore we would need 3 bags to make up the 6 lbs short fall (3 = round_up(6/2.3) )
+
 ```
