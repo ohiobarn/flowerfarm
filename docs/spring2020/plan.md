@@ -296,9 +296,9 @@ The numbers in this table represent **lbs/1000 sq ft**
 The main cutting field is 10 locations (4x100) each location 400 sq ft so that times 10 locations gives a total of 4,000 sq ft. 
 
 > main cutting field `4,000 sq ft`
- N - 10 lbs  (4000/1000 * 2.5)
- P -  4 lbs  (4000/1000 * 1)
- K -  4 lbs  (4000/1000 * 1)
+ N -  8 - 12 lbs  (4000/1000 * 2) - (4000/1000 * 3) 
+ P -  4 lbs       (4000/1000 * 1)
+ K -  4 lbs       (4000/1000 * 1)
 
 To calculate how much fertilizer is needed using the following calculation. This formula can be calculated for N, P or K.
 
@@ -311,34 +311,21 @@ Lets compute how much of the `10.10.10` is need for P and K, then I will need to
 ```text
 # given a 40 lb bag of 10-10-10
 
-40 lbs * 10% N = 4 lbs of N ( which is 6 lbs short of what we need)
+40 lbs * 10% N = 4 lbs of N ( which is 4 to 8 lbs short of what we need)
 40 lbs * 10% P = 4 lbs of P ( which is what we need)
 40 lbs * 10% K = 4 lbs of K ( which is what we need)
 
 ```
 
-N sourced from blood meal
-
-To make up the shortfall of N let look at some [blood meal](https://www.homedepot.com/p/Espoma-3-5-lbs-Organic-Blood-Meal-Fertilizer-100047195/306626551) which is rated at `12-0-0`
-
-```text
-# given a 3.5 lb bag of 12-0-0
-
-3.5 lbs * 12% N = 0.42 lbs of 
-
-Therefore we would need 14 bags to make up our 6 lbs short fall (14 = 6/0.42)
-
-```
-
 N sourced from urea
 
-To make up the shortfall of N let look at some [urea](https://www.amazon.com/Seed-And-Plant-Urea-Fertilizer/dp/B076B3961Y/ref=asc_df_B076B3961Y/?tag=hyprod-20&linkCode=df0&hvadid=309835941037&hvpos=&hvnetw=g&hvrand=16452409708629974501&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9015854&hvtargid=pla-569879295008&psc=1&tag=&ref=&adgrpid=60867042199&hvpone=&hvptwo=&hvadid=309835941037&hvpos=&hvnetw=g&hvrand=16452409708629974501&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9015854&hvtargid=pla-569879295008) which is rated at `46-0-0`
+To make up the shortfall of N let look at some [urea](https://www.amazon.com/Seed-And-Plant-Urea-Fertilizer/dp/B076B3961Y/ref=asc_df_B076B3961Y/?tag=hyprod-20&linkCode=df0&hvadid=309835941037&hvpos=&hvnetw=g&hvrand=16452409708629974501&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9015854&hvtargid=pla-569879295008&psc=1&tag=&ref=&adgrpid=60867042199&hvpone=&hvptwo=&hvadid=309835941037&hvpos=&hvnetw=g&hvrand=16452409708629974501&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9015854&hvtargid=pla-569879295008) which is rated at `45-0-0`
 
 ```text
-# given a 5 lb bag of 46-0-0
+# given a 4 lb bag of 45-0-0
 
-5 lbs * 46% N = 2.3 lbs  
+4 lbs * 45% N = 1.8 lbs of N per bag 
 
-Therefore we would need 3 bags to make up the 6 lbs short fall (3 = round_up(6/2.3) )
+Therefore we would need 4 bags which has 7.2 lbs of N ( 7.2 = 4 * 1.8). This is in the 4 to 8 lbs shortfall range.
 
 ```

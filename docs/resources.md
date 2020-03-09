@@ -1,5 +1,11 @@
 # Flowers
 
+## Unclassified (inbox)
+  * [find certified compost suppliers](https://www.compostingcouncil.org/page/participants)
+  * [How to appy fertilizers](https://www.almanac.com/content/how-apply-fertilizers-your-garden)
+
+
+
 ## PDFs
 
 * [Gloeckner-Seed_2020-2021](PDF/Gloeckner-Seed_2020-2021.pdf)
@@ -34,10 +40,25 @@
 * Supplies
   * [Yoderl's 2020-Seed-Supply-Catalog](https://yoders-produce.dcatalog.com/v/2020-Seed-Supply-Catalog?page=20)
   * [agriculturesolutions](https://www.agriculturesolutions.com/)
-  
+
 * Misc shopping
   * [Tidy tray](https://www.greenhousemegastore.com/yard-garden/tools/garden-tools/tidy-tray)
 
 ## Tech
 
 * [Clipboard to markdown](https://euangoddard.github.io/clipboard2markdown/)
+
+## Farm Science / Primary Sources
+
+* OSU Extension
+  * [CFAES - College of Food, Agricultural, and Environmental Sciences](https://cfaes.osu.edu/)
+  * [New and small farm conferences 2020](https://agnr.osu.edu/small-farm-programs/new-and-small-farm-conferences)
+  * Small Farm College [info](https://agnr.osu.edu/small-farm-programs/new-and-small-farm-college#southern) | [announcement](https://agnr.osu.edu/news/ohio-state-university-extension-small-farm-program-announces-2020-ohio-new-and-small-farm)
+  * [Clark](https://clark.osu.edu/) and [Greene](https://greene.osu.edu/) County
+  * [Ask-an-expert](https://extension.osu.edu/ask-an-expert)
+  * Youtube on composting [short](https://www.youtube.com/watch?v=dvg2ZbwePM0) | [extended](https://www.youtube.com/watch?v=Kf6CGj7xpFE)
+* Oregon State Extension
+  * [compost search](https://extension.oregonstate.edu/search?search=compost)
+  * [composting overview pdf](https://extension.oregonstate.edu/sites/default/files/documents/1/ntosoils-compostingandthectonratio.pdf)
+
+
