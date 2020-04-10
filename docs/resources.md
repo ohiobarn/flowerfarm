@@ -55,7 +55,7 @@
   * [New and small farm conferences 2020](https://agnr.osu.edu/small-farm-programs/new-and-small-farm-conferences)
   * Small Farm College [info](https://agnr.osu.edu/small-farm-programs/new-and-small-farm-college#southern) | [announcement](https://agnr.osu.edu/news/ohio-state-university-extension-small-farm-program-announces-2020-ohio-new-and-small-farm)
   * [Clark](https://clark.osu.edu/) and [Greene](https://greene.osu.edu/) County
-  * [Ask-an-expert](https://extension.osu.edu/ask-an-expert)
+  * [Ask-an-expert](https://extension.osu.edu/ask-an-expert) | [search ask-an-expert](https://ask.extension.org/groups/1395)
   * Youtube on composting [short](https://www.youtube.com/watch?v=dvg2ZbwePM0) | [extended](https://www.youtube.com/watch?v=Kf6CGj7xpFE)
 * Oregon State Extension
   * [compost search](https://extension.oregonstate.edu/search?search=compost)
