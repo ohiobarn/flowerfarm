@@ -42,6 +42,10 @@ To compute the number of plants per bed; each bed is 48 inches (4 feet) wide and
 
 ![](img/plant-spacing.png)
 
+### Spacing Template
+
+![](img/plant-spacing-9in-template.png)
+
 ---
 
 ## Irrigation Setup
