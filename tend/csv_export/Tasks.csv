@@ -1,17 +1,8 @@
 Due Date,Date Completed,Task Name,Task Type,Assignees,Plantings Assigned,Location Assigned,Method,Sub-method,Input,Description,Manufacturer,OMRI,Application Rate Amount,Application Rate Amount Unit,Application Rate Area,Total Cost,Total Cost Amount,Total Cost Unit,Comments,Name Of Pest Identified,Number Of Minutes,Lines Of Drip,360 Pipe #Lines,360 Pipe Minutes,360 Pipe Heads Per Line,180 Pipe #Lines,180 Pipe Minutes,180 Pipe Heads Per Line,Total Inches,Total Gallons,Completed,Total Labor Hours
-<<<<<<< HEAD
-03/22/2020,03/22/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Atriplex (Cut flower) Caramel Apple Mix 03/22/2020 ,"The Back Field,Main Cutting Beds,Block Foliage,Beds 9",,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
-=======
-02/15/2020,02/16/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Cherry Brandy 02/15/2020 ,"The Back Field,L3,Block Flower,Beds 5",,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,1.50
-02/15/2020,02/16/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Chim Chiminee Mix 02/15/2020 ,"The Back Field,L3,Block Flower,Beds 4",,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,1.50
-02/15/2020,02/16/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Denver Daisy Film-Coated 02/15/2020 ,"The Back Field,L3,Block Flower,Beds 6",,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,1.50
-02/15/2020,02/16/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Prairie Sun 02/15/2020 ,"The Back Field,L3,Block Flower,Beds 7",,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,1.50
-02/15/2020,02/16/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Sahara 02/15/2020 ,"The Back Field,L3,Block Flower,Beds 8",,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,1.50
-02/18/2020,02/18/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Eucalyptus Parviflora 02/18/2020 ,"The Back Field,L9,Block Foliage,Beds 6",,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,1.00
-02/17/2020,02/17/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Talinum (fame flower) Jewels of Opar 02/17/2020 ,"The Back Field,L6,Block Filler,Beds 1",,,,,,,0,,,,,,JOO 1/3 comment,,,,,,,,,,0.0,0.0,Yes,1.50
-02/17/2020,02/17/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Eucalyptus Silver Dollar 02/17/2020 ,"The Back Field,L9,Block Foliage,Beds 5",,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,1.00
-02/17/2020,02/17/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Macau 02/17/2020 ,"The Back Field,L3,Block Flower,Beds 9",,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,1.00
->>>>>>> master
+06/27/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Pumpkins Racer 06/27/2020 ,"The Back Field,Racer Patch,No Block,Beds 1",,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+06/27/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Pumpkins Howden 06/27/2020 ,"The Back Field,Howden Patch,No Block,Beds 1",,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+06/27/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Pumpkins Casper 06/27/2020 ,"The Back Field,Casper Patch,No Block,Beds 1",,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+06/27/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Gourds Ornamental Mix 06/27/2020 ,"The Back Field,Gourd Patch,No Block,Beds 1",,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 02/02/2020,02/04/2020,"Buildings, Maintenance",Maintenance,Tony Gilkerson,   ,,Buildings,,,side boards on greenhouse,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,4.00
 02/08/2020,02/09/2020,Put snow plow on tractor,Maintenance,Tony Gilkerson,   ,,Tractors,,,It is snowing and we need to clear driveway for guests,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,1.00
 02/08/2020,02/09/2020,Work on building Temporary Greenhouse,Maintenance,Tony Gilkerson,   ,,Buildings,,,"This weekend I hope to at least do the following:
@@ -28,16 +19,6 @@ The plastic cover will have to wait for later, it is snowing and the conditions 
 The plastic cover will have to wait for later, it is snowing and the conditions are bad",,,0,,,,,,This is a continuation from yesterday,,,,,,,,,,0.0,0.0,Yes,3.00
 02/10/2020,02/11/2020,Germination Station,Maintenance,Tony Gilkerson,   ,,Buildings,,,"Tonight, I wired up the germination station with heating mats and their thermostats. Also put hoops on the top so that soon I will enclose it in a poly wrap to hold in heat.",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,4.00
 02/11/2020,02/11/2020,Germination Station,Maintenance,Tony Gilkerson,   ,,Buildings,,,Cover germination station with plastic and setup heater,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,2.00
-02/11/2020,02/16/2020,SS: Gather Supplies,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Macau 02/17/2020 ,,Organizing,,,"Gather the supplies need for starting seeds in flats:
-
-* seeds
-* Seed trays
-* bottom flats
-* seed starting mix
-* fine vermiculite
-* plant tags
-* clear dome lids
-* Nature's Intent fertilizer",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 02/12/2020,02/15/2020,SS: Gather Supplies,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Cherry Brandy 02/15/2020 ,,Organizing,,,"Gather the supplies need for starting seeds in flats:
 
 * seeds
@@ -98,7 +79,6 @@ The plastic cover will have to wait for later, it is snowing and the conditions 
 * plant tags
 * clear dome lids
 * Nature's Intent fertilizer",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
-<<<<<<< HEAD
 02/13/2020,03/08/2020,SS: Gather Supplies,Greenhouse Activity,Tony Gilkerson,Eucalyptus Parviflora 02/18/2020 ,,Organizing,,,"Gather the supplies need for starting seeds in flats:
 
 * seeds
@@ -108,35 +88,21 @@ The plastic cover will have to wait for later, it is snowing and the conditions 
 * fine vermiculite
 * plant tags
 * clear dome lids",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
-=======
->>>>>>> master
-02/13/2020,02/16/2020,SS: Review Seed Stating Record,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Macau 02/17/2020 ,,Seed Starting,,,"Search Records for ""tag: seed-starting"" and follow instructions",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 02/14/2020,02/15/2020,SS: Review Seed Stating Record,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Cherry Brandy 02/15/2020 ,,Seed Starting,,,"Search Records for ""tag: seed-starting"" and follow instructions",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 02/14/2020,02/16/2020,SS: Review Seed Stating Record,Greenhouse Activity,Tony Gilkerson,Talinum (fame flower) Jewels of Opar 02/17/2020 ,,Seed Starting,,,"Search Records for ""tag: seed-starting"" and follow instructions",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 02/14/2020,02/18/2020,SS: Review Seed Starting Record,Greenhouse Activity,Tony Gilkerson,Eucalyptus Silver Dollar 02/17/2020 ,,Seed Starting,,,"Search Records for ""tag: seed-starting"" and follow instructions",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 02/14/2020,02/15/2020,SS: Review Seed Stating Record,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Chim Chiminee Mix 02/15/2020 ,,Seed Starting,,,"Search Records for ""tag: seed-starting"" and follow instructions",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
-<<<<<<< HEAD
 02/14/2020,02/15/2020,SS: Review Seed Stating Record,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Denver Daisy Film-Coated 02/15/2020 ,,Seed Starting,,,"Search Records for ""tag: seed-starting"" and follow instructions",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 02/14/2020,02/15/2020,SS: Review Seed Stating Record,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Prairie Sun 02/15/2020 ,,Seed Starting,,,"Search Records for ""tag: seed-starting"" and follow instructions",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 02/14/2020,02/15/2020,SS: Review Seed Stating Record,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Sahara 02/15/2020 ,,Seed Starting,,,"Search Records for ""tag: seed-starting"" and follow instructions",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
-02/15/2020,02/16/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Cherry Brandy 02/15/2020 ,,,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,1.50
-02/15/2020,03/18/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Flax Blue 02/15/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,Yes,
-02/15/2020,03/18/2020,Transplant,Transplant,Tony Gilkerson,Flax Blue 02/15/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,Yes,
-02/15/2020,03/23/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Flax Scarlet 02/15/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,Yes,
-02/15/2020,02/16/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Chim Chiminee Mix 02/15/2020 ,,,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,1.50
+02/15/2020,03/27/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Cherry Brandy 02/15/2020 ,,,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,1.50
+02/15/2020,03/27/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Chim Chiminee Mix 02/15/2020 ,,,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,1.50
 02/15/2020,03/08/2020,SS: Review Seed Starting Record,Greenhouse Activity,Tony Gilkerson,Eucalyptus Parviflora 02/18/2020 ,,Seed Starting,,,"Search Records for ""tag: seed-starting"" and follow instructions",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
-02/15/2020,02/16/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Denver Daisy Film-Coated 02/15/2020 ,,,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,1.50
-02/15/2020,02/16/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Prairie Sun 02/15/2020 ,,,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,1.50
-02/15/2020,02/16/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Sahara 02/15/2020 ,,,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,1.50
+02/15/2020,03/27/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Denver Daisy Film-Coated 02/15/2020 ,,,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,1.50
+02/15/2020,03/27/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Prairie Sun 02/15/2020 ,,,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,1.50
+02/15/2020,03/27/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Sahara 02/15/2020 ,,,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,1.50
 02/16/2020,02/16/2020,Cover Greenhouse (top),Maintenance,Tony Gilkerson,   ,,Buildings,,GH parts,Cover top of greenhouse with plastic and frame in ends,,,0,,,$58.37,,,,,,,,,,,,,0.0,0.0,Yes,3.50
 02/17/2020,02/17/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Talinum (fame flower) Jewels of Opar 02/17/2020 ,,,,,,,,0,,,,,,JOO 1/3 comment,,,,,,,,,,0.0,0.0,Yes,1.50
-=======
-02/14/2020,02/16/2020,SS: Review Seed Stating Record,Greenhouse Activity,Tony Gilkerson,Eucalyptus Parviflora 02/18/2020 ,,Seed Starting,,,"Search Records for ""tag: seed-starting"" and follow instructions",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
-02/14/2020,02/15/2020,SS: Review Seed Stating Record,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Denver Daisy Film-Coated 02/15/2020 ,,Seed Starting,,,"Search Records for ""tag: seed-starting"" and follow instructions",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
-02/14/2020,02/15/2020,SS: Review Seed Stating Record,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Prairie Sun 02/15/2020 ,,Seed Starting,,,"Search Records for ""tag: seed-starting"" and follow instructions",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
-02/14/2020,02/15/2020,SS: Review Seed Stating Record,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Sahara 02/15/2020 ,,Seed Starting,,,"Search Records for ""tag: seed-starting"" and follow instructions",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
-02/16/2020,02/16/2020,Cover Greenhouse (top),Maintenance,Tony Gilkerson,   ,,Buildings,,GH parts,Cover top of greenhouse with plastic and frame in ends,,,0,,,$58.37,,,,,,,,,,,,,0.0,0.0,Yes,3.50
->>>>>>> master
 02/17/2020,02/17/2020,JOO: Add light to aid germination,Greenhouse Activity,Tony Gilkerson,Talinum (fame flower) Jewels of Opar 02/17/2020 ,,Seed Starting,,,"For this crop
 * do not cover the seeds as light aids germination
 * install grow light in germination station for this flat",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,1.00
@@ -151,33 +117,14 @@ The plastic cover will have to wait for later, it is snowing and the conditions 
 * plant tags
 * clear dome lids
 * Nature's Intent fertilizer",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
-<<<<<<< HEAD
 02/17/2020,02/17/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Eucalyptus Silver Dollar 02/17/2020 ,,,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,1.00
 02/17/2020,02/17/2020,SS: Check the soil for moistness,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Chim Chiminee Mix 02/15/2020 ,,Seed Starting,,,"Seeds will usually sprout before you need to water again, but check the soil for moistness after 2-3 days and bottom water again if the soil is dry.",,,0,,,,,,only sowed 54 cells,,,,,,,,,,0.0,0.0,Yes,0.00
 02/17/2020,02/17/2020,SS: Check the soil for moistness,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Denver Daisy Film-Coated 02/15/2020 ,,Seed Starting,,,"Seeds will usually sprout before you need to water again, but check the soil for moistness after 2-3 days and bottom water again if the soil is dry.",,,0,,,,,,sowed 67 cells,,,,,,,,,,0.0,0.0,Yes,0.00
 02/17/2020,02/17/2020,SS: Check the soil for moistness,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Prairie Sun 02/15/2020 ,,Seed Starting,,,"Seeds will usually sprout before you need to water again, but check the soil for moistness after 2-3 days and bottom water again if the soil is dry.",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 02/17/2020,02/17/2020,SS: Check the soil for moistness,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Sahara 02/15/2020 ,,Seed Starting,,,"Seeds will usually sprout before you need to water again, but check the soil for moistness after 2-3 days and bottom water again if the soil is dry.",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
-02/17/2020,02/17/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Macau 02/17/2020 ,,,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,1.00
 02/18/2020,02/18/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Eucalyptus Parviflora 02/18/2020 ,,,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,1.00
-=======
-02/17/2020,02/17/2020,SS: Check the soil for moistness,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Chim Chiminee Mix 02/15/2020 ,,Seed Starting,,,"Seeds will usually sprout before you need to water again, but check the soil for moistness after 2-3 days and bottom water again if the soil is dry.",,,0,,,,,,only sowed 54 cells,,,,,,,,,,0.0,0.0,Yes,0.00
-02/17/2020,02/17/2020,SS: Gather Supplies,Greenhouse Activity,Tony Gilkerson,Eucalyptus Parviflora 02/18/2020 ,,Organizing,,,"Gather the supplies need for starting seeds in flats:
-
-* seeds
-* Seed trays
-* bottom flats
-* seed starting mix
-* fine vermiculite
-* plant tags
-* clear dome lids
-* Nature's Intent fertilizer",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
-02/17/2020,02/17/2020,SS: Check the soil for moistness,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Denver Daisy Film-Coated 02/15/2020 ,,Seed Starting,,,"Seeds will usually sprout before you need to water again, but check the soil for moistness after 2-3 days and bottom water again if the soil is dry.",,,0,,,,,,sowed 67 cells,,,,,,,,,,0.0,0.0,Yes,0.00
-02/17/2020,02/17/2020,SS: Check the soil for moistness,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Prairie Sun 02/15/2020 ,,Seed Starting,,,"Seeds will usually sprout before you need to water again, but check the soil for moistness after 2-3 days and bottom water again if the soil is dry.",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
-02/17/2020,02/17/2020,SS: Check the soil for moistness,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Sahara 02/15/2020 ,,Seed Starting,,,"Seeds will usually sprout before you need to water again, but check the soil for moistness after 2-3 days and bottom water again if the soil is dry.",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
->>>>>>> master
 02/19/2020,02/18/2020,SS: Check the soil for moistness,Greenhouse Activity,Tony Gilkerson,Talinum (fame flower) Jewels of Opar 02/17/2020 ,,Seed Starting,,,"Seeds will usually sprout before you need to water again, but check the soil for moistness after 2-3 days and bottom water again if the soil is dry.",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 02/19/2020,02/18/2020,SS: Check the soil for moistness,Greenhouse Activity,Tony Gilkerson,Eucalyptus Silver Dollar 02/17/2020 ,,Seed Starting,,,"Seeds will usually sprout before you need to water again, but check the soil for moistness after 2-3 days and bottom water again if the soil is dry.",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
-02/19/2020,02/18/2020,SS: Check the soil for moistness,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Macau 02/17/2020 ,,Seed Starting,,,"Seeds will usually sprout before you need to water again, but check the soil for moistness after 2-3 days and bottom water again if the soil is dry.",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 02/20/2020,02/23/2020,SS: Gather Supplies,Greenhouse Activity,Tony Gilkerson,Dusty Miller New Look 02/26/2020 ,,Organizing,,,"Gather the supplies need for starting seeds in flats:
 
 * seeds
@@ -187,10 +134,6 @@ The plastic cover will have to wait for later, it is snowing and the conditions 
 * fine vermiculite
 * plant tags
 * clear dome lids",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
-<<<<<<< HEAD
-=======
-02/20/2020,02/20/2020,SS: Check the soil for moistness,Greenhouse Activity,Tony Gilkerson,Eucalyptus Parviflora 02/18/2020 ,,Seed Starting,,,"Seeds will usually sprout before you need to water again, but check the soil for moistness after 2-3 days and bottom water again if the soil is dry.",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
->>>>>>> master
 02/22/2020,03/01/2020,Make Blog and IG post,Marketing,Tony Gilkerson,   ,,,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 02/22/2020,03/01/2020,Research Dusty Miller,Research,Tony Gilkerson,   ,,,,,"* Research Dusty Miller
 * update airtable with finding",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
@@ -239,27 +182,14 @@ The plastic cover will have to wait for later, it is snowing and the conditions 
 * remove the lids
 * remove from bottom heat
 * move trays to a very bright space in the greenhouse",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
-02/24/2020,03/01/2020,SS: Move to bright space off of heat mat,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Macau 02/17/2020 ,,Seed Starting,,,"Once 75% of the seeds have sprouted:
-* remove the lids
-* remove from bottom heat
-* move trays to a very bright space in the greenhouse",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 02/25/2020,03/01/2020,SS: Check seed trays daily,Greenhouse Activity,Tony Gilkerson,Talinum (fame flower) Jewels of Opar 02/17/2020 ,,Seed Starting,,,"* check seed trays and open the dome lids daily to vent 
 * check seedlings daily and water when the soil appears dry. 
 * add liquid seaweed and fish emulsion to watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 02/25/2020,03/01/2020,SS: Check seed trays daily,Greenhouse Activity,Tony Gilkerson,Eucalyptus Silver Dollar 02/17/2020 ,,Seed Starting,,,"* check seed trays and open the dome lids daily to vent 
 * check seedlings daily and water when the soil appears dry. 
 * add liquid seaweed and fish emulsion to watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
-02/25/2020,03/01/2020,SS: Check seed trays daily,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Macau 02/17/2020 ,,Seed Starting,,,"* check seed trays and open the dome lids daily to vent 
-* check seedlings daily and water when the soil appears dry. 
-* add liquid seaweed and fish emulsion to watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 02/26/2020,03/01/2020,Get Supplies for GH Tables,Maintenance,Tony Gilkerson,   ,,Buildings,,,"Collect everything needed to build the greenhouse tables.  The main thing is the wire grid for the table top, and wood",,,0,,,,,,https://www.menards.com/main/building-materials/fencing/utility-fencing/50-welded-wire/1712656/building-materials/fencing/utility-fencing/50-welded-wire/1712672/p-1539153030422.htm,,,,,,,,,,0.0,0.0,Yes,
 02/26/2020,02/27/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Dusty Miller New Look 02/26/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,Yes,
-<<<<<<< HEAD
-=======
-02/26/2020,03/01/2020,SS: Check seed trays daily,Greenhouse Activity,Tony Gilkerson,Eucalyptus Parviflora 02/18/2020 ,,Seed Starting,,,"* check seed trays and open the dome lids daily to vent 
-* check seedlings daily and water when the soil appears dry. 
-* add liquid seaweed and fish emulsion to watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
->>>>>>> master
 02/28/2020,03/01/2020,SS: Check the soil for moistness,Greenhouse Activity,Tony Gilkerson,Dusty Miller New Look 02/26/2020 ,,Seed Starting,,,"Seeds will usually sprout before you need to water again, but check the soil for moistness after 2-3 days and bottom water again if the soil is dry.",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 02/29/2020,03/01/2020,SS: Feed weekly 1,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Cherry Brandy 02/15/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 02/29/2020,03/01/2020,SS: Feed weekly 1,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Chim Chiminee Mix 02/15/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
@@ -267,7 +197,6 @@ The plastic cover will have to wait for later, it is snowing and the conditions 
 02/29/2020,03/01/2020,SS: Feed weekly 1,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Prairie Sun 02/15/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 02/29/2020,03/01/2020,SS: Feed weekly 1,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Sahara 02/15/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 03/01/2020,03/01/2020,Build GH Tables,Maintenance,Tony Gilkerson,   ,,Buildings,,,Build 1 of 4 GH tables,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,4.00
-<<<<<<< HEAD
 03/01/2020,03/03/2020,SS: Gather Supplies,Greenhouse Activity,Tony Gilkerson,Ammi (False Queen Anne's Lace) Chocolate Lace 03/09/2020 ,,Organizing,,,"Gather the supplies need for starting seeds in flats:
 
 * seeds
@@ -288,7 +217,6 @@ The plastic cover will have to wait for later, it is snowing and the conditions 
 * clear dome lids",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 03/02/2020,03/01/2020,SS: Feed weekly 1,Greenhouse Activity,Tony Gilkerson,Talinum (fame flower) Jewels of Opar 02/17/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 03/02/2020,03/01/2020,SS: Feed weekly 1,Greenhouse Activity,Tony Gilkerson,Eucalyptus Silver Dollar 02/17/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
-03/02/2020,03/01/2020,SS: Feed weekly 1,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Macau 02/17/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 03/03/2020,03/03/2020,SS: Review Seed Starting Record,Greenhouse Activity,Tony Gilkerson,Ammi (False Queen Anne's Lace) Chocolate Lace 03/09/2020 ,,Seed Starting,,,"Search Records for ""tag: seed-starting"" and follow instructions",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 03/03/2020,03/03/2020,SS: Review Seed Starting Record,Greenhouse Activity,Tony Gilkerson,Ammi (False Queen Anne's Lace) Green Mist 03/09/2020 ,,Seed Starting,,,"Search Records for ""tag: seed-starting"" and follow instructions",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 03/07/2020,03/08/2020,SS: Feed weekly 2,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Cherry Brandy 02/15/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
@@ -342,7 +270,6 @@ The plastic cover will have to wait for later, it is snowing and the conditions 
 * clear dome lids",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 03/09/2020,03/08/2020,SS: Feed weekly 2,Greenhouse Activity,Tony Gilkerson,Talinum (fame flower) Jewels of Opar 02/17/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 03/09/2020,03/08/2020,SS: Feed weekly 2,Greenhouse Activity,Tony Gilkerson,Eucalyptus Silver Dollar 02/17/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
-03/09/2020,03/08/2020,SS: Feed weekly 2,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Macau 02/17/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 03/10/2020,03/11/2020,create blog and IG post,create blog and IG post,Tony Gilkerson,   ,,social media ,,,compost and spacing templates ,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,0.00
 03/11/2020,03/11/2020,plan for next phase GH to Field,Research,Tony Gilkerson,   ,,,,,"research early plantings like JOO, can they go before frost or stage in GH
 what do i need to get field ready",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
@@ -360,21 +287,11 @@ what do i need to get field ready",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 * clear dome lids",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 03/11/2020,03/14/2020,SS: Review Seed Starting Record,Greenhouse Activity,Tony Gilkerson,Aster Harlekin Violet 03/14/2020 ,,Seed Starting,,,"Search Records for ""tag: seed-starting"" and follow instructions",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 03/11/2020,03/14/2020,SS: Review Seed Starting Record,Greenhouse Activity,Tony Gilkerson,Stock Katz Formula Mix 03/14/2020 ,,Seed Starting,,,"Search Records for ""tag: seed-starting"" and follow instructions",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
-03/11/2020,03/16/2020,SS: Gather Supplies,Greenhouse Activity,Tony Gilkerson,Orlaya White Finch 03/16/2020 ,,Organizing,,,"Gather the supplies need for starting seeds in flats:
-
-* seeds
-* Seed trays
-* bottom flats
-* seed starting mix
-* fine vermiculite
-* plant tags
-* clear dome lids",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 03/11/2020,03/08/2020,SS: Feed weekly 1,Greenhouse Activity,Tony Gilkerson,Dusty Miller New Look 02/26/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 03/12/2020,03/12/2020,create low tunnel plan,Research,Tony Gilkerson,   ,,,,,"* use floret as guide, 
 * figure out tunnel lengths and how many
 * itemize material and find sources 
 * add more tasks with specific dates and activities ",,,,,,,,,,,,,,,,,,,0.0,0.0,Yes,0.00
-03/13/2020,03/16/2020,SS: Review Seed Starting Record,Greenhouse Activity,Tony Gilkerson,Orlaya White Finch 03/16/2020 ,,Seed Starting,,,"Search Records for ""tag: seed-starting"" and follow instructions",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 03/13/2020,03/16/2020,SS: Review Seed Starting Record,Greenhouse Activity,Tony Gilkerson,Orlaya White Finch 03/16/2020 ,,Seed Starting,,,"Search Records for ""tag: seed-starting"" and follow instructions",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 03/14/2020,03/15/2020,Feed GH plants,Greenhouse Activity,Tony Gilkerson,   ,,Feed,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 03/14/2020,03/14/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Aster Apricot Swirl Mix 03/14/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,Yes,
@@ -404,15 +321,6 @@ what do i need to get field ready",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 * remove the lids
 * remove from bottom heat
 * move trays to a very bright space in the greenhouse",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
-03/16/2020,03/19/2020,SS: Gather Supplies,Greenhouse Activity,Tony Gilkerson,Geranium (scented) Scented Geranium 03/27/2020 ,,Organizing,,,"Gather the supplies need for starting seeds in flats:
-
-* seeds
-* Seed trays
-* bottom flats
-* seed starting mix
-* fine vermiculite
-* plant tags
-* clear dome lids",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 03/16/2020,03/19/2020,SS: Gather Supplies,Greenhouse Activity,Tony Gilkerson,Ornamental Grasses Frosted Explosion 03/22/2020 ,,Organizing,,,"Gather the supplies need for starting seeds in flats:
 
 * seeds
@@ -424,7 +332,6 @@ what do i need to get field ready",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 * clear dome lids",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 03/16/2020,03/19/2020,SS: Review Seed Starting Record,Greenhouse Activity,Tony Gilkerson,Atriplex (Cut flower) Caramel Apple Mix 03/22/2020 ,,Seed Starting,,,"Search Records for ""tag: seed-starting"" and follow instructions",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 03/16/2020,03/19/2020,SS: Review Seed Starting Record,Greenhouse Activity,Tony Gilkerson,Nicandra Physalodes Apple of Peru 03/22/2020 ,,Seed Starting,,,"Search Records for ""tag: seed-starting"" and follow instructions",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
-03/16/2020,03/16/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Orlaya White Finch 03/16/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 03/16/2020,03/22/2020,SS: Move to bright space off of heat mat,Greenhouse Activity,Tony Gilkerson,Ammi (False Queen Anne's Lace) Green Mist 03/09/2020 ,,Seed Starting,,,"Once 75% of the seeds have sprouted:
 * remove the lids
 * remove from bottom heat
@@ -474,7 +381,6 @@ what do i need to get field ready",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 * fine vermiculite
 * plant tags
 * clear dome lids",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
-03/18/2020,03/19/2020,SS: Review Seed Starting Record,Greenhouse Activity,Tony Gilkerson,Geranium (scented) Scented Geranium 03/27/2020 ,,Seed Starting,,,"Search Records for ""tag: seed-starting"" and follow instructions",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 03/18/2020,03/19/2020,SS: Review Seed Starting Record,Greenhouse Activity,Tony Gilkerson,Ornamental Grasses Frosted Explosion 03/22/2020 ,,Seed Starting,,,"Search Records for ""tag: seed-starting"" and follow instructions",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 03/19/2020,03/22/2020,SS: Review Seed Starting Record,Greenhouse Activity,Tony Gilkerson,Nicandra Physalodes Apple of Peru 03/22/2020 ,,Seed Starting,,,"Search Records for ""tag: seed-starting"" and follow instructions",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 03/19/2020,03/22/2020,SS: Review Seed Starting Record,Greenhouse Activity,Tony Gilkerson,Atriplex (Cut flower) Caramel Apple Mix 03/22/2020 ,,Seed Starting,,,"Search Records for ""tag: seed-starting"" and follow instructions",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
@@ -498,356 +404,248 @@ what do i need to get field ready",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 * remove from bottom heat
 * move trays to a very bright space in the greenhouse",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 03/22/2020,03/22/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Nicandra Physalodes Apple of Peru 03/22/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+03/22/2020,03/22/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Atriplex (Cut flower) Caramel Apple Mix 03/22/2020 ,,,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 03/22/2020,03/22/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Ornamental Grasses Frosted Explosion 03/22/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 03/22/2020,03/22/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Scabiosa (Pincushion Flower) Fata Morgana 03/22/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 03/22/2020,03/22/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Scabiosa (Pincushion Flower) Snowmaiden 03/22/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 03/23/2020,03/22/2020,Check on Order - Anemones and Ranunculus,Check on Order - Anemones and Ranunculus,Teresa Gilkerson,   ,,,,,Just a reminder to follow up to see if we on track to plant 3/28?,,,0,,,,,,ranunculus/anemones shipped 3/23 from eden bros USPS,,,,,,,,,,0.0,0.0,Yes,
 03/25/2020,03/23/2020,Landscape Fabric,Procurement,Teresa Gilkerson,   ,,,,,"* Buy 1 more roll of the 6 ft by 300 ft 3.2 oz stuff (DeWitt DWT-SBLT6300 Sunbelt 3.2 )
 * Buy about 2 rolls (or whatever is best deal) of 3 ft by 300 ft",,,0,,,,,,"Decided we'd have enough leftover from what we've already orderded, to cover paths of 2 beds.  NO ORDER NEEDED",,,,,,,,,,0.0,0.0,Yes,
-03/27/2020,,Compute shortfall add backfill to plan,Research,Tony Gilkerson,   ,,,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/27/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Amaranthus Green Tails 03/27/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/27/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Celosia Cockscomb Coral Reef 03/27/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/27/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Gomphrena (Globe Amaranth) Sunset Mix 03/27/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/27/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Geranium (scented) Scented Geranium 03/27/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/27/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Zinnias Lilliput Salmon 03/27/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/27/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Gomphrena (Globe Amaranth) Pastel Mix 03/27/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/27/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Zinnias Senora™ 03/27/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/27/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Ammi (False Queen Anne's Lace) Green Mist 03/27/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/27/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Gomphrena (Globe Amaranth) White 03/27/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/27/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Zinnias Lilliput Mix 03/27/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/27/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Ammi (False Queen Anne's Lace) Chocolate Lace 03/27/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+03/27/2020,03/28/2020,Urea (45-0-0),Procurement,Teresa Gilkerson,   ,,,,,"Get four @ 4 lb bags of Urea (45-0-0)
+
+Note:
+That is a total of 16 lbs Urea (45-0-0). If you find Urea somewhere else but in different size bags that is ok, just shoot for a total of about 16 lbs.",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
 03/28/2020,03/23/2020,Low tunnel supplies,Procurement,Teresa Gilkerson,   ,,,,,"Purchase the supplies needed for 3 low tunnels, less the greenhouse plastic
 
 See slack message for details: https://bagelwarehouse.slack.com/files/TF7TUF1UH/FVDT8QPM4",,,0,,,,,,"Done - conduit/Lowes, fiberglass rods, tposts and twine/TSC",,,,,,,,,,0.0,0.0,Yes,
-03/28/2020,,Feed GH plants,Greenhouse Activity,Tony Gilkerson,   ,,Feed,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/28/2020,,Table in GH,Maintenance,Tony Gilkerson,   ,,Buildings,,,Finish at least one table and install into GH,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/28/2020,,Cut trees,Maintenance,Tony Gilkerson,   ,,,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/28/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Anemone De Caen Blue White Mix 03/28/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/28/2020,,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Cherry Brandy 02/15/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/28/2020,,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Talinum (fame flower) Jewels of Opar 02/17/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/28/2020,,SS: Move to bright space off of heat mat,Greenhouse Activity,Tony Gilkerson,Orlaya White Finch 03/16/2020 ,,Seed Starting,,,"Once 75% of the seeds have sprouted:
+03/28/2020,03/28/2020,Table 3 in GH,Maintenance,Tony Gilkerson,   ,,Buildings,,,Finish at least one table and install into GH,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+03/28/2020,03/28/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Amaranthus Green Tails 03/28/2020 ,,,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+03/28/2020,03/28/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Celosia Cockscomb Coral Reef 03/28/2020 ,,,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+03/28/2020,03/28/2020,SS: Move to bright space off of heat mat,Greenhouse Activity,Tony Gilkerson,Orlaya White Finch 03/16/2020 ,,Seed Starting,,,"Once 75% of the seeds have sprouted:
 * remove the lids
 * remove from bottom heat
-* move trays to a very bright space in the greenhouse",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/28/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Anemone Lord Lieutenant 03/28/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/28/2020,,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Chim Chiminee Mix 02/15/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/28/2020,,SS: Move to bright space off of heat mat,Greenhouse Activity,Tony Gilkerson,Orlaya White Finch 03/16/2020 ,,Seed Starting,,,"Once 75% of the seeds have sprouted:
-* remove the lids
-* remove from bottom heat
-* move trays to a very bright space in the greenhouse",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-=======
-03/02/2020,03/01/2020,SS: Feed weekly 1,Greenhouse Activity,Tony Gilkerson,Talinum (fame flower) Jewels of Opar 02/17/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
-03/02/2020,03/01/2020,SS: Feed weekly 1,Greenhouse Activity,Tony Gilkerson,Eucalyptus Silver Dollar 02/17/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
-03/02/2020,03/01/2020,SS: Feed weekly 1,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Macau 02/17/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
-03/04/2020,,SS: Move to bright space off of heat mat,Greenhouse Activity,Tony Gilkerson,Dusty Miller New Look 02/26/2020 ,,Seed Starting,,,"Once 75% of the seeds have sprouted:
-* remove the lids
-* remove from bottom heat
-* move trays to a very bright space in the greenhouse",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/05/2020,,plan for next phase GH to Field,Research,Tony Gilkerson,   ,,,,,"research early plantings like JOO, can they go before frost or stage in GH
-what do i need to get field ready",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/06/2020,,Fix airtable SGH columns plant vs variety,Record Keeping,Tony Gilkerson,   ,,,,,"Fix the SGH columns in airtable, some info is on plan others is on variety pick a better method and do it",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/06/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Ammi (False Queen Anne's Lace) Chocolate Lace 03/06/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/06/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Ammi (False Queen Anne's Lace) Green Mist 03/06/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/07/2020,,SS: Feed weekly 2,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Cherry Brandy 02/15/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/07/2020,,SS: Move to bright space off of heat mat,Greenhouse Activity,Tony Gilkerson,Eucalyptus Parviflora 02/18/2020 ,,Seed Starting,,,"Once 75% of the seeds have sprouted:
-* remove the lids
-* remove from bottom heat
-* move trays to a very bright space in the greenhouse",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,0.00
-03/07/2020,,SS: Feed weekly 2,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Chim Chiminee Mix 02/15/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/07/2020,,SS: Feed weekly 2,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Denver Daisy Film-Coated 02/15/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/07/2020,,SS: Feed weekly 2,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Prairie Sun 02/15/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/07/2020,,SS: Feed weekly 2,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Sahara 02/15/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/09/2020,,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Talinum (fame flower) Jewels of Opar 02/17/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/09/2020,,SS: Repot if needed,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Cherry Brandy 02/15/2020 ,,Seed Starting,,,"When seedlings begin to outgrow their trays at about 2"" tall, either repot them into larger containers or if weather is warm enough, start transitioning them outside.",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/09/2020,,SS: Feed weekly 2,Greenhouse Activity,Tony Gilkerson,Talinum (fame flower) Jewels of Opar 02/17/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/09/2020,,SS: Feed weekly 2,Greenhouse Activity,Tony Gilkerson,Eucalyptus Silver Dollar 02/17/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/09/2020,,SS: Repot if needed,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Chim Chiminee Mix 02/15/2020 ,,Seed Starting,,,"When seedlings begin to outgrow their trays at about 2"" tall, either repot them into larger containers or if weather is warm enough, start transitioning them outside.",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/09/2020,,SS: Repot if needed,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Denver Daisy Film-Coated 02/15/2020 ,,Seed Starting,,,"When seedlings begin to outgrow their trays at about 2"" tall, either repot them into larger containers or if weather is warm enough, start transitioning them outside.",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/09/2020,,SS: Repot if needed,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Prairie Sun 02/15/2020 ,,Seed Starting,,,"When seedlings begin to outgrow their trays at about 2"" tall, either repot them into larger containers or if weather is warm enough, start transitioning them outside.",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/09/2020,,SS: Repot if needed,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Sahara 02/15/2020 ,,Seed Starting,,,"When seedlings begin to outgrow their trays at about 2"" tall, either repot them into larger containers or if weather is warm enough, start transitioning them outside.",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/09/2020,,SS: Feed weekly 2,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Macau 02/17/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/10/2020,,SS: Feed weekly 1,Greenhouse Activity,Tony Gilkerson,Eucalyptus Parviflora 02/18/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,0.00
-03/10/2020,,SS: Feed weekly 2,Greenhouse Activity,Tony Gilkerson,Eucalyptus Parviflora 02/18/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/11/2020,,SS: Repot if needed,Greenhouse Activity,Tony Gilkerson,Talinum (fame flower) Jewels of Opar 02/17/2020 ,,Seed Starting,,,"When seedlings begin to outgrow their trays at about 2"" tall, either repot them into larger containers or if weather is warm enough, start transitioning them outside.",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/11/2020,,SS: Repot if needed,Greenhouse Activity,Tony Gilkerson,Eucalyptus Silver Dollar 02/17/2020 ,,Seed Starting,,,"When seedlings begin to outgrow their trays at about 2"" tall, either repot them into larger containers or if weather is warm enough, start transitioning them outside.",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/11/2020,,SS: Feed weekly 1,Greenhouse Activity,Tony Gilkerson,Dusty Miller New Look 02/26/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/11/2020,,SS: Repot if needed,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Macau 02/17/2020 ,,Seed Starting,,,"When seedlings begin to outgrow their trays at about 2"" tall, either repot them into larger containers or if weather is warm enough, start transitioning them outside.",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/12/2020,,SS: Repot if needed,Greenhouse Activity,Tony Gilkerson,Eucalyptus Parviflora 02/18/2020 ,,Seed Starting,,,"When seedlings begin to outgrow their trays at about 2"" tall, either repot them into larger containers or if weather is warm enough, start transitioning them outside.",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/13/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Aster Apricot Swirl Mix 03/13/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/13/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Geranium (scented) Scented Geranium 03/13/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/13/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Stock Avalanche Supreme 03/13/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/13/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Orlaya White Finch 03/13/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/13/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Aster Harlekin Violet 03/13/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/13/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Stock Katz Formula Mix 03/13/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/13/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Orlaya White Finch 03/13/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/14/2020,,SS: Feed weekly 3,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Cherry Brandy 02/15/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/14/2020,,SS: Feed weekly 3,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Chim Chiminee Mix 02/15/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/14/2020,,SS: Feed weekly 3,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Denver Daisy Film-Coated 02/15/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/14/2020,,SS: Feed weekly 3,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Prairie Sun 02/15/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/14/2020,,SS: Feed weekly 3,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Sahara 02/15/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/16/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Ornamental Grasses Frosted Explosion 03/16/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/16/2020,,SS: Harden off,Greenhouse Activity,Tony Gilkerson,Talinum (fame flower) Jewels of Opar 02/17/2020 ,,Seed Starting,,,"* set trays in a sheltered spot outside, increasing the amount of time they are out each day.
+* move trays to a very bright space in the greenhouse",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+03/28/2020,03/28/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Ammi (False Queen Anne's Lace) Green Mist 03/28/2020 ,,,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+03/28/2020,03/28/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Ammi (False Queen Anne's Lace) Chocolate Lace 03/28/2020 ,,,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+03/29/2020,03/29/2020,Feed GH plants,Greenhouse Activity,Tony Gilkerson,   ,,Feed,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,0.00
+03/29/2020,03/30/2020,Compute shortfall add backfill to plan,Research,Tony Gilkerson,   ,,,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+03/29/2020,03/29/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Gomphrena (Globe Amaranth) Sunset Mix 03/29/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+03/29/2020,03/29/2020,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Cherry Brandy 02/15/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+03/29/2020,03/29/2020,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Talinum (fame flower) Jewels of Opar 02/17/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,0.00
+03/29/2020,03/29/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Gomphrena (Globe Amaranth) Pastel Mix 03/29/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+03/29/2020,03/29/2020,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Chim Chiminee Mix 02/15/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,0.00
+03/29/2020,03/29/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Gomphrena (Globe Amaranth) White 03/29/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+03/29/2020,03/29/2020,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Denver Daisy Film-Coated 02/15/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,0.00
+03/29/2020,03/29/2020,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Prairie Sun 02/15/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,0.00
+03/29/2020,03/29/2020,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Sahara 02/15/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,0.00
+03/30/2020,03/31/2020,plastic dome covers,Procurement,Tony Gilkerson,   ,,,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+03/30/2020,03/31/2020,more tray cells 128 and 72,Procurement,Tony Gilkerson,   ,,,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+03/30/2020,03/30/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Zinnias Lilliput Salmon 03/30/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+03/30/2020,03/30/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Zinnias Senora™ 03/30/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+03/31/2020,04/08/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Zinnias Lilliput Mix 03/31/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/01/2020,04/02/2020,Table 4,Maintenance,Tony Gilkerson,   ,,Buildings,,,build table 4 and install into GH,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/03/2020,04/08/2020,SS: Gather Supplies,Greenhouse Activity,Tony Gilkerson,Marigold Giant Yellow 04/08/2020 ,,Organizing,,,"Gather the supplies need for starting seeds in flats:
+
+* seeds
+* Seed trays
+* bottom flats
+* seed starting mix
+* fine vermiculite
+* plant tags
+* clear dome lids",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/03/2020,04/08/2020,SS: Gather Supplies,Greenhouse Activity,Tony Gilkerson,Celosia Pampas Plume 04/08/2020 ,,Organizing,,,"Gather the supplies need for starting seeds in flats:
+
+* seeds
+* Seed trays
+* bottom flats
+* seed starting mix
+* fine vermiculite
+* plant tags
+* clear dome lids",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/03/2020,04/08/2020,SS: Gather Supplies,Greenhouse Activity,Tony Gilkerson,Ornamental Grasses Bunny Tails 04/12/2020 ,,Organizing,,,"Gather the supplies need for starting seeds in flats:
+
+* seeds
+* Seed trays
+* bottom flats
+* seed starting mix
+* fine vermiculite
+* plant tags
+* clear dome lids",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/03/2020,04/08/2020,SS: Gather Supplies,Greenhouse Activity,Tony Gilkerson,Aster Chamois Apricot 04/08/2020 ,,Organizing,,,"Gather the supplies need for starting seeds in flats:
+
+* seeds
+* Seed trays
+* bottom flats
+* seed starting mix
+* fine vermiculite
+* plant tags
+* clear dome lids",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/03/2020,04/08/2020,SS: Gather Supplies,Greenhouse Activity,Tony Gilkerson,Celosia Texas Plume Summer Sherbert 04/08/2020 ,,Organizing,,,"Gather the supplies need for starting seeds in flats:
+
+* seeds
+* Seed trays
+* bottom flats
+* seed starting mix
+* fine vermiculite
+* plant tags
+* clear dome lids",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/03/2020,04/08/2020,SS: Gather Supplies,Greenhouse Activity,Tony Gilkerson,Ornamental Grasses Frosted Explosion 04/12/2020 ,,Organizing,,,"Gather the supplies need for starting seeds in flats:
+
+* seeds
+* Seed trays
+* bottom flats
+* seed starting mix
+* fine vermiculite
+* plant tags
+* clear dome lids",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/03/2020,04/08/2020,SS: Gather Supplies,Greenhouse Activity,Tony Gilkerson,Zinnias Lilliput Mix 03/31/2020 ,,Organizing,,,"Gather the supplies need for starting seeds in flats:
+
+* seeds
+* Seed trays
+* bottom flats
+* seed starting mix
+* fine vermiculite
+* plant tags
+* clear dome lids",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/03/2020,04/08/2020,SS: Gather Supplies,Greenhouse Activity,Tony Gilkerson,Aster Valkyrie Pink 04/08/2020 ,,Organizing,,,"Gather the supplies need for starting seeds in flats:
+
+* seeds
+* Seed trays
+* bottom flats
+* seed starting mix
+* fine vermiculite
+* plant tags
+* clear dome lids",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/03/2020,04/08/2020,SS: Gather Supplies,Greenhouse Activity,Tony Gilkerson,Zinnias Benary's Giant Salmon Rose 04/12/2020 ,,Organizing,,,"Gather the supplies need for starting seeds in flats:
+
+* seeds
+* Seed trays
+* bottom flats
+* seed starting mix
+* fine vermiculite
+* plant tags
+* clear dome lids",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/03/2020,04/08/2020,SS: Gather Supplies,Greenhouse Activity,Tony Gilkerson,Zinnias Queen Lime with Blush 04/12/2020 ,,Organizing,,,"Gather the supplies need for starting seeds in flats:
+
+* seeds
+* Seed trays
+* bottom flats
+* seed starting mix
+* fine vermiculite
+* plant tags
+* clear dome lids",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/04/2020,04/10/2020,Feed GH plants,Greenhouse Activity,Tony Gilkerson,   ,,Feed,,,DID NOT DO. I skipped this week to try to beat back the fungi,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/04/2020,04/06/2020,6x300 Ground Cover,6x300 Ground Cover,Tony Gilkerson,   ,,,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/04/2020,04/06/2020,Find side cover for pop-up tent,Maintenance,Tony Gilkerson,   ,,Buildings,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/04/2020,04/06/2020,"Set ""Harvest Unit = Stems""",Marketing,Teresa Gilkerson,   ,,,,,Do this for all that apply.  We will address non-stem stuff later,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/04/2020,04/06/2020,"Set ""Avg Yield Rate = 1 or 2 st/plant"" for OHWs",Marketing,Teresa Gilkerson,   ,,,,,After this we can default the rate for all remaining to something conservative.  Then we will update as we harvest.,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/04/2020,04/06/2020,"Update ""Unit Conversion Rate""",Marketing,Teresa Gilkerson,   ,,,,,"Set the ""bunch per stems"" rate for each planting with harvest unit = st",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/04/2020,04/06/2020,sunflower seed 5lb,Procurement,Tony Gilkerson,   ,,,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/04/2020,04/10/2020,SS: Gather Supplies,Greenhouse Activity,Tony Gilkerson,Craspedia (Drumstick Flower) Sun Ball 04/12/2020 ,,Organizing,,,"Gather the supplies need for starting seeds in flats:
+
+* seeds
+* Seed trays
+* bottom flats
+* seed starting mix
+* fine vermiculite
+* plant tags
+* clear dome lids",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/05/2020,04/08/2020,SS: Review Seed Starting Record,Greenhouse Activity,Tony Gilkerson,Marigold Giant Yellow 04/08/2020 ,,Seed Starting,,,"Search Records for ""tag: seed-starting"" and follow instructions",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/05/2020,04/08/2020,SS: Review Seed Starting Record,Greenhouse Activity,Tony Gilkerson,Celosia Pampas Plume 04/08/2020 ,,Seed Starting,,,"Search Records for ""tag: seed-starting"" and follow instructions",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/05/2020,04/08/2020,SS: Review Seed Starting Record,Greenhouse Activity,Tony Gilkerson,Ornamental Grasses Bunny Tails 04/12/2020 ,,Seed Starting,,,"Search Records for ""tag: seed-starting"" and follow instructions",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/05/2020,04/08/2020,SS: Review Seed Starting Record,Greenhouse Activity,Tony Gilkerson,Aster Chamois Apricot 04/08/2020 ,,Seed Starting,,,"Search Records for ""tag: seed-starting"" and follow instructions",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/05/2020,04/08/2020,SS: Review Seed Starting Record,Greenhouse Activity,Tony Gilkerson,Celosia Texas Plume Summer Sherbert 04/08/2020 ,,Seed Starting,,,"Search Records for ""tag: seed-starting"" and follow instructions",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/05/2020,04/08/2020,SS: Review Seed Starting Record,Greenhouse Activity,Tony Gilkerson,Ornamental Grasses Frosted Explosion 04/12/2020 ,,Seed Starting,,,"Search Records for ""tag: seed-starting"" and follow instructions",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/05/2020,04/08/2020,SS: Review Seed Starting Record,Greenhouse Activity,Tony Gilkerson,Zinnias Lilliput Mix 03/31/2020 ,,Seed Starting,,,"Search Records for ""tag: seed-starting"" and follow instructions",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/05/2020,04/08/2020,SS: Review Seed Starting Record,Greenhouse Activity,Tony Gilkerson,Aster Valkyrie Pink 04/08/2020 ,,Seed Starting,,,"Search Records for ""tag: seed-starting"" and follow instructions",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/05/2020,04/08/2020,SS: Review Seed Starting Record,Greenhouse Activity,Tony Gilkerson,Zinnias Benary's Giant Salmon Rose 04/12/2020 ,,Seed Starting,,,"Search Records for ""tag: seed-starting"" and follow instructions",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/05/2020,04/08/2020,SS: Review Seed Starting Record,Greenhouse Activity,Tony Gilkerson,Zinnias Queen Lime with Blush 04/12/2020 ,,Seed Starting,,,"Search Records for ""tag: seed-starting"" and follow instructions",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/06/2020,04/09/2020,SS: Review Seed Starting Record,Greenhouse Activity,Tony Gilkerson,Craspedia (Drumstick Flower) Sun Ball 04/12/2020 ,,Seed Starting,,,"Search Records for ""tag: seed-starting"" and follow instructions",,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/07/2020,04/11/2020,SHI: Freeze seed before sow,Greenhouse Activity,Tony Gilkerson,Shiso Perilla Purple Zi Su 04/20/2020 ,,Seed Starting,,,Freeze seed 2-3 weeks before sow,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/08/2020,04/09/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Marigold Giant Yellow 04/08/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/08/2020,04/08/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Celosia Pampas Plume 04/08/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/08/2020,04/08/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Aster Chamois Apricot 04/08/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/08/2020,04/08/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Celosia Texas Plume Summer Sherbert 04/08/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/08/2020,04/09/2020,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Aster Valkyrie Pink 04/08/2020 ,,,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/11/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Ranunculus Bridal Mix 04/11/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/11/2020,04/11/2020,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Aster Apricot Swirl Mix 03/14/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/11/2020,04/11/2020,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Stock Avalanche Supreme 03/14/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/11/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Ranunculus Purple/ White Picotee 04/11/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/11/2020,04/11/2020,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Aster Harlekin Violet 03/14/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/11/2020,04/11/2020,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Stock Katz Formula Mix 03/14/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/11/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Ranunculus Violet 04/11/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/11/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Ranunculus Pink/ White 04/11/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/11/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Ranunculus Romantic Mix 04/11/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/11/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Ranunculus White 04/11/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/11/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Ranunculus Red 04/11/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/12/2020,,Feed GH plants,Greenhouse Activity,Tony Gilkerson,   ,,Feed,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/12/2020,,Cut trees,Maintenance,Tony Gilkerson,   ,,,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/12/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Cosmos Double Click Bicolor Pink 04/12/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/12/2020,04/11/2020,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Ammi (False Queen Anne's Lace) Chocolate Lace 03/09/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/12/2020,04/11/2020,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Atriplex (Cut flower) Caramel Apple Mix 03/22/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/12/2020,04/11/2020,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Nicandra Physalodes Apple of Peru 03/22/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/12/2020,04/11/2020,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Nicandra Physalodes Apple of Peru 03/22/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/12/2020,04/11/2020,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Atriplex (Cut flower) Caramel Apple Mix 03/22/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/12/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Craspedia (Drumstick Flower) Sun Ball 04/12/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/12/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Cosmos Double Click Snow Puff 04/12/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/12/2020,04/11/2020,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Ammi (False Queen Anne's Lace) Green Mist 03/09/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/12/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Ornamental Grasses Bunny Tails 04/12/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/12/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Cosmos Cupcake Blush 04/12/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/12/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Ornamental Grasses Frosted Explosion 04/12/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/12/2020,04/11/2020,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Zinnias Lilliput Mix 03/31/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/12/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Zinnias Benary's Giant Salmon Rose 04/12/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/12/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Zinnias Queen Lime with Blush 04/12/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/12/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Dahlias Giant Hybrid Mix (seed) 04/12/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/13/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Mignonette Mignonette Standard 04/13/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/13/2020,04/11/2020,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Eucalyptus Silver Dollar 02/17/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/13/2020,04/11/2020,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Orlaya White Finch 03/16/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/13/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Mignonette White Mignonette 04/13/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/14/2020,,Fix airtable SGH columns plant vs variety,Fix airtable SGH columns plant vs variety,Tony Gilkerson,   ,,,,,"Fix the SGH columns in airtable, some info is on plan others is on variety pick a better method and do it",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/15/2020,,"Set ""Avg Sale Price""",Marketing,Teresa Gilkerson,   ,,,,,Set the $ per bunch for each planting with harvest unit = st.  We will get to the non stem stuff later,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/16/2020,,SS: Harden off,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Cherry Brandy 02/15/2020 ,,Seed Starting,,,"* set trays in a sheltered spot outside, increasing the amount of time they are out each day.
 * soil will dry out more quickly outside, so check moisture.
 * plant once all danger of frost has past",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/16/2020,,SS: Feed weekly 3,Greenhouse Activity,Tony Gilkerson,Talinum (fame flower) Jewels of Opar 02/17/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/16/2020,,SS: Feed weekly 3,Greenhouse Activity,Tony Gilkerson,Eucalyptus Silver Dollar 02/17/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/16/2020,,SS: Feed weekly 3,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Macau 02/17/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/17/2020,,SS: Feed weekly 3,Greenhouse Activity,Tony Gilkerson,Eucalyptus Parviflora 02/18/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/18/2020,,SS: Fertilize & Amend Beds,Fertilize & Amend,Tony Gilkerson,Talinum (fame flower) Jewels of Opar 02/17/2020 ,,Granular,,,Details TBD,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/18/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Ammi (False Queen Anne's Lace) Green Mist 03/18/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/18/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Ammi (False Queen Anne's Lace) Chocolate Lace 03/18/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/18/2020,,SS: Feed weekly 2,Greenhouse Activity,Tony Gilkerson,Dusty Miller New Look 02/26/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/19/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Scabiosa (Pincushion Flower) Fata Morgana 03/19/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/19/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Scabiosa (Pincushion Flower) Snowmaiden 03/19/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/20/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Nicandra Physalodes Apple of Peru 03/20/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/20/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Atriplex (Cut flower) Caramel Apple Mix 03/20/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/20/2020,,SS: Install Irrigation and fabric,Irrigate,Tony Gilkerson,Talinum (fame flower) Jewels of Opar 02/17/2020 ,,Laying drip,,,Install and setup the drip irrigation and fabric for the target beds,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/20/2020,,SS: Repot if needed,Greenhouse Activity,Tony Gilkerson,Dusty Miller New Look 02/26/2020 ,,Seed Starting,,,"When seedlings begin to outgrow their trays at about 2"" tall, either repot them into larger containers or if weather is warm enough, start transitioning them outside.",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/21/2020,,SS: Feed weekly 4,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Cherry Brandy 02/15/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/21/2020,,SS: Feed weekly 4,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Chim Chiminee Mix 02/15/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/21/2020,,SS: Feed weekly 4,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Denver Daisy Film-Coated 02/15/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/21/2020,,SS: Feed weekly 4,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Prairie Sun 02/15/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/21/2020,,SS: Feed weekly 4,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Sahara 02/15/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/23/2020,,Transplant,Transplant,Tony Gilkerson,Talinum (fame flower) Jewels of Opar 02/17/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/23/2020,,SS: Water deeply on initial field planting,Greenhouse Activity,Tony Gilkerson,Talinum (fame flower) Jewels of Opar 02/17/2020 ,,Seed Starting,,,"* water deeply right after planting in field
-* steadily nurture for the first month
-* irrigate to  keep ground moist but not soggy",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/23/2020,,SS: Feed weekly 4,Greenhouse Activity,Tony Gilkerson,Talinum (fame flower) Jewels of Opar 02/17/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/23/2020,,SS: Feed weekly 4,Greenhouse Activity,Tony Gilkerson,Eucalyptus Silver Dollar 02/17/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/23/2020,,SS: Feed weekly 4,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Macau 02/17/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/24/2020,,SS: Feed weekly 4,Greenhouse Activity,Tony Gilkerson,Eucalyptus Parviflora 02/18/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/25/2020,,SS: Feed weekly 3,Greenhouse Activity,Tony Gilkerson,Dusty Miller New Look 02/26/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/27/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Amaranthus Green Tails 03/27/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/27/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Celosia Cockscomb Coral Reef 03/27/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/27/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Gomphrena (Globe Amaranth) Sunset Mix 03/27/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/27/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Zinnias Lilliput Salmon 03/27/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/27/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Gomphrena (Globe Amaranth) Pastel Mix 03/27/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/27/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Zinnias Senora™ 03/27/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/27/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Gomphrena (Globe Amaranth) White 03/27/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/27/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Zinnias Lilliput Mix 03/27/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/28/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Anemone De Caen Blue White Mix 03/28/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/28/2020,,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Cherry Brandy 02/15/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/28/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Anemone Lord Lieutenant 03/28/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/28/2020,,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Chim Chiminee Mix 02/15/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
->>>>>>> master
-03/28/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Anemone De Caen White 03/28/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/28/2020,,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Denver Daisy Film-Coated 02/15/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/28/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Anemone Mix Super Bag 03/28/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/28/2020,,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Prairie Sun 02/15/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/28/2020,,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Sahara 02/15/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/29/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Ranunculus Bridal Mix 03/29/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-<<<<<<< HEAD
-03/29/2020,,SS: Move to bright space off of heat mat,Greenhouse Activity,Tony Gilkerson,Ornamental Grasses Frosted Explosion 03/22/2020 ,,Seed Starting,,,"Once 75% of the seeds have sprouted:
-* remove the lids
-* remove from bottom heat
-* move trays to a very bright space in the greenhouse",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/29/2020,,SS: Move to bright space off of heat mat,Greenhouse Activity,Tony Gilkerson,Atriplex (Cut flower) Caramel Apple Mix 03/22/2020 ,,Seed Starting,,,"Once 75% of the seeds have sprouted:
-* remove the lids
-* remove from bottom heat
-* move trays to a very bright space in the greenhouse",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/29/2020,,SS: Move to bright space off of heat mat,Greenhouse Activity,Tony Gilkerson,Nicandra Physalodes Apple of Peru 03/22/2020 ,,Seed Starting,,,"Once 75% of the seeds have sprouted:
-* remove the lids
-* remove from bottom heat
-* move trays to a very bright space in the greenhouse",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/29/2020,,SS: Move to bright space off of heat mat,Greenhouse Activity,Tony Gilkerson,Nicandra Physalodes Apple of Peru 03/22/2020 ,,Seed Starting,,,"Once 75% of the seeds have sprouted:
-* remove the lids
-* remove from bottom heat
-* move trays to a very bright space in the greenhouse",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/29/2020,,SS: Move to bright space off of heat mat,Greenhouse Activity,Tony Gilkerson,Atriplex (Cut flower) Caramel Apple Mix 03/22/2020 ,,Seed Starting,,,"Once 75% of the seeds have sprouted:
-* remove the lids
-* remove from bottom heat
-* move trays to a very bright space in the greenhouse",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/29/2020,,SS: Move to bright space off of heat mat,Greenhouse Activity,Tony Gilkerson,Ornamental Grasses Frosted Explosion 03/22/2020 ,,Seed Starting,,,"Once 75% of the seeds have sprouted:
-* remove the lids
-* remove from bottom heat
-* move trays to a very bright space in the greenhouse",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/29/2020,,SS: Move to bright space off of heat mat,Greenhouse Activity,Tony Gilkerson,Scabiosa (Pincushion Flower) Fata Morgana 03/22/2020 ,,Seed Starting,,,"Once 75% of the seeds have sprouted:
-* remove the lids
-* remove from bottom heat
-* move trays to a very bright space in the greenhouse",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/29/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Ranunculus Purple/ White Picotee 03/29/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/29/2020,,SS: Move to bright space off of heat mat,Greenhouse Activity,Tony Gilkerson,Scabiosa (Pincushion Flower) Snowmaiden 03/22/2020 ,,Seed Starting,,,"Once 75% of the seeds have sprouted:
-* remove the lids
-* remove from bottom heat
-* move trays to a very bright space in the greenhouse",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-=======
-03/29/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Ranunculus Purple/ White Picotee 03/29/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
->>>>>>> master
-03/29/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Ranunculus Violet 03/29/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/29/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Ranunculus Pink/ White 03/29/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/29/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Ranunculus Romantic Mix 03/29/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/29/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Ranunculus White 03/29/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/29/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Ranunculus Red 03/29/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/30/2020,,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Macau 02/17/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-<<<<<<< HEAD
-03/31/2020,,Fix airtable SGH columns plant vs variety,Fix airtable SGH columns plant vs variety,Tony Gilkerson,   ,,,,,"Fix the SGH columns in airtable, some info is on plan others is on variety pick a better method and do it",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/31/2020,,Urea (45-0-0),Procurement,Teresa Gilkerson,   ,,,,,"Get four @ 4 lb bags of Urea (45-0-0)
-
-Note:
-That is a total of 16 lbs Urea (45-0-0). If you find Urea somewhere else but in different size bags that is ok, just shoot for a total of about 16 lbs.",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-03/31/2020,,Low tunnel prep,Field Activity,Teresa Gilkerson,   ,,,,,"Prepare supplies for assembly:
+04/16/2020,,SS: Harden off,Greenhouse Activity,Tony Gilkerson,Talinum (fame flower) Jewels of Opar 02/17/2020 ,,Seed Starting,,,"* set trays in a sheltered spot outside, increasing the amount of time they are out each day.
+* soil will dry out more quickly outside, so check moisture.
+* plant once all danger of frost has past",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/16/2020,04/11/2020,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Marigold Giant Yellow 04/08/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,Yes,
+04/16/2020,,SS: Harden off,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Chim Chiminee Mix 02/15/2020 ,,Seed Starting,,,"* set trays in a sheltered spot outside, increasing the amount of time they are out each day.
+* soil will dry out more quickly outside, so check moisture.
+* plant once all danger of frost has past",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/16/2020,,SS: Harden off,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Denver Daisy Film-Coated 02/15/2020 ,,Seed Starting,,,"* set trays in a sheltered spot outside, increasing the amount of time they are out each day.
+* soil will dry out more quickly outside, so check moisture.
+* plant once all danger of frost has past",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/16/2020,,SS: Harden off,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Prairie Sun 02/15/2020 ,,Seed Starting,,,"* set trays in a sheltered spot outside, increasing the amount of time they are out each day.
+* soil will dry out more quickly outside, so check moisture.
+* plant once all danger of frost has past",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/16/2020,,SS: Harden off,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Sahara 02/15/2020 ,,Seed Starting,,,"* set trays in a sheltered spot outside, increasing the amount of time they are out each day.
+* soil will dry out more quickly outside, so check moisture.
+* plant once all danger of frost has past",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/17/2020,,Low tunnel prep,Field Activity,Teresa Gilkerson,   ,,,,,"Prepare supplies for assembly:
 * watch Floret video
 * cut and bend EMT
 * cut and punch hole in drip tape
 * cut and create loop knots etc...
 * everything possible short of assembling in the field",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/01/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Aster Chamois Apricot 04/01/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/01/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Aster Valkyrie Pink 04/01/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/02/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Celosia Pampas Plume 04/02/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/03/2020,,Low tunnel field assembly L10,Field Activity,Teresa Gilkerson,   ,,,,,"Assemble low tunnel hoops in the field. Just the hoops, the support netting will come later.",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/03/2020,,SHI: Freeze seed before sow,Greenhouse Activity,Tony Gilkerson,Shiso Perilla Purple Zi Su 04/20/2020 ,,Seed Starting,,,Freeze seed 2-3 weeks before sow,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/03/2020,,SS: Move to bright space off of heat mat,Greenhouse Activity,Tony Gilkerson,Geranium (scented) Scented Geranium 03/27/2020 ,,Seed Starting,,,"Once 75% of the seeds have sprouted:
-* remove the lids
-* remove from bottom heat
-* move trays to a very bright space in the greenhouse",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/03/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Zinnias Benary's Giant Salmon Rose 04/03/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/03/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Zinnias Queen Lime with Blush 04/03/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/04/2020,,Feed GH plants,Greenhouse Activity,Tony Gilkerson,   ,,Feed,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/04/2020,,SS: Harden off,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Cherry Brandy 02/15/2020 ,,Seed Starting,,,"* set trays in a sheltered spot outside, increasing the amount of time they are out each day.
-* soil will dry out more quickly outside, so check moisture.
-* plant once all danger of frost has past",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/04/2020,,SS: Harden off,Greenhouse Activity,Tony Gilkerson,Talinum (fame flower) Jewels of Opar 02/17/2020 ,,Seed Starting,,,"* set trays in a sheltered spot outside, increasing the amount of time they are out each day.
-* soil will dry out more quickly outside, so check moisture.
-* plant once all danger of frost has past",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/04/2020,,SS: Harden off,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Chim Chiminee Mix 02/15/2020 ,,Seed Starting,,,"* set trays in a sheltered spot outside, increasing the amount of time they are out each day.
-* soil will dry out more quickly outside, so check moisture.
-* plant once all danger of frost has past",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/04/2020,,SS: Move to bright space off of heat mat,Greenhouse Activity,Tony Gilkerson,Eucalyptus Parviflora 02/18/2020 ,,Seed Starting,,,"Once 75% of the seeds have sprouted:
-* remove the lids
-* remove from bottom heat
-* move trays to a very bright space in the greenhouse",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-=======
-04/01/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Aster Chamois Apricot 04/01/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/01/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Aster Valkyrie Pink 04/01/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/01/2020,,SS: Feed weekly 4,Greenhouse Activity,Tony Gilkerson,Dusty Miller New Look 02/26/2020 ,,Seed Starting,,,"As young plants grow, they need to be fed. Following the label instructions, add the correct amount of liquid seaweed and fish emulsion to your watering can and drench plants weekly",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/02/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Celosia Pampas Plume 04/02/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/03/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Zinnias Benary's Giant Salmon Rose 04/03/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/03/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Zinnias Queen Lime with Blush 04/03/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/04/2020,,SS: Harden off,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Cherry Brandy 02/15/2020 ,,Seed Starting,,,"* set trays in a sheltered spot outside, increasing the amount of time they are out each day.
-* soil will dry out more quickly outside, so check moisture.
-* plant once all danger of frost has past",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/04/2020,,SS: Harden off,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Chim Chiminee Mix 02/15/2020 ,,Seed Starting,,,"* set trays in a sheltered spot outside, increasing the amount of time they are out each day.
-* soil will dry out more quickly outside, so check moisture.
-* plant once all danger of frost has past",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
->>>>>>> master
-04/04/2020,,SS: Harden off,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Denver Daisy Film-Coated 02/15/2020 ,,Seed Starting,,,"* set trays in a sheltered spot outside, increasing the amount of time they are out each day.
-* soil will dry out more quickly outside, so check moisture.
-* plant once all danger of frost has past",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/04/2020,,SS: Harden off,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Prairie Sun 02/15/2020 ,,Seed Starting,,,"* set trays in a sheltered spot outside, increasing the amount of time they are out each day.
-* soil will dry out more quickly outside, so check moisture.
-* plant once all danger of frost has past",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/04/2020,,SS: Harden off,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Sahara 02/15/2020 ,,Seed Starting,,,"* set trays in a sheltered spot outside, increasing the amount of time they are out each day.
-* soil will dry out more quickly outside, so check moisture.
-* plant once all danger of frost has past",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-<<<<<<< HEAD
-04/06/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Ornamental Grasses Frosted Explosion 04/06/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-=======
-04/05/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Dahlias Giant Hybrid Mix (seed) 04/05/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/06/2020,,SS: Fertilize & Amend Beds,Fertilize & Amend,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Cherry Brandy 02/15/2020 ,,Granular,,,Details TBD,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/06/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Ornamental Grasses Frosted Explosion 04/06/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/06/2020,,SS: Fertilize & Amend Beds,Fertilize & Amend,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Chim Chiminee Mix 02/15/2020 ,,Granular,,,Details TBD,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/06/2020,,SS: Fertilize & Amend Beds,Fertilize & Amend,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Denver Daisy Film-Coated 02/15/2020 ,,Granular,,,Details TBD,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/06/2020,,SS: Fertilize & Amend Beds,Fertilize & Amend,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Prairie Sun 02/15/2020 ,,Granular,,,Details TBD,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/06/2020,,SS: Fertilize & Amend Beds,Fertilize & Amend,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Sahara 02/15/2020 ,,Granular,,,Details TBD,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
->>>>>>> master
-04/06/2020,,SS: Harden off,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Macau 02/17/2020 ,,Seed Starting,,,"* set trays in a sheltered spot outside, increasing the amount of time they are out each day.
-* soil will dry out more quickly outside, so check moisture.
-* plant once all danger of frost has past",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/08/2020,,SS: Install Irrigation and fabric,Irrigate,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Cherry Brandy 02/15/2020 ,,Laying drip,,,Install and setup the drip irrigation and fabric for the target beds,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-<<<<<<< HEAD
-04/08/2020,,SS: Install Irrigation and fabric,Irrigate,Tony Gilkerson,Talinum (fame flower) Jewels of Opar 02/17/2020 ,,Laying drip,,,Install and setup the drip irrigation and fabric for the target beds,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-=======
->>>>>>> master
-04/08/2020,,SS: Install Irrigation and fabric,Irrigate,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Chim Chiminee Mix 02/15/2020 ,,Laying drip,,,Install and setup the drip irrigation and fabric for the target beds,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/08/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Celosia Texas Plume Summer Sherbert 04/08/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/08/2020,,SS: Install Irrigation and fabric,Irrigate,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Denver Daisy Film-Coated 02/15/2020 ,,Laying drip,,,Install and setup the drip irrigation and fabric for the target beds,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/08/2020,,SS: Install Irrigation and fabric,Irrigate,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Prairie Sun 02/15/2020 ,,Laying drip,,,Install and setup the drip irrigation and fabric for the target beds,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/08/2020,,SS: Install Irrigation and fabric,Irrigate,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Sahara 02/15/2020 ,,Laying drip,,,Install and setup the drip irrigation and fabric for the target beds,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-<<<<<<< HEAD
-04/09/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Cosmos Double Click Bicolor Pink 04/09/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/09/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Cosmos Double Click Snow Puff 04/09/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/09/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Cosmos Cupcake Blush 04/09/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/09/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Dahlias Giant Hybrid Mix (seed) 04/09/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/10/2020,,Low tunnel field assembly L9,Field Activity,Teresa Gilkerson,   ,,,,,"Assemble low tunnel hoops in the field. Just the hoops, the support netting will come later.",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/10/2020,,SS: Install Irrigation and fabric,Irrigate,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Macau 02/17/2020 ,,Laying drip,,,Install and setup the drip irrigation and fabric for the target beds,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/11/2020,,Feed GH plants,Greenhouse Activity,Tony Gilkerson,   ,,Feed,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/11/2020,,Transplant,Transplant,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Cherry Brandy 02/15/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/11/2020,,Transplant,Transplant,Tony Gilkerson,Talinum (fame flower) Jewels of Opar 02/17/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/11/2020,,SS: Water deeply on initial field planting,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Cherry Brandy 02/15/2020 ,,Seed Starting,,,"* water deeply right after planting in field
-* steadily nurture for the first month
-* irrigate to  keep ground moist but not soggy",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/11/2020,,SS: Water deeply on initial field planting,Greenhouse Activity,Tony Gilkerson,Talinum (fame flower) Jewels of Opar 02/17/2020 ,,Seed Starting,,,"* water deeply right after planting in field
-* steadily nurture for the first month
-* irrigate to  keep ground moist but not soggy",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/11/2020,,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Aster Apricot Swirl Mix 03/14/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/11/2020,,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Stock Avalanche Supreme 03/14/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-=======
-04/08/2020,,SS: Fertilize & Amend Beds,Fertilize & Amend,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Macau 02/17/2020 ,,Granular,,,Details TBD,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/09/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Cosmos Double Click Bicolor Pink 04/09/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/09/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Cosmos Double Click Snow Puff 04/09/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/09/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Cosmos Cupcake Blush 04/09/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/10/2020,,SS: Install Irrigation and fabric,Irrigate,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Macau 02/17/2020 ,,Laying drip,,,Install and setup the drip irrigation and fabric for the target beds,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/11/2020,,Transplant,Transplant,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Cherry Brandy 02/15/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/11/2020,,SS: Water deeply on initial field planting,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Cherry Brandy 02/15/2020 ,,Seed Starting,,,"* water deeply right after planting in field
-* steadily nurture for the first month
-* irrigate to  keep ground moist but not soggy",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
->>>>>>> master
-04/11/2020,,Transplant,Transplant,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Chim Chiminee Mix 02/15/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/11/2020,,SS: Water deeply on initial field planting,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Chim Chiminee Mix 02/15/2020 ,,Seed Starting,,,"* water deeply right after planting in field
-* steadily nurture for the first month
-* irrigate to  keep ground moist but not soggy",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-<<<<<<< HEAD
-04/11/2020,,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Aster Harlekin Violet 03/14/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/11/2020,,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Stock Katz Formula Mix 03/14/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-=======
->>>>>>> master
-04/11/2020,,Transplant,Transplant,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Denver Daisy Film-Coated 02/15/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/11/2020,,SS: Water deeply on initial field planting,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Denver Daisy Film-Coated 02/15/2020 ,,Seed Starting,,,"* water deeply right after planting in field
-* steadily nurture for the first month
-* irrigate to  keep ground moist but not soggy",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/11/2020,,Transplant,Transplant,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Prairie Sun 02/15/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/11/2020,,SS: Water deeply on initial field planting,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Prairie Sun 02/15/2020 ,,Seed Starting,,,"* water deeply right after planting in field
-* steadily nurture for the first month
-* irrigate to  keep ground moist but not soggy",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/11/2020,,Transplant,Transplant,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Sahara 02/15/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/11/2020,,SS: Water deeply on initial field planting,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Sahara 02/15/2020 ,,Seed Starting,,,"* water deeply right after planting in field
-* steadily nurture for the first month
-* irrigate to  keep ground moist but not soggy",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-<<<<<<< HEAD
-04/12/2020,,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Ammi (False Queen Anne's Lace) Chocolate Lace 03/09/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/12/2020,,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Atriplex (Cut flower) Caramel Apple Mix 03/22/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/12/2020,,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Nicandra Physalodes Apple of Peru 03/22/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/12/2020,,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Nicandra Physalodes Apple of Peru 03/22/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/12/2020,,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Atriplex (Cut flower) Caramel Apple Mix 03/22/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/12/2020,,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Ammi (False Queen Anne's Lace) Green Mist 03/09/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/13/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Mignonette Mignonette Standard 04/13/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/13/2020,,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Eucalyptus Silver Dollar 02/17/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/13/2020,,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Orlaya White Finch 03/16/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/13/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Mignonette White Mignonette 04/13/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/13/2020,,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Orlaya White Finch 03/16/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-=======
-04/13/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Mignonette Mignonette Standard 04/13/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/13/2020,,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Eucalyptus Silver Dollar 02/17/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/13/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Mignonette White Mignonette 04/13/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
->>>>>>> master
-04/13/2020,,Transplant,Transplant,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Macau 02/17/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/13/2020,,SS: Water deeply on initial field planting,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Macau 02/17/2020 ,,Seed Starting,,,"* water deeply right after planting in field
-* steadily nurture for the first month
-* irrigate to  keep ground moist but not soggy",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-<<<<<<< HEAD
+04/17/2020,,Low tunnel field assembly L10,Field Activity,Teresa Gilkerson,   ,,,,,"Assemble low tunnel hoops in the field. Just the hoops, the support netting will come later.",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/17/2020,,Low tunnel field assembly L9,Field Activity,Teresa Gilkerson,   ,,,,,"Assemble low tunnel hoops in the field. Just the hoops, the support netting will come later.",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
 04/18/2020,,Feed GH plants,Greenhouse Activity,Tony Gilkerson,   ,,Feed,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/18/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Anemone De Caen Blue White Mix 04/18/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 04/18/2020,,SS: Harden off,Greenhouse Activity,Tony Gilkerson,Aster Apricot Swirl Mix 03/14/2020 ,,Seed Starting,,,"* set trays in a sheltered spot outside, increasing the amount of time they are out each day.
 * soil will dry out more quickly outside, so check moisture.
 * plant once all danger of frost has past",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
 04/18/2020,,SS: Harden off,Greenhouse Activity,Tony Gilkerson,Stock Avalanche Supreme 03/14/2020 ,,Seed Starting,,,"* set trays in a sheltered spot outside, increasing the amount of time they are out each day.
 * soil will dry out more quickly outside, so check moisture.
 * plant once all danger of frost has past",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/18/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Anemone Lord Lieutenant 04/18/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 04/18/2020,,SS: Harden off,Greenhouse Activity,Tony Gilkerson,Aster Harlekin Violet 03/14/2020 ,,Seed Starting,,,"* set trays in a sheltered spot outside, increasing the amount of time they are out each day.
 * soil will dry out more quickly outside, so check moisture.
 * plant once all danger of frost has past",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
 04/18/2020,,SS: Harden off,Greenhouse Activity,Tony Gilkerson,Stock Katz Formula Mix 03/14/2020 ,,Seed Starting,,,"* set trays in a sheltered spot outside, increasing the amount of time they are out each day.
 * soil will dry out more quickly outside, so check moisture.
 * plant once all danger of frost has past",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/18/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Anemone De Caen White 04/18/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/18/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Anemone Mix Super Bag 04/18/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 04/19/2020,,SS: Harden off,Greenhouse Activity,Tony Gilkerson,Ammi (False Queen Anne's Lace) Chocolate Lace 03/09/2020 ,,Seed Starting,,,"* set trays in a sheltered spot outside, increasing the amount of time they are out each day.
 * soil will dry out more quickly outside, so check moisture.
 * plant once all danger of frost has past",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
@@ -870,48 +668,59 @@ That is a total of 16 lbs Urea (45-0-0). If you find Urea somewhere else but in 
 * soil will dry out more quickly outside, so check moisture.
 * plant once all danger of frost has past",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
 04/19/2020,,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Scabiosa (Pincushion Flower) Snowmaiden 03/22/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-=======
-04/14/2020,,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Eucalyptus Parviflora 02/18/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
->>>>>>> master
+04/19/2020,,SS: Harden off,Greenhouse Activity,Tony Gilkerson,Zinnias Lilliput Mix 03/31/2020 ,,Seed Starting,,,"* set trays in a sheltered spot outside, increasing the amount of time they are out each day.
+* soil will dry out more quickly outside, so check moisture.
+* plant once all danger of frost has past",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/19/2020,,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Zinnias Benary's Giant Salmon Rose 04/12/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/19/2020,,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Zinnias Queen Lime with Blush 04/12/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
 04/20/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Shiso Perilla Purple Zi Su 04/20/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 04/20/2020,,SS: Harden off,Greenhouse Activity,Tony Gilkerson,Eucalyptus Silver Dollar 02/17/2020 ,,Seed Starting,,,"* set trays in a sheltered spot outside, increasing the amount of time they are out each day.
 * soil will dry out more quickly outside, so check moisture.
 * plant once all danger of frost has past",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-<<<<<<< HEAD
 04/20/2020,,SS: Harden off,Greenhouse Activity,Tony Gilkerson,Orlaya White Finch 03/16/2020 ,,Seed Starting,,,"* set trays in a sheltered spot outside, increasing the amount of time they are out each day.
 * soil will dry out more quickly outside, so check moisture.
 * plant once all danger of frost has past",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/20/2020,,SS: Harden off,Greenhouse Activity,Tony Gilkerson,Orlaya White Finch 03/16/2020 ,,Seed Starting,,,"* set trays in a sheltered spot outside, increasing the amount of time they are out each day.
-* soil will dry out more quickly outside, so check moisture.
-* plant once all danger of frost has past",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/21/2020,,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Geranium (scented) Scented Geranium 03/27/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
 04/21/2020,,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Eucalyptus Parviflora 02/18/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
 04/21/2020,,SS: Harden off,Greenhouse Activity,Tony Gilkerson,Eucalyptus Parviflora 02/18/2020 ,,Seed Starting,,,"* set trays in a sheltered spot outside, increasing the amount of time they are out each day.
 * soil will dry out more quickly outside, so check moisture.
 * plant once all danger of frost has past",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
 04/22/2020,,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Dusty Miller New Look 02/26/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/22/2020,,SS: Install Irrigation and fabric,Irrigate,Tony Gilkerson,Aster Apricot Swirl Mix 03/14/2020 ,,Laying drip,,,Install and setup the drip irrigation and fabric for the target beds,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/22/2020,,SS: Install Irrigation and fabric,Irrigate,Tony Gilkerson,Stock Avalanche Supreme 03/14/2020 ,,Laying drip,,,Install and setup the drip irrigation and fabric for the target beds,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/22/2020,,SS: Install Irrigation and fabric,Irrigate,Tony Gilkerson,Aster Harlekin Violet 03/14/2020 ,,Laying drip,,,Install and setup the drip irrigation and fabric for the target beds,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/22/2020,,SS: Install Irrigation and fabric,Irrigate,Tony Gilkerson,Stock Katz Formula Mix 03/14/2020 ,,Laying drip,,,Install and setup the drip irrigation and fabric for the target beds,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/23/2020,,SS: Install Irrigation and fabric,Irrigate,Tony Gilkerson,Ammi (False Queen Anne's Lace) Chocolate Lace 03/09/2020 ,,Laying drip,,,Install and setup the drip irrigation and fabric for the target beds,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/23/2020,,SS: Install Irrigation and fabric,Irrigate,Tony Gilkerson,Atriplex (Cut flower) Caramel Apple Mix 03/22/2020 ,,Laying drip,,,Install and setup the drip irrigation and fabric for the target beds,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/23/2020,,SS: Install Irrigation and fabric,Irrigate,Tony Gilkerson,Nicandra Physalodes Apple of Peru 03/22/2020 ,,Laying drip,,,Install and setup the drip irrigation and fabric for the target beds,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/23/2020,,SS: Install Irrigation and fabric,Irrigate,Tony Gilkerson,Nicandra Physalodes Apple of Peru 03/22/2020 ,,Laying drip,,,Install and setup the drip irrigation and fabric for the target beds,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/23/2020,,SS: Install Irrigation and fabric,Irrigate,Tony Gilkerson,Atriplex (Cut flower) Caramel Apple Mix 03/22/2020 ,,Laying drip,,,Install and setup the drip irrigation and fabric for the target beds,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/23/2020,,SS: Install Irrigation and fabric,Irrigate,Tony Gilkerson,Ammi (False Queen Anne's Lace) Green Mist 03/09/2020 ,,Laying drip,,,Install and setup the drip irrigation and fabric for the target beds,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/24/2020,,Transplant,Transplant,Tony Gilkerson,Amaranthus Green Tails 03/27/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/24/2020,,Transplant,Transplant,Tony Gilkerson,Gomphrena (Globe Amaranth) Sunset Mix 03/27/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/23/2020,,Transplant,Transplant,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Cherry Brandy 02/15/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/23/2020,,Transplant,Transplant,Tony Gilkerson,Talinum (fame flower) Jewels of Opar 02/17/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/23/2020,,SS: Water deeply on initial field planting,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Cherry Brandy 02/15/2020 ,,Seed Starting,,,"* water deeply right after planting in field
+* steadily nurture for the first month
+* irrigate to  keep ground moist but not soggy",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/23/2020,,SS: Water deeply on initial field planting,Greenhouse Activity,Tony Gilkerson,Talinum (fame flower) Jewels of Opar 02/17/2020 ,,Seed Starting,,,"* water deeply right after planting in field
+* steadily nurture for the first month
+* irrigate to  keep ground moist but not soggy",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/23/2020,,SS: Harden off,Greenhouse Activity,Tony Gilkerson,Marigold Giant Yellow 04/08/2020 ,,Seed Starting,,,"* set trays in a sheltered spot outside, increasing the amount of time they are out each day.
+* soil will dry out more quickly outside, so check moisture.
+* plant once all danger of frost has past",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/23/2020,,Transplant,Transplant,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Chim Chiminee Mix 02/15/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/23/2020,,SS: Water deeply on initial field planting,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Chim Chiminee Mix 02/15/2020 ,,Seed Starting,,,"* water deeply right after planting in field
+* steadily nurture for the first month
+* irrigate to  keep ground moist but not soggy",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/23/2020,,Transplant,Transplant,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Denver Daisy Film-Coated 02/15/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/23/2020,,SS: Water deeply on initial field planting,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Denver Daisy Film-Coated 02/15/2020 ,,Seed Starting,,,"* water deeply right after planting in field
+* steadily nurture for the first month
+* irrigate to  keep ground moist but not soggy",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/23/2020,,Transplant,Transplant,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Prairie Sun 02/15/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/23/2020,,SS: Water deeply on initial field planting,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Prairie Sun 02/15/2020 ,,Seed Starting,,,"* water deeply right after planting in field
+* steadily nurture for the first month
+* irrigate to  keep ground moist but not soggy",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/23/2020,,Transplant,Transplant,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Sahara 02/15/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/23/2020,,SS: Water deeply on initial field planting,Greenhouse Activity,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Sahara 02/15/2020 ,,Seed Starting,,,"* water deeply right after planting in field
+* steadily nurture for the first month
+* irrigate to  keep ground moist but not soggy",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/24/2020,,Transplant,Transplant,Tony Gilkerson,Amaranthus Green Tails 03/28/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/24/2020,,Transplant,Transplant,Tony Gilkerson,Gomphrena (Globe Amaranth) Sunset Mix 03/29/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 04/24/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Larkspur White Cloud 04/24/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/24/2020,,Transplant,Transplant,Tony Gilkerson,Zinnias Lilliput Salmon 03/27/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/24/2020,,SS: Install Irrigation and fabric,Irrigate,Tony Gilkerson,Eucalyptus Silver Dollar 02/17/2020 ,,Laying drip,,,Install and setup the drip irrigation and fabric for the target beds,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/24/2020,,SS: Install Irrigation and fabric,Irrigate,Tony Gilkerson,Orlaya White Finch 03/16/2020 ,,Laying drip,,,Install and setup the drip irrigation and fabric for the target beds,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/24/2020,,Transplant,Transplant,Tony Gilkerson,Gomphrena (Globe Amaranth) Pastel Mix 03/27/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/24/2020,,Transplant,Transplant,Tony Gilkerson,Zinnias Senora™ 03/27/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/24/2020,,Transplant,Transplant,Tony Gilkerson,Zinnias Lilliput Salmon 03/30/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/24/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Sunflower Autumn Beauty Mix 04/24/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/24/2020,,Transplant,Transplant,Tony Gilkerson,Gomphrena (Globe Amaranth) Pastel Mix 03/29/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/24/2020,,Transplant,Transplant,Tony Gilkerson,Zinnias Senora™ 03/30/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 04/24/2020,,SHI: Freeze seed before sow,Greenhouse Activity,Tony Gilkerson,Shiso Perilla Purple Zi Su 05/11/2020 ,,Seed Starting,,,Freeze seed 2-3 weeks before sow,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/24/2020,,SS: Install Irrigation and fabric,Irrigate,Tony Gilkerson,Orlaya White Finch 03/16/2020 ,,Laying drip,,,Install and setup the drip irrigation and fabric for the target beds,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/24/2020,,Transplant,Transplant,Tony Gilkerson,Gomphrena (Globe Amaranth) White 03/27/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/24/2020,,Transplant,Transplant,Tony Gilkerson,Zinnias Lilliput Mix 03/27/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/24/2020,,Transplant,Transplant,Tony Gilkerson,Gomphrena (Globe Amaranth) White 03/29/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 04/25/2020,,Feed GH plants,Greenhouse Activity,Tony Gilkerson,   ,,Feed,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
 04/25/2020,,Transplant,Transplant,Tony Gilkerson,Aster Apricot Swirl Mix 03/14/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 04/25/2020,,Transplant,Transplant,Tony Gilkerson,Stock Avalanche Supreme 03/14/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
@@ -924,7 +733,6 @@ That is a total of 16 lbs Urea (45-0-0). If you find Urea somewhere else but in 
 04/25/2020,,Transplant,Transplant,Tony Gilkerson,Aster Harlekin Violet 03/14/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 04/25/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Amaranthus Hot Biscuits 04/25/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 04/25/2020,,Transplant,Transplant,Tony Gilkerson,Stock Katz Formula Mix 03/14/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/25/2020,,SS: Install Irrigation and fabric,Irrigate,Tony Gilkerson,Eucalyptus Parviflora 02/18/2020 ,,Laying drip,,,Install and setup the drip irrigation and fabric for the target beds,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
 04/25/2020,,SS: Water deeply on initial field planting,Greenhouse Activity,Tony Gilkerson,Aster Harlekin Violet 03/14/2020 ,,Seed Starting,,,"* water deeply right after planting in field
 * steadily nurture for the first month
 * irrigate to  keep ground moist but not soggy",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
@@ -966,56 +774,25 @@ That is a total of 16 lbs Urea (45-0-0). If you find Urea somewhere else but in 
 04/26/2020,,SS: Harden off,Greenhouse Activity,Tony Gilkerson,Scabiosa (Pincushion Flower) Snowmaiden 03/22/2020 ,,Seed Starting,,,"* set trays in a sheltered spot outside, increasing the amount of time they are out each day.
 * soil will dry out more quickly outside, so check moisture.
 * plant once all danger of frost has past",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-=======
-04/21/2020,,SS: Harden off,Greenhouse Activity,Tony Gilkerson,Eucalyptus Parviflora 02/18/2020 ,,Seed Starting,,,"* set trays in a sheltered spot outside, increasing the amount of time they are out each day.
+04/26/2020,,Transplant,Transplant,Tony Gilkerson,Zinnias Lilliput Mix 03/31/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/26/2020,,SS: Water deeply on initial field planting,Greenhouse Activity,Tony Gilkerson,Zinnias Lilliput Mix 03/31/2020 ,,Seed Starting,,,"* water deeply right after planting in field
+* steadily nurture for the first month
+* irrigate to  keep ground moist but not soggy",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/26/2020,,SS: Harden off,Greenhouse Activity,Tony Gilkerson,Zinnias Benary's Giant Salmon Rose 04/12/2020 ,,Seed Starting,,,"* set trays in a sheltered spot outside, increasing the amount of time they are out each day.
 * soil will dry out more quickly outside, so check moisture.
 * plant once all danger of frost has past",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/22/2020,,SS: Fertilize & Amend Beds,Fertilize & Amend,Tony Gilkerson,Eucalyptus Silver Dollar 02/17/2020 ,,Granular,,,Details TBD,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/22/2020,,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Dusty Miller New Look 02/26/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/23/2020,,SS: Fertilize & Amend Beds,Fertilize & Amend,Tony Gilkerson,Eucalyptus Parviflora 02/18/2020 ,,Granular,,,Details TBD,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/24/2020,,Transplant,Transplant,Tony Gilkerson,Aster Apricot Swirl Mix 03/13/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/24/2020,,Transplant,Transplant,Tony Gilkerson,Amaranthus Green Tails 03/27/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/24/2020,,Transplant,Transplant,Tony Gilkerson,Ammi (False Queen Anne's Lace) Chocolate Lace 03/06/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/24/2020,,Transplant,Transplant,Tony Gilkerson,Gomphrena (Globe Amaranth) Sunset Mix 03/27/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/24/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Larkspur White Cloud 04/24/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/24/2020,,Transplant,Transplant,Tony Gilkerson,Nicandra Physalodes Apple of Peru 03/20/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/24/2020,,Transplant,Transplant,Tony Gilkerson,Atriplex (Cut flower) Caramel Apple Mix 03/20/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/24/2020,,Transplant,Transplant,Tony Gilkerson,Geranium (scented) Scented Geranium 03/13/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/24/2020,,Transplant,Transplant,Tony Gilkerson,Stock Avalanche Supreme 03/13/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/24/2020,,Transplant,Transplant,Tony Gilkerson,Zinnias Lilliput Salmon 03/27/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/24/2020,,SS: Install Irrigation and fabric,Irrigate,Tony Gilkerson,Eucalyptus Silver Dollar 02/17/2020 ,,Laying drip,,,Install and setup the drip irrigation and fabric for the target beds,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/24/2020,,Transplant,Transplant,Tony Gilkerson,Orlaya White Finch 03/13/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/24/2020,,Transplant,Transplant,Tony Gilkerson,Aster Harlekin Violet 03/13/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/24/2020,,Transplant,Transplant,Tony Gilkerson,Ammi (False Queen Anne's Lace) Green Mist 03/06/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/24/2020,,Transplant,Transplant,Tony Gilkerson,Gomphrena (Globe Amaranth) Pastel Mix 03/27/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/24/2020,,Transplant,Transplant,Tony Gilkerson,Stock Katz Formula Mix 03/13/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/24/2020,,Transplant,Transplant,Tony Gilkerson,Zinnias Senora™ 03/27/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/24/2020,,Transplant,Transplant,Tony Gilkerson,Orlaya White Finch 03/13/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/24/2020,,Transplant,Transplant,Tony Gilkerson,Gomphrena (Globe Amaranth) White 03/27/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/24/2020,,Transplant,Transplant,Tony Gilkerson,Zinnias Lilliput Mix 03/27/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/25/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Amaranthus Hot Biscuits 04/25/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/25/2020,,SS: Install Irrigation and fabric,Irrigate,Tony Gilkerson,Eucalyptus Parviflora 02/18/2020 ,,Laying drip,,,Install and setup the drip irrigation and fabric for the target beds,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/25/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Amaranthus Green Tails 04/25/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/27/2020,,Transplant,Transplant,Tony Gilkerson,Ornamental Grasses Frosted Explosion 03/16/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
->>>>>>> master
+04/26/2020,,SS: Harden off,Greenhouse Activity,Tony Gilkerson,Zinnias Queen Lime with Blush 04/12/2020 ,,Seed Starting,,,"* set trays in a sheltered spot outside, increasing the amount of time they are out each day.
+* soil will dry out more quickly outside, so check moisture.
+* plant once all danger of frost has past",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
 04/27/2020,,Transplant,Transplant,Tony Gilkerson,Eucalyptus Silver Dollar 02/17/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 04/27/2020,,SS: Water deeply on initial field planting,Greenhouse Activity,Tony Gilkerson,Eucalyptus Silver Dollar 02/17/2020 ,,Seed Starting,,,"* water deeply right after planting in field
 * steadily nurture for the first month
 * irrigate to  keep ground moist but not soggy",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-<<<<<<< HEAD
 04/27/2020,,Transplant,Transplant,Tony Gilkerson,Orlaya White Finch 03/16/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 04/27/2020,,SS: Water deeply on initial field planting,Greenhouse Activity,Tony Gilkerson,Orlaya White Finch 03/16/2020 ,,Seed Starting,,,"* water deeply right after planting in field
 * steadily nurture for the first month
 * irrigate to  keep ground moist but not soggy",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/27/2020,,Transplant,Transplant,Tony Gilkerson,Orlaya White Finch 03/16/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/27/2020,,SS: Water deeply on initial field planting,Greenhouse Activity,Tony Gilkerson,Orlaya White Finch 03/16/2020 ,,Seed Starting,,,"* water deeply right after planting in field
-* steadily nurture for the first month
-* irrigate to  keep ground moist but not soggy",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/28/2020,,SS: Harden off,Greenhouse Activity,Tony Gilkerson,Geranium (scented) Scented Geranium 03/27/2020 ,,Seed Starting,,,"* set trays in a sheltered spot outside, increasing the amount of time they are out each day.
-* soil will dry out more quickly outside, so check moisture.
-* plant once all danger of frost has past",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-=======
->>>>>>> master
+04/27/2020,,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Ornamental Grasses Bunny Tails 04/12/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
 04/28/2020,,Transplant,Transplant,Tony Gilkerson,Eucalyptus Parviflora 02/18/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 04/28/2020,,SS: Water deeply on initial field planting,Greenhouse Activity,Tony Gilkerson,Eucalyptus Parviflora 02/18/2020 ,,Seed Starting,,,"* water deeply right after planting in field
 * steadily nurture for the first month
@@ -1023,21 +800,19 @@ That is a total of 16 lbs Urea (45-0-0). If you find Urea somewhere else but in 
 04/29/2020,,SS: Harden off,Greenhouse Activity,Tony Gilkerson,Dusty Miller New Look 02/26/2020 ,,Seed Starting,,,"* set trays in a sheltered spot outside, increasing the amount of time they are out each day.
 * soil will dry out more quickly outside, so check moisture.
 * plant once all danger of frost has past",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-<<<<<<< HEAD
-04/30/2020,,SS: Install Irrigation and fabric,Irrigate,Tony Gilkerson,Ornamental Grasses Frosted Explosion 03/22/2020 ,,Laying drip,,,Install and setup the drip irrigation and fabric for the target beds,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/30/2020,,SS: Install Irrigation and fabric,Irrigate,Tony Gilkerson,Ornamental Grasses Frosted Explosion 03/22/2020 ,,Laying drip,,,Install and setup the drip irrigation and fabric for the target beds,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/30/2020,,SS: Install Irrigation and fabric,Irrigate,Tony Gilkerson,Scabiosa (Pincushion Flower) Fata Morgana 03/22/2020 ,,Laying drip,,,Install and setup the drip irrigation and fabric for the target beds,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/30/2020,,SS: Install Irrigation and fabric,Irrigate,Tony Gilkerson,Scabiosa (Pincushion Flower) Snowmaiden 03/22/2020 ,,Laying drip,,,Install and setup the drip irrigation and fabric for the target beds,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/30/2020,,Transplant,Transplant,Tony Gilkerson,Marigold Giant Yellow 04/08/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/30/2020,,SS: Water deeply on initial field planting,Greenhouse Activity,Tony Gilkerson,Marigold Giant Yellow 04/08/2020 ,,Seed Starting,,,"* water deeply right after planting in field
+* steadily nurture for the first month
+* irrigate to  keep ground moist but not soggy",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/30/2020,,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Aster Chamois Apricot 04/08/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
 04/30/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Cosmos Rubenza 04/30/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+04/30/2020,,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Aster Valkyrie Pink 04/08/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
 04/30/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Cosmos Apricot Lemonade 04/30/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 04/30/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Cosmos Double Click Mix 04/30/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/01/2020,,Transplant,Transplant,Tony Gilkerson,Zinnias Benary's Giant Salmon Rose 04/03/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/01/2020,,Transplant,Transplant,Tony Gilkerson,Zinnias Queen Lime with Blush 04/03/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+05/01/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Sunflower Autumn Beauty Mix 05/01/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 05/02/2020,,Feed GH plants,Greenhouse Activity,Tony Gilkerson,   ,,Feed,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/02/2020,,SS: Install Irrigation and fabric,Irrigate,Tony Gilkerson,Geranium (scented) Scented Geranium 03/27/2020 ,,Laying drip,,,Install and setup the drip irrigation and fabric for the target beds,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
 05/03/2020,,Transplant,Transplant,Tony Gilkerson,Ornamental Grasses Frosted Explosion 03/22/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 05/03/2020,,Transplant,Transplant,Tony Gilkerson,Scabiosa (Pincushion Flower) Fata Morgana 03/22/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/03/2020,,SS: Install Irrigation and fabric,Irrigate,Tony Gilkerson,Dusty Miller New Look 02/26/2020 ,,Laying drip,,,Install and setup the drip irrigation and fabric for the target beds,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
 05/03/2020,,SS: Water deeply on initial field planting,Greenhouse Activity,Tony Gilkerson,Ornamental Grasses Frosted Explosion 03/22/2020 ,,Seed Starting,,,"* water deeply right after planting in field
 * steadily nurture for the first month
 * irrigate to  keep ground moist but not soggy",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
@@ -1047,46 +822,50 @@ That is a total of 16 lbs Urea (45-0-0). If you find Urea somewhere else but in 
 05/03/2020,,SS: Water deeply on initial field planting,Greenhouse Activity,Tony Gilkerson,Scabiosa (Pincushion Flower) Fata Morgana 03/22/2020 ,,Seed Starting,,,"* water deeply right after planting in field
 * steadily nurture for the first month
 * irrigate to  keep ground moist but not soggy",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
+05/03/2020,,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Craspedia (Drumstick Flower) Sun Ball 04/12/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
 05/03/2020,,Transplant,Transplant,Tony Gilkerson,Scabiosa (Pincushion Flower) Snowmaiden 03/22/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 05/03/2020,,SS: Water deeply on initial field planting,Greenhouse Activity,Tony Gilkerson,Scabiosa (Pincushion Flower) Snowmaiden 03/22/2020 ,,Seed Starting,,,"* water deeply right after planting in field
 * steadily nurture for the first month
 * irrigate to  keep ground moist but not soggy",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/05/2020,,Transplant,Transplant,Tony Gilkerson,Geranium (scented) Scented Geranium 03/27/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/05/2020,,SS: Water deeply on initial field planting,Greenhouse Activity,Tony Gilkerson,Geranium (scented) Scented Geranium 03/27/2020 ,,Seed Starting,,,"* water deeply right after planting in field
+05/03/2020,,Transplant,Transplant,Tony Gilkerson,Zinnias Benary's Giant Salmon Rose 04/12/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+05/03/2020,,SS: Water deeply on initial field planting,Greenhouse Activity,Tony Gilkerson,Zinnias Benary's Giant Salmon Rose 04/12/2020 ,,Seed Starting,,,"* water deeply right after planting in field
 * steadily nurture for the first month
 * irrigate to  keep ground moist but not soggy",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-=======
-04/30/2020,,Transplant,Transplant,Tony Gilkerson,Scabiosa (Pincushion Flower) Fata Morgana 03/19/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/30/2020,,Transplant,Transplant,Tony Gilkerson,Scabiosa (Pincushion Flower) Snowmaiden 03/19/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/30/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Cosmos Rubenza 04/30/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/30/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Cosmos Apricot Lemonade 04/30/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-04/30/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Cosmos Double Click Mix 04/30/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/01/2020,,SS: Fertilize & Amend Beds,Fertilize & Amend,Tony Gilkerson,Dusty Miller New Look 02/26/2020 ,,Granular,,,Details TBD,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/01/2020,,Transplant,Transplant,Tony Gilkerson,Zinnias Benary's Giant Salmon Rose 04/03/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/01/2020,,Transplant,Transplant,Tony Gilkerson,Zinnias Queen Lime with Blush 04/03/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/03/2020,,SS: Install Irrigation and fabric,Irrigate,Tony Gilkerson,Dusty Miller New Look 02/26/2020 ,,Laying drip,,,Install and setup the drip irrigation and fabric for the target beds,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
->>>>>>> master
+05/03/2020,,Transplant,Transplant,Tony Gilkerson,Zinnias Queen Lime with Blush 04/12/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+05/03/2020,,SS: Water deeply on initial field planting,Greenhouse Activity,Tony Gilkerson,Zinnias Queen Lime with Blush 04/12/2020 ,,Seed Starting,,,"* water deeply right after planting in field
+* steadily nurture for the first month
+* irrigate to  keep ground moist but not soggy",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
+05/04/2020,,SS: Harden off,Greenhouse Activity,Tony Gilkerson,Ornamental Grasses Bunny Tails 04/12/2020 ,,Seed Starting,,,"* set trays in a sheltered spot outside, increasing the amount of time they are out each day.
+* soil will dry out more quickly outside, so check moisture.
+* plant once all danger of frost has past",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
 05/05/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Mignonette Mignonette Standard 05/05/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 05/05/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Mignonette White Mignonette 05/05/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 05/06/2020,,Transplant,Transplant,Tony Gilkerson,Dusty Miller New Look 02/26/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 05/06/2020,,SS: Water deeply on initial field planting,Greenhouse Activity,Tony Gilkerson,Dusty Miller New Look 02/26/2020 ,,Seed Starting,,,"* water deeply right after planting in field
 * steadily nurture for the first month
 * irrigate to  keep ground moist but not soggy",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-<<<<<<< HEAD
-05/07/2020,,Transplant,Transplant,Tony Gilkerson,Cosmos Double Click Bicolor Pink 04/09/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+05/06/2020,,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Ornamental Grasses Frosted Explosion 04/12/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
+05/07/2020,,Transplant,Transplant,Tony Gilkerson,Cosmos Double Click Bicolor Pink 04/12/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 05/07/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Dahlias Black Satin (Sm 2-4”) 05/07/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 05/07/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Cress Emerald Beads 05/07/2020 ,,,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/07/2020,,Transplant,Transplant,Tony Gilkerson,Cosmos Double Click Snow Puff 04/09/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+05/07/2020,,Transplant,Transplant,Tony Gilkerson,Cosmos Double Click Snow Puff 04/12/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 05/07/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Dahlias Cornel (Sm 4”) 05/07/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 05/07/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Cress Wrinkled Crinkled 05/07/2020 ,,,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/07/2020,,Transplant,Transplant,Tony Gilkerson,Cosmos Cupcake Blush 04/09/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+05/07/2020,,Transplant,Transplant,Tony Gilkerson,Cosmos Cupcake Blush 04/12/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 05/07/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Dahlias Franz Kafka (Sm 2-3”) 05/07/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+05/07/2020,,SS: Harden off,Greenhouse Activity,Tony Gilkerson,Aster Chamois Apricot 04/08/2020 ,,Seed Starting,,,"* set trays in a sheltered spot outside, increasing the amount of time they are out each day.
+* soil will dry out more quickly outside, so check moisture.
+* plant once all danger of frost has past",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
 05/07/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Dahlias Jan Ryecroft (Sm 4”) 05/07/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+05/07/2020,,SS: Harden off,Greenhouse Activity,Tony Gilkerson,Aster Valkyrie Pink 04/08/2020 ,,Seed Starting,,,"* set trays in a sheltered spot outside, increasing the amount of time they are out each day.
+* soil will dry out more quickly outside, so check moisture.
+* plant once all danger of frost has past",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
 05/07/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Dahlias Dorothy (Sm) 05/07/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 05/07/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Dahlias Lady Natalie (Sm 4”) 05/07/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 05/07/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Dahlias Wizard of Oz (Sm 3”) 05/07/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 05/07/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Dahlias Golden Scepter (Sm 2”) 05/07/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/08/2020,,Transplant,Transplant,Tony Gilkerson,Celosia Cockscomb Coral Reef 03/27/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+05/08/2020,,Transplant,Transplant,Tony Gilkerson,Celosia Cockscomb Coral Reef 03/28/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+05/08/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Sunflower Autumn Beauty Mix 05/08/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 05/08/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Dahlias Lancresse (Med 4-6“) 05/08/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 05/08/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Dahlias Peaches n Cream (Med 4-6“) 05/08/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 05/08/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Dahlias Thomas Edison (Med 6”) 05/08/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
@@ -1101,93 +880,86 @@ That is a total of 16 lbs Urea (45-0-0). If you find Urea somewhere else but in 
 05/09/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Dahlias Hamari Gold (XL 10”) 05/09/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 05/09/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Dahlias Penhill Watermelon (XL 10”) 05/09/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 05/09/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Dahlias Otto’s Thrill (XL) 05/09/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+05/10/2020,,SS: Harden off,Greenhouse Activity,Tony Gilkerson,Craspedia (Drumstick Flower) Sun Ball 04/12/2020 ,,Seed Starting,,,"* set trays in a sheltered spot outside, increasing the amount of time they are out each day.
+* soil will dry out more quickly outside, so check moisture.
+* plant once all danger of frost has past",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
+05/10/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Dahlias Lucky Number 05/10/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+05/10/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Dahlias Eye Opener Blend 05/10/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+05/10/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Dahlias Noordwijks Glorie 05/10/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 05/11/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Shiso Perilla Purple Zi Su 05/11/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/11/2020,,Transplant,Transplant,Tony Gilkerson,Ammi (False Queen Anne's Lace) Green Mist 03/27/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/11/2020,,Transplant,Transplant,Tony Gilkerson,Ammi (False Queen Anne's Lace) Chocolate Lace 03/27/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/11/2020,,Transplant,Transplant,Tony Gilkerson,Dahlias Giant Hybrid Mix (seed) 04/09/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-=======
-05/06/2020,,Transplant,Transplant,Tony Gilkerson,Ammi (False Queen Anne's Lace) Green Mist 03/18/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/06/2020,,Transplant,Transplant,Tony Gilkerson,Ammi (False Queen Anne's Lace) Chocolate Lace 03/18/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/07/2020,,Transplant,Transplant,Tony Gilkerson,Cosmos Double Click Bicolor Pink 04/09/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/07/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Dahlias Black Satin (Sm 2-4”) 05/07/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/07/2020,,Direct Sow,Direct Sow,Teresa Gilkerson,Cress Emerald Beads 05/07/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/07/2020,,Transplant,Transplant,Tony Gilkerson,Cosmos Double Click Snow Puff 04/09/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/07/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Dahlias Café Au Lait (XL) 05/07/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/07/2020,,Direct Sow,Direct Sow,Teresa Gilkerson,Cress Wrinkled Crinkled 05/07/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/07/2020,,Transplant,Transplant,Tony Gilkerson,Cosmos Cupcake Blush 04/09/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/07/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Dahlias Cornel (Sm 4”) 05/07/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/07/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Dahlias Franz Kafka (Sm 2-3”) 05/07/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/07/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Dahlias Jan Ryecroft (Sm 4”) 05/07/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/07/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Dahlias Lancresse (Med 4-6“) 05/07/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/07/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Dahlias Peaches n Cream (Med 4-6“) 05/07/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/07/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Dahlias Shiloh Noelle (XL 10”) 05/07/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/07/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Dahlias Thomas Edison (Med 6”) 05/07/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/07/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Dahlias BoomBoom White (Med 6”) 05/07/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/07/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Dahlias Conn.Coral (Med) 05/07/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/07/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Dahlias Dorothy (Sm) 05/07/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/07/2020,,Transplant,Transplant,Tony Gilkerson,Dahlias Giant Hybrid Mix (seed) 04/05/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/07/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Dahlias Hamari Gold (XL 10”) 05/07/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/07/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Dahlias Lady Natalie (Sm 4”) 05/07/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/07/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Dahlias Mystique (Med 4-6“) 05/07/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/07/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Dahlias Penhill Watermelon (XL 10”) 05/07/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/07/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Dahlias Sweet Nathalie (Med. 5”) 05/07/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/07/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Dahlias Wizard of Oz (Sm 3”) 05/07/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/07/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Dahlias Otto’s Thrill (XL) 05/07/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/07/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Dahlias Golden Scepter (Sm 2”) 05/07/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/08/2020,,Transplant,Transplant,Tony Gilkerson,Celosia Cockscomb Coral Reef 03/27/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/11/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Shiso Perilla Purple Zi Su 05/11/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
->>>>>>> master
-05/13/2020,,Transplant,Transplant,Tony Gilkerson,Aster Chamois Apricot 04/01/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/13/2020,,Transplant,Transplant,Tony Gilkerson,Aster Valkyrie Pink 04/01/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+05/11/2020,,Transplant,Transplant,Tony Gilkerson,Ornamental Grasses Bunny Tails 04/12/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+05/11/2020,,SS: Water deeply on initial field planting,Greenhouse Activity,Tony Gilkerson,Ornamental Grasses Bunny Tails 04/12/2020 ,,Seed Starting,,,"* water deeply right after planting in field
+* steadily nurture for the first month
+* irrigate to  keep ground moist but not soggy",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
+05/11/2020,,Transplant,Transplant,Tony Gilkerson,Ammi (False Queen Anne's Lace) Green Mist 03/28/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+05/11/2020,,Transplant,Transplant,Tony Gilkerson,Ammi (False Queen Anne's Lace) Chocolate Lace 03/28/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+05/11/2020,,Transplant,Transplant,Tony Gilkerson,Dahlias Giant Hybrid Mix (seed) 04/12/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+05/13/2020,,SS: Harden off,Greenhouse Activity,Tony Gilkerson,Ornamental Grasses Frosted Explosion 04/12/2020 ,,Seed Starting,,,"* set trays in a sheltered spot outside, increasing the amount of time they are out each day.
+* soil will dry out more quickly outside, so check moisture.
+* plant once all danger of frost has past",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
+05/14/2020,,Transplant,Transplant,Tony Gilkerson,Aster Chamois Apricot 04/08/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+05/14/2020,,SS: Water deeply on initial field planting,Greenhouse Activity,Tony Gilkerson,Aster Chamois Apricot 04/08/2020 ,,Seed Starting,,,"* water deeply right after planting in field
+* steadily nurture for the first month
+* irrigate to  keep ground moist but not soggy",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
+05/14/2020,,Transplant,Transplant,Tony Gilkerson,Aster Valkyrie Pink 04/08/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+05/14/2020,,SS: Water deeply on initial field planting,Greenhouse Activity,Tony Gilkerson,Aster Valkyrie Pink 04/08/2020 ,,Seed Starting,,,"* water deeply right after planting in field
+* steadily nurture for the first month
+* irrigate to  keep ground moist but not soggy",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
+05/17/2020,,Transplant,Transplant,Tony Gilkerson,Craspedia (Drumstick Flower) Sun Ball 04/12/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+05/17/2020,,SS: Water deeply on initial field planting,Greenhouse Activity,Tony Gilkerson,Craspedia (Drumstick Flower) Sun Ball 04/12/2020 ,,Seed Starting,,,"* water deeply right after planting in field
+* steadily nurture for the first month
+* irrigate to  keep ground moist but not soggy",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
 05/18/2020,,Transplant,Transplant,Tony Gilkerson,Mignonette Mignonette Standard 04/13/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 05/18/2020,,Transplant,Transplant,Tony Gilkerson,Shiso Perilla Purple Zi Su 04/20/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 05/18/2020,,Transplant,Transplant,Tony Gilkerson,Mignonette White Mignonette 04/13/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-05/18/2020,,Transplant,Transplant,Tony Gilkerson,Ornamental Grasses Frosted Explosion 04/06/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+05/20/2020,,Transplant,Transplant,Tony Gilkerson,Ornamental Grasses Frosted Explosion 04/12/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+05/20/2020,,SS: Water deeply on initial field planting,Greenhouse Activity,Tony Gilkerson,Ornamental Grasses Frosted Explosion 04/12/2020 ,,Seed Starting,,,"* water deeply right after planting in field
+* steadily nurture for the first month
+* irrigate to  keep ground moist but not soggy",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
 05/21/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Gypsophila (Baby's Breath) Covent Garden Market 05/21/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 05/23/2020,,Transplant,Transplant,Tony Gilkerson,Amaranthus Hot Biscuits 04/25/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+05/23/2020,,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Celosia Pampas Plume 04/08/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
 05/23/2020,,Transplant,Transplant,Tony Gilkerson,Amaranthus Green Tails 04/25/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 05/25/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Amaranthus Hot Biscuits 05/25/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+05/27/2020,,SS: Thin to one plant per cell,Greenhouse Activity,Tony Gilkerson,Celosia Texas Plume Summer Sherbert 04/08/2020 ,,Seed Starting,,,Thin so as to have one good plant per cell.  If a cell has two plants remove the smallest one :-(,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
 05/28/2020,,Transplant,Transplant,Tony Gilkerson,Cosmos Rubenza 04/30/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 05/28/2020,,Transplant,Transplant,Tony Gilkerson,Cosmos Apricot Lemonade 04/30/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 05/28/2020,,Transplant,Transplant,Tony Gilkerson,Cosmos Double Click Mix 04/30/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-<<<<<<< HEAD
 05/29/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Basil Mrs. Burns' Lemon 05/29/2020 ,,,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-=======
-05/29/2020,,Direct Sow,Direct Sow,Teresa Gilkerson,Basil Mrs. Burns' Lemon 05/29/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
->>>>>>> master
 05/29/2020,,Greenhouse Sow,Greenhouse Sow,Tony Gilkerson,Mignonette White Mignonette 05/29/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-06/04/2020,,Transplant,Transplant,Tony Gilkerson,Celosia Pampas Plume 04/02/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+05/30/2020,,SS: Harden off,Greenhouse Activity,Tony Gilkerson,Celosia Pampas Plume 04/08/2020 ,,Seed Starting,,,"* set trays in a sheltered spot outside, increasing the amount of time they are out each day.
+* soil will dry out more quickly outside, so check moisture.
+* plant once all danger of frost has past",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
+06/03/2020,,SS: Harden off,Greenhouse Activity,Tony Gilkerson,Celosia Texas Plume Summer Sherbert 04/08/2020 ,,Seed Starting,,,"* set trays in a sheltered spot outside, increasing the amount of time they are out each day.
+* soil will dry out more quickly outside, so check moisture.
+* plant once all danger of frost has past",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
+06/06/2020,,Transplant,Transplant,Tony Gilkerson,Celosia Pampas Plume 04/08/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+06/06/2020,,SS: Water deeply on initial field planting,Greenhouse Activity,Tony Gilkerson,Celosia Pampas Plume 04/08/2020 ,,Seed Starting,,,"* water deeply right after planting in field
+* steadily nurture for the first month
+* irrigate to  keep ground moist but not soggy",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
 06/08/2020,,Transplant,Transplant,Tony Gilkerson,Shiso Perilla Purple Zi Su 05/11/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 06/09/2020,,Transplant,Transplant,Tony Gilkerson,Mignonette Mignonette Standard 05/05/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 06/09/2020,,Transplant,Transplant,Tony Gilkerson,Mignonette White Mignonette 05/05/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 06/10/2020,,Transplant,Transplant,Tony Gilkerson,Celosia Texas Plume Summer Sherbert 04/08/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-<<<<<<< HEAD
+06/10/2020,,SS: Water deeply on initial field planting,Greenhouse Activity,Tony Gilkerson,Celosia Texas Plume Summer Sherbert 04/08/2020 ,,Seed Starting,,,"* water deeply right after planting in field
+* steadily nurture for the first month
+* irrigate to  keep ground moist but not soggy",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
 06/18/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Cress Emerald Beads 06/18/2020 ,,,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
 06/18/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Cress Pennycress 06/18/2020 ,,,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
 06/19/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Basil Aromatto 06/19/2020 ,,,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
 06/19/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Basil Mrs. Burns' Lemon 06/19/2020 ,,,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
 06/22/2020,,Transplant,Transplant,Tony Gilkerson,Amaranthus Hot Biscuits 05/25/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+06/27/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Pumpkins Generic Variety 06/27/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
+06/27/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Pumpkins Flat Stacker 06/27/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 06/29/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Gypsophila (Baby's Breath) Covent Garden Market 06/29/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 07/03/2020,,Transplant,Transplant,Tony Gilkerson,Mignonette White Mignonette 05/29/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
 07/09/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Cress Wrinkled Crinkled 07/09/2020 ,,,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
 07/09/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Cress Pennycress 07/09/2020 ,,,,,,,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-=======
-06/18/2020,,Direct Sow,Direct Sow,Teresa Gilkerson,Cress Emerald Beads 06/18/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-06/18/2020,,Direct Sow,Direct Sow,Teresa Gilkerson,Cress Pennycress 06/18/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-06/19/2020,,Direct Sow,Direct Sow,Teresa Gilkerson,Basil Aromatto 06/19/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-06/19/2020,,Direct Sow,Direct Sow,Teresa Gilkerson,Basil Mrs. Burns' Lemon 06/19/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-06/22/2020,,Transplant,Transplant,Tony Gilkerson,Amaranthus Hot Biscuits 05/25/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-06/29/2020,,Direct Sow,Direct Sow,Tony Gilkerson,Gypsophila (Baby's Breath) Covent Garden Market 06/29/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-07/03/2020,,Transplant,Transplant,Tony Gilkerson,Mignonette White Mignonette 05/29/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-07/09/2020,,Direct Sow,Direct Sow,Teresa Gilkerson,Cress Wrinkled Crinkled 07/09/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
-07/09/2020,,Direct Sow,Direct Sow,Teresa Gilkerson,Cress Pennycress 07/09/2020 ,,,,,,,,,,,,,,,,,,,,,,,,0.0,0.0,No,
->>>>>>> master
-07/10/2020,,BES: Add support,Support,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Cherry Brandy 02/15/2020 ,,,,,"Add in the field growing support, either netting or corralling.",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-07/10/2020,,BES: Add support,Support,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Chim Chiminee Mix 02/15/2020 ,,,,,"Add in the field growing support, either netting or corralling.",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-07/10/2020,,BES: Add support,Support,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Denver Daisy Film-Coated 02/15/2020 ,,,,,"Add in the field growing support, either netting or corralling.",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-07/10/2020,,BES: Add support,Support,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Prairie Sun 02/15/2020 ,,,,,"Add in the field growing support, either netting or corralling.",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-07/10/2020,,BES: Add support,Support,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Sahara 02/15/2020 ,,,,,"Add in the field growing support, either netting or corralling.",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
-07/12/2020,,BES: Add support,Support,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Macau 02/17/2020 ,,,,,"Add in the field growing support, either netting or corralling.",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
+07/22/2020,,BES: Add support,Support,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Cherry Brandy 02/15/2020 ,,,,,"Add in the field growing support, either netting or corralling.",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
+07/22/2020,,BES: Add support,Support,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Chim Chiminee Mix 02/15/2020 ,,,,,"Add in the field growing support, either netting or corralling.",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
+07/22/2020,,BES: Add support,Support,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Denver Daisy Film-Coated 02/15/2020 ,,,,,"Add in the field growing support, either netting or corralling.",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
+07/22/2020,,BES: Add support,Support,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Prairie Sun 02/15/2020 ,,,,,"Add in the field growing support, either netting or corralling.",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
+07/22/2020,,BES: Add support,Support,Tony Gilkerson,Rudbeckia (Black-Eyed Susan) Sahara 02/15/2020 ,,,,,"Add in the field growing support, either netting or corralling.",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
 07/26/2020,,EUC: Add support,Support,Tony Gilkerson,Eucalyptus Silver Dollar 02/17/2020 ,,,,,"Add in the field growing support, either netting or corralling.",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
 07/26/2020,,EUC: Add support,Support,Tony Gilkerson,Eucalyptus Silver Dollar 02/17/2020 ,,,,,"Add in the field growing support, either netting or corralling.",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
 07/27/2020,,EUC: Add support,Support,Tony Gilkerson,Eucalyptus Parviflora 02/18/2020 ,,,,,"Add in the field growing support, either netting or corralling.",,,0,,,,,,,,,,,,,,,,0.0,0.0,No,
