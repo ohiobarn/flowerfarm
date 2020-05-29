@@ -4,8 +4,11 @@ nav:
   - Home: index.md
   - Plans:
     - Spring 2020: spring2020/plan.md
-  - Resources: resources.md
-  - Etc: etc.md
+  - Info:
+    - Resources: resources.md
+    - Etc: etc.md
+  - Workflow
+    - squarespace-products.md
   - About: about.md
 
 #theme: readthedocs
