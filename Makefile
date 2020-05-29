@@ -1,5 +1,6 @@
 WP_URL := https://ohiobarnflowerfarm.com
 YYMMDD := $(shell echo "`date +%Y%m%d`")
+VARIETY_LIST=$(shell echo "`yq r tend/csv_export/Crop_plan.json [].Variety`")
 
 
 
@@ -32,6 +33,9 @@ endef
 help:
 	$(call help_info)
 
-squarespace-todo:
-	echo todo
+ss-merge:
+	# Convert crop plan to json then to yaml
+	#rm -rf tend/wrk
+	# mkdir -p wrk
+	src/merge.sh ${PWD}/tend/csv_export/Crop_plan.csv ${PWD}/squarespace/export/products.csv
 
