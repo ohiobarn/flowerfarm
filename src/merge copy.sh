@@ -37,47 +37,24 @@ doMerge() {
   echo "[" > products-updated.json
   update_count=0;
   # loop through each product and update with infrormation from crop plan
-  # while read sku; do
+  while read sku; do
 
-  #   # Set fields from forecast sku
-  #   variety=$(jq --raw-output '.[] | select (.SKU == "$SKU") | .Variety' forecast.json)
-  #   plant=$(jq --raw-output '.[] | select (.SKU == "$SKU") | .Plant' forecast.json)
-  #   week1=$(jq --raw-output '.[] | select (.SKU == "$SKU") | ."This Week"' forecast.json)
+    # Variety
+    variety=$(jq --raw-output '.[] | select (.SKU == "$SKU") | .Variety' forecast.json)
+    plant=$(jq --raw-output '.[] | select (.SKU == "$SKU") | .Plant' forecast.json)
+    
 
     # compuge EST_YIELD
     # jq --raw-output ".[] | select(.Variety==\"$v\") | .estYield" Crop_plan.json > estyield-list.txt
     # est_yield=$(awk '{s+=$1} END {printf "%.0f\n", s}' estyield-list.txt) # sum up multiple occurances
 
-    # echo "*****************************************[$sku]*******************************************************"
+    echo "*****************************************[$sku]*******************************************************"
 
     # find product by sku
     product_count=$(jq ". | length" products.json)
     for (( p=0; p<$product_count; p++ ))
     do
-      # echo p [$p]
-
-      # working record
-      jq -c .[$p] products.json > product-record.json
-      product_sku=$(jq --raw-output .SKU product-record.json)
-
-#
-#
-# need to do this:
-eval "jq --raw-output '.[] | select (.SKU == \"$s\") | .SKU' ./wrk/forecast.json"
-#
-#
-      jq --raw-output '.[] | select (.SKU == $product_sku) | .SKU' forecast.json > SKU.txt
-      sku=$(cat SKU.txt)
-      echo sku $sku
-      # sku=$(jq --raw-output '.[] | select (.SKU == "AST-VALPK") | .SKU' forecast.json) 
-      variety=$(jq --raw-output '.[] | select (.SKU == "$product_sku") | .Variety' forecast.json)
-      plant=$(jq --raw-output '.[] | select (.SKU == "$product_sku") | .Plant' forecast.json)
-      week1=$(jq --raw-output '.[] | select (.SKU == "$product_sku") | ."This Week"' forecast.json)
-
-echo forecast sku [$sku] product_sku [$product_sku] >> log.txt
-# echo forecast variety [$variety]
-# echo product_sku [$product_sku]
-
+      product_sku=$(jq --raw-output .[$p].SKU products.json)
       # echo compare [$sku] to [$product_sku]
       if [ "$sku" == "$product_sku" ]; then
         update_count=$((update_count+1))
@@ -86,7 +63,8 @@ echo forecast sku [$sku] product_sku [$product_sku] >> log.txt
         echo "Found sku: $product_sku at index $p" update_count $update_count
         echo "***************************************************"
         echo " "
-        yq w product-record.json Description "$plant - $variety (forcast: $week1)" --tojson --inplace
+        jq -c .[$p] products.json > product-record.json
+        yq w product-record.json Description "$plant - $variety_short (forcast: $est_yield Stems)" --tojson --inplace
 
         if [ "$update_count" -gt "1" ]; then
           printf "," >> products-updated.json
@@ -95,8 +73,8 @@ echo forecast sku [$sku] product_sku [$product_sku] >> log.txt
       fi
     done
 
-  # done <sku-list.txt
-  # # close up the array
+  done <sku-list.txt
+  # close up the array
   echo "]" >>  products-updated.json
 
 }
