@@ -37,5 +37,5 @@ ss-merge:
 	# Convert crop plan to json then to yaml
 	#rm -rf tend/wrk
 	# mkdir -p wrk
-	src/merge.sh ${PWD}/tend/csv_export/Crop_plan.csv ${PWD}/squarespace/export/products.csv
+	src/merge.sh ${PWD}/exports/airtable/forecast.csv ${PWD}/exports/tend/csv_export/Crop_plan.csv ${PWD}/exports/squarespace/export/products.csv
 
