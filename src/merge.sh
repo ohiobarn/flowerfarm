@@ -26,79 +26,105 @@ doMerge() {
   mv Crop_plan.json Crop_plan-backup.json
   mv products-scrub.json products.json
   mv Crop_plan-scrub.json Crop_plan.json
-
-  #
-  # Generate a unique list of variety to drive the loop
-  #
-  #jq --raw-output '.[].Variety'  Crop_plan.json | sort | uniq > variety-list.txt
-  jq --raw-output '.[].SKU'  forecast.json | sort | uniq > sku-list.txt
-    
+ 
   # init with the start of an array
   echo "[" > products-updated.json
   update_count=0;
-  # loop through each product and update with infrormation from crop plan
-  # while read sku; do
 
-  #   # Set fields from forecast sku
-  #   variety=$(jq --raw-output '.[] | select (.SKU == "$SKU") | .Variety' forecast.json)
-  #   plant=$(jq --raw-output '.[] | select (.SKU == "$SKU") | .Plant' forecast.json)
-  #   week1=$(jq --raw-output '.[] | select (.SKU == "$SKU") | ."This Week"' forecast.json)
+  
+  # Loop through product records and find the corresponding forcast record
+  # update the product record with the info from the forcast record
+  # write new product record to products-updated.json
+  #
+  product_count=$(jq ". | length" products.json)
+  for (( p=0; p<$product_count; p++ ))
+  do
 
-    # compuge EST_YIELD
-    # jq --raw-output ".[] | select(.Variety==\"$v\") | .estYield" Crop_plan.json > estyield-list.txt
-    # est_yield=$(awk '{s+=$1} END {printf "%.0f\n", s}' estyield-list.txt) # sum up multiple occurances
+    # product record
+    jq -c .[$p] products.json > product-record.json
+    product_sku=$(jq --raw-output .SKU product-record.json)
 
-    # echo "*****************************************[$sku]*******************************************************"
+    #
+    # find corresponding forecast record if it exist
+    # 
+    eval "jq --raw-output '.[] | select (.SKU == \"$product_sku\")' forecast.json > forecast-record.json"
 
-    # find product by sku
-    product_count=$(jq ". | length" products.json)
-    for (( p=0; p<$product_count; p++ ))
-    do
-      # echo p [$p]
+    forecast_sku=$(jq --raw-output  '.SKU' forecast-record.json)
+    forecast_variety=$(jq --raw-output  '.Variety' forecast-record.json)
+    forecast_plant=$(jq --raw-output  '.Plant' forecast-record.json)
+    forecast_week1=$(jq --raw-output  '."This Week"' forecast-record.json)
+    forecast_notes=$(jq --raw-output  '.Notes' forecast-record.json)
 
-      # working record
-      jq -c .[$p] products.json > product-record.json
-      product_sku=$(jq --raw-output .SKU product-record.json)
+    #
+    # If found update product record with info from forcast record
+    #
+    if [ "$forecast_sku" == "$product_sku" ]; then
+      update_count=$((update_count+1))
+      echo " "
+      echo "***************************************************"
+      echo "Found sku: $product_sku at index $p" update_count $update_count
+      echo "***************************************************"
+      echo " "
+      echo "Using:"
+      echo forecast_sku [$forecast_sku]
+      echo forecast_variety [$forecast_variety]
+      echo forecast_plant [$forecast_plant]
+      echo forecast_week1 [$forecast_week1]
+      echo forecast_notes [$forecast_notes]
+      echo " "
 
-#
-#
-# need to do this:
-eval "jq --raw-output '.[] | select (.SKU == \"$s\") | .SKU' ./wrk/forecast.json"
-#
-#
-      jq --raw-output '.[] | select (.SKU == $product_sku) | .SKU' forecast.json > SKU.txt
-      sku=$(cat SKU.txt)
-      echo sku $sku
-      # sku=$(jq --raw-output '.[] | select (.SKU == "AST-VALPK") | .SKU' forecast.json) 
-      variety=$(jq --raw-output '.[] | select (.SKU == "$product_sku") | .Variety' forecast.json)
-      plant=$(jq --raw-output '.[] | select (.SKU == "$product_sku") | .Plant' forecast.json)
-      week1=$(jq --raw-output '.[] | select (.SKU == "$product_sku") | ."This Week"' forecast.json)
+      yq w product-record.json Description "$forecast_plant - $forecast_variety (forcast: $forecast_week1)  Notes: $forecast_notes" --tojson --inplace
+    fi
 
-echo forecast sku [$sku] product_sku [$product_sku] >> log.txt
-# echo forecast variety [$variety]
-# echo product_sku [$product_sku]
+    #
+    # write product record out to products-updated.json
+    #
+    if [ "$p" -gt "0" ]; then
+      printf "," >> products-updated.json
+    fi
+    cat product-record.json >>  products-updated.json
+  done
 
-      # echo compare [$sku] to [$product_sku]
-      if [ "$sku" == "$product_sku" ]; then
-        update_count=$((update_count+1))
-        echo " "
-        echo "***************************************************"
-        echo "Found sku: $product_sku at index $p" update_count $update_count
-        echo "***************************************************"
-        echo " "
-        yq w product-record.json Description "$plant - $variety (forcast: $week1)" --tojson --inplace
-
-        if [ "$update_count" -gt "1" ]; then
-          printf "," >> products-updated.json
-        fi
-        cat product-record.json >>  products-updated.json
-      fi
-    done
-
-  # done <sku-list.txt
-  # # close up the array
+  # close up the array
   echo "]" >>  products-updated.json
 
+  #
+  # json to csv
+  #
+  jq -r '.[] | [
+      ."Product ID [Non Editable]", 
+      ."Variant ID [Non Editable]",
+      ."Product Type [Non Editable]",
+      ."Product Page",
+      ."Product URL",
+      ."Title",
+      ."Description",
+      ."SKU",
+      ."Option Name 1",
+      ."Option Value 1",
+      ."Option Name 2",
+      ."Option Value 2",
+      ."Option Name 3",
+      ."Option Value 3",
+      ."Price",
+      ."Sale Price",
+      ."On Sale",
+      ."Stock",
+      ."Categories",
+      ."Tags",
+      ."Weight",
+      ."Length",
+      ."Width",
+      ."Height",
+      ."Visible",
+      ."Hosted Image URLs"    
+    ] | @csv' products-updated.json  > products-updated.csv
+
+  #
+  # Add header row
+  #
+  echo '"Product ID [Non Editable]","Variant ID [Non Editable]","Product Type [Non Editable]","Product Page","Product URL","Title","Description","SKU","Option Name 1","Option Value 1","Option Name 2","Option Value 2","Option Name 3","Option Value 3","Price","Sale Price","On Sale","Stock","Categories","Tags","Weight","Length","Width","Height","Visible","Hosted Image URLs"' \
+    | cat - products-updated.csv > temp && mv temp products-updated.csv
 }
 
 printUsage() {
