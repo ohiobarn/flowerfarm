@@ -32,17 +32,20 @@ doMerge() {
   update_count=0;
 
   
-  # Loop through product records and find the corresponding forcast record
-  # update the product record with the info from the forcast record
+  # Loop through product records and find the corresponding forecast record
+  # update the product record with the info from the forecast record
   # write new product record to products-updated.json
   #
   product_count=$(jq ". | length" products.json)
   for (( p=0; p<$product_count; p++ ))
   do
+    printf "."
 
     # product record
     jq -c .[$p] products.json > product-record.json
     product_sku=$(jq --raw-output .SKU product-record.json)
+    product_description=$(jq --raw-output .Description product-record.json)
+    product_visible=$(jq --raw-output .Visible product-record.json)
 
     #
     # find corresponding forecast record if it exist
@@ -53,10 +56,13 @@ doMerge() {
     forecast_variety=$(jq --raw-output  '.Variety' forecast-record.json)
     forecast_plant=$(jq --raw-output  '.Plant' forecast-record.json)
     forecast_week1=$(jq --raw-output  '."This Week"' forecast-record.json)
-    forecast_notes=$(jq --raw-output  '.Notes' forecast-record.json)
+    forecast_week2=$(jq --raw-output  '."Next Week"' forecast-record.json)
+    forecast_week3=$(jq --raw-output  '."Future"' forecast-record.json)
+    forecast_notes=$(jq --raw-output  '.Notes' forecast-record.json | sed 's/null//g')
+    forecast_comment=$(jq --raw-output  '.Comment' forecast-record.json)
 
     #
-    # If found update product record with info from forcast record
+    # If found update product record with info from forecast record
     #
     if [ "$forecast_sku" == "$product_sku" ]; then
       update_count=$((update_count+1))
@@ -64,16 +70,32 @@ doMerge() {
       echo "***************************************************"
       echo "Found sku: $product_sku at index $p" update_count $update_count
       echo "***************************************************"
-      echo " "
-      echo "Using:"
-      echo forecast_sku [$forecast_sku]
-      echo forecast_variety [$forecast_variety]
-      echo forecast_plant [$forecast_plant]
-      echo forecast_week1 [$forecast_week1]
-      echo forecast_notes [$forecast_notes]
-      echo " "
 
-      yq w product-record.json Description "$forecast_plant - $forecast_variety (forcast: $forecast_week1)  Notes: $forecast_notes" --tojson --inplace
+      echo " "
+      #
+      # Set new product field values
+      #
+      desc_part=$(echo $product_description | cut -d'|' -f 1)
+      forecast_part=$(echo $product_description | cut -d'|' -f 2)
+
+      if [[ "$product_description" == *"|"* ]]; then
+        new_product_description=$(echo $desc_part" |<br><hr><b>$forecast_comment</b><br>in one week: $forecast_week1 / in two weeks: $forecast_week3 / future: $forecast_week3<br>$forecast_notes</p>")
+      else
+        echo "Skipping forecast for this product, product description not changed... ######################################## WARN ################################"
+        new_product_description=$product_description        
+      fi
+      echo "Descriptions - before/after:"
+      echo "BEFORE: $product_description"
+      echo "AFTER.: $new_product_description"
+      
+      new_product_visible="true"
+      echo "Visible - before/after:"
+      echo "BEFORE: $product_visible"
+      echo "AFTER.: $new_product_visible"
+
+      yq w product-record.json Description "$new_product_description" --tojson --inplace
+      yq w product-record.json Visible "$new_product_visible" --tojson --inplace
+
     fi
 
     #
@@ -83,6 +105,8 @@ doMerge() {
       printf "," >> products-updated.json
     fi
     cat product-record.json >>  products-updated.json
+
+
   done
 
   # close up the array
@@ -144,7 +168,7 @@ printUsage() {
 
 # Check for input parm
 if [[ -z "$1" ]]; then
-  echo "Airtable forcast.csv is required"
+  echo "Airtable forecast.csv is required"
   printUsage
 elif [[ -z "$2" ]]; then
   echo "Tend Crop_plan.csv is required"

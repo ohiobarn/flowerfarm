@@ -57,13 +57,33 @@ Knowing your flow rate is critical to sizing your system.
 I did a flow test with the spigot out in the field.  It took about 55 seconds to fill 5 gallon bucket. I used the following formula to compute gallons per hour (GPH). Or you can use the [flow calculator](https://www.dripworks.com/resources/calculators/flow-estimator) from dripworks.com
 
 ```text
-55 gal   60 sec   60 min   18,000 gal
+5 gal    60 sec   60 min   18,000 gal
 ------ x ------ x ------ = ---------- ~=  327 GPH
 55 sec    1 min    1 hr       55 hr
 
 ```
 
 > Flow Capacity:  **327 GPH**
+
+> To provide your lawn with one inch of water takes a little over half a gallon per square foot (0.623 gallon to be more exact). That means that every 10’x10’ area will require over 62 gallons of water. 
+
+
+For one 80x4 bed it takes about 200 gal to provide 1" of water.
+
+```
+.623 Gal    (80ft x 4 ft bed)
+--------- x ----------------- = 199.36 ~ 200 gal
+  1sq ft
+```
+
+Using the [drip-tape-estimator](https://www.dripworks.com/resources/calculators/drip-tape-estimator) given 3 beds with 4 drip lines per bed on 80 feet long bed using **8mill 8" low flow tape** I get **Total water required:** of `192 GPH`.  I am not sure if I understand correctly but that is about the 200 gal from above so I think it will take:
+ 
+>about 1 hour for 1" of water
+
+
+
+
+
 
 ### Soil Type
 
