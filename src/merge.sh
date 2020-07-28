@@ -44,8 +44,10 @@ doMerge() {
     # product record
     jq -c .[$p] products.json > product-record.json
     product_sku=$(jq --raw-output .SKU product-record.json)
+    product_title=$(jq --raw-output .Title product-record.json)
     product_description=$(jq --raw-output .Description product-record.json)
     product_visible=$(jq --raw-output .Visible product-record.json)
+    product_page=$(jq --raw-output '."Product Page"' product-record.json)
 
     #
     # find corresponding forecast record if it exist
@@ -60,6 +62,8 @@ doMerge() {
     forecast_week3=$(jq --raw-output  '."Future"' forecast-record.json)
     forecast_notes=$(jq --raw-output  '.Notes' forecast-record.json | sed 's/null//g')
     forecast_comment=$(jq --raw-output  '.Comment' forecast-record.json)
+    forecast_show=$(jq --raw-output  '.Show' forecast-record.json) 
+    forecast_stems_per_bunch=$(jq --raw-output  '."Stems per Bunch"' forecast-record.json)
 
     #
     # If found update product record with info from forecast record
@@ -75,24 +79,39 @@ doMerge() {
       #
       # Set new product field values
       #
-      desc_part=$(echo $product_description | cut -d'|' -f 1)
-      forecast_part=$(echo $product_description | cut -d'|' -f 2)
+      # desc_part=$(echo $product_description | cut -d'|' -f 1)
+      # forecast_part=$(echo $product_description | cut -d'|' -f 2)
+      
+      new_product_title=$(echo "$forecast_plant - $forecast_variety")
 
-      if [[ "$product_description" == *"|"* ]]; then
-        new_product_description=$(echo $desc_part" |<br><hr><b>$forecast_comment</b><br>in one week: $forecast_week1 / in two weeks: $forecast_week3 / future: $forecast_week3<br>$forecast_notes</p>")
-      else
-        echo "Skipping forecast for this product, product description not changed... ######################################## WARN ################################"
-        new_product_description=$product_description        
-      fi
+      # if [[ "$product_description" == *"|"* ]]; then
+        new_product_description=$(echo "<p>$new_product_title | $forecast_sku <br><hr><b>Forecast:</b><br>This week: $forecast_week1 / Next week: $forecast_week2 / Future: $forecast_week3<br> $forecast_stems_per_bunch stems per bunch<br>$forecast_notes</p>")
+      # else
+      #   echo "######################################## WARNING ################################"
+      #   echo "NO PIPE found skipping forecast for this product, product description not changed..."
+      #   new_product_description=$product_description        
+      # fi
       echo "Descriptions - before/after:"
       echo "BEFORE: $product_description"
       echo "AFTER.: $new_product_description"
-      
-      new_product_visible="true"
+      echo " "
+  
+      if [ "$forecast_show" == "true" ]; then
+        new_product_visible="true"
+      else
+        new_product_visible="false"
+      fi
       echo "Visible - before/after:"
       echo "BEFORE: $product_visible"
       echo "AFTER.: $new_product_visible"
+      echo " "
 
+      echo "Title - before/after:"
+      echo "BEFORE: $product_title"
+      echo "AFTER.: $new_product_title"
+      echo " "
+
+      yq w product-record.json Title "$new_product_title" --tojson --inplace
       yq w product-record.json Description "$new_product_description" --tojson --inplace
       yq w product-record.json Visible "$new_product_visible" --tojson --inplace
 
