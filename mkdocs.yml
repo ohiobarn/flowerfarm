@@ -7,8 +7,10 @@ nav:
   - Info:
     - Resources: resources.md
     - Etc: etc.md
-  - Workflow
+  - Workflow:
     - squarespace-products.md
+  - Crew:
+    - crew.md
   - About: about.md
 
 #theme: readthedocs
