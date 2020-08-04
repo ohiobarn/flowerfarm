@@ -7,11 +7,11 @@
         
         <meta name="author" content="Tony Gilkerson">
         
-        <link rel="shortcut icon" href="/img/favicon.ico">
-        <title>Ohio Barn Flower Farm</title>
-        <link href="/css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="/css/font-awesome.min.css" rel="stylesheet">
-        <link href="/css/base.css" rel="stylesheet">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Squarespace Products Sync Workflow - Ohio Barn Flower Farm</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -19,8 +19,8 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <script src="/js/jquery-1.10.2.min.js" defer></script>
-        <script src="/js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
@@ -39,7 +39,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/.">Ohio Barn Flower Farm</a>
+                    <a class="navbar-brand" href="../..">Ohio Barn Flower Farm</a>
                 </div>
 
                 <!-- Expanded navigation -->
@@ -47,14 +47,14 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li >
-                                <a href="/.">Home</a>
+                                <a href="../..">Home</a>
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Plans <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="/spring2020/plan/">Spring 2020</a>
+    <a href="../../spring2020/plan/">Spring 2020</a>
 </li>
                                 </ul>
                             </li>
@@ -63,24 +63,24 @@
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="/resources/">Resources</a>
+    <a href="../../resources/">Resources</a>
 </li>
                                     
 <li >
-    <a href="/etc/">Etc</a>
+    <a href="../../etc/">Etc</a>
 </li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Workflow <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="/workflow/mkdocs/">mkdocs</a>
+    <a href="../mkdocs/">mkdocs</a>
 </li>
                                     
-<li >
-    <a href="/workflow/squarespace-products/">Squarespace Products Sync Workflow</a>
+<li class="active">
+    <a href="./">Squarespace Products Sync Workflow</a>
 </li>
                                 </ul>
                             </li>
@@ -89,12 +89,12 @@
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="/crew/">Home</a>
+    <a href="../../crew/">Home</a>
 </li>
                                 </ul>
                             </li>
                             <li >
-                                <a href="/about/">About</a>
+                                <a href="../../about/">About</a>
                             </li>
                         </ul>
 
@@ -104,21 +104,63 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
+                            <li >
+                                <a rel="next" href="../mkdocs/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../../crew/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
                     </ul>
                 </div>
             </div>
         </div>
 
         <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#squarespace-products-sync-workflow">Squarespace Products Sync Workflow</a></li>
+            <li><a href="#preorder">Preorder</a></li>
+            <li><a href="#forecast">Forecast</a></li>
+            <li><a href="#square-space-products">Square Space Products</a></li>
+            <li><a href="#prerequisites">Prerequisites</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
 
-    <div class="row-fluid">
-      <div id="main-content" class="span12">
-        <h1 id="404-page-not-found" style="text-align: center">404</h1>
-        <p style="text-align: center"><strong>Page not found</strong></p>
-      </div>
-    </div>
+<h1 id="squarespace-products-sync-workflow">Squarespace Products Sync Workflow</h1>
+<p>Reference:</p>
+<ul>
+<li><a href="https://ohiobarnflowerfarm.com/">OBFF website</a></li>
+<li><a href="https://airtable.com/">Airtable</a></li>
+</ul>
+<h2 id="preorder">Preorder</h2>
+<p>When customers go to the <a href="https://ohiobarnflowerfarm.com/preorder">OBFF preorder page</a> and they are presented with an Airtable form. The form will create records in the <code>Preorder</code> table.  </p>
+<blockquote>
+<p>todo - need to implement a notification when preorders are created</p>
+</blockquote>
+<p>The <code>Preorder</code> table has a status column. When a preorder is taken care of the status should be moved to <code>done</code>.  The record can be deleted at that point.</p>
+<h2 id="forecast">Forecast</h2>
+<p>After a survey of the beds an estimate of the number of stems that can be harvested in a week, two weeks and beyond are created. Estimate week two as if all stems in week one are sold to customers. Do the same for future estimates.  Enter the estimated number of stems by SKU in to the <code>Forecast</code> table in Airtable.</p>
+<p>An Airtable public view if the information in the <code>Forecast</code> table can be viewed by customers on the <a href="https://ohiobarnflowerfarm.com/forecast">OBFF forecast page</a></p>
+<h2 id="square-space-products">Square Space Products</h2>
+<p>The <code>Square Space Products</code> table is an import of the products exported from Squarespace.</p>
+<blockquote>
+<p>todo - I don't think this is needed, confirm and remove if true</p>
+</blockquote>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>This workflow uses the following tools for working with CSV files.</p>
+<p>See the <a href="https://csvkit.readthedocs.io/en/latest/">csvkit doc here</a></p>
+<pre><code class="bash">sudo pip install csvkit
+</code></pre>
 
-
+<p>Below is example usage:</p>
+<pre><code class="bash">csvjson tend/csv_export/Crop_plan.csv | jq &gt; test.json
+in2csv test.json 
+</code></pre></div>
         </div>
 
         <footer class="col-md-12">
@@ -126,11 +168,11 @@
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = "/",
+            var base_url = "../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="/js/base.js" defer></script>
-        <script src="/search/main.js" defer></script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
     <div class="modal-dialog">
