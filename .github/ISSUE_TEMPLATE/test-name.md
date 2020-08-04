@@ -1,8 +1,8 @@
 ---
 name: test template name
 about: test about
-title: 'this  is a title'
-labels: 'foo, bar'
+title: this  is a title
+labels: ''
 assignees: ''
 
 ---
