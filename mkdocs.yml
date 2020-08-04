@@ -3,14 +3,15 @@ site_author: Tony Gilkerson
 nav:
   - Home: index.md
   - Plans:
-    - Spring 2020: spring2020/plan.md
+    - spring2020/plan.md
   - Info:
-    - Resources: resources.md
-    - Etc: etc.md
+    - resources.md
+    - etc.md
   - Workflow:
-    - squarespace-products.md
+    - workflow/mkdocs.md
+    - workflow/squarespace-products.md
   - Crew:
-    - crew.md
+    - Home: crew/index.md
   - About: about.md
 
 #theme: readthedocs

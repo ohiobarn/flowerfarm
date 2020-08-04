@@ -1,17 +1,14 @@
-# Flowers
+# Resources
 
 ## Unclassified (inbox)
 
-  * [find certified compost suppliers](https://www.compostingcouncil.org/page/participants)
-  * [How to appy fertilizers](https://www.almanac.com/content/how-apply-fertilizers-your-garden)
-
-
+* [find certified compost suppliers](https://www.compostingcouncil.org/page/participants)
+* [How to appy fertilizers](https://www.almanac.com/content/how-apply-fertilizers-your-garden)
 
 ## PDFs
 
 * [Gloeckner-Seed_2020-2021](PDF/Gloeckner-Seed_2020-2021.pdf)
 * [specialty-cut-flowers-ebook.engastore.com](PDF/specialty-cut-flowers-ebook.engastore.com.pdf)
-
 
 ## Floret
   * [Floret Flowers](https://www.floretflowers.com/)

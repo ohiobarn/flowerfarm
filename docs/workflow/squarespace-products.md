@@ -1,4 +1,5 @@
-# Workflow for syncing with Squarespace
+# Squarespace Products Sync Workflow
+
 
 Reference:
 
@@ -24,3 +25,20 @@ An Airtable public view if the information in the `Forecast` table can be viewed
 The `Square Space Products` table is an import of the products exported from Squarespace.
 
 > todo - I don't think this is needed, confirm and remove if true
+
+## Prerequisites
+
+This workflow uses the following tools for working with CSV files.
+
+See the [csvkit doc here](https://csvkit.readthedocs.io/en/latest/)
+
+```bash
+sudo pip install csvkit
+```
+
+Below is example usage:
+
+```bash
+csvjson tend/csv_export/Crop_plan.csv | jq > test.json
+in2csv test.json 
+```
