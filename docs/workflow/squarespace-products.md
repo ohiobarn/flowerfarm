@@ -6,27 +6,43 @@ Reference:
 * [OBFF website](https://ohiobarnflowerfarm.com/)
 * [Airtable](https://airtable.com/)
 
-## Preorder
+## AirTable Public Views
 
-When customers go to the [OBFF preorder page](https://ohiobarnflowerfarm.com/preorder) and they are presented with an Airtable form. The form will create records in the `Preorder` table.  
+This section describes how to update the records in public views. These views are hosted in airtable and are shared or embedded on the OBFF website.
 
-> todo - need to implement a notification when preorders are created
+| View                                                             | Location                             | Referenced
+|------------------------------------------------------------------|--------------------------------------|------------
+[Estimated Yield (public)](https://airtable.com/shr68zqWOk0BYXgMj) | `FlowerDB2020:Forecast`              | [OBFF web](https://ohiobarnflowerfarm.com/forecast#estimated-yield)
+[Avail Plan (public)](https://airtable.com/shrbTArfM48DQykzV)      | `FlowerDB2020:Tend Crop Plan Ext`    | [OBFF web](https://ohiobarnflowerfarm.com/forecast#availability-at-a-glance)
 
-The `Preorder` table has a status column. When a preorder is taken care of the status should be moved to `done`.  The record can be deleted at that point.
+### Estimated Yield (public)
 
-## Forecast
+1. **Survey** - After a survey of the beds an estimate of the number of stems that can be harvested in a week, two weeks and beyond are created. Estimate week two as if all stems in week one are sold to customers. Do the same for future estimates.  
+1. **Edit Records**  - Edit or crate the records in the [Forecast(Back Office)](https://airtable.com/tblUwgrBBwsPngBVO/viwC45pNTVuBV6yOk?blocks=hide) table in Airtable. 
+    * Select the estimated number of stems by SKU in the `This Week`, `Next Week` and `Future` columns
+    * Adjust the `Stems per Bunch` if needed
+    * The `Starting` date is for your reference, it is not shown to the customer
+    * The `Notes` will show on the product detail page on the OBFF website.  
+1. **Done** - The updated records will automatically show in in  the public views
 
-After a survey of the beds an estimate of the number of stems that can be harvested in a week, two weeks and beyond are created. Estimate week two as if all stems in week one are sold to customers. Do the same for future estimates.  Enter the estimated number of stems by SKU in to the `Forecast` table in Airtable.
+### Avail Plan (public)
 
-An Airtable public view if the information in the `Forecast` table can be viewed by customers on the [OBFF forecast page](https://ohiobarnflowerfarm.com/forecast)
+**todo** - need to document the work flow for exporting from tend and importing into airtable
 
-## Square Space Products
+---
 
-The `Square Space Products` table is an import of the products exported from Squarespace.
+## Square Space Inventory
 
-> todo - I don't think this is needed, confirm and remove if true
+Todo - need to describe better the process that is something like:
 
-## Prerequisites
+* export [squarespace products](https://ohiobarnflowerfarm.squarespace.com/config/commerce/inventory) 
+* export Tend `Crop_plan`
+* export airtable 'Forecast.Back Office`
+* run make ss-merge
+* import  [squarespace products](https://ohiobarnflowerfarm.squarespace.com/config/commerce/inventory) 
+
+
+### Prerequisites
 
 This workflow uses the following tools for working with CSV files.
 

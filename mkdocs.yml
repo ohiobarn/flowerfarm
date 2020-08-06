@@ -15,3 +15,5 @@ nav:
   - About: about.md
 
 #theme: readthedocs
+theme:
+  name: material
