@@ -11,7 +11,7 @@ nav:
     - workflow/mkdocs.md
     - workflow/squarespace-products.md
   - Crew:
-    - Home: crew/index.md
+    - crew/index.md
   - About: about.md
 
 #theme: readthedocs
