@@ -1,6 +1,6 @@
 ---
-name: task
-about: this is a task template 
+name: Generic Task
+about: Template for a generic task
 title: task
 labels: 'task'
 assignees: ''
@@ -22,4 +22,3 @@ Task description
 
 * How long will this take:
 * How much coordination is needed:
-
