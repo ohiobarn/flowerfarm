@@ -11,6 +11,8 @@ Step to join our slack group:
 * Soon after you will receive an invitation in your inbox. Follow the instructions in the email.
 * After you join send a message to @tonygilkerson
 
+> **Note**: our slack group is called *Bagelwarehouse*
+
 ## Create an Intuit account
 
 Your Intuit account has several usages:
