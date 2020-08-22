@@ -1,21 +1,18 @@
-# OBFF Docs
+# OBFF Documentation
 
-Ohio Barn Flower Farm documentation web site. The one place to organize it all!
 
-## OBFF sites
+Our websites:
 
 * [ohiobarnflowerfarm.com](https://ohiobarnflowerfarm.com)
 * [blog](https://ohiobarnflowerfarm.blogspot.com)
+* [The Ohio Barn Wedding Venue ](https://www.theohiobarn.com)
 
-## OBFF Resources
+Important Bookmarks:
 
 * [Crew Bookmarks](https://raindrop.io/collection/12804436?q=tag:crew&sort=-sort)
 * [Backoffice Bookmarks](https://raindrop.io/collection/12804436?q=tag:backoffice&sort=-sort)
 * [All Bookmarks](https://raindrop.io/collection/12804436)
 
-## Sister Company
-* [The Ohio Barn Wedding Venue ](https://www.theohiobarn.com)
-
-## Address
+---
 
 8790 Dayton-Springfield Rd. Fairborn, OH 45324
