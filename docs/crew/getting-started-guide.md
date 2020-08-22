@@ -11,7 +11,7 @@ Steps to join our slack group:
 * Soon after you will receive an invitation in your inbox. Follow the instructions in the email.
 * After you join send a message to @tonygilkerson
 
-> **Note**: our slack group is called *Bagelwarehouse*
+>**Note**: our slack group is called *Bagelwarehouse*
 
 ## Create your crew contact record
 
@@ -23,4 +23,18 @@ Steps to complete the contact form:
 * Completed the required fields 
 * Click submit 
 
+## Setup your timesheet
 
+You will use [clockify.me](https://clockify.me/) to track your time on a weekly basis.  
+
+Steps for setting up your timesheet:
+
+* You will receive a **Workspace invitation** from *clockify.me* in your email inbox
+* Click the link in the email and create an account, you will automatically be added to the *Ohio Barn Flower Workspace*
+* Familiarize yourself with the *clockify.me* UI. Note any question you have and bring them up in your training session where we will cover how to fill out your timesheet
+
+clockify resources:
+
+* [apps](https://clockify.me/apps)
+* [tutorial](https://youtu.be/qFwf0DWh-HY)
+* [help](https://clockify.me/help/)
