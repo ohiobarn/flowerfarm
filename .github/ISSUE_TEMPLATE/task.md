@@ -6,8 +6,6 @@ labels: 'task'
 assignees: ''
 
 ---
-# Task Title
-
 Task description
 
 ## What is needed
@@ -20,5 +18,6 @@ Task description
 
 ## What to expect
 
-* How long will this take:
-* How much coordination is needed:
+* **How long will this take**:
+* **How much coordination is needed**:
+* **Do we need to purchase supplies**:
