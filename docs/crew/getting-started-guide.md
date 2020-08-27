@@ -39,9 +39,13 @@ clockify resources:
 * [tutorial](https://youtu.be/qFwf0DWh-HY)
 * [help](https://clockify.me/help/)
 
-## Task Management
+## Issues
 
-todo - this section is a work in progress.
+The [OBFF issue list](https://github.com/ohiobarn/flowerfarm/issues) is the tool you will used to plan your work, coordinate on tasks and indicate when you are blocked or don't have what you need to complete a task. 
+
+The process of "working issues" is new and will very likely change over time with your feedback on improvements.  The process is intended to work for everyone involved and so if it is not working for you please provide your frank criticism.
+
+See [issues](./issues.md) in this guide for more detail.
 
 Resources:
 

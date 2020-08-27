@@ -1,14 +1,16 @@
-# Tasks
+# Issues
 
 [Github issues](https://github.com/ohiobarn/flowerfarm/issues) are used to manage task for all crew members. 
 
 ## Becoming a project member
 
-todo
+You  will receive an invitation in your email inbox. The invitation will contain a link that you can use to join the `ohiobarn/flowerfarm` issues list. Click the link and join and start reviewing the list of issues. 
 
 ## Issue List
 
-todo - filters, labels and milestones
+todo - I need to describe:
+* how to use filters and labels to search the list
+* how will we use milestones
 
 ## Workflow
 
