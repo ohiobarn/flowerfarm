@@ -138,6 +138,10 @@ Each station is a five shelf unit.  The top shelf is used for storage and four s
 
 > 1,152 plants per station
 
+### Greenhouse Tray  Layout
+
+![](img/greenhouse-tray-layout.png)
+
 ---
 
 ## Beds Summary
