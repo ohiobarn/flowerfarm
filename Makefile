@@ -1,11 +1,6 @@
 WP_URL := https://ohiobarnflowerfarm.com
 YYMMDD := $(shell echo "`date +%Y%m%d`")
-<<<<<<< HEAD
 VARIETY_LIST=$(shell echo "`yq r tend/csv_export/Crop_plan.json [].Variety`")
-=======
->>>>>>> master
-
-
 
 
 ####################################################################################
