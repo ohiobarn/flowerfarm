@@ -1,7 +1,6 @@
 # The Ohio Barn Flower Farm
 
 Started 2019 by Tony and Teresa Gilkerson
-
 ## Contact Info
 
 * Tony <tony@ohiobarnflowerfarm.com>

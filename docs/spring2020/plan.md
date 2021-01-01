@@ -1,17 +1,5 @@
 # Spring 2020
 
-## Results
-
-* [Germ to buy list](https://airtable.com/shrCgcllsvxiaqQhT) - This is the AirTable with the list of seeds to buy for each variety
-
-## Quick Facts
-
-> * Fairborn, OH is in Zone 6a.
-> * On average, your frost-free growing season starts Apr 11 and ends Oct 30, totaling 202 days
-> * Spring 2020 in Northern Hemisphere will begin on Thursday, March 19
-
----
-
 ## Flower Field Layout
 
 Reference:
@@ -79,9 +67,6 @@ For one 80x4 bed it takes about 200 gal to provide 1" of water.
 Using the [drip-tape-estimator](https://www.dripworks.com/resources/calculators/drip-tape-estimator) given 3 beds with 4 drip lines per bed on 80 feet long bed using **8mill 8" low flow tape** I get **Total water required:** of `192 GPH`.  I am not sure if I understand correctly but that is about the 200 gal from above so I think it will take:
  
 >about 1 hour for 1" of water
-
-
-
 
 
 

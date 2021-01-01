@@ -1,12 +1,12 @@
-site_name: Ohio Barn Flower Farm
+site_name: OBFF
 site_author: Tony Gilkerson
 nav:
-  - Home: index.md
   - Plans:
+    - spring2021/plan.md
     - spring2020/plan.md
   - Info:
     - resources.md
-    - etc.md
+    - seasons.md
   - Workflow:
     - workflow/mkdocs.md
     - workflow/squarespace-products.md
@@ -20,4 +20,11 @@ nav:
 
 #theme: readthedocs
 theme:
-  name: material
+  # name: readthedocs
+  # name: nature
+  # name: material
+  name: cluster
+  # name: windmill
+  # name: bootstrap386
+  # name: gitbook
+  # name: github  
