@@ -30,8 +30,7 @@ open http://127.0.0.1:8000/
 
 ```bash
 cd OpsDoc
-mkdocs build --clean
-mkdocs gh-deploy
+mkdocs build --cleanmkdocs gh-deploy
 open https://tonygilkerson.github.io/flowerfarm/
 ```
 

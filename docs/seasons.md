@@ -1,14 +1,15 @@
-# Etc
+# Seasons
 
-## Seasons
+## Quick Facts
 
-*Fairborn, OH is in Zone 6a*
+> * Fairborn, OH is in Zone 6a.
+> * On average, our frost-free growing season starts Apr 11 and ends Oct 30, totaling 202 days
+> * Spring 2020 in Northern Hemisphere will begin on Thursday, March 19
 
-First and last frost dates for my zip 45324.
+---
 
 * Average Last Frost:  04/23/20&clubs;
 * Average First Frost: 10/05/30&spades;
-
 
 <table style="width:100%" border=1>
   <tr>
