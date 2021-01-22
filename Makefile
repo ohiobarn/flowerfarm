@@ -12,10 +12,9 @@ define help_info
 	@echo "Squarespace Workflow:"
 	@echo "******************************************************************************"
 	@echo ""
-	@echo " todo:"
-	@echo "   1 - todo"
-	@echo "   2 - todo"
-	@echo "   3 - todo ${YYMMDD}"
+	@echo " see:"
+	@echo "   1 - https://ohiobarn.github.io/flowerfarm/workflow/squarespace-products/"
+	@echo "   2 - make ss-merge"
   @echo ""
 	@echo "******************************************************************************"
 	@echo "mkdocs Workflow:"
@@ -33,7 +32,5 @@ help:
 
 ss-merge:
 	# Convert crop plan to json then to yaml
-	#rm -rf tend/wrk
-	# mkdir -p wrk
-	src/merge.sh ${PWD}/exports/airtable/forecast.csv ${PWD}/exports/tend/csv_export/Crop_plan.csv ${PWD}/exports/squarespace/export/products.csv
+	src/merge.sh ${PWD}/exports/airtable/forecast.csv ${PWD}/exports/squarespace/export/products.csv
 
