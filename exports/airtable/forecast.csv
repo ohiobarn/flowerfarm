@@ -1,2 +1,14 @@
-﻿ID,Variety,SKU,Crop,Color,Category,Availability Months,Notes,Image,Show,This Week,Next Week,Future,Stems per Bunch
-1,Test Flower,sku-xxxxx,ztest,Blue,Flower,,I am notes,2020-12-31 12.29.39.jpg (https://dl.airtable.com/.attachments/fa8c3aef220e6308cbdb7fc3eea23aee/6b0bace0/2020-12-3112.29.39.jpg),checked,1 Bunch,2 Bunches,3 Bunches,10
+﻿ID,Variety,Grower SKU,Grower,SKU,Crop,Color,Category,Availability Months,Notes,Image,This Week,Next Week,Future,Stems per Bunch
+250,Test Flower,sku-xxxxx,OBFF,OBFF-sku-xxxxx,ztest,Blue,Flower,"August,May",I am notes xxx,2020-12-31 12.29.39.jpg (https://dl.airtable.com/.attachments/ad3740098b985f31d2f3076b84f9d4e7/4516836f/2020-12-3112.29.39.jpg),1 Bunch,2 Bunches,3 Bunches,10
+251,test 1,1,GRF,GRF-1,Cosmos,Yellow,Flower,"August,September",,,1 Bunch,3 Bunches,5 Bunches,5
+252,test 2,2,GRF,GRF-2,Cosmos,Blue,Filler,"September,October",,,5 Bunches,8 Bunches,13 Bunches,5
+253,Green Drops,1,TMG,TMG-1,Ornamental Grass,Green,Foliage,"August,September","Dried
+Panicum violaceum
+70 DTM",,1 Bunch,2 Bunches,3 Bunches,10
+254,Book-Leaf Mallee,2,TMG,TMG-2,Eucalyptus,Green,Foliage,"September,October","Dried
+Eucalyptus kruseana
+135 DTM",,1 Bunch,2 Bunches,3 Bunches,10
+255,Flamingo Feather,3,TMG,TMG-3,Celosia,Pink,Flower,"May,July","Dried
+Celosia argentea spicata
+90 DTM
+",,1 Bunch,2 Bunches,3 Bunches,10

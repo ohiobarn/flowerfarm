@@ -24,14 +24,12 @@ doMerge() {
   echo "[" > products-updated.json
   update_count=0;
 
-  #####################################################################################
+  
   # Loop through product records and find the corresponding forecast record
   # update the product record with the info from the forecast record
   # write new product record to products-updated.json
-  #####################################################################################
-  
+  #
   product_count=$(jq ". | length" products.json)
-  printf "\nLook at $product_count product records, check for updates...\n"
   for (( p=0; p<$product_count; p++ ))
   do
     printf "."
@@ -67,28 +65,36 @@ doMerge() {
       echo "***************************************************"
       echo "Found sku: $product_sku at index $p" update_count $update_count
       echo "***************************************************"
+
       echo " "
       #
       # Set new product field values
       #
+      # desc_part=$(echo $product_description | cut -d'|' -f 1)
+      # forecast_part=$(echo $product_description | cut -d'|' -f 2)
+      
       new_product_title=$(echo "$forecast_crop - $forecast_variety")
       new_product_description=$(echo "<p>$new_product_title | $forecast_sku <br><hr><b>Forecast:</b><br>This week: $forecast_week1 / Next week: $forecast_week2 / Future: $forecast_week3<br> $forecast_stems_per_bunch stems per bunch<br>$forecast_notes</p>")
 
+      echo "Descriptions - before/after:"
+      echo "BEFORE: $product_description"
+      echo "AFTER.: $new_product_description"
+      echo " "
+  
       if [ "$forecast_show" == "checked" ]; then
         new_product_visible="true"
       else
         new_product_visible="false"
       fi
+      echo "Visible - before/after:"
+      echo "BEFORE: $product_visible"
+      echo "AFTER.: $new_product_visible"
+      echo " "
 
-      printf "Descriptions:\n"
-      printf "   BEFORE: $product_description\n"
-      printf "   AFTER.: $new_product_description \n"
-
-      printf "Visible - before|after: "
-      printf "$product_visible | $new_product_visible \n"
-
-      printf "Title  before|after - "
-      printf "$product_title | $new_product_title \n"
+      echo "Title - before/after:"
+      echo "BEFORE: $product_title"
+      echo "AFTER.: $new_product_title"
+      echo " "
 
       yq eval ".Title = \"${new_product_title}\"" product-record.json --tojson --inplace
       yq eval ".Description = \"$new_product_description\"" product-record.json --tojson --inplace
@@ -104,91 +110,6 @@ doMerge() {
     fi
     cat product-record.json >>  products-updated.json
 
-    # Hack, remove " [Non Editable]" from key names, I cant deal with it
-    sed -i '' "s/ \[Non Editable\]//g" products-updated.json 
-
-  done
-
-
-  #####################################################################################
-  # Loop through each forecast record and if not in prooducts
-  # then it needs added
-  ######################################################################################
-  
-  forecast_count=$(jq ". | length" forecast.json)
-  printf "\nLook at $forecast_count forecast records, check if any are new...\n"
-  for (( fc=0; fc<$forecast_count; fc++ ))
-  do
-    jq -c .[$fc] forecast.json > forecast-record.json
-    forecast_sku=$(jq --raw-output  '.SKU' forecast-record.json)
-    forecast_variety=$(jq --raw-output  '.Variety' forecast-record.json)
-    forecast_crop=$(jq --raw-output  '.Crop' forecast-record.json)
-    forecast_week1=$(jq --raw-output  '."This Week"' forecast-record.json)
-    forecast_week2=$(jq --raw-output  '."Next Week"' forecast-record.json)
-    forecast_week3=$(jq --raw-output  '."Future"' forecast-record.json)
-    forecast_notes=$(jq --raw-output  '.Notes' forecast-record.json | sed 's/null//g')
-    forecast_show=$(jq --raw-output  '.Show' forecast-record.json) 
-    forecast_stems_per_bunch=$(jq --raw-output  '."Stems per Bunch"' forecast-record.json)
-
-    #
-    # find corresponding product record if it exist
-    # 
-    eval "jq --raw-output '.[] | select (.SKU == \"$forecast_sku\")' products.json > product-record.json"
-    product_sku=$(jq --raw-output .SKU product-record.json)
-
-    if [ "$forecast_sku" != "$product_sku" ]; then
-      echo New product found and will be added sku: $forecast_sku
-      update_count=$((update_count+1))
-      #
-      # Set new product field values
-      #
-      new_product_sku=$(echo "$forecast_sku")
-      new_product_title=$(echo "$forecast_crop - $forecast_variety")
-      new_product_description=$(echo "<p>$new_product_title | $forecast_sku <br><hr><b>Forecast:</b><br>This week: $forecast_week1 / Next week: $forecast_week2 / Future: $forecast_week3<br> $forecast_stems_per_bunch stems per bunch<br>$forecast_notes</p>")
-      
-      # todo field needs added to forcast or something
-      new_product_price=123
-      new_product_tags=mrfc
-      new_product_stock=123
-
-
-
-      if [ "$forecast_show" == "checked" ]; then
-        new_product_visible="true"
-      else
-        new_product_visible="false"
-      fi
-
-      #
-      # Add to product record
-      #
-      yq eval -n ".SKU = \"${new_product_sku}\"" --tojson > product-record.json
-      yq eval ".Title = \"${new_product_title}\"" product-record.json --tojson --inplace
-      yq eval ".Description = \"${new_product_description}\"" product-record.json --tojson --inplace
-      yq eval ".Visible = \"${new_product_visible}\"" product-record.json --tojson --inplace
-    
-      yq eval '.Product~Type = "PHYSICAL"' product-record.json --tojson --inplace
-      yq eval '.Product~Page = "mrfc"' product-record.json --tojson --inplace
-      yq eval ".Product~URL = \"${new_product_sku}\"" product-record.json --tojson --inplace
-      
-      yq eval ".Price = \"${new_product_price}\"" product-record.json --tojson --inplace
-      yq eval '.Sale~Price = "0"' product-record.json --tojson --inplace
-      yq eval '.On~Sale = "FALSE"' product-record.json --tojson --inplace
-
-      yq eval ".Stock = \"${new_product_stock}\"" product-record.json --tojson --inplace
-      yq eval ".Tags = \"${new_product_tags}\"" product-record.json --tojson --inplace
-
-      # hack, I don't know how to handle spaces in keys
-      sed -i '' 's/~/ /g' product-record.json
-
-      #
-      # write product record out to products-updated.json
-      # note, always prepend , assume records exist from first loop
-      #
-      printf "," >> products-updated.json
-      cat product-record.json >>  products-updated.json
-    fi
-
 
   done
 
@@ -199,9 +120,9 @@ doMerge() {
   # json to csv
   #
   jq -r '.[] | [
-      ."Product ID", 
-      ."Variant ID",
-      ."Product Type",
+      ."Product ID [Non Editable]", 
+      ."Variant ID [Non Editable]",
+      ."Product Type [Non Editable]",
       ."Product Page",
       ."Product URL",
       ."Title",
