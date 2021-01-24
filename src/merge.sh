@@ -25,6 +25,7 @@ doMerge() {
   update_count=0;
 
   #####################################################################################
+  #                   ###  Forecast UPDATES   ###
   # Loop through product records and find the corresponding forecast record
   # update the product record with the info from the forecast record
   # write new product record to products-updated.json
@@ -34,8 +35,6 @@ doMerge() {
   printf "\nLook at $product_count product records, check for updates...\n"
   for (( p=0; p<$product_count; p++ ))
   do
-    printf "."
-
     # product record
     jq -c .[$p] products.json > product-record.json
     product_sku=$(jq --raw-output .SKU product-record.json)
@@ -57,6 +56,7 @@ doMerge() {
     forecast_notes=$(jq --raw-output  '.Notes' forecast-record.json | sed 's/null//g')
     forecast_show=$(jq --raw-output  '.Show' forecast-record.json) 
     forecast_stems_per_bunch=$(jq --raw-output  '."Stems per Bunch"' forecast-record.json)
+    forecast_grower=$(jq --raw-output  '.Grower' forecast-record.json) 
 
     #
     # If found update product record with info from forecast record
@@ -72,7 +72,14 @@ doMerge() {
       # Set new product field values
       #
       new_product_title=$(echo "$forecast_crop - $forecast_variety")
-      new_product_description=$(echo "<p>$new_product_title | $forecast_sku <br><hr><b>Forecast:</b><br>This week: $forecast_week1 / Next week: $forecast_week2 / Future: $forecast_week3<br> $forecast_stems_per_bunch stems per bunch<br>$forecast_notes</p>")
+      
+      dtitle="$new_product_title | $forecast_sku"
+      spb="<blockquote><i>$forecast_stems_per_bunch stems per bunch</i></blockquote>"
+      dforecast="<hr><b>Forecast:</b> <br>This week: $forecast_week1 <br>Next week: $forecast_week2 <br>Future: $forecast_week3<br>$spb<hr>"
+      dgrower="Grower: $forecast_grower"
+      dnotes="$forecast_notes"
+      new_product_description=$(printf "<p>%s<br>%s<br>%s<br>%s</p>" "$dtitle" "$dforecast" "$dnotes" "$dgrower")
+
 
       if [ "$forecast_show" == "checked" ]; then
         new_product_visible="true"
@@ -80,15 +87,21 @@ doMerge() {
         new_product_visible="false"
       fi
 
-      printf "Descriptions:\n"
-      printf "   BEFORE: $product_description\n"
-      printf "   AFTER.: $new_product_description \n"
+      if [ "$product_description" != "$new_product_description" ]; then
+        printf "CANGE - Description:\n"
+        printf "   BEFORE: $product_description\n"
+        printf "   AFTER.: $new_product_description \n"
+      fi 
 
-      printf "Visible - before|after: "
-      printf "$product_visible | $new_product_visible \n"
+      if [ "$product_visible" != "$new_product_visible" ]; then
+        printf "CANGE - Visible (before|after): "
+        printf 1"$product_visible | $new_product_visible \n"
+      fi
 
-      printf "Title  before|after - "
-      printf "$product_title | $new_product_title \n"
+      if [ "$product_title" != "$new_product_title" ]; then
+        printf "CANGE - Title (before|after): "
+        printf "$product_title | $new_product_title \n"
+      fi
 
       yq eval ".Title = \"${new_product_title}\"" product-record.json --tojson --inplace
       yq eval ".Description = \"$new_product_description\"" product-record.json --tojson --inplace
@@ -111,8 +124,8 @@ doMerge() {
 
 
   #####################################################################################
-  # Loop through each forecast record and if not in prooducts
-  # then it needs added
+  #                   ###   NEW Products   ###
+  # Loop through each forecast record and if not in prooducts then it needs added
   ######################################################################################
   
   forecast_count=$(jq ". | length" forecast.json)
@@ -144,13 +157,12 @@ doMerge() {
       #
       new_product_sku=$(echo "$forecast_sku")
       new_product_title=$(echo "$forecast_crop - $forecast_variety")
-      new_product_description=$(echo "<p>$new_product_title | $forecast_sku <br><hr><b>Forecast:</b><br>This week: $forecast_week1 / Next week: $forecast_week2 / Future: $forecast_week3<br> $forecast_stems_per_bunch stems per bunch<br>$forecast_notes</p>")
+      new_product_description=$(echo "This is a new product. The stock and price need set. This description will be replaced with the actual description the next update run.")
       
-      # todo field needs added to forcast or something
-      new_product_price=123
+      # hardcode initial values
+      new_product_price=999
+      new_product_stock=999
       new_product_tags=mrfc
-      new_product_stock=123
-
 
 
       if [ "$forecast_show" == "checked" ]; then
