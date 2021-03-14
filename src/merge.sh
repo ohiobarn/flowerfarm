@@ -74,7 +74,7 @@ doMerge() {
       new_product_title=$(echo "$forecast_crop - $forecast_variety")
       
       dtitle="$new_product_title | $forecast_sku"
-      spb="<blockquote><i>$forecast_stems_per_bunch stems per bunch</i></blockquote>"
+      spb="<i>$forecast_stems_per_bunch stems per bunch</i>"
       dforecast="<hr><b>Forecast:</b> <br>This week: $forecast_week1 <br>Next week: $forecast_week2 <br>Future: $forecast_week3<br>$spb<hr>"
       dgrower="Grower: $forecast_grower"
       dnotes="$forecast_notes"
@@ -95,7 +95,7 @@ doMerge() {
 
       if [ "$product_visible" != "$new_product_visible" ]; then
         printf "CANGE - Visible (before|after): "
-        printf 1"$product_visible | $new_product_visible \n"
+        printf "$product_visible | $new_product_visible \n"
       fi
 
       if [ "$product_title" != "$new_product_title" ]; then
