@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
-        <title>mkdocs - OBFF</title>
+        <title>Greenhouse IOT - OBFF</title>
 
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
@@ -53,7 +53,7 @@
             
             
             
-                <li class="dropdown">
+                <li class="dropdown active">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Plans <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                     
@@ -70,8 +70,8 @@
                         
                     
                         
-                        <li >
-                            <a href="../../iot/gh/">Greenhouse IOT </a>
+                        <li class="active">
+                            <a href="./">Greenhouse IOT </a>
                         </li>
                         
                     
@@ -105,19 +105,19 @@
             
             
             
-                <li class="dropdown active">
+                <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Workflow <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                     
                         
-                        <li class="active">
-                            <a href="./">mkdocs </a>
+                        <li >
+                            <a href="../../workflow/mkdocs/">mkdocs </a>
                         </li>
                         
                     
                         
                         <li >
-                            <a href="../squarespace-products/">Squarespace Products Sync Workflow </a>
+                            <a href="../../workflow/squarespace-products/">Squarespace Products Sync Workflow </a>
                         </li>
                         
                     
@@ -207,10 +207,35 @@
 </div>
             <div class="col-md-9" role="main">
 
-<h1 id="mkdocs">mkdocs</h1>
-<p>To edit and publish OBFF doc site.</p>
-<pre><code class="language-bash">mkdocs serve
-mkdocs build --clean; mkdocs gh-deploy
+<h1 id="greenhouse-iot">Greenhouse IOT</h1>
+<h2 id="temperature-monitoring">Temperature Monitoring</h2>
+<p><img alt="" src="../img/gh-iot.png" /></p>
+<p>The drawing above shows how the sensor data emanating from <em>ObserverIP</em> is intercepted via <code>iptables</code> running on <em>WRT54G</em> and sent to a Node-RED service running on <code>pi1</code></p>
+<h3 id="iptables">iptables</h3>
+<p>An <em>iptables</em> entry is created to intercept traffic from <em>ObserverIP</em> to <em>ambientweather.net</em>. and redirect it Node-RED running on a Raspberry Pi. The <em>gh-flow</em> running on the Pi will act as a tee, sending the data to Prometheus before sending it along to its original target <em>ambientweather.net</em>.</p>
+<pre><code class="language-bash">#
+# ssh to WRT54G
+#
+ssh root@192.168.2.1 
+
+#
+# While on pi1
+# redirect traffic from ObserverIP to pi1
+#
+iptables -t nat -A PREROUTING -s 192.168.2.151 -p tcp --dport 80 -j DNAT --to-destination 192.168.2.160:1880
+
+# Verify
+iptables -t nat -L PREROUTING
+
+</code></pre>
+<h3 id="pi-setup">Pi Setup</h3>
+<p>Load raspbian lite OS and then set a static IP. For more information see the official <a href="https://www.raspberrypi.org/documentation/configuration/tcpip/">doc</a></p>
+<h4 id="static-ip-address">Static IP address</h4>
+<p>If you wish to disable automatic configuration for an interface and instead configure it statically, add the details to /etc/dhcpcd.conf. For example:</p>
+<pre><code class="language-bash">interface eth0
+static ip_address=192.168.2.160/24
+static routers=192.168.2.254
+static domain_name_servers=192.168.2.254 8.8.8.8
 </code></pre></div>
         </div>
 
