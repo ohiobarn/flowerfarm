@@ -1,0 +1,110 @@
+[
+  {
+      "id": "1f8abdee.e6e1b2",
+      "type": "tab",
+      "label": "gh-flow",
+      "disabled": false,
+      "info": ""
+  },
+  {
+      "id": "100858e.5f2baa7",
+      "type": "http in",
+      "z": "1f8abdee.e6e1b2",
+      "name": "",
+      "url": "/endpoint",
+      "method": "get",
+      "upload": false,
+      "swaggerDoc": "",
+      "x": 160,
+      "y": 280,
+      "wires": [
+          [
+              "28cf9aa0.8729e6",
+              "6da47cbe.c56554"
+          ]
+      ]
+  },
+  {
+      "id": "28cf9aa0.8729e6",
+      "type": "debug",
+      "z": "1f8abdee.e6e1b2",
+      "name": "",
+      "active": false,
+      "tosidebar": true,
+      "console": false,
+      "tostatus": false,
+      "complete": "false",
+      "statusVal": "",
+      "statusType": "auto",
+      "x": 370,
+      "y": 220,
+      "wires": []
+  },
+  {
+      "id": "de55d17.5ec943",
+      "type": "http response",
+      "z": "1f8abdee.e6e1b2",
+      "name": "",
+      "statusCode": "200",
+      "headers": {},
+      "x": 740,
+      "y": 340,
+      "wires": []
+  },
+  {
+      "id": "d022a09a.c3421",
+      "type": "http request",
+      "z": "1f8abdee.e6e1b2",
+      "name": "",
+      "method": "GET",
+      "ret": "txt",
+      "paytoqs": "query",
+      "url": "http://api.ambientweather.net/endpoint",
+      "tls": "",
+      "persist": false,
+      "proxy": "",
+      "authType": "",
+      "x": 550,
+      "y": 280,
+      "wires": [
+          [
+              "de55d17.5ec943",
+              "4e2401dc.7c6b5"
+          ]
+      ]
+  },
+  {
+      "id": "4e2401dc.7c6b5",
+      "type": "debug",
+      "z": "1f8abdee.e6e1b2",
+      "name": "",
+      "active": false,
+      "tosidebar": true,
+      "console": false,
+      "tostatus": false,
+      "complete": "false",
+      "statusVal": "",
+      "statusType": "auto",
+      "x": 750,
+      "y": 220,
+      "wires": []
+  },
+  {
+      "id": "6da47cbe.c56554",
+      "type": "function",
+      "z": "1f8abdee.e6e1b2",
+      "name": "metric",
+      "func": "\nreturn msg;",
+      "outputs": 1,
+      "noerr": 0,
+      "initialize": "",
+      "finalize": "",
+      "x": 350,
+      "y": 340,
+      "wires": [
+          [
+              "d022a09a.c3421"
+          ]
+      ]
+  }
+]
