@@ -1,110 +1,197 @@
 [
   {
-      "id": "1f8abdee.e6e1b2",
-      "type": "tab",
-      "label": "gh-flow",
-      "disabled": false,
-      "info": ""
+    "id": "1f8abdee.e6e1b2",
+    "type": "tab",
+    "label": "gh-flow",
+    "disabled": false,
+    "info": ""
   },
   {
-      "id": "100858e.5f2baa7",
-      "type": "http in",
-      "z": "1f8abdee.e6e1b2",
-      "name": "",
-      "url": "/endpoint",
-      "method": "get",
-      "upload": false,
-      "swaggerDoc": "",
-      "x": 160,
-      "y": 280,
-      "wires": [
-          [
-              "28cf9aa0.8729e6",
-              "6da47cbe.c56554"
-          ]
+    "id": "100858e.5f2baa7",
+    "type": "http in",
+    "z": "1f8abdee.e6e1b2",
+    "name": "",
+    "url": "/endpoint",
+    "method": "get",
+    "upload": false,
+    "swaggerDoc": "",
+    "x": 160,
+    "y": 280,
+    "wires": [
+      [
+        "28cf9aa0.8729e6",
+        "6da47cbe.c56554",
+        "d022a09a.c3421"
       ]
+    ]
   },
   {
-      "id": "28cf9aa0.8729e6",
-      "type": "debug",
-      "z": "1f8abdee.e6e1b2",
-      "name": "",
-      "active": false,
-      "tosidebar": true,
-      "console": false,
-      "tostatus": false,
-      "complete": "false",
-      "statusVal": "",
-      "statusType": "auto",
-      "x": 370,
-      "y": 220,
-      "wires": []
+    "id": "28cf9aa0.8729e6",
+    "type": "debug",
+    "z": "1f8abdee.e6e1b2",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 350,
+    "y": 220,
+    "wires": []
   },
   {
-      "id": "de55d17.5ec943",
-      "type": "http response",
-      "z": "1f8abdee.e6e1b2",
-      "name": "",
-      "statusCode": "200",
-      "headers": {},
-      "x": 740,
-      "y": 340,
-      "wires": []
+    "id": "de55d17.5ec943",
+    "type": "http response",
+    "z": "1f8abdee.e6e1b2",
+    "name": "",
+    "statusCode": "200",
+    "headers": {},
+    "x": 740,
+    "y": 280,
+    "wires": []
   },
   {
-      "id": "d022a09a.c3421",
-      "type": "http request",
-      "z": "1f8abdee.e6e1b2",
-      "name": "",
-      "method": "GET",
-      "ret": "txt",
-      "paytoqs": "query",
-      "url": "http://api.ambientweather.net/endpoint",
-      "tls": "",
-      "persist": false,
-      "proxy": "",
-      "authType": "",
-      "x": 550,
-      "y": 280,
-      "wires": [
-          [
-              "de55d17.5ec943",
-              "4e2401dc.7c6b5"
-          ]
+    "id": "d022a09a.c3421",
+    "type": "http request",
+    "z": "1f8abdee.e6e1b2",
+    "name": "",
+    "method": "GET",
+    "ret": "txt",
+    "paytoqs": "query",
+    "url": "http://api.ambientweather.net/endpoint",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "authType": "",
+    "x": 550,
+    "y": 280,
+    "wires": [
+      [
+        "de55d17.5ec943",
+        "4e2401dc.7c6b5"
       ]
+    ]
   },
   {
-      "id": "4e2401dc.7c6b5",
-      "type": "debug",
-      "z": "1f8abdee.e6e1b2",
-      "name": "",
-      "active": false,
-      "tosidebar": true,
-      "console": false,
-      "tostatus": false,
-      "complete": "false",
-      "statusVal": "",
-      "statusType": "auto",
-      "x": 750,
-      "y": 220,
-      "wires": []
+    "id": "4e2401dc.7c6b5",
+    "type": "debug",
+    "z": "1f8abdee.e6e1b2",
+    "name": "",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 750,
+    "y": 220,
+    "wires": []
   },
   {
-      "id": "6da47cbe.c56554",
-      "type": "function",
-      "z": "1f8abdee.e6e1b2",
-      "name": "metric",
-      "func": "\nreturn msg;",
-      "outputs": 1,
-      "noerr": 0,
-      "initialize": "",
-      "finalize": "",
-      "x": 350,
-      "y": 340,
-      "wires": [
-          [
-              "d022a09a.c3421"
-          ]
+    "id": "6da47cbe.c56554",
+    "type": "function",
+    "z": "1f8abdee.e6e1b2",
+    "name": "metric",
+    "func": "var msg2 = {};\nvar metric = \"# TYPE temp1f gauge\\n# HELP temp1f Greenhouse Tempature\\ntemp1f \" + msg.payload.temp1f +\"\\n\";\n\nmsg2.payload = Buffer.from(metric);\nmsg2.headers = {\n    Accept: \"application/json\"\n};\nmsg2.headers['Content-type'] = 'application/x-www-form-urlencoded';\n\nreturn msg2;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 350,
+    "y": 360,
+    "wires": [
+      [
+        "c2d83306.ecf8",
+        "958ba878.13d7d8"
       ]
+    ]
+  },
+  {
+    "id": "5bf5e01d.ac68a",
+    "type": "inject",
+    "z": "1f8abdee.e6e1b2",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "{\"PASSKEY\":\"ebb0c2fc6c61f89d877a608b45764f3f\",\"stationtype\":\"WS-1501-IP\",\"dateutc\":\"2021-03-16 04:24:21\",\"winddir\":\"152\",\"windspeedmph\":\"1.79\",\"windgustmph\":\"3.36\",\"maxdailygust\":\"6.93\",\"tempf\":\"34.9\",\"battout\":\"1\",\"humidity\":\"94\",\"hourlyrainin\":\"0.07\",\"eventrainin\":\"0.04\",\"dailyrainin\":\"0.01\",\"weeklyrainin\":\"0.05\",\"monthlyrainin\":\"0.73\",\"yearlyrainin\":\"0.73\",\"totalrainin\":\"0.73\",\"uv\":\"0\",\"solarradiation\":\"0.00\",\"temp1f\":\"62.60\",\"humidity1\":\"78\",\"batt1\":\"1\",\"batt2\":\"1\",\"batt3\":\"1\",\"batt4\":\"1\",\"batt5\":\"1\",\"batt6\":\"1\",\"batt7\":\"1\",\"batt8\":\"1\"}",
+    "payloadType": "json",
+    "x": 170,
+    "y": 420,
+    "wires": [
+      [
+        "6da47cbe.c56554"
+      ]
+    ]
+  },
+  {
+    "id": "c2d83306.ecf8",
+    "type": "debug",
+    "z": "1f8abdee.e6e1b2",
+    "name": "metric out",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 460,
+    "y": 420,
+    "wires": []
+  },
+  {
+    "id": "958ba878.13d7d8",
+    "type": "http request",
+    "z": "1f8abdee.e6e1b2",
+    "name": "",
+    "method": "POST",
+    "ret": "txt",
+    "paytoqs": "body",
+    "url": "http://192.168.2.161:9091/metrics/job/sensor_reading/location/greenhouse",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "authType": "",
+    "x": 730,
+    "y": 360,
+    "wires": [
+      [
+        "dfa4db21.0b7078"
+      ]
+    ]
+  },
+  {
+    "id": "dfa4db21.0b7078",
+    "type": "debug",
+    "z": "1f8abdee.e6e1b2",
+    "name": "scraper out",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 830,
+    "y": 420,
+    "wires": []
   }
 ]
