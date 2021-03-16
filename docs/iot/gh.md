@@ -158,9 +158,13 @@ scrape_configs:
 sudo systemctl restart prometheus
 ```
 
+todo - need to make the scraper a service
+
 ### metrics
 
 TODO 
+echo "temp1f 59" | curl -v --data-binary @- http://192.168.2.161:9091/metrics/job/sensor_reading/location/greenhouse
+
 
 ```text
 /metrics/job/sensor_reading/location/greenhouse
@@ -168,4 +172,20 @@ TODO
 # TYPE temp1f gauge
 # HELP temp1f Greenhouse Tempature
 temp1f 2398.283
+```
+
+### Static Routs
+
+This section based on [this](https://wiki.dd-wrt.com/wiki/index.php/Linking_Subnets_with_Static_Routes)
+
+
+on 1
+![](img/subnet-route.png)
+
+
+on 2
+
+```
+# Allow everything to be forwarded through the router (simple but do not use on routers directly connected to the internet)
+iptables -I FORWARD -j ACCEPT
 ```
