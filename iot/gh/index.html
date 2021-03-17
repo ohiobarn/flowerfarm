@@ -204,6 +204,21 @@
         <div class="container">
             <div class="col-md-3">
   
+<div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#greenhouse-iot">Greenhouse IOT</a></li>
+        
+            <li><a href="#temperature-monitoring">Temperature Monitoring</a></li>
+        
+            <li><a href="#iptables">iptables</a></li>
+        
+            <li><a href="#pi-setup">Pi Setup</a></li>
+        
+    
+    </ul>
+</div>
+  
 </div>
             <div class="col-md-9" role="main">
 
@@ -211,7 +226,7 @@
 <h2 id="temperature-monitoring">Temperature Monitoring</h2>
 <p><img alt="" src="../img/gh-iot.png" /></p>
 <p>The drawing above shows how the sensor data emanating from <em>ObserverIP</em> is intercepted via <code>iptables</code> running on <em>WRT54G</em> and sent to a Node-RED service running on <code>pi1</code></p>
-<h3 id="iptables">iptables</h3>
+<h2 id="iptables">iptables</h2>
 <p>An <em>iptables</em> entry is created to intercept traffic from <em>ObserverIP</em> to <em>ambientweather.net</em>. and redirect it Node-RED running on a Raspberry Pi. The <em>gh-flow</em> running on the Pi will act as a tee, sending the data to Prometheus before sending it along to its original target <em>ambientweather.net</em>.</p>
 <pre><code class="language-bash">#
 # ssh to WRT54G
@@ -228,14 +243,211 @@ iptables -t nat -A PREROUTING -s 192.168.2.151 -p tcp --dport 80 -j DNAT --to-de
 iptables -t nat -L PREROUTING
 
 </code></pre>
-<h3 id="pi-setup">Pi Setup</h3>
+<h2 id="pi-setup">Pi Setup</h2>
 <p>Load raspbian lite OS and then set a static IP. For more information see the official <a href="https://www.raspberrypi.org/documentation/configuration/tcpip/">doc</a></p>
-<h4 id="static-ip-address">Static IP address</h4>
-<p>If you wish to disable automatic configuration for an interface and instead configure it statically, add the details to /etc/dhcpcd.conf. For example:</p>
+<h3 id="raspi-config">raspi-config</h3>
+<p>Login with the default login <code>pi/raspbery</code> and run <code>rasp-config</code></p>
+<pre><code class="language-bash">raspi-config
+</code></pre>
+<ul>
+<li>Change the password for the <code>pi</code> user</li>
+<li>Change the hostname to <code>pi1</code> and <code>pi2</code></li>
+<li>Enable ssh under "Interface Options"</li>
+</ul>
+<h3 id="static-ip-address">Static IP address</h3>
+<p>Configure the <code>eth0</code> interface statically by editing the <code>/etc/dhcpcd.conf</code> file.</p>
+<p>For the hostname <code>pi1</code>:</p>
 <pre><code class="language-bash">interface eth0
 static ip_address=192.168.2.160/24
-static routers=192.168.2.254
-static domain_name_servers=192.168.2.254 8.8.8.8
+static routers=192.168.2.1
+static domain_name_servers=192.168.2.1 8.8.8.8
+</code></pre>
+<p>For the hostname <code>pi2</code>:</p>
+<pre><code class="language-bash">interface eth0
+static ip_address=192.168.2.161/24
+static routers=192.168.2.1
+static domain_name_servers=192.168.2.1 8.8.8.8
+</code></pre>
+<h3 id="prometheus">Prometheus</h3>
+<p>The following is based on this <a href="https://pimylifeup.com/raspberry-pi-prometheus/">article</a>.</p>
+<pre><code class="language-bash">sudo apt update
+sudo apt full-upgrade
+
+wget https://github.com/prometheus/prometheus/releases/download/v2.22.0/prometheus-2.22.0.linux-armv7.tar.gz
+tar xfz prometheus-2.22.0.linux-armv7.tar.gz
+mv prometheus-2.22.0.linux-armv7/ prometheus/
+rm prometheus-2.22.0.linux-armv7.tar.gz
+</code></pre>
+<p>Create a service config file</p>
+<pre><code class="language-bash">sudo nano /etc/systemd/system/prometheus.service
+</code></pre>
+<p>and edit to look like the following.</p>
+<pre><code class="language-text">[Unit]
+Description=Prometheus Server
+Documentation=https://prometheus.io/docs/introduction/overview/
+After=network-online.target
+
+[Service]
+User=pi
+Restart=on-failure
+
+ExecStart=/home/pi/prometheus/prometheus \
+  --config.file=/home/pi/prometheus/prometheus.yml \
+  --storage.tsdb.path=/home/pi/prometheus/data
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+<p>Then</p>
+<pre><code class="language-bash">sudo systemctl enable prometheus
+sudo systemctl start prometheus
+sudo systemctl status prometheus
+
+open http://192.168.2.161:9090
+</code></pre>
+<h3 id="prometheus-push-gateway">Prometheus Push Gateway</h3>
+<p>This section base on this <a href="https://github.com/prometheus/pushgateway/blob/master/README.md">github page</a></p>
+<pre><code class="language-bash">wget https://github.com/prometheus/pushgateway/releases/download/v1.4.0/pushgateway-1.4.0.linux-armv7.tar.gz
+
+
+tar xfz pushgateway-1.4.0.linux-armv7.tar.gz
+mv pushgateway-1.4.0.linux-armv7/ pushgateway/
+rm pushgateway-1.4.0.linux-armv7.tar.gz
+</code></pre>
+<p>Create a service config file</p>
+<pre><code class="language-bash">sudo nano /etc/systemd/system/pushgateway.service
+</code></pre>
+<p>and edit to look like the following.</p>
+<pre><code class="language-text">[Unit]
+Description=Prometheus Push Gateway
+Documentation=https://prometheus.io/docs/introduction/overview/
+After=network-online.target
+
+[Service]
+User=pi
+Restart=on-failure
+
+ExecStart=/home/pi/pushgateway/pushgateway
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+<p>Then </p>
+<pre><code class="language-bash">sudo systemctl enable pushgateway
+sudo systemctl start pushgateway
+sudo systemctl status pushgateway
+</code></pre>
+<p>The query API allows accessing pushed metrics and build and runtime information.</p>
+<pre><code class="language-bash">curl -X GET http://192.168.2.161:9091/api/v1/status | jq
+</code></pre>
+<p>To configure pushgateway as a scrape target in prometheus edit <code>/home/pi/prometheus/prometheus.yml</code> as shown below (must have correct indentation)</p>
+<pre><code class="language-yaml">...
+scrape_configs:
+  ...
+  - job_name: 'pushgateway'
+    honor_labels: true
+    static_configs:
+    - targets: ['localhost:9091']
+...
+</code></pre>
+<p>Then restart</p>
+<pre><code>sudo systemctl restart prometheus
+</code></pre>
+<h3 id="metrics">Metrics</h3>
+<h4 id="temp1f">temp1f</h4>
+<p>The <code>gh-flow</code> will generate a metric similar to the following.</p>
+<pre><code class="language-bash">cat &lt;&lt;EOF | curl --data-binary @- http://192.168.2.161:9091/metrics/job/sensor_reading/location/greenhouse
+# TYPE temp1f gauge
+# HELP temp1f Greenhouse Tempature
+temp1f 60.25
+</code></pre>
+<ul>
+<li><strong>Metric Name</strong>: temp1f</li>
+<li><strong>Labels</strong>:</li>
+<li>job=sensor_reading</li>
+<li>location=greenhouse</li>
+</ul>
+<h3 id="static-routs">Static Routs</h3>
+<p>This section based on <a href="https://wiki.dd-wrt.com/wiki/index.php/Linking_Subnets_with_Static_Routes">this</a></p>
+<p>on router 1</p>
+<p><img alt="" src="../img/subnet-route.png" /></p>
+<p>on router 2</p>
+<pre><code class="language-bash"># Allow everything to be forwarded through the router (simple but do not use on routers directly connected to the internet)
+iptables -I FORWARD -j ACCEPT
+</code></pre>
+<h3 id="alert-manager">Alert Manager</h3>
+<p>Setup.</p>
+<pre><code class="language-bash">wget https://github.com/prometheus/alertmanager/releases/download/v0.21.0/alertmanager-0.21.0.linux-armv7.tar.gz
+tar xfz alertmanager-0.21.0.linux-armv7.tar.gz
+mv alertmanager-0.21.0.linux-armv7/ alertmanager/
+rm alertmanager-0.21.0.linux-armv7.tar.gz
+</code></pre>
+<p>Create a service config file</p>
+<pre><code class="language-bash">sudo vi /etc/systemd/system/alertmanager.service
+</code></pre>
+<p>and edit to look like the following.</p>
+<pre><code class="language-text">[Unit]
+Description=Alert Manager
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=pi
+Group=pi
+ExecStart=/home/pi/alertmanager/alertmanager \
+  --config.file=/home/pi/alertmanager/alertmanager.yml \
+  --storage.path=/home/pi/alertmanager/data/alertmanager
+
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+<p>Configure the alertmanager config</p>
+<pre><code class="language-bash">sudo nano /home/pi/alertmanager/alertmanager.yml
+</code></pre>
+<p>and edit to look like the following. See the <a href="https://prometheus.io/docs/alerting/latest/configuration/">alertmanager config doc</a>.  And here is a good <a href="https://grafana.com/blog/2020/02/25/step-by-step-guide-to-setting-up-prometheus-alertmanager-with-slack-pagerduty-and-gmail/">blog</a></p>
+<pre><code class="language-text">global:
+  slack_api_url: 'https://hooks.slack.com/services/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'
+
+route:
+  receiver: 'slack-notifications'
+  group_by: [alertname, datacenter, app]
+
+receivers:
+- name: 'slack-notifications'
+  slack_configs:
+  - channel: '#weather-alerts'
+    send_resolved: true
+</code></pre>
+<p>Then</p>
+<pre><code class="language-bash">sudo systemctl enable alertmanager
+sudo systemctl start alertmanager
+sudo systemctl status alertmanager
+
+open http://192.168.2.161:9093
+</code></pre>
+<p>Now go to the Prometheus server directory and add to the prometheus.yml file and add stuff like this:</p>
+<pre><code class="language-yaml">alerting:  
+  alert managers:  
+    - static_configs: 
+       - targets:  
+           - &quot;localhost:9093  
+rule_files:  
+ - &quot;./rules.yml&quot;
+</code></pre>
+<p>And make the <code>rules.yml</code> look like:</p>
+<pre><code class="language-yaml">groups:
+- name: sensors
+  rules:
+  - alert: GhTest
+    expr: temp1f &gt; 50
+    for: 1m
+    labels:
+      severity: page
+    annotations:
+      summary: Greenhouse Test
 </code></pre></div>
         </div>
 
