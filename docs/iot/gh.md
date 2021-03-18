@@ -188,18 +188,18 @@ sudo systemctl restart prometheus
 
 ### Metrics
 
-#### temp1f
+#### obff_wh31e_temp1f
 
 The `gh-flow` will generate a metric similar to the following.
 
 ```bash
 cat <<EOF | curl --data-binary @- http://192.168.2.161:9091/metrics/job/sensor_reading/location/greenhouse
-# TYPE temp1f gauge
-# HELP temp1f Greenhouse Tempature
-temp1f 60.25
+# TYPE obff_wh31e_temp1f gauge
+# HELP obff_wh31e_temp1f Greenhouse Tempature
+obff_wh31e_temp1f 60.25
 ```
 
-* **Metric Name**: temp1f
+* **Metric Name**: obff_wh31e_temp1f
 * **Labels**:
   * job=sensor_reading
   * location=greenhouse
@@ -212,7 +212,6 @@ This section based on [this](https://wiki.dd-wrt.com/wiki/index.php/Linking_Subn
 on router 1
 
 ![](img/subnet-route.png)
-
 
 on router 2
 
@@ -270,8 +269,7 @@ and edit to look like the following. See the [alertmanager config doc](https://p
 
 ```text
 global:
-  slack_api_url: 'https://hooks.slack.com/services/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'
-
+  slack_api_url: 'https://hooks.slack.com/services/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'
 route:
   receiver: 'slack-notifications'
   group_by: [alertname, datacenter, app]
@@ -281,6 +279,7 @@ receivers:
   slack_configs:
   - channel: '#weather-alerts'
     send_resolved: true
+    text: Detail *Temp* `{{ .CommonAnnotations.description }}` {{ range .Alerts -}}{{ range .Labels.SortedPairs }}  *{{ .Name }}* `{{ .Value }}`{{ end }}{{ end }}
 ```
 
 Then
@@ -311,11 +310,36 @@ And make the `rules.yml` look like:
 groups:
 - name: sensors
   rules:
-  - alert: GhTest
-    expr: temp1f > 50
-    for: 1m
-    labels:
-      severity: page
+  - alert: gh-very-cold
+    expr: avg_over_time(obff_wh31e_temp1f [2m]) < 50
     annotations:
-      summary: Greenhouse Test
+      text: 'Greenhouse is very cold'
+      description: "{{ $value }}"
+  - alert: gh-cold
+    expr: avg_over_time(obff_wh31e_temp1f [2m]) > 50 and avg_over_time(obff_wh31e_temp1f [5m]) < 60
+    annotations:
+      text: Greenhouse is cold
+      description: "{{ $value }}"
+  - alert: gh-warm
+    expr: avg_over_time(obff_wh31e_temp1f [2m]) > 75 and avg_over_time(obff_wh31e_temp1f [5m]) < 85
+    annotations:
+      text: Greenhouse is warm
+      description: "{{ $value }}"
+  - alert: gh-hot
+    expr: avg_over_time(obff_wh31e_temp1f [2m]) > 85 and avg_over_time(obff_wh31e_temp1f [5m]) < 90
+    annotations:
+      text: Greenhouse is hot
+      description: "{{ $value }}"
+  - alert: gh-very-hot
+    expr: avg_over_time(obff_wh31e_temp1f [2m]) > 90
+    annotations:
+      text: Greenhouse is very hot
+      description: "{{ $value }}"
+```
+
+
+to debug:
+
+```
+sudo journalctl --unit=alertmanager.service
 ```
