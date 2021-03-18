@@ -269,7 +269,7 @@ and edit to look like the following. See the [alertmanager config doc](https://p
 
 ```text
 global:
-  slack_api_url: 'https://hooks.slack.com/services/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'
+  slack_api_url: 'https://hooks.slack.com/services/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'
 route:
   receiver: 'slack-notifications'
   group_by: [alertname, datacenter, app]
@@ -316,17 +316,17 @@ groups:
       text: 'Greenhouse is very cold'
       description: "{{ $value }}"
   - alert: gh-cold
-    expr: avg_over_time(obff_wh31e_temp1f [2m]) > 50 and avg_over_time(obff_wh31e_temp1f [5m]) < 60
+    expr: avg_over_time(obff_wh31e_temp1f [2m]) < 60
     annotations:
       text: Greenhouse is cold
       description: "{{ $value }}"
   - alert: gh-warm
-    expr: avg_over_time(obff_wh31e_temp1f [2m]) > 75 and avg_over_time(obff_wh31e_temp1f [5m]) < 85
+    expr: avg_over_time(obff_wh31e_temp1f [2m]) > 75
     annotations:
       text: Greenhouse is warm
       description: "{{ $value }}"
   - alert: gh-hot
-    expr: avg_over_time(obff_wh31e_temp1f [2m]) > 85 and avg_over_time(obff_wh31e_temp1f [5m]) < 90
+    expr: avg_over_time(obff_wh31e_temp1f [2m]) > 85
     annotations:
       text: Greenhouse is hot
       description: "{{ $value }}"
@@ -337,6 +337,12 @@ groups:
       description: "{{ $value }}"
 ```
 
+If changes are made to the file you need to restart to have them take affect:
+
+```bash
+vi rules.yml 
+sudo systemctl restart prometheus
+```
 
 to debug:
 
