@@ -354,15 +354,15 @@ scrape_configs:
 <pre><code>sudo systemctl restart prometheus
 </code></pre>
 <h3 id="metrics">Metrics</h3>
-<h4 id="temp1f">temp1f</h4>
+<h4 id="obff_wh31e_temp1f">obff_wh31e_temp1f</h4>
 <p>The <code>gh-flow</code> will generate a metric similar to the following.</p>
 <pre><code class="language-bash">cat &lt;&lt;EOF | curl --data-binary @- http://192.168.2.161:9091/metrics/job/sensor_reading/location/greenhouse
-# TYPE temp1f gauge
-# HELP temp1f Greenhouse Tempature
-temp1f 60.25
+# TYPE obff_wh31e_temp1f gauge
+# HELP obff_wh31e_temp1f Greenhouse Tempature
+obff_wh31e_temp1f 60.25
 </code></pre>
 <ul>
-<li><strong>Metric Name</strong>: temp1f</li>
+<li><strong>Metric Name</strong>: obff_wh31e_temp1f</li>
 <li><strong>Labels</strong>:</li>
 <li>job=sensor_reading</li>
 <li>location=greenhouse</li>
@@ -409,7 +409,10 @@ WantedBy=multi-user.target
 </code></pre>
 <p>and edit to look like the following. See the <a href="https://prometheus.io/docs/alerting/latest/configuration/">alertmanager config doc</a>.  And here is a good <a href="https://grafana.com/blog/2020/02/25/step-by-step-guide-to-setting-up-prometheus-alertmanager-with-slack-pagerduty-and-gmail/">blog</a></p>
 <pre><code class="language-text">global:
-  slack_api_url: 'https://hooks.slack.com/services/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'
+  # URL value not shown becaue it contains a token
+  # to get the URL in slack, click more &gt; apps &gt; Browse Apps &gt; Custom Integrations &gt; Incoming WebHooks
+  # or go here: https://bagelwarehouse.slack.com/services/1874015307842
+  slack_api_url: 'https://hooks.slack.com/services/REDACTED/REDACTED/REDACTED'
 
 route:
   receiver: 'slack-notifications'
@@ -420,6 +423,7 @@ receivers:
   slack_configs:
   - channel: '#weather-alerts'
     send_resolved: true
+    text: Detail *Temp* `{{ .CommonAnnotations.description }}` {{ range .Alerts -}}{{ range .Labels.SortedPairs }}  *{{ .Name }}* `{{ .Value }}`{{ end }}{{ end }}
 </code></pre>
 <p>Then</p>
 <pre><code class="language-bash">sudo systemctl enable alertmanager
@@ -441,13 +445,40 @@ rule_files:
 <pre><code class="language-yaml">groups:
 - name: sensors
   rules:
-  - alert: GhTest
-    expr: temp1f &gt; 50
-    for: 1m
-    labels:
-      severity: page
+  - alert: gh-very-cold
+    expr: avg_over_time(obff_wh31e_temp1f [2m]) &lt; 50
     annotations:
-      summary: Greenhouse Test
+      text: 'Greenhouse is very cold'
+      description: &quot;{{ $value }}&quot;
+  - alert: gh-cold
+    expr: avg_over_time(obff_wh31e_temp1f [2m]) &lt; 69
+    annotations:
+      text: Greenhouse is cold
+      description: &quot;{{ $value }}&quot;
+  - alert: gh-warm
+    expr: avg_over_time(obff_wh31e_temp1f [2m]) &gt; 75
+    annotations:
+      text: Greenhouse is warm
+      description: &quot;{{ $value }}&quot;
+  - alert: gh-hot
+    expr: avg_over_time(obff_wh31e_temp1f [2m]) &gt; 85
+    annotations:
+      text: Greenhouse is hot
+      description: &quot;{{ $value }}&quot;
+  - alert: gh-very-hot
+    expr: avg_over_time(obff_wh31e_temp1f [2m]) &gt; 90
+    annotations:
+      text: Greenhouse is very hot
+      description: &quot;{{ $value }}&quot;
+</code></pre>
+<p>If changes are made to the file you need to restart to have them take affect:</p>
+<pre><code class="language-bash">vi rules.yml 
+sudo systemctl restart prometheus
+sudo systemctl status prometheus
+sudo journalctl --unit=prometheus -f
+</code></pre>
+<p>to debug:</p>
+<pre><code>sudo journalctl --unit=alertmanager.service
 </code></pre></div>
         </div>
 
