@@ -269,7 +269,11 @@ and edit to look like the following. See the [alertmanager config doc](https://p
 
 ```text
 global:
-  slack_api_url: 'https://hooks.slack.com/services/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'
+  # URL value not shown becaue it contains a token
+  # to get the URL in slack, click more > apps > Browse Apps > Custom Integrations > Incoming WebHooks
+  # or go here: https://bagelwarehouse.slack.com/services/1874015307842
+  slack_api_url: 'https://hooks.slack.com/services/REDACTED/REDACTED/REDACTED'
+
 route:
   receiver: 'slack-notifications'
   group_by: [alertname, datacenter, app]
@@ -316,7 +320,7 @@ groups:
       text: 'Greenhouse is very cold'
       description: "{{ $value }}"
   - alert: gh-cold
-    expr: avg_over_time(obff_wh31e_temp1f [2m]) < 60
+    expr: avg_over_time(obff_wh31e_temp1f [2m]) < 69
     annotations:
       text: Greenhouse is cold
       description: "{{ $value }}"
@@ -342,6 +346,8 @@ If changes are made to the file you need to restart to have them take affect:
 ```bash
 vi rules.yml 
 sudo systemctl restart prometheus
+sudo systemctl status prometheus
+sudo journalctl --unit=prometheus -f
 ```
 
 to debug:

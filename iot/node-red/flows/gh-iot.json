@@ -20,8 +20,8 @@
     "wires": [
       [
         "28cf9aa0.8729e6",
-        "6da47cbe.c56554",
-        "d022a09a.c3421"
+        "d022a09a.c3421",
+        "6da47cbe.c56554"
       ]
     ]
   },
@@ -39,7 +39,7 @@
     "statusVal": "",
     "statusType": "auto",
     "x": 350,
-    "y": 220,
+    "y": 500,
     "wires": []
   },
   {
@@ -96,7 +96,7 @@
     "type": "function",
     "z": "1f8abdee.e6e1b2",
     "name": "metric",
-    "func": "var msg2 = {};\nvar metric = \"# TYPE temp1f gauge\\n# HELP temp1f Greenhouse Tempature\\ntemp1f \" + msg.payload.temp1f +\"\\n\";\n\nmsg2.payload = Buffer.from(metric);\nmsg2.headers = {\n    Accept: \"application/json\"\n};\nmsg2.headers['Content-type'] = 'application/x-www-form-urlencoded';\n\nreturn msg2;",
+    "func": "var msg2 = {};\nvar metric = \n`\n# TYPE obff_wh31e_temp1f gauge\n# HELP obff_wh31e_temp1f Greenhouse Tempature\nobff_wh31e_temp1f  ${msg.payload.temp1f}\n\n# TYPE obff_ws2902a_tempf gauge\n# HELP obff_ws2902a_tempf Outdoor Tempature\nobff_ws2902a_tempf  ${msg.payload.tempf}\n\n# TYPE obff_ws2902a_winddir gauge\n# HELP obff_ws2902a_winddir Wind Direction\nobff_ws2902a_winddir  ${msg.payload.winddir}\n\n# TYPE obff_ws2902a_windspeedmph gauge\n# HELP obff_ws2902a_windspeedmph Windspeedmph\nobff_ws2902a_windspeedmph ${msg.payload.windspeedmph}\n\n# TYPE obff_ws2902a_battout gauge\n# HELP obff_ws2902a_battout Batteries \nobff_ws2902a_battout ${msg.payload.battout}\n\n# TYPE obff_ws2902a_humidity gauge\n# HELP obff_ws2902a_humidity Humidity\nobff_ws2902a_humidity ${msg.payload.humidity}\n\n# TYPE obff_ws2902a_hourlyrainin gauge\n# HELP obff_ws2902a_hourlyrainin Hourly Rain Inches\nobff_ws2902a_hourlyrainin ${msg.payload.hourlyrainin}\n\n# TYPE obff_ws2902a_eventrainin gauge\n# HELP obff_ws2902a_eventrainin Event Rain Inches\nobff_ws2902a_eventrainin ${msg.payload.eventrainin}\n\n# TYPE obff_ws2902a_dailyrainin gauge\n# HELP obff_ws2902a_dailyrainin Daily Rain Inches\nobff_ws2902a_dailyrainin ${msg.payload.dailyrainin}\n\n# TYPE obff_ws2902a_weeklyrainin gauge\n# HELP obff_ws2902a_weeklyrainin Weekly Rain Inches\nobff_ws2902a_weeklyrainin ${msg.payload.weeklyrainin}\n\n# TYPE obff_ws2902a_monthlyrainin gauge\n# HELP obff_ws2902a_monthlyrainin Monthly Rain Inches\nobff_ws2902a_monthlyrainin ${msg.payload.monthlyrainin}\n\n# TYPE obff_ws2902a_yearlyrainin gauge\n# HELP obff_ws2902a_yearlyrainin Yearly Rain Inches\nobff_ws2902a_yearlyrainin ${msg.payload.yearlyrainin}\n\n# TYPE obff_ws2902a_totalrainin gauge\n# HELP obff_ws2902a_totalrainin Total Rain Inches\nobff_ws2902a_totalrainin ${msg.payload.totalrainin}\n\n# TYPE obff_ws2902a_uv gauge\n# HELP obff_ws2902a_uv UV\nobff_ws2902a_uv ${msg.payload.uv}\n\n# TYPE obff_ws2902a_solarradiation gauge\n# HELP obff_ws2902a_solarradiation Solar Radiation\nobff_ws2902a_solarradiation ${msg.payload.solarradiation}\n\n# TYPE obff_wh31e_humidity1 gauge\n# HELP obff_wh31e_humidity1 Greenhouse Humidity\nobff_wh31e_humidity1  ${msg.payload.humidity1}\n\n`;\n\nmsg2.payload = Buffer.from(metric);\nmsg2.headers = {\n    Accept: \"application/json\"\n};\nmsg2.headers['Content-type'] = 'application/x-www-form-urlencoded';\n\nreturn msg2;",
     "outputs": 1,
     "noerr": 0,
     "initialize": "",
@@ -129,13 +129,14 @@
     "once": false,
     "onceDelay": 0.1,
     "topic": "",
-    "payload": "{\"PASSKEY\":\"ebb0c2fc6c61f89d877a608b45764f3f\",\"stationtype\":\"WS-1501-IP\",\"dateutc\":\"2021-03-16 04:24:21\",\"winddir\":\"152\",\"windspeedmph\":\"1.79\",\"windgustmph\":\"3.36\",\"maxdailygust\":\"6.93\",\"tempf\":\"34.9\",\"battout\":\"1\",\"humidity\":\"94\",\"hourlyrainin\":\"0.07\",\"eventrainin\":\"0.04\",\"dailyrainin\":\"0.01\",\"weeklyrainin\":\"0.05\",\"monthlyrainin\":\"0.73\",\"yearlyrainin\":\"0.73\",\"totalrainin\":\"0.73\",\"uv\":\"0\",\"solarradiation\":\"0.00\",\"temp1f\":\"62.60\",\"humidity1\":\"78\",\"batt1\":\"1\",\"batt2\":\"1\",\"batt3\":\"1\",\"batt4\":\"1\",\"batt5\":\"1\",\"batt6\":\"1\",\"batt7\":\"1\",\"batt8\":\"1\"}",
+    "payload": "{\"PASSKEY\":\"ebb0c2fc6c61f89d877a608b45764f3f\",\"stationtype\":\"WS-1501-IP\",\"dateutc\":\"2021-03-16 04:24:21\",\"winddir\":\"152\",\"windspeedmph\":\"1.79\",\"windgustmph\":\"3.36\",\"maxdailygust\":\"6.93\",\"tempf\":\"40\",\"battout\":\"1\",\"humidity\":\"94\",\"hourlyrainin\":\"0.07\",\"eventrainin\":\"0.04\",\"dailyrainin\":\"0.01\",\"weeklyrainin\":\"0.05\",\"monthlyrainin\":\"0.73\",\"yearlyrainin\":\"0.73\",\"totalrainin\":\"0.73\",\"uv\":\"0\",\"solarradiation\":\"0.00\",\"temp1f\":\"61\",\"humidity1\":\"10\",\"batt1\":\"1\",\"batt2\":\"1\",\"batt3\":\"1\",\"batt4\":\"1\",\"batt5\":\"1\",\"batt6\":\"1\",\"batt7\":\"1\",\"batt8\":\"1\"}",
     "payloadType": "json",
     "x": 170,
     "y": 420,
     "wires": [
       [
-        "6da47cbe.c56554"
+        "6da47cbe.c56554",
+        "28cf9aa0.8729e6"
       ]
     ]
   },
@@ -148,8 +149,8 @@
     "tosidebar": true,
     "console": false,
     "tostatus": false,
-    "complete": "true",
-    "targetType": "full",
+    "complete": "payload",
+    "targetType": "msg",
     "statusVal": "",
     "statusType": "auto",
     "x": 460,
