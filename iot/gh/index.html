@@ -446,27 +446,27 @@ rule_files:
 - name: sensors
   rules:
   - alert: gh-very-cold
-    expr: avg_over_time(obff_wh31e_temp1f [2m]) &lt; 50
+    expr: round(avg_over_time(obff_wh31e_temp1f [2m])) &lt; 50
     annotations:
       text: 'Greenhouse is very cold'
       description: &quot;{{ $value }}&quot;
   - alert: gh-cold
-    expr: avg_over_time(obff_wh31e_temp1f [2m]) &lt; 69
+    expr: round(avg_over_time(obff_wh31e_temp1f [2m])) &lt; 59
     annotations:
       text: Greenhouse is cold
       description: &quot;{{ $value }}&quot;
   - alert: gh-warm
-    expr: avg_over_time(obff_wh31e_temp1f [2m]) &gt; 75
+    expr: round(avg_over_time(obff_wh31e_temp1f [2m])) &gt; 75
     annotations:
       text: Greenhouse is warm
       description: &quot;{{ $value }}&quot;
   - alert: gh-hot
-    expr: avg_over_time(obff_wh31e_temp1f [2m]) &gt; 85
+    expr: round(avg_over_time(obff_wh31e_temp1f [2m])) &gt; 85
     annotations:
       text: Greenhouse is hot
       description: &quot;{{ $value }}&quot;
   - alert: gh-very-hot
-    expr: avg_over_time(obff_wh31e_temp1f [2m]) &gt; 90
+    expr: round(avg_over_time(obff_wh31e_temp1f [2m])) &gt; 90
     annotations:
       text: Greenhouse is very hot
       description: &quot;{{ $value }}&quot;
@@ -479,6 +479,19 @@ sudo journalctl --unit=prometheus -f
 </code></pre>
 <p>to debug:</p>
 <pre><code>sudo journalctl --unit=alertmanager.service
+</code></pre>
+<h3 id="bug-fix">Bug fix</h3>
+<p>Do this on pi1 and pi2</p>
+<pre><code class="language-bash">sudo vi /etc/avahi/avahi-daemon.conf
+
+# Comment out
+# use-ipv6=yes
+
+# set this
+deny-interfaces=wlan0
+
+# Then
+sudo systemctl restart avahi-daemon
 </code></pre></div>
         </div>
 
