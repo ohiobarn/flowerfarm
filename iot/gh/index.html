@@ -117,7 +117,13 @@
                     
                         
                         <li >
-                            <a href="../../workflow/squarespace-products/">Squarespace Products Sync Workflow </a>
+                            <a href="../../workflow/squarespace/">Squarespace </a>
+                        </li>
+                        
+                    
+                        
+                        <li >
+                            <a href="../../workflow/public-views/">Public Views </a>
                         </li>
                         
                     
@@ -209,11 +215,23 @@
     
         <li class="main active"><a href="#greenhouse-iot">Greenhouse IOT</a></li>
         
-            <li><a href="#temperature-monitoring">Temperature Monitoring</a></li>
+            <li><a href="#overview">Overview</a></li>
         
-            <li><a href="#iptables">iptables</a></li>
+            <li><a href="#router-setup">Router Setup</a></li>
         
             <li><a href="#pi-setup">Pi Setup</a></li>
+        
+            <li><a href="#prometheus">Prometheus</a></li>
+        
+            <li><a href="#push-gateway">Push Gateway</a></li>
+        
+            <li><a href="#alert-manager">Alert Manager</a></li>
+        
+            <li><a href="#grafana">Grafana</a></li>
+        
+            <li><a href="#metrics">Metrics</a></li>
+        
+            <li><a href="#miscellaneous">Miscellaneous</a></li>
         
     
     </ul>
@@ -223,11 +241,14 @@
             <div class="col-md-9" role="main">
 
 <h1 id="greenhouse-iot">Greenhouse IOT</h1>
-<h2 id="temperature-monitoring">Temperature Monitoring</h2>
+<h2 id="overview">Overview</h2>
 <p><img alt="" src="../img/gh-iot.png" /></p>
 <p>The drawing above shows how the sensor data emanating from <em>ObserverIP</em> is intercepted via <code>iptables</code> running on <em>WRT54G</em> and sent to a Node-RED service running on <code>pi1</code></p>
-<h2 id="iptables">iptables</h2>
-<p>An <em>iptables</em> entry is created to intercept traffic from <em>ObserverIP</em> to <em>ambientweather.net</em>. and redirect it Node-RED running on a Raspberry Pi. The <em>gh-flow</em> running on the Pi will act as a tee, sending the data to Prometheus before sending it along to its original target <em>ambientweather.net</em>.</p>
+<h2 id="router-setup">Router Setup</h2>
+<p>You will need to find an old WAP like the Linksys <em>WRT54G</em>, and load <strong>DD-WRT</strong></p>
+<h3 id="iptables">iptables</h3>
+<p>This section based on this <a href="https://obrienlabs.net/redirecting-weather-station-data-from-observerip/">blog post</a></p>
+<p>An <em>iptables</em> entry is created to intercept traffic from <em>ObserverIP</em> to <em>ambientweather.net</em> and redirect it Node-RED running on a Raspberry Pi. The <em>gh-flow</em> service, hosted by Node-RED on <code>pi1</code>, will act as a tee, sending the data to Prometheus before sending it along to its original target <em>ambientweather.net</em>.</p>
 <pre><code class="language-bash">#
 # ssh to WRT54G
 #
@@ -238,13 +259,20 @@ ssh root@192.168.2.1
 # redirect traffic from ObserverIP to pi1
 #
 iptables -t nat -A PREROUTING -s 192.168.2.151 -p tcp --dport 80 -j DNAT --to-destination 192.168.2.160:1880
+iptables -t nat -A POSTROUTING -j MASQUERADE
+
+# Allow everything to be forwarded through the router (simple but do not use on routers directly connected to the internet)
+iptables -I FORWARD -j ACCEPT
 
 # Verify
 iptables -t nat -L PREROUTING
 
+# Save above as Firewall script to survive a reboot
 </code></pre>
+<p><strong>Note</strong> to survive a reboot the above commands need to be saved in a Firewall script (see <a href="https://wiki.dd-wrt.com/wiki/index.php/Iptables_command">dd-wrt iptables doc</a>)</p>
+<p><img alt="" src="../img/dd-wrt-firewall.png" /></p>
 <h2 id="pi-setup">Pi Setup</h2>
-<p>Load raspbian lite OS and then set a static IP. For more information see the official <a href="https://www.raspberrypi.org/documentation/configuration/tcpip/">doc</a></p>
+<p>Load raspbian lite OS and then set a static IP. For more information see the official <a href="https://www.raspberrypi.org/documentation/configuration/tcpip/">Raspberry Pi Doc</a></p>
 <h3 id="raspi-config">raspi-config</h3>
 <p>Login with the default login <code>pi/raspbery</code> and run <code>rasp-config</code></p>
 <pre><code class="language-bash">raspi-config
@@ -268,7 +296,7 @@ static ip_address=192.168.2.161/24
 static routers=192.168.2.1
 static domain_name_servers=192.168.2.1 8.8.8.8
 </code></pre>
-<h3 id="prometheus">Prometheus</h3>
+<h2 id="prometheus">Prometheus</h2>
 <p>The following is based on this <a href="https://pimylifeup.com/raspberry-pi-prometheus/">article</a>.</p>
 <pre><code class="language-bash">sudo apt update
 sudo apt full-upgrade
@@ -305,7 +333,7 @@ sudo systemctl status prometheus
 
 open http://192.168.2.161:9090
 </code></pre>
-<h3 id="prometheus-push-gateway">Prometheus Push Gateway</h3>
+<h2 id="push-gateway">Push Gateway</h2>
 <p>This section base on this <a href="https://github.com/prometheus/pushgateway/blob/master/README.md">github page</a></p>
 <pre><code class="language-bash">wget https://github.com/prometheus/pushgateway/releases/download/v1.4.0/pushgateway-1.4.0.linux-armv7.tar.gz
 
@@ -353,29 +381,7 @@ scrape_configs:
 <p>Then restart</p>
 <pre><code>sudo systemctl restart prometheus
 </code></pre>
-<h3 id="metrics">Metrics</h3>
-<h4 id="obff_wh31e_temp1f">obff_wh31e_temp1f</h4>
-<p>The <code>gh-flow</code> will generate a metric similar to the following.</p>
-<pre><code class="language-bash">cat &lt;&lt;EOF | curl --data-binary @- http://192.168.2.161:9091/metrics/job/sensor_reading/location/greenhouse
-# TYPE obff_wh31e_temp1f gauge
-# HELP obff_wh31e_temp1f Greenhouse Tempature
-obff_wh31e_temp1f 60.25
-</code></pre>
-<ul>
-<li><strong>Metric Name</strong>: obff_wh31e_temp1f</li>
-<li><strong>Labels</strong>:</li>
-<li>job=sensor_reading</li>
-<li>location=greenhouse</li>
-</ul>
-<h3 id="static-routs">Static Routs</h3>
-<p>This section based on <a href="https://wiki.dd-wrt.com/wiki/index.php/Linking_Subnets_with_Static_Routes">this</a></p>
-<p>on router 1</p>
-<p><img alt="" src="../img/subnet-route.png" /></p>
-<p>on router 2</p>
-<pre><code class="language-bash"># Allow everything to be forwarded through the router (simple but do not use on routers directly connected to the internet)
-iptables -I FORWARD -j ACCEPT
-</code></pre>
-<h3 id="alert-manager">Alert Manager</h3>
+<h2 id="alert-manager">Alert Manager</h2>
 <p>Setup.</p>
 <pre><code class="language-bash">wget https://github.com/prometheus/alertmanager/releases/download/v0.21.0/alertmanager-0.21.0.linux-armv7.tar.gz
 tar xfz alertmanager-0.21.0.linux-armv7.tar.gz
@@ -478,8 +484,46 @@ sudo systemctl status prometheus
 sudo journalctl --unit=prometheus -f
 </code></pre>
 <p>to debug:</p>
-<pre><code>sudo journalctl --unit=alertmanager.service
+<pre><code class="language-bash">sudo journalctl --unit=alertmanager.service
 </code></pre>
+<h2 id="grafana">Grafana</h2>
+<p>This section is based on this <a href="https://grafana.com/tutorials/install-grafana-on-raspberry-pi/">article</a></p>
+<p>Installing grafana on <code>pi2</code></p>
+<pre><code class="language-bash"># Add the APT key used to authenticate packages:
+wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
+
+# Add the Grafana APT repository:
+echo &quot;deb https://packages.grafana.com/oss/deb stable main&quot; | sudo tee -a /etc/apt/sources.list.d/grafana.list
+
+# install grafana
+sudo apt-get update
+sudo apt-get install -y grafana
+</code></pre>
+<p>then.</p>
+<pre><code class="language-bash">sudo /bin/systemctl enable grafana-server
+sudo /bin/systemctl start grafana-server
+sudo /bin/systemctl status grafana-server
+</code></pre>
+<p>Open a browser and go to http://192.168.2.161:3000. Log in to Grafana with the default username <code>admin</code>, and the default password <code>admin</code>. Change the password for the admin user when asked.</p>
+<h2 id="metrics">Metrics</h2>
+<h3 id="obff_wh31e_temp1f">obff_wh31e_temp1f</h3>
+<p>The <code>gh-flow</code> will generate a metric similar to the following.</p>
+<pre><code class="language-bash">cat &lt;&lt;EOF | curl --data-binary @- http://192.168.2.161:9091/metrics/job/sensor_reading/location/greenhouse
+# TYPE obff_wh31e_temp1f gauge
+# HELP obff_wh31e_temp1f Greenhouse Tempature
+obff_wh31e_temp1f 60.25
+</code></pre>
+<ul>
+<li><strong>Metric Name</strong>: obff_wh31e_temp1f</li>
+<li><strong>Labels</strong>:</li>
+<li>job=sensor_reading</li>
+<li>location=greenhouse</li>
+</ul>
+<h2 id="miscellaneous">Miscellaneous</h2>
+<h3 id="static-routs">Static Routs</h3>
+<p>This section based on <a href="https://wiki.dd-wrt.com/wiki/index.php/Linking_Subnets_with_Static_Routes">this</a></p>
+<p>on router 1</p>
+<p><img alt="" src="../img/subnet-route.png" /></p>
 <h3 id="bug-fix">Bug fix</h3>
 <p>Do this on pi1 and pi2</p>
 <pre><code class="language-bash">sudo vi /etc/avahi/avahi-daemon.conf

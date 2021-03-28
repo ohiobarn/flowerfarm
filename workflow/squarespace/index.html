@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
-        <title>mkdocs - OBFF</title>
+        <title>Squarespace - OBFF</title>
 
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
@@ -110,14 +110,14 @@
                     <ul class="dropdown-menu">
                     
                         
-                        <li class="active">
-                            <a href="./">mkdocs </a>
+                        <li >
+                            <a href="../mkdocs/">mkdocs </a>
                         </li>
                         
                     
                         
-                        <li >
-                            <a href="../squarespace/">Squarespace </a>
+                        <li class="active">
+                            <a href="./">Squarespace </a>
                         </li>
                         
                     
@@ -210,13 +210,68 @@
         <div class="container">
             <div class="col-md-3">
   
+<div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#squarespace">Squarespace</a></li>
+        
+            <li><a href="#inventory">Inventory</a></li>
+        
+            <li><a href="#prerequisites">Prerequisites</a></li>
+        
+    
+    </ul>
+</div>
+  
 </div>
             <div class="col-md-9" role="main">
 
-<h1 id="mkdocs">mkdocs</h1>
-<p>To edit and publish OBFF doc site.</p>
-<pre><code class="language-bash">mkdocs serve
-mkdocs build --clean; mkdocs gh-deploy
+<h1 id="squarespace">Squarespace</h1>
+<p>This article is mostly about synchronizing data between these two data sources.</p>
+<ul>
+<li>Squarespacce:  <a href="https://www.squarespace.com/">Admin</a> | <a href="https://ohiobarnflowerfarm.com/">OBFF website</a></li>
+<li><a href="https://airtable.com/">Airtable</a></li>
+</ul>
+<h2 id="inventory">Inventory</h2>
+<p>How to update the inventory in squarespace with the data from airtable.</p>
+<h3 id="1-export-products-from-squarespace">1. Export products from squarespace</h3>
+<ul>
+<li>Open the <a href="https://ohiobarnflowerfarm.squarespace.com/config/commerce/inventory">squarespace products</a> page</li>
+<li>Click <em>EXPORT ALL</em> and save to:</li>
+</ul>
+<pre><code class="language-text">flowerfarm/exports/squarespace/export/products.csv
+</code></pre>
+<h3 id="2-export-forecast-table-from-airtable">2. Export Forecast table from airtable</h3>
+<ul>
+<li>Open <a href="https://airtable.com/">airtable</a> and navigate to <strong><em>crop-planner-&gt;Forecast</em></strong></li>
+<li>Select the <strong><em>Forecast (OBFF)</em></strong> view</li>
+<li>From the <code>...</code>  menu select <strong><em>Download CSV</em></strong> and save to:</li>
+</ul>
+<pre><code class="language-text">flowerfarm/exports/airtable/forecast.csv
+</code></pre>
+<h3 id="3-run-ss-merge">3. Run ss-merge</h3>
+<p>Run the "squarespace merge" make target:</p>
+<pre><code class="language-bash">make ss-merge
+</code></pre>
+<h3 id="4-import-updated-products-into-squarespace">4. Import updated products into squarespace</h3>
+<ul>
+<li>Open the <a href="https://ohiobarnflowerfarm.squarespace.com/config/commerce/inventory">squarespace products</a> page</li>
+<li>Click <em>IMPORT</em> and and select the following:</li>
+</ul>
+<pre><code class="language-text">flowerfarm/wrk/products-updated.csv
+</code></pre>
+<ul>
+<li>Disable/uncheck the <em>Update Product Quantities</em> checkbox and click <strong><em>IMPORT</em></strong></li>
+</ul>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>This workflow uses the following tools for working with CSV files.</p>
+<p>See the <a href="https://csvkit.readthedocs.io/en/latest/">csvkit doc here</a></p>
+<pre><code class="language-bash">sudo pip install csvkit
+</code></pre>
+<p>Below is example usage:</p>
+<pre><code class="language-bash">
+
+in2csv test.json 
 </code></pre></div>
         </div>
 

@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
-        <title>Squarespace Products Sync Workflow - OBFF</title>
+        <title>Public Views - OBFF</title>
 
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
@@ -116,8 +116,14 @@
                         
                     
                         
+                        <li >
+                            <a href="../squarespace/">Squarespace </a>
+                        </li>
+                        
+                    
+                        
                         <li class="active">
-                            <a href="./">Squarespace Products Sync Workflow </a>
+                            <a href="./">Public Views </a>
                         </li>
                         
                     
@@ -207,11 +213,13 @@
 <div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#squarespace-products-sync-workflow">Squarespace Products Sync Workflow</a></li>
+        <li class="main active"><a href="#public-views">Public Views</a></li>
         
             <li><a href="#airtable-public-views">AirTable Public Views</a></li>
         
-            <li><a href="#square-space-inventory">Square Space Inventory</a></li>
+            <li><a href="#estimated-yield-public">Estimated Yield (public)</a></li>
+        
+            <li><a href="#avail-plan-public">Avail Plan (public)</a></li>
         
     
     </ul>
@@ -220,12 +228,8 @@
 </div>
             <div class="col-md-9" role="main">
 
-<h1 id="squarespace-products-sync-workflow">Squarespace Products Sync Workflow</h1>
-<p>Reference:</p>
-<ul>
-<li><a href="https://ohiobarnflowerfarm.com/">OBFF website</a></li>
-<li><a href="https://airtable.com/">Airtable</a></li>
-</ul>
+<h1 id="public-views">Public Views</h1>
+<p><strong>Note</strong> - This section is outdated and in need of an update.</p>
 <h2 id="airtable-public-views">AirTable Public Views</h2>
 <p>This section describes how to update the records in public views. These views are hosted in airtable and are shared or embedded on the OBFF website.</p>
 <table>
@@ -249,10 +253,10 @@
 </tr>
 </tbody>
 </table>
-<h3 id="estimated-yield-public">Estimated Yield (public)</h3>
+<h2 id="estimated-yield-public">Estimated Yield (public)</h2>
 <ol>
 <li><strong>Survey</strong> - After a survey of the beds an estimate of the number of stems that can be harvested in a week, two weeks and beyond are created. Estimate week two as if all stems in week one are sold to customers. Do the same for future estimates.  </li>
-<li><strong>Edit Records</strong>  - Edit or crate the records in the <a href="https://airtable.com/tblUwgrBBwsPngBVO/viwC45pNTVuBV6yOk?blocks=hide">Forecast(Back Office)</a> table in Airtable. <ul>
+<li><strong>Edit Records</strong>  - Edit or crate the records in the <a href="https://airtable.com/tblUwgrBBwsPngBVO/viwC45pNTVuBV6yOk?blocks=hide">Forecast(Back Office)</a> table in Airtable.<ul>
 <li>Select the estimated number of stems by SKU in the <code>This Week</code>, <code>Next Week</code> and <code>Future</code> columns</li>
 <li>Adjust the <code>Stems per Bunch</code> if needed</li>
 <li>The <code>Starting</code> date is for your reference, it is not shown to the customer</li>
@@ -261,27 +265,8 @@
 </li>
 <li><strong>Done</strong> - The updated records will automatically show in in  the public views</li>
 </ol>
-<h3 id="avail-plan-public">Avail Plan (public)</h3>
-<p><strong>todo</strong> - need to document the work flow for exporting from tend and importing into airtable</p>
-<hr />
-<h2 id="square-space-inventory">Square Space Inventory</h2>
-<p>Todo - need to describe better the process that is something like:</p>
-<ul>
-<li>export <a href="https://ohiobarnflowerfarm.squarespace.com/config/commerce/inventory">squarespace products</a> </li>
-<li>export Tend <code>Crop_plan</code></li>
-<li>export airtable 'Forecast.Back Office`</li>
-<li>run make ss-merge</li>
-<li>import  <a href="https://ohiobarnflowerfarm.squarespace.com/config/commerce/inventory">squarespace products</a> </li>
-</ul>
-<h3 id="prerequisites">Prerequisites</h3>
-<p>This workflow uses the following tools for working with CSV files.</p>
-<p>See the <a href="https://csvkit.readthedocs.io/en/latest/">csvkit doc here</a></p>
-<pre><code class="language-bash">sudo pip install csvkit
-</code></pre>
-<p>Below is example usage:</p>
-<pre><code class="language-bash">csvjson tend/csv_export/Crop_plan.csv | jq &gt; test.json
-in2csv test.json 
-</code></pre></div>
+<h2 id="avail-plan-public">Avail Plan (public)</h2>
+<p><strong>todo</strong> - need to document the work flow for exporting from tend and importing into airtable</p></div>
         </div>
 
     <footer class="col-md-12">
