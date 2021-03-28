@@ -1,14 +1,19 @@
 # Greenhouse IOT 
 
-## Temperature Monitoring
+## Overview
 
 ![](img/gh-iot.png)
 
 The drawing above shows how the sensor data emanating from *ObserverIP* is intercepted via `iptables` running on *WRT54G* and sent to a Node-RED service running on `pi1`
 
-## iptables
+## Router Setup
 
-An *iptables* entry is created to intercept traffic from *ObserverIP* to *ambientweather.net*. and redirect it Node-RED running on a Raspberry Pi. The *gh-flow* running on the Pi will act as a tee, sending the data to Prometheus before sending it along to its original target *ambientweather.net*.
+You will need to find an old WAP like the Linksys *WRT54G*, and load **DD-WRT**
+### iptables
+
+This section based on this [blog post](https://obrienlabs.net/redirecting-weather-station-data-from-observerip/)
+
+An *iptables* entry is created to intercept traffic from *ObserverIP* to *ambientweather.net* and redirect it Node-RED running on a Raspberry Pi. The *gh-flow* service, hosted by Node-RED on `pi1`, will act as a tee, sending the data to Prometheus before sending it along to its original target *ambientweather.net*.
 
 ```bash
 #
@@ -21,15 +26,24 @@ ssh root@192.168.2.1
 # redirect traffic from ObserverIP to pi1
 #
 iptables -t nat -A PREROUTING -s 192.168.2.151 -p tcp --dport 80 -j DNAT --to-destination 192.168.2.160:1880
+iptables -t nat -A POSTROUTING -j MASQUERADE
+
+# Allow everything to be forwarded through the router (simple but do not use on routers directly connected to the internet)
+iptables -I FORWARD -j ACCEPT
 
 # Verify
 iptables -t nat -L PREROUTING
 
+# Save above as Firewall script to survive a reboot
 ```
+
+**Note** to survive a reboot the above commands need to be saved in a Firewall script (see [dd-wrt iptables doc](https://wiki.dd-wrt.com/wiki/index.php/Iptables_command))
+
+![](img/dd-wrt-firewall.png)
 
 ## Pi Setup
 
-Load raspbian lite OS and then set a static IP. For more information see the official [doc](https://www.raspberrypi.org/documentation/configuration/tcpip/)
+Load raspbian lite OS and then set a static IP. For more information see the official [Raspberry Pi Doc](https://www.raspberrypi.org/documentation/configuration/tcpip/)
 
 ### raspi-config
 
@@ -65,7 +79,7 @@ static routers=192.168.2.1
 static domain_name_servers=192.168.2.1 8.8.8.8
 ```
 
-### Prometheus
+## Prometheus
 
 The following is based on this [article](https://pimylifeup.com/raspberry-pi-prometheus/).
 
@@ -115,7 +129,7 @@ sudo systemctl status prometheus
 open http://192.168.2.161:9090
 ```
 
-### Prometheus Push Gateway
+## Push Gateway
 
 This section base on this [github page](https://github.com/prometheus/pushgateway/blob/master/README.md)
 
@@ -186,41 +200,7 @@ Then restart
 sudo systemctl restart prometheus
 ```
 
-### Metrics
-
-#### obff_wh31e_temp1f
-
-The `gh-flow` will generate a metric similar to the following.
-
-```bash
-cat <<EOF | curl --data-binary @- http://192.168.2.161:9091/metrics/job/sensor_reading/location/greenhouse
-# TYPE obff_wh31e_temp1f gauge
-# HELP obff_wh31e_temp1f Greenhouse Tempature
-obff_wh31e_temp1f 60.25
-```
-
-* **Metric Name**: obff_wh31e_temp1f
-* **Labels**:
-  * job=sensor_reading
-  * location=greenhouse
-
-### Static Routs
-
-This section based on [this](https://wiki.dd-wrt.com/wiki/index.php/Linking_Subnets_with_Static_Routes)
-
-
-on router 1
-
-![](img/subnet-route.png)
-
-on router 2
-
-```bash
-# Allow everything to be forwarded through the router (simple but do not use on routers directly connected to the internet)
-iptables -I FORWARD -j ACCEPT
-```
-
-### Alert Manager
+## Alert Manager
 
 Setup.
 
@@ -315,27 +295,27 @@ groups:
 - name: sensors
   rules:
   - alert: gh-very-cold
-    expr: avg_over_time(obff_wh31e_temp1f [2m]) < 50
+    expr: round(avg_over_time(obff_wh31e_temp1f [2m])) < 50
     annotations:
       text: 'Greenhouse is very cold'
       description: "{{ $value }}"
   - alert: gh-cold
-    expr: avg_over_time(obff_wh31e_temp1f [2m]) < 69
+    expr: round(avg_over_time(obff_wh31e_temp1f [2m])) < 59
     annotations:
       text: Greenhouse is cold
       description: "{{ $value }}"
   - alert: gh-warm
-    expr: avg_over_time(obff_wh31e_temp1f [2m]) > 75
+    expr: round(avg_over_time(obff_wh31e_temp1f [2m])) > 75
     annotations:
       text: Greenhouse is warm
       description: "{{ $value }}"
   - alert: gh-hot
-    expr: avg_over_time(obff_wh31e_temp1f [2m]) > 85
+    expr: round(avg_over_time(obff_wh31e_temp1f [2m])) > 85
     annotations:
       text: Greenhouse is hot
       description: "{{ $value }}"
   - alert: gh-very-hot
-    expr: avg_over_time(obff_wh31e_temp1f [2m]) > 90
+    expr: round(avg_over_time(obff_wh31e_temp1f [2m])) > 90
     annotations:
       text: Greenhouse is very hot
       description: "{{ $value }}"
@@ -352,6 +332,80 @@ sudo journalctl --unit=prometheus -f
 
 to debug:
 
-```
+```bash
 sudo journalctl --unit=alertmanager.service
+```
+
+## Grafana
+
+This section is based on this [article](https://grafana.com/tutorials/install-grafana-on-raspberry-pi/)
+
+
+Installing grafana on `pi2`
+
+```bash
+# Add the APT key used to authenticate packages:
+wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
+
+# Add the Grafana APT repository:
+echo "deb https://packages.grafana.com/oss/deb stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
+
+# install grafana
+sudo apt-get update
+sudo apt-get install -y grafana
+```
+
+then.
+
+```bash
+sudo /bin/systemctl enable grafana-server
+sudo /bin/systemctl start grafana-server
+sudo /bin/systemctl status grafana-server
+```
+
+Open a browser and go to http://192.168.2.161:3000. Log in to Grafana with the default username `admin`, and the default password `admin`. Change the password for the admin user when asked.
+
+## Metrics
+
+### obff_wh31e_temp1f
+
+The `gh-flow` will generate a metric similar to the following.
+
+```bash
+cat <<EOF | curl --data-binary @- http://192.168.2.161:9091/metrics/job/sensor_reading/location/greenhouse
+# TYPE obff_wh31e_temp1f gauge
+# HELP obff_wh31e_temp1f Greenhouse Tempature
+obff_wh31e_temp1f 60.25
+```
+
+* **Metric Name**: obff_wh31e_temp1f
+* **Labels**:
+  * job=sensor_reading
+  * location=greenhouse
+
+## Miscellaneous
+
+### Static Routs
+
+This section based on [this](https://wiki.dd-wrt.com/wiki/index.php/Linking_Subnets_with_Static_Routes)
+
+on router 1
+
+![](img/subnet-route.png)
+
+### Bug fix
+
+Do this on pi1 and pi2
+
+```bash
+sudo vi /etc/avahi/avahi-daemon.conf
+
+# Comment out
+# use-ipv6=yes
+
+# set this
+deny-interfaces=wlan0
+
+# Then
+sudo systemctl restart avahi-daemon
 ```

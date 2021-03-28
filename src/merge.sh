@@ -88,18 +88,18 @@ doMerge() {
       fi
 
       if [ "$product_description" != "$new_product_description" ]; then
-        printf "CANGE - Description:\n"
+        printf "CHANGE - Description:\n"
         printf "   BEFORE: $product_description\n"
         printf "   AFTER.: $new_product_description \n"
       fi 
 
       if [ "$product_visible" != "$new_product_visible" ]; then
-        printf "CANGE - Visible (before|after): "
+        printf "CHANGE - Visible (before|after): "
         printf "$product_visible | $new_product_visible \n"
       fi
 
       if [ "$product_title" != "$new_product_title" ]; then
-        printf "CANGE - Title (before|after): "
+        printf "CHANGE - Title (before|after): "
         printf "$product_title | $new_product_title \n"
       fi
 
@@ -244,6 +244,11 @@ doMerge() {
   #
   echo '"Product ID [Non Editable]","Variant ID [Non Editable]","Product Type [Non Editable]","Product Page","Product URL","Title","Description","SKU","Option Name 1","Option Value 1","Option Name 2","Option Value 2","Option Name 3","Option Value 3","Price","Sale Price","On Sale","Stock","Categories","Tags","Weight","Length","Width","Height","Visible","Hosted Image URLs"' \
     | cat - products-updated.csv > temp && mv temp products-updated.csv
+
+  echo "**************************"
+  echo DONE
+  echo "**************************"
+  echo "Results written to: $PWD/flowerfarm/wrk/products-updated.csv"
 }
 
 printUsage() {

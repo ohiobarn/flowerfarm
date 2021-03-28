@@ -11,7 +11,7 @@ Reference:
 
 * Each bed is 4 feet by 100 feet
 * 10 beds total (5 beds in each irrigation zone)
-* 2 feet between each bed with 6 feet between each zone 
+* 2 feet between each bed with 6 feet between each zone
   * Landscape fabric is 6 feet wide. This is enough to cover the beds and overlap in between to allow ~2 feet for a walking path
 * 3 drip tape irrigation lines per bed
 * 2 irrigation zones, each zone has 15 drip tape lines
@@ -308,14 +308,18 @@ The numbers in this table represent **lbs/1000 sq ft**
 
 The main cutting field is 10 locations (4x100) each location 400 sq ft so that times 10 locations gives a total of 4,000 sq ft. 
 
-> main cutting field `4,000 sq ft`
- N -  8 - 12 lbs  (4000/1000 * 2) - (4000/1000 * 3) 
- P -  4 lbs       (4000/1000 * 1)
- K -  4 lbs       (4000/1000 * 1)
+```text
+main cutting field 4,000 sq ft
+N -  8 - 12 lbs  (4000/1000 * 2) - (4000/1000 * 3)
+P -  4 lbs       (4000/1000 * 1)
+K -  4 lbs       (4000/1000 * 1)
+```
 
 To calculate how much fertilizer is needed using the following calculation. This formula can be calculated for N, P or K.
 
-`Lbs. N recommended / %N in the fertilizer blend x 100 = lbs. fertilizer needed per 1000 sq ft` 
+```text
+Lbs. N recommended / %N in the fertilizer blend x 100 = lbs. fertilizer needed per 1000 sq ft
+```
 
 So `10-10-10` all purpose fertilizer is generally available at [THD](https://www.homedepot.com/p/Hyponex-40-lb-All-Purpose-Fertilizer-10-10-10-523902/202968725).  
 

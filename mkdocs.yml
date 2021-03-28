@@ -10,7 +10,8 @@ nav:
     - seasons.md
   - Workflow:
     - workflow/mkdocs.md
-    - workflow/squarespace-products.md
+    - workflow/squarespace.md
+    - workflow/public-views.md
   - Crew:
     - crew/README.md
     - crew/getting-started-guide.md

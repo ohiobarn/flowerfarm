@@ -1,19 +1,19 @@
 <mxfile>
     <diagram id="gKTQBFgvQ7YWo5DgVCbP" name="Page-1">
-        <mxGraphModel dx="897" dy="644" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="953" dy="478" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="10" target="11" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="10" value="Linksys &lt;b&gt;WRT54G&lt;/b&gt;&lt;br&gt;DD-WRT&lt;br&gt;lan: 192.168.2.1&lt;br&gt;wan: 192.168.1.149" style="fontColor=#0066CC;verticalAlign=middle;verticalLabelPosition=middle;labelPosition=left;align=left;html=1;outlineConnect=0;fillColor=#CCCCCC;strokeColor=#6881B3;gradientColor=none;gradientDirection=north;strokeWidth=2;shape=mxgraph.networks.router;spacingRight=1;spacingLeft=0;" parent="1" vertex="1">
+                <mxCell id="10" value="Linksys &lt;b&gt;WRT54G&lt;/b&gt;&lt;br&gt;DD-WRT&lt;br&gt;lan: 192.168.2.1&lt;br&gt;wan: 192.168.1.135" style="fontColor=#0066CC;verticalAlign=middle;verticalLabelPosition=middle;labelPosition=left;align=left;html=1;outlineConnect=0;fillColor=#CCCCCC;strokeColor=#6881B3;gradientColor=none;gradientDirection=north;strokeWidth=2;shape=mxgraph.networks.router;spacingRight=1;spacingLeft=0;" parent="1" vertex="1">
                     <mxGeometry x="114" y="360" width="100" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="11" target="14" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="11" value="Linksys &lt;b&gt;E2500&lt;/b&gt;&lt;br&gt;192.168.1.1" style="fontColor=#0066CC;verticalAlign=middle;verticalLabelPosition=middle;labelPosition=left;align=left;html=1;outlineConnect=0;fillColor=#CCCCCC;strokeColor=#6881B3;gradientColor=none;gradientDirection=north;strokeWidth=2;shape=mxgraph.networks.router;" parent="1" vertex="1">
+                <mxCell id="11" value="Linksys &lt;b&gt;E2500&lt;/b&gt;&lt;br&gt;lan: 192.168.1.1&lt;br&gt;wan:&amp;nbsp;76.92.27.209" style="fontColor=#0066CC;verticalAlign=middle;verticalLabelPosition=middle;labelPosition=left;align=left;html=1;outlineConnect=0;fillColor=#CCCCCC;strokeColor=#6881B3;gradientColor=none;gradientDirection=north;strokeWidth=2;shape=mxgraph.networks.router;" parent="1" vertex="1">
                     <mxGeometry x="114" y="290" width="100" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="13" value="www" style="html=1;outlineConnect=0;fillColor=#CCCCCC;strokeColor=#6881B3;gradientColor=none;gradientDirection=north;strokeWidth=2;shape=mxgraph.networks.cloud;fontColor=#ffffff;" parent="1" vertex="1">

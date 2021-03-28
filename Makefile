@@ -1,6 +1,5 @@
 WP_URL := https://ohiobarnflowerfarm.com
-YYMMDD := $(shell echo "`date +%Y%m%d`")
-VARIETY_LIST=$(shell echo "`yq r tend/csv_export/Crop_plan.json [].Variety`")
+NOW := $(shell echo "`date +%Y-%m-%d`")
 
 
 ####################################################################################
@@ -31,6 +30,6 @@ help:
 	$(call help_info)
 
 ss-merge:
-	# Convert crop plan to json then to yaml
+	echo "Backing up products..."
+	cp "${PWD}/exports/squarespace/export/products.csv" "${PWD}/exports/squarespace/export/products-${NOW}.csv"
 	src/merge.sh ${PWD}/exports/airtable/forecast.csv ${PWD}/exports/squarespace/export/products.csv
-
