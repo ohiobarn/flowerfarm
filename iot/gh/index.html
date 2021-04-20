@@ -242,7 +242,7 @@
 
 <h1 id="greenhouse-iot">Greenhouse IOT</h1>
 <h2 id="overview">Overview</h2>
-<p><img alt="" src="../img/gh-iot.png" /></p>
+<p><img alt="" src="../gh-iot.drawio.png" /></p>
 <p>The drawing above shows how the sensor data emanating from <em>ObserverIP</em> is intercepted via <code>iptables</code> running on <em>WRT54G</em> and sent to a Node-RED service running on <code>pi1</code></p>
 <h2 id="router-setup">Router Setup</h2>
 <p>You will need to find an old WAP like the Linksys <em>WRT54G</em>, and load <strong>DD-WRT</strong></p>
@@ -282,6 +282,7 @@ iptables -t nat -L PREROUTING
 <li>Change the hostname to <code>pi1</code> and <code>pi2</code></li>
 <li>Enable ssh under "Interface Options"</li>
 </ul>
+<p>This will allow for <code>ssh pi@192.168.2.161</code></p>
 <h3 id="static-ip-address">Static IP address</h3>
 <p>Configure the <code>eth0</code> interface statically by editing the <code>/etc/dhcpcd.conf</code> file.</p>
 <p>For the hostname <code>pi1</code>:</p>
@@ -360,7 +361,7 @@ ExecStart=/home/pi/pushgateway/pushgateway
 [Install]
 WantedBy=multi-user.target
 </code></pre>
-<p>Then </p>
+<p>Then</p>
 <pre><code class="language-bash">sudo systemctl enable pushgateway
 sudo systemctl start pushgateway
 sudo systemctl status pushgateway
@@ -498,6 +499,27 @@ echo &quot;deb https://packages.grafana.com/oss/deb stable main&quot; | sudo tee
 # install grafana
 sudo apt-get update
 sudo apt-get install -y grafana
+</code></pre>
+<p>Edit the config</p>
+<pre><code class="language-bash">vi /etc/grafana/grafana.ini
+
+# set the following
+[auth]
+disable_login_form = true
+...
+
+[auth.anonymous]
+# enable anonymous access 
+enabled = true
+
+...
+
+# specify organization name that should be used for unauthenticated users
+org_name = Ohio Barn Flower Farm
+
+
+# specify role for unauthenticated users
+org_role = Editor
 </code></pre>
 <p>then.</p>
 <pre><code class="language-bash">sudo /bin/systemctl enable grafana-server
