@@ -10,8 +10,8 @@ doMerge() {
   #
   # csv to json
   #
-  csvjson $FORECAST | jq > forecast.json
-	csvjson $PRODUCTS | jq > products.json
+  csvjson --no-inference $FORECAST | jq > forecast.json
+	csvjson --no-inference $PRODUCTS | jq > products.json
 
   # 
   # Data Scrub 
@@ -41,7 +41,7 @@ doMerge() {
     product_title=$(jq --raw-output .Title product-record.json)
     product_description=$(jq --raw-output .Description product-record.json)
     product_visible=$(jq --raw-output .Visible product-record.json)
-
+    
     #
     # find corresponding forecast record if it exist
     # 
@@ -56,7 +56,6 @@ doMerge() {
     forecast_notes=$(jq --raw-output  '.Notes' forecast-record.json | sed 's/null//g')
     forecast_show=$(jq --raw-output  '.Show' forecast-record.json) 
     forecast_stems_per_bunch=$(jq --raw-output  '."Stems per Bunch"' forecast-record.json)
-    forecast_grower=$(jq --raw-output  '.Grower' forecast-record.json) 
 
     #
     # If found update product record with info from forecast record
@@ -76,16 +75,9 @@ doMerge() {
       dtitle="$new_product_title | $forecast_sku"
       spb="<i>$forecast_stems_per_bunch stems per bunch</i>"
       dforecast="<hr><b>Forecast:</b> <br>This week: $forecast_week1 <br>Next week: $forecast_week2 <br>Future: $forecast_week3<br>$spb<hr>"
-      dgrower="Grower: $forecast_grower"
       dnotes="$forecast_notes"
-      new_product_description=$(printf "<p>%s<br>%s<br>%s<br>%s</p>" "$dtitle" "$dforecast" "$dnotes" "$dgrower")
-
-
-      if [ "$forecast_show" == "checked" ]; then
-        new_product_visible="true"
-      else
-        new_product_visible="false"
-      fi
+      new_product_description=$(printf "<p>%s<br>%s<br>%s</p>" "$dtitle" "$dforecast" "$dnotes")
+      new_product_visible=$forecast_show
 
       if [ "$product_description" != "$new_product_description" ]; then
         printf "CHANGE - Description:\n"

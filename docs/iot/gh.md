@@ -2,7 +2,7 @@
 
 ## Overview
 
-![](img/gh-iot.png)
+![](gh-iot.drawio.png)
 
 The drawing above shows how the sensor data emanating from *ObserverIP* is intercepted via `iptables` running on *WRT54G* and sent to a Node-RED service running on `pi1`
 
@@ -56,6 +56,8 @@ raspi-config
 * Change the password for the `pi` user
 * Change the hostname to `pi1` and `pi2`
 * Enable ssh under "Interface Options"
+
+This will allow for `ssh pi@192.168.2.161`
 
 ### Static IP address
 
@@ -166,7 +168,7 @@ ExecStart=/home/pi/pushgateway/pushgateway
 WantedBy=multi-user.target
 ```
 
-Then 
+Then
 
 ```bash
 sudo systemctl enable pushgateway
@@ -353,6 +355,30 @@ echo "deb https://packages.grafana.com/oss/deb stable main" | sudo tee -a /etc/a
 # install grafana
 sudo apt-get update
 sudo apt-get install -y grafana
+```
+
+Edit the config
+
+```bash
+vi /etc/grafana/grafana.ini
+
+# set the following
+[auth]
+disable_login_form = true
+...
+
+[auth.anonymous]
+# enable anonymous access 
+enabled = true
+
+...
+
+# specify organization name that should be used for unauthenticated users
+org_name = Ohio Barn Flower Farm
+
+
+# specify role for unauthenticated users
+org_role = Editor
 ```
 
 then.
