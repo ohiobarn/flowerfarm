@@ -40,7 +40,6 @@ doMerge() {
     product_sku=$(jq --raw-output .SKU product-record.json)
     product_title=$(jq --raw-output .Title product-record.json)
     product_description=$(jq --raw-output .Description product-record.json)
-    product_visible=$(jq --raw-output .Visible product-record.json)
     
     #
     # find corresponding forecast record if it exist
@@ -54,7 +53,6 @@ doMerge() {
     forecast_week2=$(jq --raw-output  '."Next Week"' forecast-record.json)
     forecast_week3=$(jq --raw-output  '."Future"' forecast-record.json)
     forecast_notes=$(jq --raw-output  '.Notes' forecast-record.json | sed 's/null//g')
-    forecast_show=$(jq --raw-output  '.Show' forecast-record.json) 
     forecast_stems_per_bunch=$(jq --raw-output  '."Stems per Bunch"' forecast-record.json)
 
     #
@@ -77,18 +75,12 @@ doMerge() {
       dforecast="<hr><b>Forecast:</b> <br>This week: $forecast_week1 <br>Next week: $forecast_week2 <br>Future: $forecast_week3<br>$spb<hr>"
       dnotes="$forecast_notes"
       new_product_description=$(printf "<p>%s<br>%s<br>%s</p>" "$dtitle" "$dforecast" "$dnotes")
-      new_product_visible=$forecast_show
 
       if [ "$product_description" != "$new_product_description" ]; then
         printf "CHANGE - Description:\n"
         printf "   BEFORE: $product_description\n"
         printf "   AFTER.: $new_product_description \n"
       fi 
-
-      if [ "$product_visible" != "$new_product_visible" ]; then
-        printf "CHANGE - Visible (before|after): "
-        printf "$product_visible | $new_product_visible \n"
-      fi
 
       if [ "$product_title" != "$new_product_title" ]; then
         printf "CHANGE - Title (before|after): "
@@ -97,7 +89,6 @@ doMerge() {
 
       yq eval ".Title = \"${new_product_title}\"" product-record.json --tojson --inplace
       yq eval ".Description = \"$new_product_description\"" product-record.json --tojson --inplace
-      yq eval ".Visible = \"$new_product_visible\"" product-record.json --tojson --inplace
 
     fi
 
@@ -132,7 +123,6 @@ doMerge() {
     forecast_week2=$(jq --raw-output  '."Next Week"' forecast-record.json)
     forecast_week3=$(jq --raw-output  '."Future"' forecast-record.json)
     forecast_notes=$(jq --raw-output  '.Notes' forecast-record.json | sed 's/null//g')
-    forecast_show=$(jq --raw-output  '.Show' forecast-record.json) 
     forecast_stems_per_bunch=$(jq --raw-output  '."Stems per Bunch"' forecast-record.json)
 
     #
@@ -155,13 +145,7 @@ doMerge() {
       new_product_price=999
       new_product_stock=999
       new_product_tags=mrfc
-
-
-      if [ "$forecast_show" == "checked" ]; then
-        new_product_visible="true"
-      else
-        new_product_visible="false"
-      fi
+      new_product_visible="true"
 
       #
       # Add to product record
@@ -240,7 +224,7 @@ doMerge() {
   echo "**************************"
   echo DONE
   echo "**************************"
-  echo "Results written to: $PWD/flowerfarm/wrk/products-updated.csv"
+  echo "Results written to: $PWD/products-updated.csv"
 }
 
 printUsage() {
