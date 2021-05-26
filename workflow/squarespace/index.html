@@ -234,33 +234,24 @@
 </ul>
 <h2 id="inventory">Inventory</h2>
 <p>How to update the inventory in squarespace with the data from airtable.</p>
-<h3 id="1-export-products-from-squarespace">1. Export products from squarespace</h3>
+<p>1 Export products from squarespace</p>
 <ul>
 <li>Open the <a href="https://ohiobarnflowerfarm.squarespace.com/config/commerce/inventory">squarespace products</a> page</li>
-<li>Click <em>EXPORT ALL</em> and save to:</li>
+<li>Click <em>EXPORT ALL</em> and save to: <code>flowerfarm/exports/squarespace/export/products.csv</code></li>
 </ul>
-<pre><code class="language-text">flowerfarm/exports/squarespace/export/products.csv
-</code></pre>
-<h3 id="2-export-forecast-table-from-airtable">2. Export Forecast table from airtable</h3>
+<p>2 Export Forecast table from airtable</p>
 <ul>
-<li>Open <a href="https://airtable.com/">airtable</a> and navigate to <strong><em>crop-planner-&gt;Forecast</em></strong></li>
-<li>Select the <strong><em>Forecast (OBFF)</em></strong> view</li>
-<li>From the <code>...</code>  menu select <strong><em>Download CSV</em></strong> and save to:</li>
+<li>Open <a href="https://airtable.com/">airtable</a> and navigate to the <strong><em>MRFC</em></strong> base</li>
+<li>For each Synced table tab, select <strong><em>Sync now</em></strong> [<strong><em>Forecast (OBFF)</em></strong>, <strong><em>Forecast (GRF)</em></strong>, <strong><em>Forecast (TMG)</em></strong>]</li>
+<li>Select the <strong><em>Forecast (MRFC)</em></strong> table --&gt; <strong><em>ss-inventory</em></strong> view</li>
+<li>Open <strong><em>APPS</em></strong> and run the <strong><em>Populate Forecast (MRFC)</em></strong> app. This will combine the Synced tables into one.</li>
+<li>From the <code>...</code>  menu select <strong><em>Download CSV</em></strong> and save to: <code>flowerfarm/exports/airtable/forecast.csv</code></li>
 </ul>
-<pre><code class="language-text">flowerfarm/exports/airtable/forecast.csv
-</code></pre>
-<h3 id="3-run-ss-merge">3. Run ss-merge</h3>
-<p>Run the "squarespace merge" make target:</p>
-<pre><code class="language-bash">make ss-merge
-</code></pre>
-<h3 id="4-import-updated-products-into-squarespace">4. Import updated products into squarespace</h3>
+<p>3 Run the "squarespace merge" make target: <code>make ss-merge</code></p>
+<p>4 Import updated products into squarespace</p>
 <ul>
 <li>Open the <a href="https://ohiobarnflowerfarm.squarespace.com/config/commerce/inventory">squarespace products</a> page</li>
-<li>Click <em>IMPORT</em> and and select the following:</li>
-</ul>
-<pre><code class="language-text">flowerfarm/wrk/products-updated.csv
-</code></pre>
-<ul>
+<li>Click <em>IMPORT</em> and and select the following: <code>flowerfarm/wrk/products-updated.csv</code></li>
 <li>Disable/uncheck the <em>Update Product Quantities</em> checkbox and click <strong><em>IMPORT</em></strong></li>
 </ul>
 <h2 id="prerequisites">Prerequisites</h2>
@@ -269,9 +260,7 @@
 <pre><code class="language-bash">sudo pip install csvkit
 </code></pre>
 <p>Below is example usage:</p>
-<pre><code class="language-bash">
-
-in2csv test.json 
+<pre><code class="language-bash">in2csv test.json 
 </code></pre></div>
         </div>
 
