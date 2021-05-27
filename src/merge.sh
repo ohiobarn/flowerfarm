@@ -1,11 +1,15 @@
+#!/bin/bash
+  # set -x # trace
+  # set -e # exit on error
+
 doMerge() {
 
   echo "Using Forecast: $FORECAST"
   echo "Using Products: $PRODUCTS"
   echo "Using Work Dir: $WORK_DIR"
 
-  cd $WORK_DIR
-  rm *.json *.txt
+  cd "$WORK_DIR" || exit
+  rm *.json *.txt || true
 
   #
   # csv to json
@@ -32,8 +36,9 @@ doMerge() {
   #####################################################################################
   
   product_count=$(jq ". | length" products.json)
-  printf "\nLook at $product_count product records, check for updates...\n"
-  for (( p=0; p<$product_count; p++ ))
+  printf "\nLook at %s product records, check for updates...\n" "$product_count"
+
+  for (( p=0; p<"$product_count"; p++ ))
   do
     # product record
     jq -c .[$p] products.json > product-record.json
@@ -54,17 +59,14 @@ doMerge() {
     forecast_week3=$(jq --raw-output  '."Future"' forecast-record.json)
     forecast_notes=$(jq --raw-output  '.Notes' forecast-record.json | sed 's/null//g')
     forecast_stems_per_bunch=$(jq --raw-output  '."Stems per Bunch"' forecast-record.json)
+    forecast_shop_description=$(jq --raw-output  '."Shop Description"' forecast-record.json | sed 's/null//g; s/"//g')
 
     #
     # If found update product record with info from forecast record
     #
     if [ "$forecast_sku" == "$product_sku" ]; then
       update_count=$((update_count+1))
-      echo " "
-      echo "***************************************************"
-      echo "Found sku: $product_sku at index $p" update_count $update_count
-      echo "***************************************************"
-      echo " "
+      printf "\nSKU: %s\n" "$product_sku"
       #
       # Set new product field values
       #
@@ -74,17 +76,19 @@ doMerge() {
       spb="<i>$forecast_stems_per_bunch stems per bunch</i>"
       dforecast="<hr><b>Forecast:</b> <br>This week: $forecast_week1 <br>Next week: $forecast_week2 <br>Future: $forecast_week3<br>$spb<hr>"
       dnotes="$forecast_notes"
-      new_product_description=$(printf "<p>%s<br>%s<br>%s</p>" "$dtitle" "$dforecast" "$dnotes")
+      new_product_description=$(printf "<p>%s<br>%s<br>%s<br>%s</p>"  "$dtitle" "$forecast_shop_description" "$dforecast" "$dnotes")
+
 
       if [ "$product_description" != "$new_product_description" ]; then
-        printf "CHANGE - Description:\n"
-        printf "   BEFORE: $product_description\n"
-        printf "   AFTER.: $new_product_description \n"
+        printf "Description:\n"
+        printf "   BEFORE: %s\n" "$product_description"
+        printf "   AFTER.: %s\n" "$new_product_description"
       fi 
 
       if [ "$product_title" != "$new_product_title" ]; then
-        printf "CHANGE - Title (before|after): "
-        printf "$product_title | $new_product_title \n"
+        printf "Title:\n"
+        printf "   BEFORE: %s\n" "$product_title"
+        printf "   AFTER.: %s\n" "$new_product_title"
       fi
 
       yq eval ".Title = \"${new_product_title}\"" product-record.json --tojson --inplace
@@ -112,8 +116,9 @@ doMerge() {
   ######################################################################################
   
   forecast_count=$(jq ". | length" forecast.json)
-  printf "\nLook at $forecast_count forecast records, check if any are new...\n"
-  for (( fc=0; fc<$forecast_count; fc++ ))
+  printf "\nLook at %s forecast records, check if any are new...\n" "$forecast_count"
+  
+  for (( fc=0; fc<"$forecast_count"; fc++ ))
   do
     jq -c .[$fc] forecast.json > forecast-record.json
     forecast_sku=$(jq --raw-output  '.SKU' forecast-record.json)
@@ -137,9 +142,9 @@ doMerge() {
       #
       # Set new product field values
       #
-      new_product_sku=$(echo "$forecast_sku")
-      new_product_title=$(echo "$forecast_crop - $forecast_variety")
-      new_product_description=$(echo "This is a new product. The stock and price need set. This description will be replaced with the actual description the next update run.")
+      new_product_sku="$forecast_sku"
+      new_product_title="$forecast_crop - $forecast_variety"
+      new_product_description="This is a new product. The stock and price need set. This description will be replaced with the actual description the next update run."
       
       # hardcode initial values
       new_product_price=999
