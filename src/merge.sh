@@ -144,7 +144,7 @@ doMerge() {
       #
       new_product_sku="$forecast_sku"
       new_product_title="$forecast_crop - $forecast_variety"
-      new_product_description="This is a new product. The stock and price need set. This description will be replaced with the actual description the next update run."
+      new_product_description=" "
       
       # hardcode initial values
       new_product_price=999
