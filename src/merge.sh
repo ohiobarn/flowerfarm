@@ -7,6 +7,7 @@ doMerge() {
   echo "Using Forecast: $FORECAST"
   echo "Using Products: $PRODUCTS"
   echo "Using Work Dir: $WORK_DIR"
+  echo "Update Stock: $UPDATE_STOCK"
 
   cd "$WORK_DIR" || exit
   rm *.json *.txt || true
@@ -40,38 +41,46 @@ doMerge() {
 
   for (( p=0; p<"$product_count"; p++ ))
   do
+    #
     # product record
+    #
     jq -c .[$p] products.json > product-record.json
     product_sku=$(jq --raw-output .SKU product-record.json)
-    product_title=$(jq --raw-output .Title product-record.json)
-    product_description=$(jq --raw-output .Description product-record.json)
+
     
     #
     # find corresponding forecast record if it exist
     # 
     eval "jq --raw-output '.[] | select (.SKU == \"$product_sku\")' forecast.json > forecast-record.json"
-
     forecast_sku=$(jq --raw-output  '.SKU' forecast-record.json)
-    forecast_variety=$(jq --raw-output  '.Variety' forecast-record.json)
-    forecast_crop=$(jq --raw-output  '.Crop' forecast-record.json)
-    forecast_week1=$(jq --raw-output  '."This Week"' forecast-record.json)
-    forecast_week2=$(jq --raw-output  '."Next Week"' forecast-record.json)
-    forecast_week3=$(jq --raw-output  '."Future"' forecast-record.json)
-    forecast_notes=$(jq --raw-output  '.Notes' forecast-record.json | sed 's/null//g')
-    forecast_stems_per_bunch=$(jq --raw-output  '."Stems per Bunch"' forecast-record.json)
-    forecast_shop_description=$(jq --raw-output  '."Shop Description"' forecast-record.json | sed 's/null//g; s/"//g')
 
     #
     # If found update product record with info from forecast record
     #
     if [ "$forecast_sku" == "$product_sku" ]; then
+
       update_count=$((update_count+1))
       printf "\nSKU: %s\n" "$product_sku"
+
+      product_title=$(jq --raw-output .Title product-record.json)
+      product_description=$(jq --raw-output .Description product-record.json)
+      product_stock=$(jq --raw-output .Stock product-record.json)
+      
+      forecast_variety=$(jq --raw-output  '.Variety' forecast-record.json)
+      forecast_crop=$(jq --raw-output  '.Crop' forecast-record.json)
+      forecast_week1=$(jq --raw-output  '."This Week"' forecast-record.json)
+      forecast_week2=$(jq --raw-output  '."Next Week"' forecast-record.json)
+      forecast_week3=$(jq --raw-output  '."Future"' forecast-record.json)
+      forecast_notes=$(jq --raw-output  '.Notes' forecast-record.json | sed 's/null//g')
+      forecast_stems_per_bunch=$(jq --raw-output  '."Stems per Bunch"' forecast-record.json)
+      forecast_shop_description=$(jq --raw-output  '."Shop Description"' forecast-record.json | sed 's/null//g; s/"//g')
+
+
       #
       # Set new product field values
       #
       new_product_title=$(echo "$forecast_crop - $forecast_variety")
-      
+      new_product_stock="$forecast_week1"
       dtitle="$new_product_title | $forecast_sku"
       spb="<i>$forecast_stems_per_bunch stems per bunch</i>"
       dforecast="<hr><b>Forecast:</b> <br>This week: $forecast_week1 <br>Next week: $forecast_week2 <br>Future: $forecast_week3<br>$spb<hr>"
@@ -91,8 +100,15 @@ doMerge() {
         printf "   AFTER.: %s\n" "$new_product_title"
       fi
 
+      if [ "$product_stock" != "$new_product_stock" ]; then
+        printf "Stock:\n"
+        printf "   BEFORE: %s\n" "$product_stock"
+        printf "   AFTER.: %s\n" "$new_product_stock"
+      fi
+
       yq eval ".Title = \"${new_product_title}\"" product-record.json --tojson --inplace
       yq eval ".Description = \"$new_product_description\"" product-record.json --tojson --inplace
+      yq eval ".Stock = \"$new_product_stock\"" product-record.json --tojson --inplace
 
     fi
 
@@ -238,14 +254,13 @@ printUsage() {
   echo "This script will merge an airtable forecast export with a squarespace products export:"
   echo ""
   echo "Usage:"
-  echo "  merge.sh [path/to/csv_export/airtable/forecast.csv] [path/csv_export/squarespace/products.csv]"
+  echo "  merge.sh [path/to/csv_export/airtable/forecast.csv] [path/csv_export/squarespace/products.csv] [Update Stock yes | no]"
   echo ""
   echo "Example:"
-  echo "  $ ./merge.sh airtable/forecast.csv squarespace/products.csv"
+  echo "  $ ./merge.sh airtable/forecast.csv squarespace/products.csv yes"
   echo ""
 }   
 
-#  set -x
 
 # Check for input parm
 if [[ -z "$1" ]]; then
@@ -254,9 +269,9 @@ if [[ -z "$1" ]]; then
 elif [[ -z "$2" ]]; then
   echo "Squarespace procucts.csv is required"
   printUsage
-else 
-  FORECAST=$1
-  PRODUCTS=$2
+else
+  FORECAST="$1"
+  PRODUCTS="$2"
   WORK_DIR="./wrk"
   mkdir -p $WORK_DIR
 
