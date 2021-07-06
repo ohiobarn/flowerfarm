@@ -1,12 +1,6 @@
 # flowerfarm
 
-The Ohio Barn Flower Farm, TOC:
-
-[Docs](#Docs)
-
-[Wordpress](#Wordpress)
-
----
+The Ohio Barn Flower Farm
 
 ## Docs
 
