@@ -56,7 +56,7 @@ type Products []ProductDoc
 
 type ProductDoc struct {
 	ProductID       string `json:"Product ID [Non Editable]"`
-	VariantID       string `json:"Variant ID [Non Editable]""`
+	VariantID       string `json:"Variant ID [Non Editable]"`
 	ProductType     string `json:"Product Type [Non Editable]"`
 	ProductPage     string `json:"Product Page"`
 	ProductURL      string `json:"Product URL"`
@@ -89,6 +89,7 @@ type ProductDoc struct {
 	HostedImageURLs string `json:"Hosted Image URLs"`
 }
 
+var productsUpdated []ProductDoc
 
 const colorReset = string("\033[0m")
 const colorRed = string("\033[31m")
@@ -115,6 +116,18 @@ Example ran from the flowerfarm project root:
 		forecast := loadForecast(cmd, args)
 		products := loadProducts(cmd, args)
 		updateProductsWithForecast(forecast, products)
+
+		//debug
+		// fmt.Println("Check for updates 1")
+		// l := len(productsUpdated)
+		// fmt.Println("Check for updates 2")
+		// if l == 0 {
+		// 	fmt.Println("No products need updated")
+		// } else {
+		// 	printSlice(productsUpdated)
+		// }
+
+		fmt.Println("******** DONE ************")
 	},
 }
 
@@ -136,6 +149,11 @@ func init() {
 
 	forecastCmd.Flags().StringP("products", "p", "exports/squarespace/export/products.json", "Path to the products file exported from Square Space, must be in json format")
 	forecastCmd.MarkFlagRequired("products")
+
+	//
+	// Other init stuff
+	//
+	productsUpdated = make([]ProductDoc, 0)
 }
 
 func loadForecast(cmd *cobra.Command, args []string) *Forecast {
@@ -159,7 +177,7 @@ func loadForecast(cmd *cobra.Command, args []string) *Forecast {
 	//
 	forecastJsonData, _ := ioutil.ReadAll(forecastFile)
 	forecast := new(Forecast)
-	err = json.Unmarshal(forecastJsonData, &forecast)
+	json.Unmarshal(forecastJsonData, &forecast)
 
 	return forecast
 }
@@ -185,7 +203,7 @@ func loadProducts(cmd *cobra.Command, args []string) *Products {
 	//
 	productsJsonData, _ := ioutil.ReadAll(productsFile)
 	products := new(Products)
-	err = json.Unmarshal(productsJsonData, &products)
+	json.Unmarshal(productsJsonData, &products)
 
 	return products
 }
@@ -194,9 +212,11 @@ func updateProductsWithForecast(forecast *Forecast, products *Products) {
 	fmt.Printf("-----------------------------------------------------------------\n")
 	fmt.Printf("*** Update products from forecast\n")
 	fmt.Printf("-----------------------------------------------------------------\n")
-	
+
+	productUpdateCount := 0
 
 	for _, productDoc := range *products {
+
 		fmt.Printf("\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n")
 		fmt.Printf("Processing product sku: %s%s%s\n", colorBlue, productDoc.SKU, colorReset)
 
@@ -208,18 +228,14 @@ func updateProductsWithForecast(forecast *Forecast, products *Products) {
 		} else {
 
 			fmt.Printf("Found matching forcast doc...\n")
-			//
-			// TODO - left off here
-			//        productsUpdated need to be global to the module or defined above
-			//        and passed int doMerge... i THINK
-			//
-			productsUpdated := doMerge(&forecastDoc, &productDoc)
-			if productsUpdated != nil {
-				printSlice(*productsUpdated)
+			if doMerge(&forecastDoc, &productDoc) {
+				productUpdateCount++
 			}
+
 		}
 		fmt.Printf(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n")
 	}
+	fmt.Printf("%sTotal products updated [%d/%d]%s\n", colorRed, productUpdateCount, len(*products), colorReset)
 }
 
 func findForecastDocBySKU(sku string, forecast *Forecast) ForecastDoc {
@@ -238,9 +254,8 @@ func findForecastDocBySKU(sku string, forecast *Forecast) ForecastDoc {
 //   Use forecast doc to genererate a new product doc.  Then compare
 //   the new product with existing product to see if any change is needed
 //
-func doMerge(f *ForecastDoc, p *ProductDoc) *Products {
+func doMerge(f *ForecastDoc, p *ProductDoc) bool {
 	needToMerge := false
-
 	dmp := diffmatchpatch.New()
 
 	newProductTitle := f.Crop + " - " + f.Variety
@@ -278,12 +293,11 @@ func doMerge(f *ForecastDoc, p *ProductDoc) *Products {
 		productDocUpdated.Description = newProductDescription
 		productDocUpdated.Stock = newProductStock
 
-		productsUpdated := new(Products)
-		*productsUpdated = append(*productsUpdated, *productDocUpdated)
-		return productsUpdated
-	} else {
-		return nil
+		productsUpdated = append(productsUpdated, *productDocUpdated)
 	}
+
+	// Returns true if merge occured
+	return needToMerge
 
 }
 
