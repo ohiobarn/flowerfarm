@@ -21,6 +21,7 @@ import (
 	"io/ioutil"
 	"os"
 
+	"github.com/sergi/go-diff/diffmatchpatch"
 	"github.com/spf13/cobra"
 )
 
@@ -42,6 +43,7 @@ type ForecastDoc struct {
 	AvailabilityMonths string `json:"Availability Months"`
 	Category           string `json:"Category"`
 	ThisNextFuture     string `json:"This week | Next week | Future"`
+	ShopDescription    string `json:"Shop Description"`
 	OpenInShop         string `json:"Open in Shop"`
 	Color              string `json:"Color"`
 	Tier               string `json:"Tier"`
@@ -50,9 +52,9 @@ type ForecastDoc struct {
 //
 // Products
 //
-type Products []ProductsDoc
+type Products []ProductDoc
 
-type ProductsDoc struct {
+type ProductDoc struct {
 	ProductID       string `json:"Product ID [Non Editable]"`
 	VariantID       string `json:"Variant ID [Non Editable]""`
 	ProductType     string `json:"Product Type [Non Editable]"`
@@ -86,6 +88,16 @@ type ProductsDoc struct {
 	Visible         string `json:"Visible"`
 	HostedImageURLs string `json:"Hosted Image URLs"`
 }
+
+
+const colorReset = string("\033[0m")
+const colorRed = string("\033[31m")
+const colorGreen = string("\033[32m")
+const colorYellow = string("\033[33m")
+const colorBlue = string("\033[34m")
+const colorPurple = string("\033[35m")
+const colorCyan = string("\033[36m")
+const colorWhite = string("\033[37m")
 
 // forecastCmd represents the forecast command
 var forecastCmd = &cobra.Command{
@@ -179,25 +191,104 @@ func loadProducts(cmd *cobra.Command, args []string) *Products {
 }
 
 func updateProductsWithForecast(forecast *Forecast, products *Products) {
+	fmt.Printf("-----------------------------------------------------------------\n")
+	fmt.Printf("*** Update products from forecast\n")
+	fmt.Printf("-----------------------------------------------------------------\n")
+	
 
 	for _, productDoc := range *products {
+		fmt.Printf("\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n")
+		fmt.Printf("Processing product sku: %s%s%s\n", colorBlue, productDoc.SKU, colorReset)
 
-		fmt.Printf("Processing product sku: %s\n", productDoc.SKU)
-		findForecastDocBySKU(productDoc.SKU, forecast)
-		fmt.Println("------------------------------------------------------------------------------")
+		forecastDoc := findForecastDocBySKU(productDoc.SKU, forecast)
+		if forecastDoc.SKU == "" {
+
+			fmt.Printf("%sNo matching forcast found%s\n", colorYellow, colorReset)
+
+		} else {
+
+			fmt.Printf("Found matching forcast doc...\n")
+			//
+			// TODO - left off here
+			//        productsUpdated need to be global to the module or defined above
+			//        and passed int doMerge... i THINK
+			//
+			productsUpdated := doMerge(&forecastDoc, &productDoc)
+			if productsUpdated != nil {
+				printSlice(*productsUpdated)
+			}
+		}
+		fmt.Printf(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n")
 	}
-
 }
 
 func findForecastDocBySKU(sku string, forecast *Forecast) ForecastDoc {
 
 	for _, forecastDoc := range *forecast {
 		if forecastDoc.SKU == sku {
-			fmt.Printf("\nFound forcast doc sku: %s\n", sku)
 			return forecastDoc
 		}
 	}
-
 	var errorDoc ForecastDoc
 	return errorDoc
+}
+
+//
+// doMerge
+//   Use forecast doc to genererate a new product doc.  Then compare
+//   the new product with existing product to see if any change is needed
+//
+func doMerge(f *ForecastDoc, p *ProductDoc) *Products {
+	needToMerge := false
+
+	dmp := diffmatchpatch.New()
+
+	newProductTitle := f.Crop + " - " + f.Variety
+	newProductStock := f.ThisWeek
+	newProductDescription := fmt.Sprintf("<p>%s | %s<br>%s<br><hr><b>Forecast:</b> <br>This week: %s <br>Next week: %s <br>Future: %s<br><i>%s stems per bunch</i><hr><br></p>",
+		newProductTitle, f.SKU,
+		f.ShopDescription,
+		f.ThisWeek,
+		f.NextWeek,
+		f.Future,
+		f.StemsPerBunch,
+	)
+
+	if newProductDescription != p.Description {
+		needToMerge = true
+		diffs := dmp.DiffMain(p.Description, newProductDescription, false)
+		fmt.Printf("%sDescription:%s %s\n", colorGreen, colorReset, dmp.DiffPrettyText(diffs))
+	}
+
+	if newProductTitle != p.Title {
+		needToMerge = true
+		diffs := dmp.DiffMain(p.Title, newProductTitle, false)
+		fmt.Printf("Title: %s\n", dmp.DiffPrettyText(diffs))
+	}
+
+	if newProductStock != p.Stock {
+		needToMerge = true
+		diffs := dmp.DiffMain(p.Stock, newProductStock, false)
+		fmt.Printf("Stock: %s\n", dmp.DiffPrettyText(diffs))
+	}
+
+	if needToMerge {
+		productDocUpdated := p
+		productDocUpdated.Title = newProductTitle
+		productDocUpdated.Description = newProductDescription
+		productDocUpdated.Stock = newProductStock
+
+		productsUpdated := new(Products)
+		*productsUpdated = append(*productsUpdated, *productDocUpdated)
+		return productsUpdated
+	} else {
+		return nil
+	}
+
+}
+
+func printSlice(p Products) {
+	s := p
+	fmt.Println("PRINT SLICE:")
+	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
 }

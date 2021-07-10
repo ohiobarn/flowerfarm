@@ -33,3 +33,23 @@ ss-merge:
 	echo "Backing up products..."
 	cp "${PWD}/exports/squarespace/export/products.csv" "${PWD}/exports/squarespace/export/products-${NOW}.csv"
 	src/merge.sh ${PWD}/exports/airtable/forecast.csv ${PWD}/exports/squarespace/export/products.csv
+
+go-merge:
+	#
+	# backup
+	#
+	cp "${PWD}/exports/squarespace/export/products.csv" "${PWD}/exports/squarespace/export/products-${NOW}.csv"
+
+	# 
+	# csv to json
+	#
+	csvjson --no-inference "${PWD}/exports/airtable/forecast.cs"v | jq > "${PWD}/wrk/forecast.json"
+	csvjson --no-inference "${PWD}/exports/squarespace/export/products.csv" | jq > "${PWD}/wrk/products.json"
+	#
+	# forecast
+	#
+	obffctl/obffctl forecast --forecast "${PWD}/wrk/forecast.json" --products "${PWD}/wrk/products.json"
+	#
+	# for dev use: 
+	# $ cd obffctl
+	# $ go run . forecast --forecast ../wrk/forecast.json --products ../wrk/products.json

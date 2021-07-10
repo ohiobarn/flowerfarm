@@ -81,6 +81,7 @@ doMerge() {
       #
       new_product_title=$(echo "$forecast_crop - $forecast_variety")
       new_product_stock="$forecast_week1"
+      
       dtitle="$new_product_title | $forecast_sku"
       spb="<i>$forecast_stems_per_bunch stems per bunch</i>"
       dforecast="<hr><b>Forecast:</b> <br>This week: $forecast_week1 <br>Next week: $forecast_week2 <br>Future: $forecast_week3<br>$spb<hr>"
