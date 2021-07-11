@@ -14,7 +14,8 @@
       "args": [
         "forecast",
         "--forecast", "../wrk/forecast.json",
-        "--products", "../wrk/products.json"
+        "--products", "../wrk/products.json",
+        "--products-modified", "../wrk/products-modified.json"
      ],
 
     }

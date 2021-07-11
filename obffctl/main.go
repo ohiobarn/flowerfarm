@@ -15,8 +15,13 @@ limitations under the License.
 */
 package main
 
-import "github.com/ohiobarn/flowerfarm/obffctl/cmd"
+import (
+	"fmt"
+
+	"github.com/ohiobarn/flowerfarm/obffctl/cmd"
+)
 
 func main() {
+	fmt.Println("Get ready...")
 	cmd.Execute()
 }

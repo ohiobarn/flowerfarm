@@ -111,21 +111,19 @@ Example ran from the flowerfarm project root:
 `,
 	Run: func(cmd *cobra.Command, args []string) {
 
-		forecast := loadForecast(cmd, args)
-		products := loadProducts(cmd, args)
+		forecast := loadForecast(cmd)
+		products := loadProducts(cmd)
 		productsModified := make([]ProductDoc, 0)
 
+		//
+		// updateProductsFromForecast - Inspect forecast documents update and/or add prouct docs as needed
+		//
 		updateProductsFromForecast(forecast, products, &productsModified)
 
-		//debug
-		// fmt.Println("Check for updates 1")
-		// l := len(productsModified)
-		// fmt.Println("Check for updates 2")
-		// if l == 0 {
-		// 	fmt.Println("No products need updated")
-		// } else {
-		// 	printSlice(productsModified)
-		// }
+		//
+		// writeProducts - Output the productsModified slice as a json file
+		//
+		writeProducts(&productsModified, cmd)
 
 		fmt.Printf("\n************ DONE ****************\n")
 	},
@@ -150,9 +148,11 @@ func init() {
 	forecastCmd.Flags().StringP("products", "p", "exports/squarespace/export/products.json", "Path to the products file exported from Square Space, must be in json format")
 	forecastCmd.MarkFlagRequired("products")
 
+	forecastCmd.Flags().StringP("products-modified", "m", "exports/squarespace/export/products-modified.json", "Output path to the new modified products file")
+	forecastCmd.MarkFlagRequired("products-modified")
 }
 
-func loadForecast(cmd *cobra.Command, args []string) *Forecast {
+func loadForecast(cmd *cobra.Command) *Forecast {
 	//
 	// Open forecastFile
 	//
@@ -178,7 +178,7 @@ func loadForecast(cmd *cobra.Command, args []string) *Forecast {
 	return forecast
 }
 
-func loadProducts(cmd *cobra.Command, args []string) *Products {
+func loadProducts(cmd *cobra.Command) *Products {
 	//
 	// Open productsFile
 	//
@@ -202,6 +202,16 @@ func loadProducts(cmd *cobra.Command, args []string) *Products {
 	json.Unmarshal(productsJsonData, &products)
 
 	return products
+}
+
+func writeProducts(productsModified *[]ProductDoc, cmd *cobra.Command) {
+
+	productsModifiedFileName, _ := cmd.Flags().GetString("products-modified")
+	fmt.Printf("\nWrite productsMofified as json file: %s\n", productsModifiedFileName)
+
+	data, _ := json.Marshal(productsModified)
+	_ = ioutil.WriteFile(productsModifiedFileName, data, 0644)
+
 }
 
 //
@@ -228,13 +238,14 @@ func updateProductsFromForecast(forecast *Forecast, products *Products, products
 		productDoc := findProductDocBySKU(forecastDoc.SKU, products)
 		if productDoc.SKU == "" {
 
+			createProduct(forecastDoc, productsModified)
 			fmt.Printf("%s[ Create ] %s", colorYellow, colorReset)
 			fmt.Printf("Forecast has no matching Product, Product will be created from forecast\n")
 			productCreateCount++
 
 		} else {
 
-			if doUpdate(&forecastDoc, &productDoc, productsModified) {
+			if doUpdate(forecastDoc, productDoc, productsModified) {
 
 				fmt.Printf("%s[ Modified ] %s", colorYellow, colorReset)
 				fmt.Printf("Forecast and Product are different, Product will be updated from forecast\n")
@@ -272,7 +283,7 @@ func updateProductsFromForecast(forecast *Forecast, products *Products, products
 //   Use forecast doc to genererate a new product doc.  Then compare
 //   the new product with existing product to see if any change is needed
 //
-func doUpdate(fDoc *ForecastDoc, pDoc *ProductDoc, productsModified *[]ProductDoc) bool {
+func doUpdate(fDoc ForecastDoc, pDoc ProductDoc, productsModified *[]ProductDoc) bool {
 	doUpdate := false
 	dmp := diffmatchpatch.New()
 
@@ -304,15 +315,14 @@ func doUpdate(fDoc *ForecastDoc, pDoc *ProductDoc, productsModified *[]ProductDo
 		pDoc.Description = newProductDescription
 		pDoc.Stock = newProductStock
 
-		*productsModified = append(*productsModified, *pDoc)
+		*productsModified = append(*productsModified, pDoc)
 	}
 
 	// Returns true if merge occured
 	return doUpdate
-
 }
 
-func buidTitle(fDoc *ForecastDoc) string {
+func buidTitle(fDoc ForecastDoc) string {
 
 	title := fmt.Sprintf("<p>%s - %s | %s<br>%s<br><hr><b>Forecast:</b> <br>This week: %s <br>Next week: %s <br>Future: %s<br><i>%s stems per bunch</i><hr><br></p>",
 		fDoc.Crop,
@@ -328,13 +338,22 @@ func buidTitle(fDoc *ForecastDoc) string {
 	return title
 }
 
-func createProduct(fDoc *ForecastDoc, productsModified *[]ProductDoc) {
+//
+// createProduct - Create a default product document from a forecast doc
+//                 and add it to the productsModified slice
+func createProduct(fDoc ForecastDoc, productsModified *[]ProductDoc) {
 
 	var pDoc ProductDoc
 
+	pDoc.SKU = fDoc.SKU
 	pDoc.Title = fDoc.Crop + " - " + fDoc.Variety
 	pDoc.Description = buidTitle(fDoc)
+	pDoc.Price = "999"
 	pDoc.Stock = fDoc.ThisWeek
+	pDoc.Tags = "mrfc"
+	pDoc.ProductType = "PHYSICAL"
+	pDoc.ProductPage = "mrfc"
+	pDoc.Visible = "true"
 
 	fmt.Printf("Title: %s\n", pDoc.Description)
 	fmt.Printf("Description: %s\n", pDoc.Description)
@@ -352,10 +371,4 @@ func findProductDocBySKU(forecastSKU string, products *Products) ProductDoc {
 	}
 	var errorDoc ProductDoc
 	return errorDoc
-}
-
-func printSlice(p Products) {
-	s := p
-	fmt.Println("PRINT SLICE:")
-	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
 }
