@@ -228,34 +228,25 @@ func updateProductsFromForecast(forecast *Forecast, products *Products, products
 		productDoc := findProductDocBySKU(forecastDoc.SKU, products)
 		if productDoc.SKU == "" {
 
-			fmt.Printf("%sNo matching product found%s\n", colorWhite, colorReset)
+			fmt.Printf("%s[ Create ] %s", colorYellow, colorReset)
+			fmt.Printf("Forecast has no matching Product, Product will be created from forecast\n")
 			productCreateCount++
 
 		} else {
 
-			//
-			// todo - create a new generateProductDoc 
-			//        this new function should create a product doc from a forecast doc
-			//        
-			//        create a new compareProductAndForecast
-			//        this function take the new product doc and compare it to the product doc found
-			//
-			//        if same 
-			//           call updateProduct
-			//        else
-			//           call createProduct
-			//
-
 			if doUpdate(&forecastDoc, &productDoc, productsModified) {
-				fmt.Printf("%sChange detected%s\n",colorYellow, colorReset)
+
+				fmt.Printf("%s[ Modified ] %s", colorYellow, colorReset)
+				fmt.Printf("Forecast and Product are different, Product will be updated from forecast\n")
 				productUpdateCount++
+
 			} else {
-				fmt.Printf("%sNo change%s\n",colorWhite, colorReset)
+
+				fmt.Printf("%s[ No change ] %s", colorYellow, colorReset)
+				fmt.Printf("Forecast and Product are the same, do nothing\n")
 				productUnchangedCount++
 			}
-
 		}
-
 	}
 
 	fmt.Printf("\n--------------------------------------------\n")
@@ -281,50 +272,74 @@ func updateProductsFromForecast(forecast *Forecast, products *Products, products
 //   Use forecast doc to genererate a new product doc.  Then compare
 //   the new product with existing product to see if any change is needed
 //
-func doUpdate(f *ForecastDoc, p *ProductDoc, productsModified *[]ProductDoc) bool {
+func doUpdate(fDoc *ForecastDoc, pDoc *ProductDoc, productsModified *[]ProductDoc) bool {
 	doUpdate := false
 	dmp := diffmatchpatch.New()
 
-	newProductTitle := f.Crop + " - " + f.Variety
-	newProductStock := f.ThisWeek
-	newProductDescription := fmt.Sprintf("<p>%s | %s<br>%s<br><hr><b>Forecast:</b> <br>This week: %s <br>Next week: %s <br>Future: %s<br><i>%s stems per bunch</i><hr><br></p>",
-		newProductTitle, f.SKU,
-		f.ShopDescription,
-		f.ThisWeek,
-		f.NextWeek,
-		f.Future,
-		f.StemsPerBunch,
-	)
+	newProductTitle := fDoc.Crop + " - " + fDoc.Variety
+	newProductStock := fDoc.ThisWeek
+	newProductDescription := buidTitle(fDoc)
 
-	if newProductDescription != p.Description {
+	if newProductDescription != pDoc.Description {
 		doUpdate = true
-		diffs := dmp.DiffMain(p.Description, newProductDescription, false)
+		diffs := dmp.DiffMain(pDoc.Description, newProductDescription, false)
 		fmt.Printf("%sDescription:%s %s\n", colorGreen, colorReset, dmp.DiffPrettyText(diffs))
 	}
 
-	if newProductTitle != p.Title {
+	if newProductTitle != pDoc.Title {
 		doUpdate = true
-		diffs := dmp.DiffMain(p.Title, newProductTitle, false)
+		diffs := dmp.DiffMain(pDoc.Title, newProductTitle, false)
 		fmt.Printf("Title: %s\n", dmp.DiffPrettyText(diffs))
 	}
 
-	if newProductStock != p.Stock {
+	if newProductStock != pDoc.Stock {
 		doUpdate = true
-		diffs := dmp.DiffMain(p.Stock, newProductStock, false)
+		diffs := dmp.DiffMain(pDoc.Stock, newProductStock, false)
 		fmt.Printf("Stock: %s\n", dmp.DiffPrettyText(diffs))
 	}
 
 	if doUpdate {
-		productDocUpdated := p
-		productDocUpdated.Title = newProductTitle
-		productDocUpdated.Description = newProductDescription
-		productDocUpdated.Stock = newProductStock
 
-		*productsModified = append(*productsModified, *productDocUpdated)
+		pDoc.Title = newProductTitle
+		pDoc.Description = newProductDescription
+		pDoc.Stock = newProductStock
+
+		*productsModified = append(*productsModified, *pDoc)
 	}
 
 	// Returns true if merge occured
 	return doUpdate
+
+}
+
+func buidTitle(fDoc *ForecastDoc) string {
+
+	title := fmt.Sprintf("<p>%s - %s | %s<br>%s<br><hr><b>Forecast:</b> <br>This week: %s <br>Next week: %s <br>Future: %s<br><i>%s stems per bunch</i><hr><br></p>",
+		fDoc.Crop,
+		fDoc.Variety,
+		fDoc.SKU,
+		fDoc.ShopDescription,
+		fDoc.ThisWeek,
+		fDoc.NextWeek,
+		fDoc.Future,
+		fDoc.StemsPerBunch,
+	)
+
+	return title
+}
+
+func createProduct(fDoc *ForecastDoc, productsModified *[]ProductDoc) {
+
+	var pDoc ProductDoc
+
+	pDoc.Title = fDoc.Crop + " - " + fDoc.Variety
+	pDoc.Description = buidTitle(fDoc)
+	pDoc.Stock = fDoc.ThisWeek
+
+	fmt.Printf("Title: %s\n", pDoc.Description)
+	fmt.Printf("Description: %s\n", pDoc.Description)
+	fmt.Printf("Stock: %s\n", pDoc.Description)
+	*productsModified = append(*productsModified, pDoc)
 
 }
 
