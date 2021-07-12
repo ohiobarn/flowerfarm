@@ -39,7 +39,6 @@ type ForecastDoc struct {
 	ThisWeek           string `json:"This Week"`
 	NextWeek           string `json:"Next Week"`
 	Future             string `json:"Future"`
-	StemsPerBunch      string `json:"Stems per Bunch"`
 	AvailabilityMonths string `json:"Availability Months"`
 	Category           string `json:"Category"`
 	ThisNextFuture     string `json:"This week | Next week | Future"`
@@ -47,6 +46,8 @@ type ForecastDoc struct {
 	OpenInShop         string `json:"Open in Shop"`
 	Color              string `json:"Color"`
 	Tier               string `json:"Tier"`
+	StemsPerBunch      string `json:"Stems per Bunch"`
+	PricePerBunch      string `json:"Price per Bunch"`
 }
 
 //
@@ -290,6 +291,7 @@ func doUpdate(fDoc ForecastDoc, pDoc ProductDoc, productsModified *[]ProductDoc)
 	newProductTitle := fDoc.Crop + " - " + fDoc.Variety
 	newProductStock := fDoc.ThisWeek
 	newProductDescription := buidTitle(fDoc)
+	newProductPrice := fDoc.PricePerBunch
 
 	if newProductDescription != pDoc.Description {
 		doUpdate = true
@@ -300,13 +302,19 @@ func doUpdate(fDoc ForecastDoc, pDoc ProductDoc, productsModified *[]ProductDoc)
 	if newProductTitle != pDoc.Title {
 		doUpdate = true
 		diffs := dmp.DiffMain(pDoc.Title, newProductTitle, false)
-		fmt.Printf("Title: %s\n", dmp.DiffPrettyText(diffs))
+		fmt.Printf("%Title:%s %s\n", colorGreen, colorReset, dmp.DiffPrettyText(diffs))
 	}
 
 	if newProductStock != pDoc.Stock {
 		doUpdate = true
 		diffs := dmp.DiffMain(pDoc.Stock, newProductStock, false)
-		fmt.Printf("Stock: %s\n", dmp.DiffPrettyText(diffs))
+		fmt.Printf("%sStock:%s %s\n", colorGreen, colorReset, dmp.DiffPrettyText(diffs))
+	}
+
+	if newProductPrice != pDoc.Price {
+		doUpdate = true
+		diffs := dmp.DiffMain(pDoc.Price, newProductPrice, false)
+		fmt.Printf("%sPrice:%s %s\n", colorGreen, colorReset, dmp.DiffPrettyText(diffs))
 	}
 
 	if doUpdate {
@@ -314,6 +322,7 @@ func doUpdate(fDoc ForecastDoc, pDoc ProductDoc, productsModified *[]ProductDoc)
 		pDoc.Title = newProductTitle
 		pDoc.Description = newProductDescription
 		pDoc.Stock = newProductStock
+		pDoc.Price = newProductPrice
 
 		*productsModified = append(*productsModified, pDoc)
 	}
@@ -348,7 +357,7 @@ func createProduct(fDoc ForecastDoc, productsModified *[]ProductDoc) {
 	pDoc.SKU = fDoc.SKU
 	pDoc.Title = fDoc.Crop + " - " + fDoc.Variety
 	pDoc.Description = buidTitle(fDoc)
-	pDoc.Price = "999"
+	pDoc.Price = fDoc.PricePerBunch
 	pDoc.Stock = fDoc.ThisWeek
 	pDoc.Tags = "mrfc"
 	pDoc.ProductType = "PHYSICAL"
