@@ -91,17 +91,29 @@ type ProductDoc struct {
 }
 
 type ForecastProductDoc struct {
-	compareStatus int
+	compareStatus string
 	forecastDoc   ForecastDoc
 	productDoc    ProductDoc
 }
 
-const (
-	err = iota
-	NewProduct
-	ModifiedProduct
-	ProductSame
-)
+type compareStatus struct {
+	new string
+	modified string
+	unchanged string
+}
+
+var status = compareStatus{
+	new: "New",
+	modified: "Modified",
+	unchanged: "Unchanged",
+}
+
+// const (
+// 	err = iota
+// 	NewProduct
+// 	ModifiedProduct
+// 	ProductSame
+// )
 
 const colorReset = string("\033[0m")
 const colorRed = string("\033[31m")
@@ -243,11 +255,11 @@ func processingReport(fpColl *[]ForecastProductDoc) {
 
 	for _, fpDoc := range *fpColl {
 		switch fpDoc.compareStatus {
-		case NewProduct:
+		case status.new:
 			new++
-		case ModifiedProduct:
+		case status.modified:
 			mod++
-		case ProductSame:
+		case status.unchanged:
 			same++
 		default:
 			other++
@@ -285,7 +297,7 @@ func updateProductsFromForecast(forecast *Forecast, products *Products, products
 			*productsModified = append(*productsModified, newProductDoc)
 
 			var fpDoc ForecastProductDoc
-			fpDoc.compareStatus = NewProduct
+			fpDoc.compareStatus = status.new
 			fpDoc.forecastDoc = forecastDoc
 			fpDoc.productDoc = newProductDoc
 			*forecastProductCollection = append(*forecastProductCollection, fpDoc)
@@ -301,7 +313,7 @@ func updateProductsFromForecast(forecast *Forecast, products *Products, products
 				*productsModified = append(*productsModified, productDoc)
 
 				var fpDoc ForecastProductDoc
-				fpDoc.compareStatus = ModifiedProduct
+				fpDoc.compareStatus = status.modified
 				fpDoc.forecastDoc = forecastDoc
 				fpDoc.productDoc = productDoc
 				*forecastProductCollection = append(*forecastProductCollection, fpDoc)
@@ -318,7 +330,7 @@ func updateProductsFromForecast(forecast *Forecast, products *Products, products
 				}
 
 				var fpDoc ForecastProductDoc
-				fpDoc.compareStatus = ProductSame
+				fpDoc.compareStatus = status.unchanged
 				fpDoc.forecastDoc = forecastDoc
 				fpDoc.productDoc = productDoc
 				*forecastProductCollection = append(*forecastProductCollection, fpDoc)
