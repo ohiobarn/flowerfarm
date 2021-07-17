@@ -97,23 +97,16 @@ type ForecastProductDoc struct {
 }
 
 type compareStatus struct {
-	new string
-	modified string
+	new       string
+	modified  string
 	unchanged string
 }
 
 var status = compareStatus{
-	new: "New",
-	modified: "Modified",
+	new:       "New",
+	modified:  "Modified",
 	unchanged: "Unchanged",
 }
-
-// const (
-// 	err = iota
-// 	NewProduct
-// 	ModifiedProduct
-// 	ProductSame
-// )
 
 const colorReset = string("\033[0m")
 const colorRed = string("\033[31m")
@@ -136,30 +129,7 @@ Example ran from the flowerfarm project root:
 
  $ obffctl forecast --forecast wrk/forecast.json --products wrk/products.json
 `,
-	Run: func(cmd *cobra.Command, args []string) {
-
-		forecast := loadForecast(cmd)
-		products := loadProducts(cmd)
-		productsModified := make([]ProductDoc, 0)
-		forecastProductCollection := make([]ForecastProductDoc, 0)
-
-		//
-		// updateProductsFromForecast - Inspect forecast documents update and/or add prouct docs as needed
-		//
-		updateProductsFromForecast(forecast, products, &productsModified, &forecastProductCollection)
-
-		//
-		//
-		//
-		processingReport(&forecastProductCollection)
-
-		//
-		// writeProducts - Output the productsModified slice as a json file
-		//
-		writeProducts(&productsModified, cmd)
-
-		fmt.Printf("\n************ DONE ****************\n")
-	},
+	Run: forecastRun,
 }
 
 func init() {
@@ -185,11 +155,44 @@ func init() {
 	forecastCmd.MarkFlagRequired("products-modified")
 }
 
-func loadForecast(cmd *cobra.Command) *Forecast {
+func forecastRun(cmd *cobra.Command, args []string) {
+	forecastFileName, _ := cmd.Flags().GetString("forecast")
+	productsFileName, _ := cmd.Flags().GetString("products")
+	productsModifiedFileName, _ := cmd.Flags().GetString("products-modified")
+
+	ForecastRun(forecastFileName, productsFileName, productsModifiedFileName)
+}
+func ForecastRun(forecastFileName string, productsFileName string, productsModifiedFileName string) *[]ForecastProductDoc {
+
+	forecast := loadForecast(forecastFileName)
+	products := loadProducts(productsFileName)
+
+	productsModified := make([]ProductDoc, 0)
+	forecastProductCollection := make([]ForecastProductDoc, 0)
+
+	//
+	// updateProductsFromForecast - Inspect forecast documents update and/or add prouct docs as needed
+	//
+	updateProductsFromForecast(forecast, products, &productsModified, &forecastProductCollection)
+
+	//
+	//
+	//
+	processingReport(&forecastProductCollection)
+
+	//
+	// writeProducts - Output the productsModified slice as a json file
+	//
+	writeProducts(&productsModified, productsModifiedFileName)
+
+	fmt.Printf("\n************ DONE ****************\n")
+	return &forecastProductCollection
+}
+
+func loadForecast(forecastFileName string) *Forecast {
 	//
 	// Open forecastFile
 	//
-	forecastFileName, _ := cmd.Flags().GetString("forecast")
 	fmt.Printf("forcastFilePath: %s\n", forecastFileName)
 	forecastFile, err := os.Open(forecastFileName)
 	if err != nil {
@@ -211,11 +214,10 @@ func loadForecast(cmd *cobra.Command) *Forecast {
 	return forecast
 }
 
-func loadProducts(cmd *cobra.Command) *Products {
+func loadProducts(productsFileName string) *Products {
 	//
 	// Open productsFile
 	//
-	productsFileName, _ := cmd.Flags().GetString("products")
 	fmt.Printf("productsFilePath: %s\n", productsFileName)
 	productsFile, err := os.Open(productsFileName)
 	if err != nil {
@@ -237,9 +239,8 @@ func loadProducts(cmd *cobra.Command) *Products {
 	return products
 }
 
-func writeProducts(productsModified *[]ProductDoc, cmd *cobra.Command) {
+func writeProducts(productsModified *[]ProductDoc, productsModifiedFileName string) {
 
-	productsModifiedFileName, _ := cmd.Flags().GetString("products-modified")
 	fmt.Printf("\nWrite productsMofified as json file: %s\n", productsModifiedFileName)
 
 	data, _ := json.Marshal(productsModified)
