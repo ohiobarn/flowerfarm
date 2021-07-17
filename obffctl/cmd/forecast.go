@@ -90,14 +90,28 @@ type ProductDoc struct {
 	HostedImageURLs string `json:"Hosted Image URLs"`
 }
 
+type ForecastProductDoc struct {
+	compareStatus int
+	forecastDoc   ForecastDoc
+	productDoc    ProductDoc
+}
+
+const (
+	err = iota
+	NewProduct
+	ModifiedProduct
+	ProductSame
+)
+
 const colorReset = string("\033[0m")
 const colorRed = string("\033[31m")
 const colorGreen = string("\033[32m")
 const colorYellow = string("\033[33m")
 const colorBlue = string("\033[34m")
-const colorPurple = string("\033[35m")
-const colorCyan = string("\033[36m")
-const colorWhite = string("\033[37m")
+
+// const colorPurple = string("\033[35m")
+// const colorCyan = string("\033[36m")
+// const colorWhite = string("\033[37m")
 
 // forecastCmd represents the forecast command
 var forecastCmd = &cobra.Command{
@@ -115,11 +129,17 @@ Example ran from the flowerfarm project root:
 		forecast := loadForecast(cmd)
 		products := loadProducts(cmd)
 		productsModified := make([]ProductDoc, 0)
+		forecastProductCollection := make([]ForecastProductDoc, 0)
 
 		//
 		// updateProductsFromForecast - Inspect forecast documents update and/or add prouct docs as needed
 		//
-		updateProductsFromForecast(forecast, products, &productsModified)
+		updateProductsFromForecast(forecast, products, &productsModified, &forecastProductCollection)
+
+		//
+		//
+		//
+		processingReport(&forecastProductCollection)
 
 		//
 		// writeProducts - Output the productsModified slice as a json file
@@ -215,6 +235,27 @@ func writeProducts(productsModified *[]ProductDoc, cmd *cobra.Command) {
 
 }
 
+func processingReport(fpColl *[]ForecastProductDoc) {
+	new := 0
+	mod := 0
+	same := 0
+	other := 0
+
+	for _, fpDoc := range *fpColl {
+		switch fpDoc.compareStatus {
+		case NewProduct:
+			new++
+		case ModifiedProduct:
+			mod++
+		case ProductSame:
+			same++
+		default:
+			other++
+		}
+	}
+	fmt.Printf("New: %v, Mod: %v, Same: %v, Other: %v, Total: %v\n", new, mod, same, other, new+mod+same+other)
+}
+
 //
 // updateProductsFromForecast
 //   For each forecast doc do:
@@ -223,7 +264,7 @@ func writeProducts(productsModified *[]ProductDoc, cmd *cobra.Command) {
 //     - if no cooresponding product doc is found creat a new product doc
 //     - add the new/modified product doc to the `productsModified` slice
 //
-func updateProductsFromForecast(forecast *Forecast, products *Products, productsModified *[]ProductDoc) {
+func updateProductsFromForecast(forecast *Forecast, products *Products, productsModified *[]ProductDoc, forecastProductCollection *[]ForecastProductDoc) {
 
 	productUpdateCount := 0
 	productCreateCount := 0
@@ -232,21 +273,38 @@ func updateProductsFromForecast(forecast *Forecast, products *Products, products
 
 	for _, forecastDoc := range *forecast {
 
+		totalCount++
 		fmt.Printf("\n--------------------------------------------\n")
 		fmt.Printf("forecast SKU: %s%s%s\n", colorBlue, forecastDoc.SKU, colorReset)
-		totalCount++
 
 		productDoc := findProductDocBySKU(forecastDoc.SKU, products)
 		if productDoc.SKU == "" {
 
-			createProduct(forecastDoc, productsModified)
+			newProductDoc := createProduct(forecastDoc)
+
+			*productsModified = append(*productsModified, newProductDoc)
+
+			var fpDoc ForecastProductDoc
+			fpDoc.compareStatus = NewProduct
+			fpDoc.forecastDoc = forecastDoc
+			fpDoc.productDoc = newProductDoc
+			*forecastProductCollection = append(*forecastProductCollection, fpDoc)
+
 			fmt.Printf("%s[ Create ] %s", colorYellow, colorReset)
 			fmt.Printf("Forecast has no matching Product, Product will be created from forecast\n")
 			productCreateCount++
 
 		} else {
 
-			if doUpdate(forecastDoc, productDoc, productsModified) {
+			if doUpdate(forecastDoc, productDoc) {
+
+				*productsModified = append(*productsModified, productDoc)
+
+				var fpDoc ForecastProductDoc
+				fpDoc.compareStatus = ModifiedProduct
+				fpDoc.forecastDoc = forecastDoc
+				fpDoc.productDoc = productDoc
+				*forecastProductCollection = append(*forecastProductCollection, fpDoc)
 
 				fmt.Printf("%s[ Modified ] %s", colorYellow, colorReset)
 				fmt.Printf("Forecast and Product are different, Product will be updated from forecast\n")
@@ -254,8 +312,17 @@ func updateProductsFromForecast(forecast *Forecast, products *Products, products
 
 			} else {
 
-				fmt.Printf("%s[ No change ] %s", colorYellow, colorReset)
-				fmt.Printf("Forecast and Product are the same, do nothing\n")
+				if false {
+					fmt.Printf("%s[ No change ] %s", colorYellow, colorReset)
+					fmt.Printf("Forecast and Product are the same, do nothing\n")
+				}
+
+				var fpDoc ForecastProductDoc
+				fpDoc.compareStatus = ProductSame
+				fpDoc.forecastDoc = forecastDoc
+				fpDoc.productDoc = productDoc
+				*forecastProductCollection = append(*forecastProductCollection, fpDoc)
+
 				productUnchangedCount++
 			}
 		}
@@ -284,7 +351,7 @@ func updateProductsFromForecast(forecast *Forecast, products *Products, products
 //   Use forecast doc to genererate a new product doc.  Then compare
 //   the new product with existing product to see if any change is needed
 //
-func doUpdate(fDoc ForecastDoc, pDoc ProductDoc, productsModified *[]ProductDoc) bool {
+func doUpdate(fDoc ForecastDoc, pDoc ProductDoc) bool {
 	doUpdate := false
 	dmp := diffmatchpatch.New()
 
@@ -302,7 +369,7 @@ func doUpdate(fDoc ForecastDoc, pDoc ProductDoc, productsModified *[]ProductDoc)
 	if newProductTitle != pDoc.Title {
 		doUpdate = true
 		diffs := dmp.DiffMain(pDoc.Title, newProductTitle, false)
-		fmt.Printf("%Title:%s %s\n", colorGreen, colorReset, dmp.DiffPrettyText(diffs))
+		fmt.Printf("%sTitle:%s %s\n", colorGreen, colorReset, dmp.DiffPrettyText(diffs))
 	}
 
 	if newProductStock != pDoc.Stock {
@@ -323,8 +390,6 @@ func doUpdate(fDoc ForecastDoc, pDoc ProductDoc, productsModified *[]ProductDoc)
 		pDoc.Description = newProductDescription
 		pDoc.Stock = newProductStock
 		pDoc.Price = newProductPrice
-
-		*productsModified = append(*productsModified, pDoc)
 	}
 
 	// Returns true if merge occured
@@ -350,7 +415,7 @@ func buidTitle(fDoc ForecastDoc) string {
 //
 // createProduct - Create a default product document from a forecast doc
 //                 and add it to the productsModified slice
-func createProduct(fDoc ForecastDoc, productsModified *[]ProductDoc) {
+func createProduct(fDoc ForecastDoc) ProductDoc {
 
 	var pDoc ProductDoc
 
@@ -367,7 +432,8 @@ func createProduct(fDoc ForecastDoc, productsModified *[]ProductDoc) {
 	fmt.Printf("Title: %s\n", pDoc.Description)
 	fmt.Printf("Description: %s\n", pDoc.Description)
 	fmt.Printf("Stock: %s\n", pDoc.Description)
-	*productsModified = append(*productsModified, pDoc)
+
+	return pDoc
 
 }
 
