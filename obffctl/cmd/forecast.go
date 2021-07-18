@@ -90,10 +90,55 @@ type ProductDoc struct {
 	HostedImageURLs string `json:"Hosted Image URLs"`
 }
 
-type ForecastProductDoc struct {
+type Audit struct {
+	NewCount         int
+	ModifiedCount    int
+	UnchangedCount   int
+	FPDocs           []fpDoc
+	ProductsModified []ProductDoc
+}
+type fpDoc struct {
 	compareStatus string
 	forecastDoc   ForecastDoc
 	productDoc    ProductDoc
+}
+
+func (audit *Audit) recordNew(fd ForecastDoc, pd ProductDoc) {
+
+	var fpDoc fpDoc
+	fpDoc.compareStatus = status.new
+	fpDoc.forecastDoc = fd
+	fpDoc.productDoc = pd
+
+	audit.FPDocs = append(audit.FPDocs, fpDoc)
+	audit.ProductsModified = append(audit.ProductsModified, pd)
+	audit.NewCount++
+
+}
+
+func (audit *Audit) recordModified(fd ForecastDoc, pd ProductDoc) {
+
+	var fpDoc fpDoc
+	fpDoc.compareStatus = status.modified
+	fpDoc.forecastDoc = fd
+	fpDoc.productDoc = pd
+
+	audit.FPDocs = append(audit.FPDocs, fpDoc)
+	audit.ProductsModified = append(audit.ProductsModified, pd)
+	audit.ModifiedCount++
+
+}
+
+func (audit *Audit) recordUncchanged(fd ForecastDoc, pd ProductDoc) {
+
+	var fpDoc fpDoc
+	fpDoc.compareStatus = status.unchanged
+	fpDoc.forecastDoc = fd
+	fpDoc.productDoc = pd
+
+	audit.FPDocs = append(audit.FPDocs, fpDoc)
+	audit.UnchangedCount++
+
 }
 
 type compareStatus struct {
@@ -162,23 +207,25 @@ func forecastRun(cmd *cobra.Command, args []string) {
 
 	ForecastRun(forecastFileName, productsFileName, productsModifiedFileName)
 }
-func ForecastRun(forecastFileName string, productsFileName string, productsModifiedFileName string) *[]ForecastProductDoc {
+func ForecastRun(forecastFileName string, productsFileName string, productsModifiedFileName string) *Audit {
 
 	forecast := loadForecast(forecastFileName)
 	products := loadProducts(productsFileName)
 
 	productsModified := make([]ProductDoc, 0)
-	forecastProductCollection := make([]ForecastProductDoc, 0)
+
+	//forecastProductCollection := make([]ForecastProductDoc, 0)
+	var audit Audit
 
 	//
 	// updateProductsFromForecast - Inspect forecast documents update and/or add prouct docs as needed
 	//
-	updateProductsFromForecast(forecast, products, &productsModified, &forecastProductCollection)
+	updateProductsFromForecast(forecast, products, &audit)
 
 	//
 	//
 	//
-	processingReport(&forecastProductCollection)
+	processingReport(&audit)
 
 	//
 	// writeProducts - Output the productsModified slice as a json file
@@ -186,7 +233,7 @@ func ForecastRun(forecastFileName string, productsFileName string, productsModif
 	writeProducts(&productsModified, productsModifiedFileName)
 
 	fmt.Printf("\n************ DONE ****************\n")
-	return &forecastProductCollection
+	return &audit
 }
 
 func loadForecast(forecastFileName string) *Forecast {
@@ -248,14 +295,14 @@ func writeProducts(productsModified *[]ProductDoc, productsModifiedFileName stri
 
 }
 
-func processingReport(fpColl *[]ForecastProductDoc) {
+func processingReport(audit *Audit) {
 	new := 0
 	mod := 0
 	same := 0
 	other := 0
 
-	for _, fpDoc := range *fpColl {
-		switch fpDoc.compareStatus {
+	for _, doc := range audit.FPDocs {
+		switch doc.compareStatus {
 		case status.new:
 			new++
 		case status.modified:
@@ -266,6 +313,7 @@ func processingReport(fpColl *[]ForecastProductDoc) {
 			other++
 		}
 	}
+	fmt.Printf("\nfpDoc Len: %v\n", len(audit.FPDocs))
 	fmt.Printf("New: %v, Mod: %v, Same: %v, Other: %v, Total: %v\n", new, mod, same, other, new+mod+same+other)
 }
 
@@ -277,11 +325,11 @@ func processingReport(fpColl *[]ForecastProductDoc) {
 //     - if no cooresponding product doc is found creat a new product doc
 //     - add the new/modified product doc to the `productsModified` slice
 //
-func updateProductsFromForecast(forecast *Forecast, products *Products, productsModified *[]ProductDoc, forecastProductCollection *[]ForecastProductDoc) {
+func updateProductsFromForecast(
+	forecast *Forecast,
+	products *Products,
+	audit *Audit) {
 
-	productUpdateCount := 0
-	productCreateCount := 0
-	productUnchangedCount := 0
 	totalCount := 0
 
 	for _, forecastDoc := range *forecast {
@@ -291,66 +339,43 @@ func updateProductsFromForecast(forecast *Forecast, products *Products, products
 		fmt.Printf("forecast SKU: %s%s%s\n", colorBlue, forecastDoc.SKU, colorReset)
 
 		productDoc := findProductDocBySKU(forecastDoc.SKU, products)
+
 		if productDoc.SKU == "" {
 
 			newProductDoc := createProduct(forecastDoc)
-
-			*productsModified = append(*productsModified, newProductDoc)
-
-			var fpDoc ForecastProductDoc
-			fpDoc.compareStatus = status.new
-			fpDoc.forecastDoc = forecastDoc
-			fpDoc.productDoc = newProductDoc
-			*forecastProductCollection = append(*forecastProductCollection, fpDoc)
+			audit.recordNew(forecastDoc, newProductDoc)
 
 			fmt.Printf("%s[ Create ] %s", colorYellow, colorReset)
 			fmt.Printf("Forecast has no matching Product, Product will be created from forecast\n")
-			productCreateCount++
 
 		} else {
 
 			if doUpdate(forecastDoc, productDoc) {
 
-				*productsModified = append(*productsModified, productDoc)
-
-				var fpDoc ForecastProductDoc
-				fpDoc.compareStatus = status.modified
-				fpDoc.forecastDoc = forecastDoc
-				fpDoc.productDoc = productDoc
-				*forecastProductCollection = append(*forecastProductCollection, fpDoc)
-
+				audit.recordModified(forecastDoc, productDoc)
 				fmt.Printf("%s[ Modified ] %s", colorYellow, colorReset)
 				fmt.Printf("Forecast and Product are different, Product will be updated from forecast\n")
-				productUpdateCount++
 
 			} else {
 
-				if false {
-					fmt.Printf("%s[ No change ] %s", colorYellow, colorReset)
-					fmt.Printf("Forecast and Product are the same, do nothing\n")
-				}
+				audit.recordUncchanged(forecastDoc, productDoc)
+				fmt.Printf("%s[ Unchanged ] %s", colorYellow, colorReset)
 
-				var fpDoc ForecastProductDoc
-				fpDoc.compareStatus = status.unchanged
-				fpDoc.forecastDoc = forecastDoc
-				fpDoc.productDoc = productDoc
-				*forecastProductCollection = append(*forecastProductCollection, fpDoc)
-
-				productUnchangedCount++
 			}
 		}
+
 	}
 
 	fmt.Printf("\n--------------------------------------------\n")
-	fmt.Printf("%sProduct update count...: %d%s\n", colorYellow, productUpdateCount, colorReset)
-	fmt.Printf("%sProduct create count...: %d%s\n", colorRed, productCreateCount, colorReset)
-	fmt.Printf("%sProduct unchanged count: %d%s\n", colorGreen, productUnchangedCount, colorReset)
+	fmt.Printf("%sProduct update count...: %d%s\n", colorYellow, audit.ModifiedCount, colorReset)
+	fmt.Printf("%sProduct create count...: %d%s\n", colorRed, audit.NewCount, colorReset)
+	fmt.Printf("%sProduct unchanged count: %d%s\n", colorGreen, audit.UnchangedCount, colorReset)
 	fmt.Printf("\nVerify:\n")
 
 	var sum int
 	var countStatus string
 	countStatus = colorRed + "Error" + colorReset
-	sum = productUpdateCount + productCreateCount + productUnchangedCount
+	sum = audit.ModifiedCount + audit.NewCount + audit.UnchangedCount
 	if (sum == totalCount) && (sum == len(*forecast)) {
 		countStatus = colorGreen + "OK" + colorReset
 	}

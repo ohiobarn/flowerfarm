@@ -13,16 +13,27 @@ func TestForecastRun(t *testing.T) {
 	forecastFileName := "/Users/tgilkerson/github/flowerfarm/obffctl/test-data/forecast.json"
 	productsFileName := "/Users/tgilkerson/github/flowerfarm/obffctl/test-data/products.json"
 	productsModifiedFileName := "/Users/tgilkerson/github/flowerfarm/obffctl/test-data/products-modified.json"
-	forecastProductCollection := cmd.ForecastRun(forecastFileName, productsFileName, productsModifiedFileName)
 
-	// Todo - add properties to the ForecastProductDoc for counters.
-	//      - update the logic to use the new counters
-	//      - then update this test to assert the counters
-	t.Logf("forecastProductCollection: %v", forecastProductCollection)
+	audit := cmd.ForecastRun(forecastFileName, productsFileName, productsModifiedFileName)
 
-	var want int = 1
-	var got int = 1
+	// Check modified count
+	want := 2
+	got := audit.ModifiedCount
 	if want != got {
-		t.Errorf("want %v, got %v", want, got)
+		t.Errorf("ModifiedCount: want %v, got %v", want, got)
+	}
+
+	// Check create count
+	want = 1
+	got = audit.NewCount
+	if want != got {
+		t.Errorf("NewCount: want %v, got %v", want, got)
+	}
+
+	// Check unchanged count
+	want = 1
+	got = audit.UnchangedCount
+	if want != got {
+		t.Errorf("UnchangedCount: want %v, got %v", want, got)
 	}
 }
