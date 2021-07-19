@@ -20,6 +20,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
+	"strings"
 
 	"github.com/sergi/go-diff/diffmatchpatch"
 	"github.com/spf13/cobra"
@@ -212,8 +213,6 @@ func ForecastRun(forecastFileName string, productsFileName string, productsModif
 	forecast := loadForecast(forecastFileName)
 	products := loadProducts(productsFileName)
 
-	productsModified := make([]ProductDoc, 0)
-
 	//forecastProductCollection := make([]ForecastProductDoc, 0)
 	var audit Audit
 
@@ -230,7 +229,7 @@ func ForecastRun(forecastFileName string, productsFileName string, productsModif
 	//
 	// writeProducts - Output the productsModified slice as a json file
 	//
-	writeProducts(&productsModified, productsModifiedFileName)
+	writeProducts(&audit.ProductsModified, productsModifiedFileName)
 
 	fmt.Printf("\n************ DONE ****************\n")
 	return &audit
@@ -393,15 +392,18 @@ func doUpdate(fDoc ForecastDoc, pDoc ProductDoc) bool {
 	doUpdate := false
 	dmp := diffmatchpatch.New()
 
-	newProductTitle := fDoc.Crop + " - " + fDoc.Variety
-	newProductStock := fDoc.ThisWeek
-	newProductDescription := buidTitle(fDoc)
-	newProductPrice := fDoc.PricePerBunch
+	newProductTitle := strings.TrimSpace(fDoc.Crop) + " - " + strings.TrimSpace(fDoc.Variety)
+	newProductStock := strings.TrimSpace(fDoc.ThisWeek)
+	newProductDescription := buidDescription(fDoc)
+	newProductPrice := strings.TrimSpace(fDoc.PricePerBunch)
 
 	if newProductDescription != pDoc.Description {
 		doUpdate = true
 		diffs := dmp.DiffMain(pDoc.Description, newProductDescription, false)
-		fmt.Printf("%sDescription:%s %s\n", colorGreen, colorReset, dmp.DiffPrettyText(diffs))
+		fmt.Printf("%sDescription (diff):%s %s\n\n", colorGreen, colorReset, dmp.DiffPrettyText(diffs))
+		fmt.Printf("%sDescription (before):%s %s\n", colorGreen, colorReset, pDoc.Description)
+		fmt.Printf("%sDescription (after).:%s %s\n\n", colorGreen, colorReset, newProductDescription)
+
 	}
 
 	if newProductTitle != pDoc.Title {
@@ -434,9 +436,9 @@ func doUpdate(fDoc ForecastDoc, pDoc ProductDoc) bool {
 	return doUpdate
 }
 
-func buidTitle(fDoc ForecastDoc) string {
+func buidDescription(fDoc ForecastDoc) string {
 
-	title := fmt.Sprintf("<p>%s - %s | %s<br>%s<br><hr><b>Forecast:</b> <br>This week: %s <br>Next week: %s <br>Future: %s<br><i>%s stems per bunch</i><hr><br></p>",
+	desc := fmt.Sprintf("<p>%s - %s | %s<br>%s<br><hr><b>Forecast:</b> <br>This week: %s <br>Next week: %s <br>Future: %s<br><i>%s stems per bunch</i><hr><br></p>",
 		fDoc.Crop,
 		fDoc.Variety,
 		fDoc.SKU,
@@ -447,7 +449,7 @@ func buidTitle(fDoc ForecastDoc) string {
 		fDoc.StemsPerBunch,
 	)
 
-	return title
+	return strings.TrimSpace(desc)
 }
 
 //
@@ -459,7 +461,7 @@ func createProduct(fDoc ForecastDoc) ProductDoc {
 
 	pDoc.SKU = fDoc.SKU
 	pDoc.Title = fDoc.Crop + " - " + fDoc.Variety
-	pDoc.Description = buidTitle(fDoc)
+	pDoc.Description = buidDescription(fDoc)
 	pDoc.Price = fDoc.PricePerBunch
 	pDoc.Stock = fDoc.ThisWeek
 	pDoc.Tags = "mrfc"

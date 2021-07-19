@@ -50,7 +50,7 @@
     "Variety": "Jewels of Opar ",
     "Grower": "GRF,OBFF",
     "SKU": "TAL-JEWOO",
-    "This Week": "0",
+    "This Week": "1",
     "Next Week": "0",
     "Future": "10",
     "Availability Months": "July,August,September,October",
@@ -86,5 +86,27 @@
     "Price per Bunch": "5.00",
     "Preorder Table": null,
     "Preorder": "https://airtable.com/shrb8jaLEpA886b4i?prefill_SKU=DAH-PENHW"
+  },
+  {
+    "SKU #": "STR-BRTRS",
+    "Image": "straw bright rose.jpg (https://dl.airtable.com/.attachments/dd333aa4d6b344089ae06c83e594373b/ac570776/strawbrightrose.jpg)",
+    "Crop": "Strawflower",
+    "Variety": "Bright Rose ",
+    "Grower": "GRF",
+    "SKU": "STR-BRTRS",
+    "This Week": "0",
+    "Next Week": "0",
+    "Future": "0",
+    "Availability Months": "July,August,September,October",
+    "Category": "Flower",
+    "This week | Next week | Future": "0 | 0 | 0 (@5 spb)",
+    "Open in Shop": "https://ohiobarnflowerfarm.com/mrfc/p/str-brtrs",
+    "Shop Description": "Profuse bloomers for fresh or dried arrangements. Tall, well-branched plants produce double flowers 2–2 1/2\" across. Blooms are pure to creamy white and frosted with rose at the petal tips. Rose coloring is subtler on young blooms and darkens as they mature and open. Also known as bracted strawflower.",
+    "Color": "IvoryPink",
+    "Tier": "4",
+    "Stems per Bunch": "5",
+    "Price per Bunch": "5.00",
+    "Preorder Table": null,
+    "Preorder": "https://airtable.com/shrb8jaLEpA886b4i?prefill_SKU=STR-BRTRS"
   }
 ]
