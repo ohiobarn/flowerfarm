@@ -99,9 +99,11 @@ type Audit struct {
 	ProductsModified []ProductDoc
 }
 type fpDoc struct {
-	compareStatus string
-	forecastDoc   ForecastDoc
-	productDoc    ProductDoc
+	compareStatus    string
+	forecastDoc      ForecastDoc
+	productOriginalDoc ProductDoc
+	productModifiedDoc  ProductDoc
+	// modMap           map[string]string
 }
 
 func (audit *Audit) recordNew(fd ForecastDoc, pd ProductDoc) {
@@ -109,7 +111,7 @@ func (audit *Audit) recordNew(fd ForecastDoc, pd ProductDoc) {
 	var fpDoc fpDoc
 	fpDoc.compareStatus = status.new
 	fpDoc.forecastDoc = fd
-	fpDoc.productDoc = pd
+	fpDoc.productModifiedDoc = pd
 
 	audit.FPDocs = append(audit.FPDocs, fpDoc)
 	audit.ProductsModified = append(audit.ProductsModified, pd)
@@ -117,15 +119,16 @@ func (audit *Audit) recordNew(fd ForecastDoc, pd ProductDoc) {
 
 }
 
-func (audit *Audit) recordModified(fd ForecastDoc, pd ProductDoc) {
+func (audit *Audit) recordModified(fd ForecastDoc, pdOrig ProductDoc, pdMod ProductDoc) {
 
 	var fpDoc fpDoc
 	fpDoc.compareStatus = status.modified
 	fpDoc.forecastDoc = fd
-	fpDoc.productDoc = pd
+	fpDoc.productModifiedDoc = pdMod
+	fpDoc.productOriginalDoc = pdOrig
 
 	audit.FPDocs = append(audit.FPDocs, fpDoc)
-	audit.ProductsModified = append(audit.ProductsModified, pd)
+	audit.ProductsModified = append(audit.ProductsModified, pdMod)
 	audit.ModifiedCount++
 
 }
@@ -135,7 +138,7 @@ func (audit *Audit) recordUncchanged(fd ForecastDoc, pd ProductDoc) {
 	var fpDoc fpDoc
 	fpDoc.compareStatus = status.unchanged
 	fpDoc.forecastDoc = fd
-	fpDoc.productDoc = pd
+	fpDoc.productModifiedDoc = pd
 
 	audit.FPDocs = append(audit.FPDocs, fpDoc)
 	audit.UnchangedCount++
@@ -338,6 +341,7 @@ func updateProductsFromForecast(
 		fmt.Printf("forecast SKU: %s%s%s\n", colorBlue, forecastDoc.SKU, colorReset)
 
 		productDoc := findProductDocBySKU(forecastDoc.SKU, products)
+		productOriginalDoc := productDoc
 
 		if productDoc.SKU == "" {
 
@@ -349,9 +353,9 @@ func updateProductsFromForecast(
 
 		} else {
 
-			if doUpdate(forecastDoc, productDoc) {
+			if doUpdate(forecastDoc, &productDoc) {
 
-				audit.recordModified(forecastDoc, productDoc)
+				audit.recordModified(forecastDoc, productOriginalDoc, productDoc)
 				fmt.Printf("%s[ Modified ] %s", colorYellow, colorReset)
 				fmt.Printf("Forecast and Product are different, Product will be updated from forecast\n")
 
@@ -388,7 +392,7 @@ func updateProductsFromForecast(
 //   Use forecast doc to genererate a new product doc.  Then compare
 //   the new product with existing product to see if any change is needed
 //
-func doUpdate(fDoc ForecastDoc, pDoc ProductDoc) bool {
+func doUpdate(fDoc ForecastDoc, pDoc *ProductDoc) bool {
 	doUpdate := false
 	dmp := diffmatchpatch.New()
 
