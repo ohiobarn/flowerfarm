@@ -100,10 +100,10 @@ type Audit struct {
 }
 type fpDoc struct {
 	compareStatus    string
+	isModifed        uint
 	forecastDoc      ForecastDoc
-	productOriginalDoc ProductDoc
-	productModifiedDoc  ProductDoc
-	// modMap           map[string]string
+	productBeforeDoc ProductDoc
+	productAfterDoc  ProductDoc
 }
 
 func (audit *Audit) recordNew(fd ForecastDoc, pd ProductDoc) {
@@ -111,7 +111,7 @@ func (audit *Audit) recordNew(fd ForecastDoc, pd ProductDoc) {
 	var fpDoc fpDoc
 	fpDoc.compareStatus = status.new
 	fpDoc.forecastDoc = fd
-	fpDoc.productModifiedDoc = pd
+	fpDoc.productAfterDoc = pd
 
 	audit.FPDocs = append(audit.FPDocs, fpDoc)
 	audit.ProductsModified = append(audit.ProductsModified, pd)
@@ -119,13 +119,18 @@ func (audit *Audit) recordNew(fd ForecastDoc, pd ProductDoc) {
 
 }
 
-func (audit *Audit) recordModified(fd ForecastDoc, pdOrig ProductDoc, pdMod ProductDoc) {
+func (audit *Audit) recordModified(
+	fd ForecastDoc,
+	pdOrig ProductDoc,
+	pdMod ProductDoc,
+	isMod uint) {
 
 	var fpDoc fpDoc
 	fpDoc.compareStatus = status.modified
+	fpDoc.isModifed = isMod
 	fpDoc.forecastDoc = fd
-	fpDoc.productModifiedDoc = pdMod
-	fpDoc.productOriginalDoc = pdOrig
+	fpDoc.productAfterDoc = pdMod
+	fpDoc.productBeforeDoc = pdOrig
 
 	audit.FPDocs = append(audit.FPDocs, fpDoc)
 	audit.ProductsModified = append(audit.ProductsModified, pdMod)
@@ -138,7 +143,7 @@ func (audit *Audit) recordUncchanged(fd ForecastDoc, pd ProductDoc) {
 	var fpDoc fpDoc
 	fpDoc.compareStatus = status.unchanged
 	fpDoc.forecastDoc = fd
-	fpDoc.productModifiedDoc = pd
+	fpDoc.productAfterDoc = pd
 
 	audit.FPDocs = append(audit.FPDocs, fpDoc)
 	audit.UnchangedCount++
@@ -157,6 +162,13 @@ var status = compareStatus{
 	unchanged: "Unchanged",
 }
 
+const (
+	isModifiedTitle = 1 << iota
+	isModifiedStock
+	isModifiedDescription
+	isModifiedPrice
+)
+
 const colorReset = string("\033[0m")
 const colorRed = string("\033[31m")
 const colorGreen = string("\033[32m")
@@ -164,8 +176,9 @@ const colorYellow = string("\033[33m")
 const colorBlue = string("\033[34m")
 
 // const colorPurple = string("\033[35m")
-// const colorCyan = string("\033[36m")
-// const colorWhite = string("\033[37m")
+const colorCyan = string("\033[36m")
+
+//const colorWhite = string("\033[37m")
 
 // forecastCmd represents the forecast command
 var forecastCmd = &cobra.Command{
@@ -302,6 +315,9 @@ func processingReport(audit *Audit) {
 	mod := 0
 	same := 0
 	other := 0
+	dmp := diffmatchpatch.New()
+
+	fmt.Printf("\n\nProcessing Report\n\n")
 
 	for _, doc := range audit.FPDocs {
 		switch doc.compareStatus {
@@ -311,10 +327,31 @@ func processingReport(audit *Audit) {
 			mod++
 		case status.unchanged:
 			same++
+			fmt.Printf("%v[Unchanged]%v SKU: %v, Title: %v\n", colorBlue, colorReset, doc.productAfterDoc.SKU, doc.productAfterDoc.Title)
 		default:
 			other++
 		}
 	}
+
+	for _, doc := range audit.FPDocs {
+		if doc.compareStatus == status.new {
+			fmt.Printf("%v[   New   ]%v SKU: %v, Title: %v\n", colorYellow, colorReset, doc.productAfterDoc.SKU, doc.productAfterDoc.Title)
+		}
+	}
+
+	for _, doc := range audit.FPDocs {
+		if doc.compareStatus == status.modified {
+			fmt.Printf("%v[Modified ]%v SKU: %v, Title: %v\n", colorCyan, colorReset, doc.productAfterDoc.SKU, doc.productAfterDoc.Title)
+
+			if doc.isModifed&isModifiedDescription == isModifiedDescription {
+				diffs := dmp.DiffMain(doc.productBeforeDoc.Description, doc.productAfterDoc.Description, false)
+				fmt.Printf("  [Diff  ] %v\n", dmp.DiffPrettyText(diffs))
+				fmt.Printf("%v  [Before] %v%v\n", colorRed, colorReset, doc.productBeforeDoc.Description)
+				fmt.Printf("%v  [After ] %v%v\n\n", colorGreen, colorReset, doc.productAfterDoc.Description)
+			}
+		}
+	}
+
 	fmt.Printf("\nfpDoc Len: %v\n", len(audit.FPDocs))
 	fmt.Printf("New: %v, Mod: %v, Same: %v, Other: %v, Total: %v\n", new, mod, same, other, new+mod+same+other)
 }
@@ -341,7 +378,7 @@ func updateProductsFromForecast(
 		fmt.Printf("forecast SKU: %s%s%s\n", colorBlue, forecastDoc.SKU, colorReset)
 
 		productDoc := findProductDocBySKU(forecastDoc.SKU, products)
-		productOriginalDoc := productDoc
+		productBeforeDoc := productDoc
 
 		if productDoc.SKU == "" {
 
@@ -353,9 +390,10 @@ func updateProductsFromForecast(
 
 		} else {
 
-			if doUpdate(forecastDoc, &productDoc) {
+			isModified, productNewDoc := doUpdate(forecastDoc, productDoc)
+			if isModified > 0 {
 
-				audit.recordModified(forecastDoc, productOriginalDoc, productDoc)
+				audit.recordModified(forecastDoc, productBeforeDoc, productNewDoc, isModified)
 				fmt.Printf("%s[ Modified ] %s", colorYellow, colorReset)
 				fmt.Printf("Forecast and Product are different, Product will be updated from forecast\n")
 
@@ -375,6 +413,7 @@ func updateProductsFromForecast(
 	fmt.Printf("%sProduct unchanged count: %d%s\n", colorGreen, audit.UnchangedCount, colorReset)
 	fmt.Printf("\nVerify:\n")
 
+	// TODO - remove this section once you have more/better unit tests
 	var sum int
 	var countStatus string
 	countStatus = colorRed + "Error" + colorReset
@@ -392,8 +431,10 @@ func updateProductsFromForecast(
 //   Use forecast doc to genererate a new product doc.  Then compare
 //   the new product with existing product to see if any change is needed
 //
-func doUpdate(fDoc ForecastDoc, pDoc *ProductDoc) bool {
-	doUpdate := false
+
+// todo - change pDoc to value and returen a pDocMod
+func doUpdate(fDoc ForecastDoc, pDoc ProductDoc) (uint, ProductDoc) {
+	var isModified uint = 0
 	dmp := diffmatchpatch.New()
 
 	newProductTitle := strings.TrimSpace(fDoc.Crop) + " - " + strings.TrimSpace(fDoc.Variety)
@@ -402,7 +443,7 @@ func doUpdate(fDoc ForecastDoc, pDoc *ProductDoc) bool {
 	newProductPrice := strings.TrimSpace(fDoc.PricePerBunch)
 
 	if newProductDescription != pDoc.Description {
-		doUpdate = true
+		isModified = isModified | isModifiedDescription
 		diffs := dmp.DiffMain(pDoc.Description, newProductDescription, false)
 		fmt.Printf("%sDescription (diff):%s %s\n\n", colorGreen, colorReset, dmp.DiffPrettyText(diffs))
 		fmt.Printf("%sDescription (before):%s %s\n", colorGreen, colorReset, pDoc.Description)
@@ -411,24 +452,25 @@ func doUpdate(fDoc ForecastDoc, pDoc *ProductDoc) bool {
 	}
 
 	if newProductTitle != pDoc.Title {
-		doUpdate = true
+		isModified = isModified | isModifiedTitle
 		diffs := dmp.DiffMain(pDoc.Title, newProductTitle, false)
 		fmt.Printf("%sTitle:%s %s\n", colorGreen, colorReset, dmp.DiffPrettyText(diffs))
 	}
 
 	if newProductStock != pDoc.Stock {
-		doUpdate = true
+		isModified = isModified | isModifiedStock
 		diffs := dmp.DiffMain(pDoc.Stock, newProductStock, false)
 		fmt.Printf("%sStock:%s %s\n", colorGreen, colorReset, dmp.DiffPrettyText(diffs))
 	}
 
 	if newProductPrice != pDoc.Price {
-		doUpdate = true
+		isModified = isModified | isModifiedPrice
 		diffs := dmp.DiffMain(pDoc.Price, newProductPrice, false)
 		fmt.Printf("%sPrice:%s %s\n", colorGreen, colorReset, dmp.DiffPrettyText(diffs))
 	}
 
-	if doUpdate {
+	// if isModified is greater than zero then something changed
+	if isModified > 0 {
 
 		pDoc.Title = newProductTitle
 		pDoc.Description = newProductDescription
@@ -437,7 +479,7 @@ func doUpdate(fDoc ForecastDoc, pDoc *ProductDoc) bool {
 	}
 
 	// Returns true if merge occured
-	return doUpdate
+	return isModified, pDoc
 }
 
 func buidDescription(fDoc ForecastDoc) string {

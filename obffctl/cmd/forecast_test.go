@@ -17,7 +17,7 @@ func TestForecastRun(t *testing.T) {
 	audit := cmd.ForecastRun(forecastFileName, productsFileName, productsModifiedFileName)
 
 	// Check modified count
-	want := 2
+	want := 3
 	got := audit.ModifiedCount
 	if want != got {
 		t.Errorf("ModifiedCount: want %v, got %v", want, got)
