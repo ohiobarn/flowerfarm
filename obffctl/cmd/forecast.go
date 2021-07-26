@@ -231,6 +231,8 @@ func ForecastRun(forecastFileName string, productsFileName string, productsModif
 
 	//forecastProductCollection := make([]ForecastProductDoc, 0)
 	var audit Audit
+	// set initial size to keep the append from unecessarly resize
+	audit.ProductsModified = make([]ProductDoc, 200)
 
 	//
 	// updateProductsFromForecast - Inspect forecast documents update and/or add prouct docs as needed
@@ -327,7 +329,7 @@ func processingReport(audit *Audit) {
 			mod++
 		case status.unchanged:
 			same++
-			fmt.Printf("%v[Unchanged]%v SKU: %v, Title: %v\n", colorBlue, colorReset, doc.productAfterDoc.SKU, doc.productAfterDoc.Title)
+			fmt.Printf("\n%v[Unchanged]%v SKU: %v, Title: %v\n", colorBlue, colorReset, doc.productAfterDoc.SKU, doc.productAfterDoc.Title)
 		default:
 			other++
 		}
@@ -335,19 +337,25 @@ func processingReport(audit *Audit) {
 
 	for _, doc := range audit.FPDocs {
 		if doc.compareStatus == status.new {
-			fmt.Printf("%v[   New   ]%v SKU: %v, Title: %v\n", colorYellow, colorReset, doc.productAfterDoc.SKU, doc.productAfterDoc.Title)
+			fmt.Printf("\n%v[New]%v SKU: %v, Title: %v\n", colorYellow, colorReset, doc.productAfterDoc.SKU, doc.productAfterDoc.Title)
 		}
 	}
 
 	for _, doc := range audit.FPDocs {
 		if doc.compareStatus == status.modified {
-			fmt.Printf("%v[Modified ]%v SKU: %v, Title: %v\n", colorCyan, colorReset, doc.productAfterDoc.SKU, doc.productAfterDoc.Title)
+			fmt.Printf("\n%v[Modified]%v SKU: %v, Title: %v\n", colorCyan, colorReset, doc.productAfterDoc.SKU, doc.productAfterDoc.Title)
 
 			if doc.isModifed&isModifiedDescription == isModifiedDescription {
 				diffs := dmp.DiffMain(doc.productBeforeDoc.Description, doc.productAfterDoc.Description, false)
-				fmt.Printf("  [Diff  ] %v\n", dmp.DiffPrettyText(diffs))
-				fmt.Printf("%v  [Before] %v%v\n", colorRed, colorReset, doc.productBeforeDoc.Description)
-				fmt.Printf("%v  [After ] %v%v\n\n", colorGreen, colorReset, doc.productAfterDoc.Description)
+				diffWrapped := wrapWords(dmp.DiffPrettyText(diffs), 15, "\t")
+				// beforeWrapped := wrap(doc.productBeforeDoc.Description, 60, "     ")
+				// afterWrapped := wrap(doc.productAfterDoc.Description, 60, "     ")
+				//diffWrapped := wrap(doc.productBeforeDoc.Description, doc.productAfterDoc.Description, 120, "\t")
+
+				//fmt.Printf("%v  [Diff  ] %v\n%v\n", colorYellow, colorReset, diffWrapped)
+				// fmt.Printf("%v  [Before] %v\n%v\n", colorRed, colorReset, beforeWrapped)
+				// fmt.Printf("%v  [After ] %v\n%v\n\n", colorGreen, colorReset, afterWrapped)
+				fmt.Printf("%v  [Description] %v\n%v\n\n", colorGreen, colorReset, diffWrapped)
 			}
 		}
 	}
@@ -385,22 +393,16 @@ func updateProductsFromForecast(
 			newProductDoc := createProduct(forecastDoc)
 			audit.recordNew(forecastDoc, newProductDoc)
 
-			fmt.Printf("%s[ Create ] %s", colorYellow, colorReset)
-			fmt.Printf("Forecast has no matching Product, Product will be created from forecast\n")
-
 		} else {
 
 			isModified, productNewDoc := doUpdate(forecastDoc, productDoc)
 			if isModified > 0 {
 
 				audit.recordModified(forecastDoc, productBeforeDoc, productNewDoc, isModified)
-				fmt.Printf("%s[ Modified ] %s", colorYellow, colorReset)
-				fmt.Printf("Forecast and Product are different, Product will be updated from forecast\n")
 
 			} else {
 
 				audit.recordUncchanged(forecastDoc, productDoc)
-				fmt.Printf("%s[ Unchanged ] %s", colorYellow, colorReset)
 
 			}
 		}
@@ -532,4 +534,67 @@ func findProductDocBySKU(forecastSKU string, products *Products) ProductDoc {
 	}
 	var errorDoc ProductDoc
 	return errorDoc
+}
+
+// Wraps text at the specified number of columns
+func wrap(s1 string, s2 string, limit int, pad string) string {
+
+	if strings.TrimSpace(s1) == "" {
+		return s1
+	}
+
+	var result string = ""
+
+	for len(s1) >= 1 {
+		// but insert \r\n at specified limit
+		result = result + pad + s1[:limit] + "\r\n" + pad + s2[:limit] + "\r\n\n"
+
+		// discard the elements that were copied over to result
+		s1 = s1[limit:]
+		s2 = s2[limit:]
+
+		// change the limit
+		// to cater for the last few words in
+		//
+		if len(s1) < limit {
+			limit = len(s1)
+		}
+
+	}
+
+	return result
+
+}
+
+func wrapWords(s string, limit int, pad string) string {
+
+	if strings.TrimSpace(s) == "" {
+		return pad + s
+	}
+
+	var result string = ""
+
+	words := strings.Fields(s)
+	if len(words) < limit {
+		return pad + s
+	}
+
+	for len(words) >= 1 {
+		// but insert \r\n at specified limit
+		result = result + pad + strings.Join(words[:limit], " ") + "\r\n"
+
+		// discard the elements that were copied over to result
+		words = words[limit:]
+
+		// change the limit
+		// to cater for the last few words in
+		//
+		if len(words) < limit {
+			limit = len(words)
+		}
+
+	}
+
+	return result
+
 }
