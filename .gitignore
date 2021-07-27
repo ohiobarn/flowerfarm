@@ -6,4 +6,4 @@ wp-snapshots
 site
 *.zip
 wrk
-exports/
+exports
