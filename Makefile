@@ -31,10 +31,11 @@ help:
 
 ss-merge:
 	echo "Backing up products..."
-	cp "${PWD}/exports/squarespace/export/products.csv" "${PWD}/exports/squarespace/export/products-${NOW}.csv"
-	src/merge.sh ${PWD}/exports/airtable/forecast.csv ${PWD}/exports/squarespace/export/products.csv
+	cp "${PWD}/exports/squarespace/products.csv" "${PWD}/exports/squarespace/products-${NOW}.csv"
+	src/merge.sh ${PWD}/exports/airtable/forecast.csv ${PWD}/exports/squarespace/products.csv
 
 go-merge:
 	echo "Backing up products..."
-	cp "${PWD}/exports/squarespace/export/products.csv" "${PWD}/exports/squarespace/export/products-${NOW}.csv"
-	src/go-merge.sh ${PWD}/exports/airtable/forecast.csv ${PWD}/exports/squarespace/export/products.csv
+	cp "${PWD}/exports/squarespace/products.csv" "${PWD}/exports/squarespace/products-${NOW}.csv"
+	cp "${PWD}/exports/squarespace/products.csv" "${PWD}/archive/products.csv"
+	src/go-merge.sh ${PWD}/exports/airtable/forecast.csv ${PWD}/exports/squarespace/products.csv

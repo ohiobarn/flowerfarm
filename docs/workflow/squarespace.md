@@ -12,7 +12,7 @@ How to update the inventory in squarespace with the data from airtable.
 1 Export products from squarespace
 
 * Open the [squarespace products](https://ohiobarnflowerfarm.squarespace.com/config/commerce/inventory) page
-* Click *EXPORT ALL* and save to: `flowerfarm/exports/squarespace/export/products.csv`
+* Click *EXPORT ALL* and save to: `flowerfarm/exports/squarespace/products.csv`
 
 2 Export Forecast table from airtable
 

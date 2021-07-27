@@ -210,10 +210,10 @@ func init() {
 	forecastCmd.Flags().StringP("forecast", "f", "exports/airtable/forecast.json", "Path to the forecast file exported from AirTable, must be in json format")
 	forecastCmd.MarkFlagRequired("forecast")
 
-	forecastCmd.Flags().StringP("products", "p", "exports/squarespace/export/products.json", "Path to the products file exported from Square Space, must be in json format")
+	forecastCmd.Flags().StringP("products", "p", "exports/squarespace/products.json", "Path to the products file exported from Square Space, must be in json format")
 	forecastCmd.MarkFlagRequired("products")
 
-	forecastCmd.Flags().StringP("products-modified", "m", "exports/squarespace/export/products-modified.json", "Output path to the new modified products file")
+	forecastCmd.Flags().StringP("products-modified", "m", "exports/squarespace/products-modified.json", "Output path to the new modified products file")
 	forecastCmd.MarkFlagRequired("products-modified")
 }
 
