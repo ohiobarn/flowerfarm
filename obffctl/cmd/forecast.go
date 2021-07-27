@@ -232,7 +232,7 @@ func ForecastRun(forecastFileName string, productsFileName string, productsModif
 	//forecastProductCollection := make([]ForecastProductDoc, 0)
 	var audit Audit
 	// set initial size to keep the append from unecessarly resize
-	audit.ProductsModified = make([]ProductDoc, 200)
+	audit.ProductsModified = make([]ProductDoc, 0, 200)
 
 	//
 	// updateProductsFromForecast - Inspect forecast documents update and/or add prouct docs as needed
@@ -247,7 +247,7 @@ func ForecastRun(forecastFileName string, productsFileName string, productsModif
 	//
 	// writeProducts - Output the productsModified slice as a json file
 	//
-	writeProducts(&audit.ProductsModified, productsModifiedFileName)
+	writeProducts(audit.ProductsModified, productsModifiedFileName)
 
 	fmt.Printf("\n************ DONE ****************\n")
 	return &audit
@@ -303,7 +303,7 @@ func loadProducts(productsFileName string) *Products {
 	return products
 }
 
-func writeProducts(productsModified *[]ProductDoc, productsModifiedFileName string) {
+func writeProducts(productsModified []ProductDoc, productsModifiedFileName string) {
 
 	fmt.Printf("\nWrite productsMofified as json file: %s\n", productsModifiedFileName)
 
@@ -348,15 +348,27 @@ func processingReport(audit *Audit) {
 			if doc.isModifed&isModifiedDescription == isModifiedDescription {
 				diffs := dmp.DiffMain(doc.productBeforeDoc.Description, doc.productAfterDoc.Description, false)
 				diffWrapped := wrapWords(dmp.DiffPrettyText(diffs), 15, "\t")
-				// beforeWrapped := wrap(doc.productBeforeDoc.Description, 60, "     ")
-				// afterWrapped := wrap(doc.productAfterDoc.Description, 60, "     ")
-				//diffWrapped := wrap(doc.productBeforeDoc.Description, doc.productAfterDoc.Description, 120, "\t")
-
-				//fmt.Printf("%v  [Diff  ] %v\n%v\n", colorYellow, colorReset, diffWrapped)
-				// fmt.Printf("%v  [Before] %v\n%v\n", colorRed, colorReset, beforeWrapped)
-				// fmt.Printf("%v  [After ] %v\n%v\n\n", colorGreen, colorReset, afterWrapped)
 				fmt.Printf("%v  [Description] %v\n%v\n\n", colorGreen, colorReset, diffWrapped)
 			}
+
+			if doc.isModifed&isModifiedTitle == isModifiedTitle {
+				diffs := dmp.DiffMain(doc.productBeforeDoc.Title, doc.productAfterDoc.Title, false)
+				diffWrapped := wrapWords(dmp.DiffPrettyText(diffs), 15, "\t")
+				fmt.Printf("%v  [Title] %v\n%v\n\n", colorGreen, colorReset, diffWrapped)
+			}
+
+			if doc.isModifed&isModifiedStock == isModifiedStock {
+				diffs := dmp.DiffMain(doc.productBeforeDoc.Stock, doc.productAfterDoc.Stock, false)
+				diffWrapped := wrapWords(dmp.DiffPrettyText(diffs), 15, "\t")
+				fmt.Printf("%v  [Stock] %v\n%v\n\n", colorGreen, colorReset, diffWrapped)
+			}
+
+			if doc.isModifed&isModifiedPrice == isModifiedPrice {
+				diffs := dmp.DiffMain(doc.productBeforeDoc.Price, doc.productAfterDoc.Price, false)
+				diffWrapped := wrapWords(dmp.DiffPrettyText(diffs), 15, "\t")
+				fmt.Printf("%v  [Stock] %v\n%v\n\n", colorGreen, colorReset, diffWrapped)
+			}
+
 		}
 	}
 
