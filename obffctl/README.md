@@ -25,6 +25,8 @@ $ cobra add bar -p createCmd
 # to install
 $ go install github.com/ohiobarn/flowerfarm/obffctl
 
+# Run tests
+$ go test -v ./...
 ```
 
 1. Cobra will add the source files needed for the command. You will need to edit the source files and add specific logic for your command.

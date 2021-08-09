@@ -249,7 +249,6 @@ func ForecastRun(forecastFileName string, productsFileName string, productsModif
 	//
 	writeProducts(audit.ProductsModified, productsModifiedFileName)
 
-	fmt.Printf("\n************ DONE ****************\n")
 	return &audit
 }
 
@@ -394,8 +393,6 @@ func updateProductsFromForecast(
 	for _, forecastDoc := range *forecast {
 
 		totalCount++
-		fmt.Printf("\n--------------------------------------------\n")
-		fmt.Printf("forecast SKU: %s%s%s\n", colorBlue, forecastDoc.SKU, colorReset)
 
 		productDoc := findProductDocBySKU(forecastDoc.SKU, products)
 		productBeforeDoc := productDoc
@@ -427,7 +424,7 @@ func updateProductsFromForecast(
 	fmt.Printf("%sProduct unchanged count: %d%s\n", colorGreen, audit.UnchangedCount, colorReset)
 	fmt.Printf("\nVerify:\n")
 
-	// TODO - remove this section once you have more/better unit tests
+	// DEVTODO - remove this section once you have more/better unit tests
 	var sum int
 	var countStatus string
 	countStatus = colorRed + "Error" + colorReset
@@ -449,7 +446,7 @@ func updateProductsFromForecast(
 // todo - change pDoc to value and returen a pDocMod
 func doUpdate(fDoc ForecastDoc, pDoc ProductDoc) (uint, ProductDoc) {
 	var isModified uint = 0
-	dmp := diffmatchpatch.New()
+
 
 	newProductTitle := strings.TrimSpace(fDoc.Crop) + " - " + strings.TrimSpace(fDoc.Variety)
 	newProductStock := strings.TrimSpace(fDoc.ThisWeek)
@@ -458,29 +455,18 @@ func doUpdate(fDoc ForecastDoc, pDoc ProductDoc) (uint, ProductDoc) {
 
 	if newProductDescription != pDoc.Description {
 		isModified = isModified | isModifiedDescription
-		diffs := dmp.DiffMain(pDoc.Description, newProductDescription, false)
-		fmt.Printf("%sDescription (diff):%s %s\n\n", colorGreen, colorReset, dmp.DiffPrettyText(diffs))
-		fmt.Printf("%sDescription (before):%s %s\n", colorGreen, colorReset, pDoc.Description)
-		fmt.Printf("%sDescription (after).:%s %s\n\n", colorGreen, colorReset, newProductDescription)
-
 	}
 
 	if newProductTitle != pDoc.Title {
 		isModified = isModified | isModifiedTitle
-		diffs := dmp.DiffMain(pDoc.Title, newProductTitle, false)
-		fmt.Printf("%sTitle:%s %s\n", colorGreen, colorReset, dmp.DiffPrettyText(diffs))
 	}
 
 	if newProductStock != pDoc.Stock {
 		isModified = isModified | isModifiedStock
-		diffs := dmp.DiffMain(pDoc.Stock, newProductStock, false)
-		fmt.Printf("%sStock:%s %s\n", colorGreen, colorReset, dmp.DiffPrettyText(diffs))
 	}
 
 	if newProductPrice != pDoc.Price {
 		isModified = isModified | isModifiedPrice
-		diffs := dmp.DiffMain(pDoc.Price, newProductPrice, false)
-		fmt.Printf("%sPrice:%s %s\n", colorGreen, colorReset, dmp.DiffPrettyText(diffs))
 	}
 
 	// if isModified is greater than zero then something changed
@@ -528,10 +514,6 @@ func createProduct(fDoc ForecastDoc) ProductDoc {
 	pDoc.ProductType = "PHYSICAL"
 	pDoc.ProductPage = "mrfc"
 	pDoc.Visible = "true"
-
-	fmt.Printf("Title: %s\n", pDoc.Description)
-	fmt.Printf("Description: %s\n", pDoc.Description)
-	fmt.Printf("Stock: %s\n", pDoc.Description)
 
 	return pDoc
 
