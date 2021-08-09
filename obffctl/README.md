@@ -21,6 +21,10 @@ $ cobra add foo
 # Add new "bar" subcommand to the existing "create" command
 # Usage: $ opsctl create bar 
 $ cobra add bar -p createCmd
+
+# to install
+$ go install github.com/ohiobarn/flowerfarm/obffctl
+
 ```
 
 1. Cobra will add the source files needed for the command. You will need to edit the source files and add specific logic for your command.

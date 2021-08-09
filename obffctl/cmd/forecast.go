@@ -548,36 +548,6 @@ func findProductDocBySKU(forecastSKU string, products *Products) ProductDoc {
 	return errorDoc
 }
 
-// Wraps text at the specified number of columns
-func wrap(s1 string, s2 string, limit int, pad string) string {
-
-	if strings.TrimSpace(s1) == "" {
-		return s1
-	}
-
-	var result string = ""
-
-	for len(s1) >= 1 {
-		// but insert \r\n at specified limit
-		result = result + pad + s1[:limit] + "\r\n" + pad + s2[:limit] + "\r\n\n"
-
-		// discard the elements that were copied over to result
-		s1 = s1[limit:]
-		s2 = s2[limit:]
-
-		// change the limit
-		// to cater for the last few words in
-		//
-		if len(s1) < limit {
-			limit = len(s1)
-		}
-
-	}
-
-	return result
-
-}
-
 func wrapWords(s string, limit int, pad string) string {
 
 	if strings.TrimSpace(s) == "" {
