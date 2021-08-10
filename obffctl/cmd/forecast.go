@@ -365,7 +365,7 @@ func processingReport(audit *Audit) {
 			if doc.isModifed&isModifiedPrice == isModifiedPrice {
 				diffs := dmp.DiffMain(doc.productBeforeDoc.Price, doc.productAfterDoc.Price, false)
 				diffWrapped := wrapWords(dmp.DiffPrettyText(diffs), 15, "\t")
-				fmt.Printf("%v  [Stock] %v\n%v\n\n", colorGreen, colorReset, diffWrapped)
+				fmt.Printf("%v  [Price] %v\n%v\n\n", colorGreen, colorReset, diffWrapped)
 			}
 
 		}
@@ -446,7 +446,6 @@ func updateProductsFromForecast(
 // todo - change pDoc to value and returen a pDocMod
 func doUpdate(fDoc ForecastDoc, pDoc ProductDoc) (uint, ProductDoc) {
 	var isModified uint = 0
-
 
 	newProductTitle := strings.TrimSpace(fDoc.Crop) + " - " + strings.TrimSpace(fDoc.Variety)
 	newProductStock := strings.TrimSpace(fDoc.ThisWeek)
