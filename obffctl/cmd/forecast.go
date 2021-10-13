@@ -49,6 +49,7 @@ type ForecastDoc struct {
 	Tier               string `json:"Tier"`
 	StemsPerBunch      string `json:"Stems per Bunch"`
 	PricePerBunch      string `json:"Price per Bunch"`
+	Visible            string `json:"Visible"`
 }
 
 //
@@ -167,6 +168,7 @@ const (
 	isModifiedStock
 	isModifiedDescription
 	isModifiedPrice
+	isModifiedVisible
 )
 
 const colorReset = string("\033[0m")
@@ -368,6 +370,12 @@ func processingReport(audit *Audit) {
 				fmt.Printf("%v  [Price] %v\n%v\n\n", colorGreen, colorReset, diffWrapped)
 			}
 
+			if doc.isModifed&isModifiedVisible == isModifiedVisible {
+				diffs := dmp.DiffMain(doc.productBeforeDoc.Visible, doc.productAfterDoc.Visible, false)
+				diffWrapped := wrapWords(dmp.DiffPrettyText(diffs), 15, "\t")
+				fmt.Printf("%v  [Visible] %v\n%v\n\n", colorGreen, colorReset, diffWrapped)
+			}
+
 		}
 	}
 
@@ -451,6 +459,7 @@ func doUpdate(fDoc ForecastDoc, pDoc ProductDoc) (uint, ProductDoc) {
 	newProductStock := strings.TrimSpace(fDoc.ThisWeek)
 	newProductDescription := buidDescription(fDoc)
 	newProductPrice := strings.TrimSpace(fDoc.PricePerBunch)
+	newProductVisible := strings.TrimSpace(fDoc.Visible)
 
 	if newProductDescription != pDoc.Description {
 		isModified = isModified | isModifiedDescription
@@ -468,6 +477,10 @@ func doUpdate(fDoc ForecastDoc, pDoc ProductDoc) (uint, ProductDoc) {
 		isModified = isModified | isModifiedPrice
 	}
 
+	if newProductVisible != pDoc.Visible {
+		isModified = isModified | isModifiedVisible
+	}
+
 	// if isModified is greater than zero then something changed
 	if isModified > 0 {
 
@@ -475,6 +488,7 @@ func doUpdate(fDoc ForecastDoc, pDoc ProductDoc) (uint, ProductDoc) {
 		pDoc.Description = newProductDescription
 		pDoc.Stock = newProductStock
 		pDoc.Price = newProductPrice
+		pDoc.Visible = newProductVisible
 	}
 
 	// Returns true if merge occured
@@ -512,7 +526,7 @@ func createProduct(fDoc ForecastDoc) ProductDoc {
 	pDoc.Tags = "mrfc"
 	pDoc.ProductType = "PHYSICAL"
 	pDoc.ProductPage = "mrfc"
-	pDoc.Visible = "true"
+	pDoc.Visible = "Yes"
 
 	return pDoc
 

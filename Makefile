@@ -13,7 +13,7 @@ define help_info
 	@echo ""
 	@echo " see:"
 	@echo "   1 - https://ohiobarn.github.io/flowerfarm/workflow/squarespace-products/"
-	@echo "   2 - make ss-merge"
+	@echo "   2 - make go-merge"
   @echo ""
 	@echo "******************************************************************************"
 	@echo "mkdocs Workflow:"
@@ -28,11 +28,6 @@ endef
 
 help:
 	$(call help_info)
-
-ss-merge:
-	echo "Backing up products..."
-	cp "${PWD}/exports/squarespace/products.csv" "${PWD}/exports/squarespace/products-${NOW}.csv"
-	src/merge.sh ${PWD}/exports/airtable/forecast.csv ${PWD}/exports/squarespace/products.csv
 
 go-merge:
 	echo "Backing up products..."
